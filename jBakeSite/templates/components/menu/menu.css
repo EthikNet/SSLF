@@ -1,7 +1,10 @@
 .navbar {
 	font-size: 125%;
+	display: flex;
+	justify-content: center;
 }
 
 .navbar-toggle {
 	width: 32px;
+	margin-right: 45px;
 }

@@ -14,12 +14,12 @@
 	<artifactId>weblegerTool</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>MonSite</name>
+	<name>SSLF</name>
 
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<publish.url>scm:git:git@github.com:Webleger/webleger.git</publish.url>
+		<publish.url>scm:git:git@github.com:EthikNet/SSLF.git</publish.url>
 	</properties>
 
 	<dependencies>

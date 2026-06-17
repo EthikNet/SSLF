@@ -4,7 +4,7 @@ type=org_openCiLife_block
 category=hp_content
 tags=
 status=published
-contentImage=images/common/logo_left.png
+contentImage=images/common/logo_left.jpg
 anchorId=content2
 order=121
 ~~~~~~

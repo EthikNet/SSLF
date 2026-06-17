@@ -127,7 +127,14 @@
 <#-- build the site menu (using Boostrap) -->
 <#macro build content>
 <#if (content.displayMenu!"true") != "false">
-	<div class="navbar" role="navigation">
+	<#local navBarCustomClass = "">
+	<#if (config.site_menu_customClass)?? && config.site_menu_customClass?has_content>
+		<#local navBarCustomClass = " " + config.site_menu_customClass>
+	</#if>
+	<#if (logHelper??)>
+		${logHelper.stackDebugMessage("MENU : custom class for menu : " + navBarCustomClass)}
+	</#if>
+	<div class="navbar${navBarCustomClass}" role="navigation">
 		<div class="container-fluid">
 	      <div class="navbar-header">
 	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">

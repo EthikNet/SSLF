@@ -238,7 +238,7 @@
 			</div>
 		</div>
 		<#if (block.contentImage)??>
-				<@common.addImageIcon block.contentImage "blockIcon" block.title/>
+			<@common.addImageIcon block.contentImage "blockIcon" block.title/>
 		</#if>
 	</div>
 </#macro>
@@ -279,6 +279,9 @@
 		<div class="imageHeroMask"></div>
 	</div>
 	<@noImageSubTemplate block "position:relative"/>
+	<#if hookHelper??>
+		<@hookHelper.hook "afterBlockImageHero" block/>
+	</#if>
 	</section>
 </#macro>
 

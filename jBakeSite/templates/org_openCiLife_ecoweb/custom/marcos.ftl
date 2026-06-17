@@ -89,10 +89,8 @@
 		<#local orderBy="order">
 		
 		<section class="imageHeroSection"> 
-			<div class="imageHeroContainer"> 
-				<img src="${image}"> 
-				<div class="imageHeroMask"></div> 
-			</div>
+			<img class="imgHero" src="${image}"> 
+			<div class="imageHeroMask"></div> 
 			
 			<#nested>
 			
@@ -107,6 +105,9 @@
 			<#list imageHeroBlocks as imageHeroBlock>
 				<@block.buildWithCategory imageHeroBlock categoryContent orderBy />
 			</#list>
+			<#if hookHelper??>
+				<@hookHelper.hook "afterBlockImageHero" block/>
+			</#if>
 		</section>
 	</#if>
 </#macro>

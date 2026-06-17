@@ -1,10 +1,9 @@
-.action_centered {
+.actions_list {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
 
-.action_centered a {
+.actions_list a {
 	margin-top:10px;
 	display: flex;
 	align-items: center;
@@ -12,8 +11,16 @@
 	justify-content: center;
 }
 
+.action_centered {
+	justify-content: center;
+}
+
+.action_left {
+	justify-content: start;
+}
+
 @media screen and (min-width: 640px) {
-	.action_centered {
+	.action_centered, .action_left {
 		flex-direction: row;
 		gap: 8px;
 	}

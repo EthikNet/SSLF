@@ -598,8 +598,9 @@
 }
 
 .navbar-default {
-	background-color: #f8f8f8;
-	border-color: #e7e7e7
+	border-color: #e7e7e7;
+	opacity:1 !important;
+	background-color: ${webleger.site.style.background.color};
 }
 
 .navbar-default .navbar-brand {
