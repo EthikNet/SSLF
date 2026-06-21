@@ -1,0 +1,13 @@
+title=Dernières publications
+date=2026-06-19
+type=org_openCiLife_block
+subTemplate=imageBeforeTitleSubTemplate
+category=AlaUne
+includeContent={"type":"org_openCiLife_post", "category":"publication", "limit":10, "order":"date", "orderDirection":"desc", "display":{"subTemplate":"sslf.publicationCompactSubTemplate"}}
+tags=
+specificClass=lastPublications
+status=published
+contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="primaryInverse" aria-hidden="true"><path d="M15 18h-5"></path><path d="M18 14h-8"></path><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"></path><rect width="8" height="4" x="10" y="6" rx="1"></rect></svg>
+order=131
+~~~~~~
+	

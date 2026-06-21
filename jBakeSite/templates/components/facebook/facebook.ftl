@@ -41,7 +41,7 @@
 	<@buildfaceBook "events" "${webleger.component.meta.facebook.container.url}" />
 </#macro>
 
-<#macro buildfaceBook tabs href>
+<#macro buildfaceBook tabs href showFacePile=true>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("facebook.buildfaceBook : adding facebook component. page already contain Facebook component : " + pageUseFacebook?string("yes","no"))}
 	</#if>
@@ -52,7 +52,7 @@
     		data-tabs="${tabs}" 
     		data-width="${webleger.component.meta.facebook.container.width.desktop}" 
     		data-height="${webleger.component.meta.facebook.container.height.desktop}" 
-    		data-small-header="false" 
+    		data-small-header="${webleger.component.meta.facebook.smallHeader}" 
     		data-adapt-container-width="false" 
     		data-hide-cover="false" 
     		data-show-facepile="true">

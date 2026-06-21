@@ -21,8 +21,13 @@
 			<#switch actionListDisposition>
 				<#case "center">
 					<#local actionListSpecificClass = actionListSpecificClass + " action_centered">
+					<#break>
 				<#case "left">
 					<#local actionListSpecificClass = actionListSpecificClass + " action_left">
+					<#break>
+				<#case "right">
+					<#local actionListSpecificClass = actionListSpecificClass + " action_right">
+					<#break>
 				<#break>
 			</#switch>
 			<#if (content.action.specificClass)??>

@@ -14,9 +14,12 @@
 .action_centered {
 	justify-content: center;
 }
-
 .action_left {
 	justify-content: start;
+}
+.action_right {
+	flex-wrap: wrap;
+	align-content: flex-end;
 }
 
 @media screen and (min-width: 640px) {

@@ -252,6 +252,35 @@
 	</div>
 </#macro>
 
+<#macro imageBeforeTitleAndContentWithoutAfterHookSubTemplate block customCssStyle="">
+	<div <@generateAnchor block/> <@generateCssClass block "imageBeforeTitleAndContentWithoutAfterHookSubTemplate"/> <#if customCssStyle?has_content>style="${customCssStyle}"</#if>>
+		<#if hookHelper??>
+			<@hookHelper.hook "beforeBlockContent" block/>
+		</#if>
+		<div class="groupe_title_and_content_no_after_hook">
+			<#if (block.contentImage)??>
+				<@common.addImageIcon block.contentImage "blockIcon" block.title/>
+			</#if>
+			<div class="titleAndContent">
+				<@generateTitle block/>
+				
+				<div class="blockContent">
+					<#if hookHelper??>
+						<@hookHelper.hook "beforeBlockBody" block/>
+					</#if>
+					${block.body}
+					<#if hookHelper??>
+						<@hookHelper.hook "afterBlockBody" block/>
+					</#if>
+				</div>
+			</div>
+		</div>
+		<#if hookHelper??>
+			<@hookHelper.hook "afterBlockContent" block/>
+		</#if>
+	</div>
+</#macro>
+
 <#macro noImageSubTemplate block customCssStyle="">
 	<div <@generateAnchor block/> <@generateCssClass block "noImageSubTemplate"/> <#if customCssStyle?has_content>style="${customCssStyle}"</#if>>
 		<@generateTitle block/>

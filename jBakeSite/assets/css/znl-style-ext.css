@@ -19,6 +19,11 @@
 	background-color:${webleger.site.style.primary.highlight.color};
 }
 
+.primaryInverse{
+	color:${webleger.site.style.primary.background.color};
+	background-color:${webleger.site.style.primary.color};
+}
+
 #preHeader_blocks {
 	display: flex;
 	flex-direction: column-reverse;
@@ -63,12 +68,14 @@
 	border-radius:24px;
 }
 
+
 .action_button.btn {
 	padding:12px 36px;
 	font-weight:600;
 	border-radius: 30px;
 	z-index:50;
 	position:relative;
+	border-color:${webleger.site.style.color};
 	color:${webleger.site.style.background.color};
 }
 
@@ -81,9 +88,96 @@
 .btn-semi-transparent {
 	background-color: rgb(250,250,250,0.25);
 	backdrop-filter:blur(8px);
+	border-color:transparent!important;
 	border:1px solid ${webleger.site.style.background.color};
 }
 
+.hp h2 {
+	letter-spacing: -.025em;
+	color:${webleger.site.style.color};
+}
+.hp iframe {
+	border-radius:5%!important;
+    border: 2px solid ${webleger.site.style.discret.background.color}!important;
+}
+
+.facebook_cta {
+	float:right;
+}
+.actions_list.facebook_cta a {
+	padding: 6px 24px;
+}
+
+.paneauPocketGroup {
+	flex-direction:column;
+}
+#paneauPocketGroup .block {
+	width:100%
+}
+
+.section > .blockTitle {
+	text-transform:uppercase;
+	letter-spacing: .2em;
+	font-weight:750;
+	font-size:11px;
+	color:${webleger.site.style.impact.color};
+}
+
+.section > .blockBody > .blockContent {
+	padding:0;
+}
+
+.section > .blockBody > .blockContent {
+	padding:0;
+}
+
+.faceBookLogo {
+	color: #1877f2;
+	background-color: #1877f21a;
+	border-radius:100%;
+}
+.faceBookNews {
+	margin-bottom: 25px;
+}
+.faceBookNews .blockTitle {
+	padding-bottom:0;
+}
+
+.lastPublications .block_wraping{
+	width:100%;
+}
+
+.publicationCompact_items {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+}
+
+.publicationCompact {
+	border-radius:24px;
+	margin:6px;
+	padding:6px 6px 0 6px;
+	border:1px solid ${webleger.site.style.discret.background.color};
+	background-color:${webleger.site.style.card.background.color};
+}
+.publicationCompact_identification {
+	display:flex;
+	gap:0.05rem;
+	text-transform:upperCase;
+	letter-spacing:.005rem;
+	font-weight:700;
+	font-size: .7em;
+	justify-content: flex-start;
+	color:${webleger.site.style.impact.color};
+}
+.publicationCompact .publicationCompact_title {
+	margin-top:0;
+	font-size:.875em;
+}
+.publicationCompact .publicationCompact_content {
+	font-size:.8em;
+	line-height:1.5em;
+}
 
 #footer_blocks .block {
 	text-align:left;
@@ -110,5 +204,25 @@
 	#accueil {
 		padding-bottom: 8rem;
 		margin-top:48px;
+	}
+	.title .blockContent p:first-child {
+		width:60%;
+	}
+
+	.paneauPocketGroup {
+		flex-direction:column;
+		width:100% !important;
+	}
+	#paneauPocketGroup .block {
+		width:100%
+	}
+	#panneauPocket_infos .actions_list {
+		flex-direction:column;
+	}
+	.publicationCompact_items {
+		flex-direction:row;
+	}
+	.publicationCompact_items .publicationCompact{
+		width:45%;
 	}
 }

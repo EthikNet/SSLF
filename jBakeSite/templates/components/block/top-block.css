@@ -32,7 +32,6 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	width: 100%;
 	height: auto;
 	vertical-align: middle;
 	margin: auto;
@@ -40,6 +39,7 @@
 	line-height: 170%;
 	border-radius: 20px;
     margin-bottom: 10px;
+    flex-wrap:wrap;
 }
 
 .blockTitle {
@@ -68,6 +68,18 @@
 	flex-direction:column;
 }
 
+.imageBeforeTitleAndContentWithoutAfterHookSubTemplate .groupe_title_and_content_no_after_hook {
+	display:flex;
+	flex-direction:row;
+	gap:8px
+}
+.imageBeforeTitleAndContentWithoutAfterHookSubTemplate .groupe_title_and_content_no_after_hook > .titleAndContent {
+	width:100%;
+}
+.imageBeforeTitleAndContentWithoutAfterHookSubTemplate .blockIcon_wraper{
+	align-content: center;
+}
+
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (min-width: 640px) {
 	.blocks {
@@ -87,19 +99,19 @@
 	.imageLeftTitleAndContentSubTemplate {
 		flex-direction:row;
 	}
-	.onePerRow .card, .onePerRow .block{
+	.onePerRow .card, .onePerRow .block, .onePerRow .block_wraping{
 		width:98%
 	}
-	.twoPerRow .card, .twoPerRow .block{
+	.twoPerRow .card, .twoPerRow .block, .twoPerRow .block_wraping{
 		width:45%
 	}
-	.threePerRow .card, .threePerRow .block{
+	.threePerRow .card, .threePerRow .block, .threePerRow .block_wraping{
 		width:30%
 	}
-	.fourPerRow .card, .fourPerRow .block{
+	.fourPerRow .card, .fourPerRow .block, .fourPerRow .block_wraping{
 		width:23%
 	}
-	.fivePerRow .card, .fivePerRow .block{
+	.fivePerRow .card, .fivePerRow .block, .fivePerRow .block_wraping{
 		width:19%
 	}
 	.block_wraping {

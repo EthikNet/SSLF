@@ -161,15 +161,15 @@ param : content : content to search for include content
 			<#local subContents = subContents?reverse>
 		</#if>
 		
-			<#if (content.includeContent.userFilters)?? && (content.includeContent.userFilters.filters?size > 0) >
-				<#if !anchorId?has_content>
-				<#-- UserFilter REQUIRED an AnchorId, generating one as none specified in content header -->
-					<#local anchorId = common.generatedAnchorId(content.title)>
-					${logHelper.stackDebugMessage("SubContent.build (userFilter) : Generating an anchor because UserFilter REQUIRE one, id generated : " + anchorId)}
-				<#else>
-					${logHelper.stackDebugMessage("SubContent.build (userFilter) : Anchor ID already set : " + anchorId)}
-				</#if>
+		<#if (content.includeContent.userFilters)?? && (content.includeContent.userFilters.filters?size > 0) >
+			<#if !anchorId?has_content>
+			<#-- UserFilter REQUIRED an AnchorId, generating one as none specified in content header -->
+				<#local anchorId = common.generatedAnchorId(content.title)>
+				${logHelper.stackDebugMessage("SubContent.build (userFilter) : Generating an anchor because UserFilter REQUIRE one, id generated : " + anchorId)}
+			<#else>
+				${logHelper.stackDebugMessage("SubContent.build (userFilter) : Anchor ID already set : " + anchorId)}
 			</#if>
+		</#if>
 		
 		<#local specificClass = (content.includeContent.specificClass)!"">
 		<div <@generateAnchor content, anchorId /><#if specificClass?? && specificClass?has_content> class="${specificClass}"</#if>>
@@ -199,6 +199,7 @@ param : content : content to search for include content
 			<#if (hasSubTemplate)?? && hasSubTemplate?has_content>
 				<#local subTemplateInterpretation = "<@${hasSubTemplate} content subContents />"?interpret>
 				<@subTemplateInterpretation/>
+				</div>
 				<#return>
 			<#elseif (listDisplayType == "table")>
 				<@generateUserFilters content subContents "#"+anchorId+" ."+listDisplayType/>

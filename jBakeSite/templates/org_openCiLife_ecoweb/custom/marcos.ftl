@@ -48,17 +48,25 @@
 	</#if>
 </#macro>
 
-<#macro displayTags content, label="Tags">
+<#macro displayTags content, label="Tags", style="list">
 	<#if (content.tags)?? && (content.tags?size > 0) >
 		<#if (label)?? && (label?has_content)>
 			<span>Tags : </span>
 		</#if>
-		<ul class="content_tags">
-		<#list content.tags as tag>
-			<li>${tag}</li>
-		</#list>
-		</ul>
 	</#if>
+	<#if style=="list">
+		<@displayAsHtmlList content.tags "content_tags"/>
+	<#else>
+		${propertiesHelper.sequenceToString(content.tags)}
+	</#if>
+</#macro>
+
+<#macro displayAsHtmlList elements, listClass, elementTag="">
+	<ul<#if listClass?? && listClass?has_content> class="${listClass}"</#if>>
+	<#list elements as el>
+		<li<#if elementTag?? && elementTag?has_content> class="${elementTag}"</#if>>${el}</li>
+	</#list>
+	</ul>
 </#macro>
 
 <#function retrieveMetaDescription content>
