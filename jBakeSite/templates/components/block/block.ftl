@@ -154,17 +154,21 @@
 <#macro generateTitle block contentImageBefore=false>
 	<#if (block.title)?? && block.title?has_content && !((block.displayTitle)?? && block.displayTitle == "false")>
 		<#local titleTag = "h2">
+		<#local customCssClass = "block_title_image">
+		<#if (block.contentImageSpecificClass)?? && block.contentImageSpecificClass?has_content>
+			<#local customCssClass = customCssClass + " " + block.contentImageSpecificClass>
+		</#if>
 		<#if (block.titleTag)??>
 			<#local titleTag = block.titleTag>
 		</#if>
-		<${titleTag} class="blockTitle"><#escape x as x?xml>
+		<${titleTag} class="blockTitle">
 		<#if (block.beforeTitleImage?has_content)>
-			<@common.addImageIcon block.beforeTitleImage "block_title_image" block.title/>
+			<@common.addImageIcon block.beforeTitleImage customCssClass block.title/>
 		</#if>
 		<#if (contentImageBefore)>
-			<@common.addImageIcon block.contentImage "block_title_image" block.title/>
+			<@common.addImageIcon block.contentImage customCssClass block.title/>
 		</#if>
-		${block.title}</#escape>
+		<span><#escape x as x?xml>${block.title}</#escape></span>
 		</${titleTag}>
 	</#if>
 </#macro>

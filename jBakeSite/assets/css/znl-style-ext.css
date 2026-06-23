@@ -41,6 +41,26 @@
 	height:auto;
 }
 
+.green {
+	color:hsl(92.14,57.32%,97.13%);
+	background-color:hsl(133.55,100%,23.74%,0.2);
+}
+.light_green {
+	color:hsl(92.14,57.32%,97.13%);
+	background-color:hsl(133.55,100%,23.74%,0.1);
+}
+.blue {
+	color:hsl(194.31 100% 17.38%);
+	background-color:hsl(191.81,100%,36.82%,0.15);
+}
+.orange {
+	color:hsl(24.57 100% 24.82%);
+	background-color:hsl(30.96,100%,48.44%,0.2);
+}
+.round {
+	border-radius:9999px;
+}
+
 .imageHeroSection {
 	    margin-bottom: 2rem;
 }
@@ -115,7 +135,7 @@
 	width:100%
 }
 
-.section > .blockTitle {
+.section > .blockTitle, .section > .groupe_content > .blockTitle {
 	text-transform:uppercase;
 	letter-spacing: .2em;
 	font-weight:750;
@@ -179,6 +199,30 @@
 	line-height:1.5em;
 }
 
+.notreTeritoire .blockIcon_wraper img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+.cardWithDetailsSubTemplate {
+	border-radius:24px;
+	margin:6px;
+	padding:6px 6px 0 6px;
+	border:1px solid ${webleger.site.style.discret.background.color};
+	background-color:${webleger.site.style.card.background.color};
+}
+
+.cardWithDetailsSubTemplate .blockTitle {
+	margin-top:0;
+	font-size:.875em;
+}
+.cardWithDetailsSubTemplate .blockTitle img {
+	border-radius: 99999px;
+	padding: 0.2em;
+}
+    
+
 #footer_blocks .block {
 	text-align:left;
 }
@@ -198,6 +242,12 @@
 	.preHeader .blockContent {
 		margin-left: 25px;
 	}
+	.cardWithDetailsSubTemplate .blockBody {
+		flex-direction:column;
+		align-items:start;
+		
+	}
+
 	.imageHeroSection {
 	    margin-bottom: 5rem;
 	}

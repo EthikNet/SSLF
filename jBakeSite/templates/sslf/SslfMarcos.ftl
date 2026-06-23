@@ -106,3 +106,20 @@
 	</div> <!-- End Main  Block -->
 	</div>
 </#macro>
+
+<#macro cardWithDetailsSubTemplate theBlock>
+	<div <@block.generateAnchor theBlock/> <@block.generateCssClass theBlock "cardWithDetailsSubTemplate"/> <#if customCssStyle?has_content>style="${customCssStyle}"</#if>>
+		<@block.generateTitle theBlock true/>
+		<div class="blockBody">
+			<@common.buildLocation theBlock/>
+			<@common.buildPhone theBlock/>
+			<@common.buildHours theBlock/>
+			<@common.buildFiles theBlock/>
+			<@common.buildDates theBlock/>
+			<@common.buildDateTimes theBlock/>
+			
+			<@block.generateBodyContent theBlock/>
+		</div>
+	</div>
+
+</#macro>

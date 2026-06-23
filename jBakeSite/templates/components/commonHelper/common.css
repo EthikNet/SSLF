@@ -1,0 +1,31 @@
+.blockTitle{
+	display:flex;
+	flex-direction:row;
+	gap:6px;
+	flex-wrap:nowrap;
+	align-items:center;
+}
+
+.elementWithIconSmallWrap{
+	display:flex;
+	flex-direction:row;
+	align-items: center;
+	justify-content: start;
+	flex-wrap:nowrap;
+	gap:6px;
+}
+
+.iconWrap {
+	width:24px;
+	height:auto;
+}
+.iconWrap svg, .iconWrap img{
+	width: 24px;
+	height: auto;
+	border-radius: 99999px;
+	padding: 0.2em;
+}
+.location, .phone, .hours{
+	font-size: small;
+	line-height: 1.5em;
+}

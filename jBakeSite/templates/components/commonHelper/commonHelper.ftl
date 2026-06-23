@@ -88,8 +88,21 @@ return : text with URL transformed
 	<#return isSvg>
 </#function>
 
-<#macro addImageIcon image cssClass="" alternativeText="" wrapTo="span class=\""+cssClass+"_wraper\"">
+<#macro addImageIcon image cssClass="" alternativeText="" wrapTo="__default__">
 	<#if (image)??>
+		<#if wrapTo == "__default__">
+			<#local wrapToCssClass = cssClass+ "_wraper">
+			<#local allClassesSeq = cssClass?split(" ")>
+			<#if (allClassesSeq?size>1)>
+				<#local wrapToCssClass = allClassesSeq[0] + "_wrapper">
+				<#list allClassesSeq[1..allClassesSeq?size-1] as aWrappCssClass>
+				<#local wrapToCssClass = wrapToCssClass + " " + aWrappCssClass>
+				</#list>
+			</#if>
+			
+			<#local wrapTo="span class=\""+wrapToCssClass+"\"">
+		</#if>
+	
 		<#if common.isSvg(image)>
 			<@wrap wrapTo>
 				<span <#if cssClass?has_content>class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>
@@ -226,3 +239,91 @@ param : theObject : object to transform in String
 	</#if>
 	<#return theList>
 </#function>
+
+
+<#macro buildLocation theContent>
+	<#if (theContent.location)?? && theContent.location?has_content>
+		<div class="elementWithIconSmallWrap">
+			<div class="iconWrap">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground" aria-hidden="true">
+					<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle>
+				</svg>
+			</div>
+			<div class="location">${theContent.location}</div>
+		</div>
+	</#if>
+</#macro>
+
+<#macro buildPhone theContent>
+	<#if (theContent.phone)?? && theContent.phone?has_content>
+		<div class="elementWithIconSmallWrap">
+			<div class="iconWrap">
+				<img src="${buildRootPathAwareURL("images/icones/telephone.svg")}">
+			</div>
+			<div class="phone">${theContent.phone}</div>
+		</div>
+	</#if>
+</#macro>
+
+<#macro buildHours theContent>
+	<#if (theContent.hours)?? && theContent.hours?has_content>
+		<#local hoursItems = theContent.hours?split(",")>
+		<#list hoursItems as anHour>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap">
+					<img src="${buildRootPathAwareURL("images/icones/horloge.svg")}">
+				</div>
+				<div class="hours">${anHour}</div>
+			</div>
+		</#list>
+	</#if>
+</#macro>
+
+<#macro buildFiles theContent>
+	<#if (theContent.files)?? && theContent.files?has_content && (theContent.files.data)?? && theContent.files.data?has_content>
+		<#list theContent.files.data as aFile>
+			<div class="elementWithIconSmallWrap">
+				<a class="btn btn-default" href="${buildRootPathAwareURL(aFile.location)}" target="_blank">
+					<#if (aFile.icone)?? && aFile.icone?has_content>
+						<#local customCssClass="">
+						<#if (aFile.specificClass)?? && aFile.specificClass?has_content>
+							<#local customCssClass=aFile.specificClass>
+						</#if>
+						<span class="iconWrap">
+							<@common.addImageIcon aFile.icone customCssClass aFile.label/>
+						</span>
+					</#if>
+					<span class="label">${aFile.label}</span>
+				</a>
+			</div>
+		</#list>
+	</#if>
+</#macro>
+
+<#macro buildDates theContent>
+	<#if (theContent.dates)?? && theContent.dates?has_content>
+		<#local datesItems = theContent.dates?split(",")>
+		<#list datesItems as dateItem>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap">
+					<img src="${buildRootPathAwareURL("images/icones/horloge.svg")}">
+				</div>
+				<div class="hours">${dateItem?date("yyyy-MM-dd")?string("'le 'dd MMM yyyy")}</div>
+			</div>
+		</#list>
+	</#if>
+</#macro>
+
+<#macro buildDateTimes theContent>
+	<#if (theContent.dateTimes)?? && theContent.dateTimes?has_content>
+		<#local dateTimesItems = theContent.dateTimes?split(",")>
+		<#list dateTimesItems as dateTimeItem>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap">
+					<img src="${buildRootPathAwareURL("images/icones/horloge.svg")}">
+				</div>
+				<div class="hours">${dateTimeItem?datetime.iso?string("'le 'dd MMM yyyy' à 'HH:mm")}</div>
+			</div>
+		</#list>
+	</#if>
+</#macro>
