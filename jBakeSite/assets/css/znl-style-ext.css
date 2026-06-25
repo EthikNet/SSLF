@@ -72,6 +72,9 @@
 .imageHeroSection {
 	    margin-bottom: 2rem;
 }
+.imageHeroMask {
+	
+}
 .vaguesSvg {
 	z-index:5;
 	color:${webleger.site.style.background.color};
@@ -293,7 +296,7 @@
 	.imageHeroSection {
 	    margin-bottom: 5rem;
 	}
-	#accueil {
+	.title {
 		padding-bottom: 8rem;
 		margin-top:48px;
 	}
