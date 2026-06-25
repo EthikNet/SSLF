@@ -6,6 +6,7 @@ status=published
 displayDate=false
 displayTitle=false
 displayBreadcrumb=false
+displayTags=false
 specificClass=hp
 order=001
 ~~~~~~

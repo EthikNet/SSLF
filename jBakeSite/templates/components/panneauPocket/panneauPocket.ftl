@@ -25,7 +25,7 @@
 		<#local loadingMode = theContent.panneauPocket.loadingMode!"Lazy">
 		<#local referrerPolicy = theContent.panneauPocket.referrerPolicy!"no-referrer-when-downgrade">
 		<#local height = theContent.panneauPocket.height!"748px">
-		<#local width = theContent.panneauPocket.width!"418px">
+		<#local width = theContent.panneauPocket.width!"100%">
 		<#local specificClass = theContent.panneauPocket.specificClass!"">
 		
 		<#local frameTitle = "PanneauPocket">

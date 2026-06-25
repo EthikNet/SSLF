@@ -304,12 +304,7 @@ param : theObject : object to transform in String
 	<#if (theContent.dates)?? && theContent.dates?has_content>
 		<#local datesItems = theContent.dates?split(",")>
 		<#list datesItems as dateItem>
-			<div class="elementWithIconSmallWrap">
-				<div class="iconWrap">
-					<img src="${buildRootPathAwareURL("images/icones/horloge.svg")}">
-				</div>
-				<div class="hours">${dateItem?date("yyyy-MM-dd")?string("'le 'dd MMM yyyy")}</div>
-			</div>
+			<@createDateElement dateItem?date("yyyy-MM-dd")?string("'le 'dd MMM yyyy") />
 		</#list>
 	</#if>
 </#macro>
@@ -318,12 +313,39 @@ param : theObject : object to transform in String
 	<#if (theContent.dateTimes)?? && theContent.dateTimes?has_content>
 		<#local dateTimesItems = theContent.dateTimes?split(",")>
 		<#list dateTimesItems as dateTimeItem>
+			<@createDateElement dateTimeItem?datetime.iso?string("'le 'dd MMM yyyy' à 'HH:mm") />
+		</#list>
+	</#if>
+</#macro>
+
+<#macro buildFreeDate theContent>
+	<#if (theContent.freeDate)?? && theContent.freeDate?has_content>
+		<#local freeDateItems = theContent.freeDate?split(",")>
+		<#list freeDateItems as freeDateItem>
+			<@createDateElement freeDateItem />
+		</#list>
+	</#if>
+</#macro>
+
+<#macro createDateElement formatedDate>
+	<div class="elementWithIconSmallWrap">
+		<div class="iconWrap">
+			<img src="${buildRootPathAwareURL("images/icones/horloge.svg")}">
+		</div>
+		<div class="hours">${formatedDate}</div>
+	</div>
+</#macro>
+
+<#macro buildEmail theContent>
+	<#if (theContent.email)?? && theContent.email?has_content>
+		<#local emailItems = theContent.email?split(",")>
+		<#list emailItems as emailItem>
 			<div class="elementWithIconSmallWrap">
-				<div class="iconWrap">
-					<img src="${buildRootPathAwareURL("images/icones/horloge.svg")}">
-				</div>
-				<div class="hours">${dateTimeItem?datetime.iso?string("'le 'dd MMM yyyy' à 'HH:mm")}</div>
-			</div>
+		<div class="iconWrap">
+			<img src="${buildRootPathAwareURL("images/icones/email.svg")}">
+		</div>
+		<div class="email">${emailItem}</div>
+	</div>
 		</#list>
 	</#if>
 </#macro>

@@ -9,7 +9,6 @@ action={"disposition":"center", "specificClass":"panneauPocket_cta", "data":[{"t
 contentImage=images/nature-path.jpg
 hooks={"data":[{"position":"afterBlockBody", "action":"action.build", "renderOnce":true, "order":30}]}
 specificClass=section notreTeritoire
-anchorId=notre_teritoire
 order=140
 ~~~~~~
 ## Vivre, travailler et s'épanouir au cœur de la France verdoyante

@@ -7,7 +7,6 @@ tags=
 status=published
 hooks={"data":[{"position":"afterBlockBody", "action":"block.build", "renderOnce":true, "order":30}]}
 specificClass=section auQuotidien
-anchorId=au_quotidien
 order=150
 ~~~~~~
 ## Infos utiles

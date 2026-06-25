@@ -24,6 +24,10 @@
 	background-color:${webleger.site.style.primary.color};
 }
 
+.discret, .primary .discret, .secondaty .discret {
+	opacity:50%;
+}
+
 #preHeader_blocks {
 	display: flex;
 	flex-direction: column-reverse;
@@ -61,6 +65,10 @@
 	border-radius:9999px;
 }
 
+.secondary strong{
+	color:black;
+}
+
 .imageHeroSection {
 	    margin-bottom: 2rem;
 }
@@ -72,7 +80,7 @@
 	z-index:6;
 }
 
-#accueil {
+.title {
 	padding-bottom: 2rem;
 	margin-top:12px;
 }
@@ -163,6 +171,10 @@
 	padding-bottom:0;
 }
 
+.panneauPocket_infos {
+	border-radius: 25px;
+}
+
 .lastPublications .block_wraping{
 	width:100%;
 }
@@ -222,18 +234,49 @@
 	padding: 0.2em;
 }
     
-
+#sectionFooter {
+	background-color:${webleger.site.style.secondary.background.color};
+}
 #footer_blocks .block {
 	text-align:left;
 }
 #footer_blocks .blockBody {
-	flex-direction: row;
+	flex-direction: column;
+	align-items:flex-start;
 }
 
+#footer_blocks .blockTitle > span {
+	letter-spacing: -.025em;
+	font-weight: bold;
+	font-size: large;
+	color:${webleger.site.style.color};
+}
+
+#footer_blocks .block:not(#contact) .blockTitle > span {
+	text-transform:uppercase;
+}
+
+
+#footer_blocks #contact .block_title_image_wraper img {
+	width:80px;
+	border-radius:99999px;
+}
+
+.footerLogoMessage {
+	font-size: 0.80em;
+}
+.footerSecondRow {
+	font-size: 0.85em;
+}
+.firstInRow {
+	border-top: 1px solid ${webleger.site.style.secondary.hr.color};
+}
+.lastInRow{
+	text-align: right;
+}
+
+
 @media screen and (min-width: 640px) {
-	#footer_blocks .block {
-		width:31%;
-	}
 	#preHeader_blocks {
 		flex-direction: row-reverse;
 		justify-content: flex-start;
@@ -245,7 +288,6 @@
 	.cardWithDetailsSubTemplate .blockBody {
 		flex-direction:column;
 		align-items:start;
-		
 	}
 
 	.imageHeroSection {
@@ -274,5 +316,12 @@
 	}
 	.publicationCompact_items .publicationCompact{
 		width:45%;
+	}
+	
+	.footerSecondRow {
+		width:50% !important;
+		margin-top: 24px;
+		padding-top: 24px
+		border-top: 1px solid ${webleger.site.style.secondary.hr.color};
 	}
 }

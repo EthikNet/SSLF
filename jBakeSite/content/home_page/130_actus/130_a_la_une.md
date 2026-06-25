@@ -6,7 +6,6 @@ includeBlocks={"category":"AlaUne", "wrap":{"enable":"true", "specificClass":"AL
 tags=
 status=published
 specificClass=section
-anchorId=a_la_une
 hooks={"data":[{"position":"afterBlockBody", "action":"block.build", "renderOnce":true, "order":30}]}
 order=130
 ~~~~~~

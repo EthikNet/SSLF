@@ -1227,7 +1227,7 @@ th {
 
 .secondary b,
 .secondary strong {
-	color:${webleger.site.style.primary.impact.color}
+	color:${webleger.site.style.secondary.impact.color}
 }
 
 .secondary a {

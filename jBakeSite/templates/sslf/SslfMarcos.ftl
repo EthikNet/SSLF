@@ -108,11 +108,20 @@
 </#macro>
 
 <#macro cardWithDetailsSubTemplate theBlock>
-	<div <@block.generateAnchor theBlock/> <@block.generateCssClass theBlock "cardWithDetailsSubTemplate"/> <#if customCssStyle?has_content>style="${customCssStyle}"</#if>>
-		<@block.generateTitle theBlock true/>
+	<@detailsSubTemplate theBlock "cardWithDetailsSubTemplate" />
+</#macro>
+
+<#macro detailsSubTemplate theBlock specificClass="">
+	<div <@block.generateAnchor theBlock/> <@block.generateCssClass theBlock specificClass/> <#if customCssStyle?has_content>style="${customCssStyle}"</#if>>
+		<#if (theBlock.contentImage)?? && theBlock.contentImage?has_content>
+			<@block.generateTitle theBlock true/>
+		<#else>
+			<@block.generateTitle theBlock/>
+		</#if>
 		<div class="blockBody">
 			<@common.buildLocation theBlock/>
 			<@common.buildPhone theBlock/>
+			<@common.buildEmail theBlock/>
 			<@common.buildHours theBlock/>
 			<@common.buildFiles theBlock/>
 			<@common.buildDates theBlock/>
@@ -121,5 +130,4 @@
 			<@block.generateBodyContent theBlock/>
 		</div>
 	</div>
-
 </#macro>

@@ -49,15 +49,15 @@
 </#macro>
 
 <#macro displayTags content, label="Tags", style="list">
-	<#if (content.tags)?? && (content.tags?size > 0) >
+	<#if (content.tags)?? && (content.tags?size > 0) && !((block.displayTags)?? && block.displayTags == "false")>
 		<#if (label)?? && (label?has_content)>
 			<span>Tags : </span>
 		</#if>
-	</#if>
-	<#if style=="list">
-		<@displayAsHtmlList content.tags "content_tags"/>
-	<#else>
-		${propertiesHelper.sequenceToString(content.tags)}
+		<#if style=="list">
+			<@displayAsHtmlList content.tags "content_tags"/>
+		<#else>
+			${propertiesHelper.sequenceToString(content.tags)}
+		</#if>
 	</#if>
 </#macro>
 

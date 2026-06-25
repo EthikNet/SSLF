@@ -1,12 +1,13 @@
-title=Contact
+title=Saint-Sulpice-les-Feuilles
+date=2026-06-22
 type=org_openCiLife_block
-subTemplate=imageLeftSubTemplate
+subTemplate=imageBeforeTitleSubTemplate
 category=footer
 tags=
 status=published
-specificClass=actions
-contentImage=images/contact.svg
+contentImage=images/common/logo_left-small.jpg
+specificClass=footerLogoMessage
 anchorId=contact
-order=9
+order=902
 ~~~~~~
-En cours de construction
+Commune de la Haute-Vienne, au cœur du Limousin. Site officiel d'information.

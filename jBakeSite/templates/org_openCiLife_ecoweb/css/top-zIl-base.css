@@ -67,7 +67,7 @@ a.no_state:active {
 }
 
 .primary [data-href]:hover {
-	color: ${webleger.site.style.color};
+	color: ${webleger.site.primary.style.color};
 }
 
 .secondary a.no_state:link, 
@@ -91,7 +91,7 @@ a.no_state:active {
 
 .secondary .btn-secondary.no_state:link, 
 .secondary .btn-secondary.no_state:visited {
-  color: ${webleger.site.style.color};
+  color: ${webleger.site.secondary.style.color};
 }
 
 .secondary .btn-secondary.no_state:hover, 
@@ -100,7 +100,7 @@ a.no_state:active {
 }
 
 .secondary [data-href]:hover {
-	color: ${webleger.site.style.color};
+	color: ${webleger.site.secondary.style.color};
 }
 
 .featured_label {
@@ -127,6 +127,17 @@ a.no_state:active {
 	color: ${webleger.site.style.discret.color};
 	background-color: ${webleger.site.style.discret.background.color};
 }
+
+.primary .discret {
+	color: ${webleger.site.style.primary.discret.color};
+	background-color: ${webleger.site.style.primary.discret.background.color};
+}
+
+.secondary .discret {
+	color: ${webleger.site.style.secondary.discret.color};
+	background-color: ${webleger.site.style.secondary.discret.background.color};
+}
+
 
 .text-muted-foreground {
 	color:${webleger.site.style.muted.foreground};
