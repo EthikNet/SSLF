@@ -28,6 +28,14 @@
 	opacity:50%;
 }
 
+.elementWithIconSmallWrap.main .btn-default {
+	color:${webleger.site.style.primary.background.color.medium}
+}
+
+.btn-primary.dowloadLink .label {
+	color:${webleger.site.style.primary.color};
+}
+
 #preHeader_blocks {
 	display: flex;
 	flex-direction: column-reverse;
@@ -72,9 +80,7 @@
 .imageHeroSection {
 	    margin-bottom: 2rem;
 }
-.imageHeroMask {
-	
-}
+
 .vaguesSvg {
 	z-index:5;
 	color:${webleger.site.style.background.color};
@@ -106,10 +112,10 @@
 	border-radius: 30px;
 	z-index:50;
 	position:relative;
+	z-index:5;
 	border-color:${webleger.site.style.color};
 	color:${webleger.site.style.background.color};
 }
-
 .action_button.btn-default {
 	color:${webleger.site.style.primary.background.color}!important;
 }
@@ -130,6 +136,15 @@
 .hp iframe {
 	border-radius:5%!important;
     border: 2px solid ${webleger.site.style.discret.background.color}!important;
+}
+
+.pageContent .activeFilter, .pageContent .btn-default:focus {
+	color: ${webleger.site.style.background.color};
+	background-color: ${webleger.site.style.impact.color};
+    border-color: ${webleger.site.style.background.color};
+}
+.pageContent .btn-default:focus {
+	font-weight:bolder;
 }
 
 .facebook_cta {
@@ -182,42 +197,63 @@
 	width:100%;
 }
 
-.publicationCompact_items {
+.publication_items {
 	display:flex;
 	flex-direction:column;
 	flex-wrap:wrap;
 }
 
-.publicationCompact {
+.publication {
 	border-radius:24px;
-	margin:6px;
-	padding:6px 6px 0 6px;
+	margin:10px;
+	padding:12px;
 	border:1px solid ${webleger.site.style.discret.background.color};
 	background-color:${webleger.site.style.card.background.color};
 }
-.publicationCompact_identification {
+.publication_identification {
 	display:flex;
 	gap:0.05rem;
 	text-transform:upperCase;
 	letter-spacing:.005rem;
 	font-weight:700;
-	font-size: .7em;
 	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
 	color:${webleger.site.style.impact.color};
 }
-.publicationCompact .publicationCompact_title {
+
+.publication .publication_title {
 	margin-top:0;
-	font-size:.875em;
+	font-size:1.3em;
+	color:black;
 }
-.publicationCompact .publicationCompact_content {
+.publication.full .publication_title {
+	margin-top:12px;
+	font-size:x-large;
+	color:black;
+}
+.publication .publication_exerpt {
+	line-height:1.3em;
+}
+.publication.full .publication_exerpt {
+	font-weight:500;
+	padding-bottom:6px;
+}
+.publication .publication_content {
 	font-size:.8em;
 	line-height:1.5em;
+}
+.publication.full .publication_content {
+	font-size:inherit;
+	line-height:inherit;
 }
 
 .notreTeritoire .blockIcon_wraper img {
 	width: 100%;
 	height: auto;
 	max-width: 100%;
+	border-radius:40px;
 }
 
 .cardWithDetailsSubTemplate {
@@ -309,15 +345,21 @@
 		width:100% !important;
 	}
 	#paneauPocketGroup .block {
-		width:100%
+		width:100%;
 	}
 	#panneauPocket_infos .actions_list {
 		flex-direction:column;
 	}
-	.publicationCompact_items {
+	
+	.publication_list {
+		display:flex;
+		flex-wrap: wrap;
 		flex-direction:row;
 	}
-	.publicationCompact_items .publicationCompact{
+	.publication_list .publication{
+		width:98%;
+	}
+	.publication_list .full{
 		width:45%;
 	}
 	

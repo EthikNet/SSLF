@@ -103,17 +103,13 @@ return : text with URL transformed
 			<#local wrapTo="span class=\""+wrapToCssClass+"\"">
 		</#if>
 	
-		<#if common.isSvg(image)>
-			<@wrap wrapTo>
-				<span <#if cssClass?has_content>class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>
-					${image}
-				</span>
-			</@wrap>
-		<#else>
-			<@wrap wrapTo>
+		<@wrap wrapTo>
+			<#if common.isSvg(image)>
+				<span <#if cssClass?has_content>class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>${image}</span>
+			<#else>
 				<img src="${common.buildRootPathAwareURL(image)}"<#if cssClass?has_content> class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>
-			</@wrap>
-		</#if>
+			</#if>
+		</@wrap>
 	</#if>
 </#macro>
 
@@ -279,18 +275,27 @@ param : theObject : object to transform in String
 	</#if>
 </#macro>
 
-<#macro buildFiles theContent>
+<#macro buildFiles theContent beforeList="">
 	<#if (theContent.files)?? && theContent.files?has_content && (theContent.files.data)?? && theContent.files.data?has_content>
+		<#if beforeList?? && beforeList?has_content>${beforeList}</#if>
 		<#list theContent.files.data as aFile>
-			<div class="elementWithIconSmallWrap">
-				<a class="btn btn-default" href="${buildRootPathAwareURL(aFile.location)}" target="_blank">
-					<#if (aFile.icone)?? && aFile.icone?has_content>
-						<#local customCssClass="">
-						<#if (aFile.specificClass)?? && aFile.specificClass?has_content>
-							<#local customCssClass=aFile.specificClass>
+			<#local specificClass="">
+			<#if (aFile.specificClass)?? && (aFile.specificClass?has_content)>
+				<#local specificClass=aFile.specificClass>
+			</#if>
+			<#local btnSpecificClass="btn-default dowloadLink">
+			<#if (aFile.main)?? && (aFile.main?has_content) && (aFile.main == true)>
+				<#local btnSpecificClass="btn-primary dowloadLink">
+			</#if>
+			<div class="elementWithIconSmallWrap<#if specificClass?has_content> ${specificClass}</#if>">
+				<a class="btn ${btnSpecificClass}" href="${buildRootPathAwareURL(aFile.location)}" target="_blank">
+					<#if (aFile.icon)?? && aFile.icon?has_content>
+						<#local customCssClass="dowloadLink">
+						<#if (aFile.iconSpecificClass)?? && aFile.iconSpecificClass?has_content>
+							<#local customCssClass=customCssClass + " " + aFile.iconSpecificClass>
 						</#if>
 						<span class="iconWrap">
-							<@common.addImageIcon aFile.icone customCssClass aFile.label/>
+							<@common.addImageIcon aFile.icon customCssClass aFile.label/>
 						</span>
 					</#if>
 					<span class="label">${aFile.label}</span>
@@ -329,9 +334,7 @@ param : theObject : object to transform in String
 
 <#macro createDateElement formatedDate>
 	<div class="elementWithIconSmallWrap">
-		<div class="iconWrap">
-			<img src="${buildRootPathAwareURL("images/icones/horloge.svg")}">
-		</div>
+		<div class="iconWrap"><img src="${buildRootPathAwareURL("images/icones/horloge.svg")}"></div>
 		<div class="hours">${formatedDate}</div>
 	</div>
 </#macro>
@@ -341,11 +344,9 @@ param : theObject : object to transform in String
 		<#local emailItems = theContent.email?split(",")>
 		<#list emailItems as emailItem>
 			<div class="elementWithIconSmallWrap">
-		<div class="iconWrap">
-			<img src="${buildRootPathAwareURL("images/icones/email.svg")}">
-		</div>
-		<div class="email">${emailItem}</div>
-	</div>
+				<div class="iconWrap"><img src="${buildRootPathAwareURL("images/icones/email.svg")}"></div>
+				<div class="email">${emailItem}</div>
+			</div>
 		</#list>
 	</#if>
 </#macro>

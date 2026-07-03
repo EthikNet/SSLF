@@ -1,5 +1,5 @@
 <#function getComponnentInfo>
-	<#return {"componnentVersion":2, "name":"panneauPocket", "description":"Allow to embed Panneau Pocket", "version":"0.1.0", "recommandedNamespace":"panneauPocket", "require":[{"value":"stripe", "type":"contentHeader"}, {"value":"webleger.component.stripe.apiKey", "type":"config"}], "uses":[{"value":"langHelper", "type":"lib"}, {"value":"logHelper", "type":"lib"}]}>
+	<#return {"componnentVersion":2, "name":"panneauPocket", "description":"Allow to embed Panneau Pocket", "version":"0.1.0", "recommandedNamespace":"panneauPocket", "require":[{"value":"panneauPocket", "type":"contentHeader"}], "uses":[{"value":"logHelper", "type":"lib"}]}>
 </#function>
 
 <#function init>

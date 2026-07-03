@@ -29,3 +29,9 @@
 	font-size: small;
 	line-height: 1.5em;
 }
+
+.dowloadLink {
+	border-radius: 29px;
+	padding: 0 12px;
+	margin: 6px;
+}

@@ -13,97 +13,52 @@
 </svg>
 </#macro>
 
-<#macro publicationCompactSubTemplate theContent items>
-	<#local className = "publicationCompact">
-	<#local maxItemToDisplay = theContent.includeContent.limit!-1>
-	<#local orderBy = theContent.includeContent.order!"order">
-	<#local orderDirection = theContent.includeContent.orderDirection!"ascending">
-	<#local specificContentClass = (theContent.includeContent.display.specificClass)!"">
-	<#local displayTitle = true>
-	<#if (theContent.includeContent.display.displayTitle)?? && theContent.includeContent.display.displayTitle == false>
-		<#local displayTitle = false>
-	</#if>
-	<#local subContentDisplayContentMode = (theContent.includeContent.display.content)!"link">
-	<#local subContentDisplayTags = (theContent.includeContent.display.displayTags)!false>
-	<#local filter = theContent.includeContent.filter!"">
-	<#local anchorId = theContent.anchorId!"">	
-	
-	<@subcontent.generateUserFilters theContent items "#"+anchorId+" ."+className/>
-	
-	<#if (theContent.includeContent.userFilters)?? && (theContent.includeContent.userFilters.filters?size > 0) >
-		<#if !anchorId?has_content>
-		<#-- UserFilter REQUIRED an AnchorId, generating one as none specified in content header -->
-			<#local anchorId = common.generatedAnchorId(content.title)>
-			${logHelper.stackDebugMessage("SubContent.build (userFilter) : Generating an anchor because UserFilter REQUIRE one, id generated : " + anchorId)}
-		<#else>
-			${logHelper.stackDebugMessage("SubContent.build (userFilter) : Anchor ID already set : " + anchorId)}
+
+<#macro publicationCompactSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<@publication theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage "compact" />
+</#macro>
+
+<#macro publicationSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<@publication theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage "full" />
+</#macro>
+
+<#macro publication theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage type>
+	<div class="${className}_block" data-href="${common.buildRootPathAwareURL(item.uri)}">
+		<#if featauredText?has_content>
+			<span class="featured_label">${featauredText}</span>
 		</#if>
-	</#if>
-	
-	<div class="${className}_list content_type_${subContentDisplayContentMode}">
-		<div class="${className}_items">
-			<#list items as subContent>
-				<#if (maxItemToDisplay!=-1) && (subContent?counter > maxItemToDisplay) >
-					<#break>
+		<div class="${className}_body">
+			<div class="${className}_identification">
+				<@common.addImageIcon '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>' className+"_image" "dates"/>
+				${item.date?date?string.long} · ${item.pubCateg!"Général"}
+			</div>
+			<#if (item.contentImage)??>
+				<@common.addImageIcon item.contentImage className+"_image" item.title/>
+			</#if>
+			
+			<#if displayTitle>						
+				<h3 class="${className}_title"><#rt>
+				<#if (subContentBeforeTitleImage?has_content)>
+					<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
 				</#if>
-				<#local altSubContent = commonInc.propagateContentChain(subContent) />
+					<#t>${item.title!""}
+				<#lt></h3>
+			</#if>
+			
+			<#if (item.exerpt??)>
+				<div class="${className}_exerpt">
+					${item.exerpt!""}
+				</div>
+			</#if>
+			
+			<#if type!="compact">
+				<div class="${className}_content">
+					${item.body!""}
+				</div>
 				
-				<#if (altSubContent.featured)??>
-					<#local specificContentClass = specificContentClass + " featured">
-					<#if (altSubContent.featured.text)??>
-						<#local featauredText = altSubContent.featured.text>
-					</#if>
-				</#if>
-				
-				<#if (altSubContent.includeContent.hooks)??>
-					<#if logHelper??>
-						${logHelper.stackDebugMessage("SubContent.build(publicationCompactSubTemplate) : Custom Hooks detected for : " + altSubContent.uri + " : " + common.toString(content.includeContent.hooks))}
-					</#if>
-					<#if hookHelper??>
-						<#if logHelper??>
-							${logHelper.stackDebugMessage("SubContent.build(publicationCompactSubTemplate) : Registering Custom Hooks")}
-						</#if>
-						${hookHelper.registerHookFromJson(altSubContent.includeContent.hooks)}
-					</#if>
-				</#if>
-				
-				<div class="${className}">
-				<@subcontent.generateUserFiltersElementData theContent subContent />
-					<div class="${className}_block">
-						<#if featauredText?has_content>
-							<span class="featured_label">${featauredText}</span>
-						</#if>
-						<div class="${className}_body">
-						<div class="${className}_identification">
-							${altSubContent.date?date?string.long} · <@ecoWeb.displayTags altSubContent "" ", "/>
-						</div>
-							<#if (altSubContent.contentImage)??>
-								<@common.addImageIcon altSubContent.contentImage className+"_image" altSubContent.title/>
-							</#if>
-							<#if (altSubContent.exerpt??)>
-								<div class="${className}_exerpt">
-									${altSubContent.exerpt!""}
-								</div>
-							</#if>
-							
-							<#if displayTitle>						
-								<h3 class="${className}_title"><#rt>
-								<#if (subContentBeforeTitleImage?has_content)>
-									<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
-								</#if>
-									<#t>${altSubContent.title!""}
-								<#lt></h3>
-							</#if>
-							<div class="${className}_content">
-								${altSubContent.body!""}
-							</div>
-						</div> <!-- End Body Item -->
-					</div> <!-- end item Wrap Block -->
-					</div>
-				</#list>
-			</div><! -- End internal wrap items -->
-		<div> <!-- End Items -->
-	</div> <!-- End Main  Block -->
+				<@common.buildFiles item "<hr/>"/>
+			</#if>
+		</div>
 	</div>
 </#macro>
 

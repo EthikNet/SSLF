@@ -11,13 +11,13 @@ $(document).ready(function(){
 	userFiltersDiv.find(".userFilter_all").removeClass('activeFilter');
 	clickedButton.toggleClass('activeFilter');
 	//reset
-	var allCards = subContentBlock.children(".elementsList").children();
+	var allCards = subContentBlock.find(".elementsList").children();
 	console.log("UserFilters : reseting " + allCards.size() + " elements");
 	allCards.removeClass("hiddenElement");
 	allCards.toggle(true);
 	
 	var handleLast = [];
-	//add class for diltering
+	//add class for filtering
 	allFiltersGroup.each(function() {
 		var allowMultiple = true;
 		var currentGroup = $(this);
@@ -64,7 +64,17 @@ $(document).ready(function(){
 				var buttonValue = currentButton.text();
 				var isButtonActive = currentButton.hasClass("activeFilter");
 				
-				var isCardShouldBeVisible = buttonValue.toLowerCase().indexOf(currentElement.text().toLowerCase()) > -1;
+				isCardShouldBeVisible = false;
+				var curentElementsValues = currentElement.text().split(",");
+				
+				var i;
+				for (i = 0; i < curentElementsValues.length; ++i) {
+					var anElementValue = curentElementsValues[i];
+					isCardShouldBeVisible = buttonValue.toLowerCase().indexOf(anElementValue.toLowerCase()) > -1;
+					if(isCardShouldBeVisible) {
+						break;
+					}
+				}
 				
 				if (isButtonActive && isCardShouldBeVisible){
 					cardfilterStatus[buttonIndex] = true;

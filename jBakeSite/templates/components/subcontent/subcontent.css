@@ -257,9 +257,9 @@
 }
 
 .activeFilter {
-	color: ${webleger.site.style.primary.color};
-	background-color: ${webleger.site.style.primary.highlight.background.color};
-    border-color: ${webleger.site.style.primary.highlight.color};
+	color: ${webleger.site.style.secondary.highlight.color};
+	background-color: ${webleger.site.style.secondary.highlight.background.color};
+    border-color: ${webleger.site.style.secondary.highlight.color};
 }
 
 @media (min-width: 640px) {

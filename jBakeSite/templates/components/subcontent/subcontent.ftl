@@ -22,10 +22,10 @@
 	<#return "" />
 </#function>
 
-<#macro generateAnchor theContent defaultAnchor="">
+<#macro generateAnchor theContent defaultAnchor="" sufix="_list">
 	<#local theAnchorId = defaultAnchor>
 	<#if (theContent.anchorId)??>
-		<#local theAnchorId = theContent.anchorId>
+		<#local theAnchorId = theContent.anchorId + sufix>
 	</#if>
 	
 	<#if theAnchorId?has_content>
@@ -109,6 +109,74 @@
 	</#if>
 </#macro>
 
+<#macro wrapItem theContent subContent collapseId="">
+	<#local listDisplayType = (theContent.includeContent.display.type)!"bullet">
+	<#local subContentDisplayContentMode = (theContent.includeContent.display.content)!"link">
+	<#local specificContentClass = (theContent.includeContent.display.specificClass)!"">
+	<#local featauredText = "">
+	<#if (altSubContent.featured)??>
+		<#local specificContentClass = specificContentClass + " featured">
+		<#if (altSubContent.featured.text)??>
+			<#local featauredText = altSubContent.featured.text>
+		</#if>
+	</#if>
+	
+	<#if hookHelper??>
+		<@hookHelper.hook "beforeItemSubContent" subContent/>
+	</#if>
+	<div <@generateAnchor subContent/> class="${listDisplayType} content_type_${subContentDisplayContentMode} ${specificContentClass}">
+		<#if featauredText?has_content>
+			<div class="featured_label">${featauredText}</div>
+		</#if>
+
+		<@generateUserFiltersElementData theContent subContent />
+		<#if hookHelper??>
+			<@hookHelper.hook "beginItemSubContent" subContent/>
+		</#if>
+		<#switch listDisplayType>
+			<#case  "link">
+				<a href="${common.buildRootPathAwareURL(subContent.uri)}" class="widget_link">
+			<#break>
+			<#case "collapse_block">
+				<#local collapseClass = "collapse">
+				<a data-toggle="collapse" href="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}">
+			<#break>
+			<#case "card">
+				<#if (subContentDisplayContentMode == "modalLink")>
+					<@modal.extractContentForModal subContent, "link", listDisplayType, "Plus", subContentDisplayTags />
+				<#elseif (subContentDisplayContentMode == "link")>
+					<a href="${common.buildRootPathAwareURL(subContent.uri)}">
+				</#if>
+			<#break>
+		</#switch>
+		
+		<#nested>
+		<#switch listDisplayType>
+			<#case  "link">
+			<#case "collapse_block">
+				</a>
+				<#break>
+			<#case "card">
+				<#if (subContentDisplayContentMode == "link")>
+					<a href="${common.buildRootPathAwareURL(subContent.uri)}">
+				</#if>
+			<#break>
+		</#switch>
+		
+		<#-->
+		<#if (subContentDisplayContentMode == "modalLink") || subContentDisplayContentMode == "link" || subContentDisplayContentMode == "modal">
+			</a>
+		</#if>
+		</#-->
+		<#if hookHelper??>
+			<@hookHelper.hook "endItemSubContent" subContent/>
+		</#if>
+	</div>
+	<#if hookHelper??>
+		<@hookHelper.hook "afterItemSubContent" subContent/>
+	</#if>
+</#macro>
+
 <#-- build an block or table listing (using Boostrap)
 param : content : content to search for include content
 -->
@@ -161,18 +229,20 @@ param : content : content to search for include content
 			<#local subContents = subContents?reverse>
 		</#if>
 		
+		<#local anchorIdList = "">
 		<#if (content.includeContent.userFilters)?? && (content.includeContent.userFilters.filters?size > 0) >
 			<#if !anchorId?has_content>
 			<#-- UserFilter REQUIRED an AnchorId, generating one as none specified in content header -->
-				<#local anchorId = common.generatedAnchorId(content.title)>
-				${logHelper.stackDebugMessage("SubContent.build (userFilter) : Generating an anchor because UserFilter REQUIRE one, id generated : " + anchorId)}
+				<#local anchorIdList = common.generatedAnchorId(content.title) + "_list">
+				${logHelper.stackDebugMessage("SubContent.build (userFilter) : Generating an anchor because UserFilter REQUIRE one, id generated : " + anchorIdList)}
 			<#else>
-				${logHelper.stackDebugMessage("SubContent.build (userFilter) : Anchor ID already set : " + anchorId)}
+				<#local anchorIdList = anchorId + "_list">
+				${logHelper.stackDebugMessage("SubContent.build (userFilter) : Anchor ID already set : " + anchorIdList)}
 			</#if>
 		</#if>
 		
 		<#local specificClass = (content.includeContent.specificClass)!"">
-		<div <@generateAnchor content, anchorId /><#if specificClass?? && specificClass?has_content> class="${specificClass}"</#if>>
+		<div <@generateAnchor content, anchorIdList /><#if specificClass?? && specificClass?has_content> class="${specificClass}"</#if>>
 		<#if (subContents?size > 0)>
 			<#if (content.includeContent.title)??>
 				<div class="title">${content.includeContent.title}</div>
@@ -186,6 +256,7 @@ param : content : content to search for include content
 			<#local subContentDisplayTags = (content.includeContent.display.displayTags)!false>
 			
 			<#local hasSubTemplate = (content.includeContent.display.subTemplate)!"">
+			<#local hasSubTemplateItem = (content.includeContent.display.subTemplateItem)!"">
 			
 			<#if logHelper??>
 				<@logHelper.debug "listDisplayType = " + listDisplayType + " subContentDisplayContentMode = " + subContentDisplayContentMode/>
@@ -202,7 +273,7 @@ param : content : content to search for include content
 				</div>
 				<#return>
 			<#elseif (listDisplayType == "table")>
-				<@generateUserFilters content subContents "#"+anchorId+" ."+listDisplayType/>
+				<@generateUserFilters content subContents "#"+anchorIdList+" ."+listDisplayType/>
 				<table class="${listDisplayType}_list content_type_${subContentDisplayContentMode} elementsList">
 					<thead>
 						<tr>
@@ -222,7 +293,7 @@ param : content : content to search for include content
 					</thead>
 					<tbody>
 			<#else>
-				<@generateUserFilters content subContents "#"+anchorId+" ."+listDisplayType/>
+				<@generateUserFilters content subContents "#"+anchorIdList+" ."+listDisplayType/>
 				<div class="${listDisplayType}_list elementsList">
 			</#if>
 			
@@ -242,6 +313,11 @@ param : content : content to search for include content
 				<#local collapseId = "">
 				<#local isSelf = altSubContent.title == content.title>
 				<#local featauredText = "">
+				
+				<#local collapseId="">
+				<#if listDisplayType == "collapse_block">
+					<#local collapseId = common.randomNumber()>
+				</#if>
 				
 				<#if isSelf>
 					<#local specificContentClass += " self">
@@ -280,7 +356,14 @@ param : content : content to search for include content
 					</#if>
 				</#if>
 				
-				<#if (listDisplayType == "table")>
+				<#if (hasSubTemplateItem)?? && hasSubTemplateItem?has_content>
+					<#local subTemplateInterpretation = "<@${hasSubTemplateItem} content subContent specificContentClass featauredText displayTitle listDisplayType subContentBeforeTitleImage/>"?interpret>
+					
+					<@wrapItem content altSubContent collapseId>
+						<@subTemplateInterpretation/>
+					</@wrapItem>
+					
+				<#elseif (listDisplayType == "table")>
 					<#local specificClassForContent = specificContentClass>
 					<#if (altSubContent.featured)??>
 						<#local specificClassForContent = specificClassForContent + "featured">
@@ -343,17 +426,7 @@ param : content : content to search for include content
 						</#if>
 					</tr>
 				<#elseif listDisplayType == "steps" >
-					<#if featauredText?has_content>
-						<div class="featured_label">${featauredText}</div>
-					</#if>
-					<#if hookHelper??>
-						<@hookHelper.hook "beforeItemSubContent" altSubContent/>
-					</#if>
-					<div <@generateAnchor altSubContent/> class="${listDisplayType} content_type_${subContentDisplayContentMode} ${specificContentClass}">
-						<#if hookHelper??>
-							<@hookHelper.hook "beginItemSubContent" altSubContent/>
-						</#if>
-						<@generateUserFiltersElementData content subContent />
+					<@wrapItem content altSubContent collapseId>
 						<div class="step_icon">
 							<#if (altSubContent.contentImage)??>
 								<@common.addImageIcon altSubContent.contentImage listDisplayType+"_image" altSubContent.title/>
@@ -385,42 +458,9 @@ param : content : content to search for include content
 								${altSubContent.body!""}
 							</div>
 						</div>
-						<#if hookHelper??>
-							<@hookHelper.hook "endItemSubContent" altSubContent/>
-						</#if>
-					</div>
-					<#if hookHelper??>
-						<@hookHelper.hook "afterItemSubContent" altSubContent/>
-					</#if>
+						</@wrapItem>
 				<#else><#-- NOT a table -->
-					<#if hookHelper??>
-						<@hookHelper.hook "beforeItemSubContent" altSubContent/>
-					</#if>
-					<div <@generateAnchor altSubContent/> class="${listDisplayType} content_type_${subContentDisplayContentMode} ${specificContentClass}">
-						<#if featauredText?has_content>
-							<div class="featured_label">${featauredText}</div>
-						</#if>
-						<#if hookHelper??>
-							<@hookHelper.hook "beginItemSubContent" altSubContent/>
-						</#if>
-						<@generateUserFiltersElementData content subContent />
-						<#switch listDisplayType>
-							<#case  "link">
-								<a href="${common.buildRootPathAwareURL(altSubContent.uri)}" class="widget_link">
-							<#break>
-							<#case "collapse_block">
-								<#local collapseClass = "collapse">
-								<#local collapseId = common.randomNumber()>
-								<a data-toggle="collapse" href="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}">
-							<#break>
-							<#case "card">
-								<#if (subContentDisplayContentMode == "modalLink")>
-									<@modal.extractContentForModal altSubContent, "link", listDisplayType, "Plus", subContentDisplayTags />
-								<#elseif (subContentDisplayContentMode == "link")>
-									<a href="${common.buildRootPathAwareURL(altSubContent.uri)}">
-								</#if>
-							<#break>
-						</#switch>
+					<@wrapItem content altSubContent collapseId>
 						<#if listDisplayType == "card">
 							<#if (altSubContent.contentImage??)>
 								<#if (altSubContent.contentImage)??>
@@ -460,10 +500,6 @@ param : content : content to search for include content
 							</div>
 						</#if>
 						
-						<#if listDisplayType == "collapse_block">
-							</a>
-						</#if>
-						
 						<#if (subContentDisplayContentMode == "modal")>
 							<@modal.extractContentForModal altSubContent, "button", listDisplayType, "voir plus", subContentDisplayTags />
 						</#if>
@@ -472,19 +508,10 @@ param : content : content to search for include content
 								${altSubContent.body!""}
 							</div>
 						</#if>
-						<#if (listDisplayType == "link" || subContentDisplayContentMode == "modalLink") || subContentDisplayContentMode == "link" || subContentDisplayContentMode == "modal">
-							</a>
-						</#if>
 						<#if listDisplayType == "collapse_block">
 							</div>
 						</#if>
-						<#if hookHelper??>
-							<@hookHelper.hook "endItemSubContent" altSubContent/>
-						</#if>
-					</div>
-					<#if hookHelper??>
-						<@hookHelper.hook "afterItemSubContent" altSubContent/>
-					</#if>
+					</@wrapItem>
 				</#if> <#-- end onf contentDisplayType "switch" -->
 			</#list>
 			<#if (listDisplayType == "table")>
@@ -526,7 +553,7 @@ param : content : content to search for include content
 	<#local subContentDisplayTags = (theContent.includeContent.display.displayTags)!false>
 	<#local currentIndex = 0>
 	
-	<@generateUserFilters content subContents "#"+anchorId+" ."+listDisplayType/>
+	<@generateUserFilters content subContents "#"+anchorIdList+" ."+listDisplayType/>
 	
 	<div class="${className}_list content_type_${subContentDisplayContentMode}">
 		<div class="middleLine"></div>

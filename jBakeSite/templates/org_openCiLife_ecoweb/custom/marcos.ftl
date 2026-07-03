@@ -82,9 +82,26 @@
 	<#return keywords />
 </#function>
 
-<#macro imageHero>
+<#macro imageHero theContent>
 
-	<#local imageProp = propertiesHelper.retrieveAndDisplayConfigText("site.imageHero.image", true)>
+	<#if (theContent.imageHero)?? && (theContent.imageHero.category)?? && theContent.imageHero.category?has_content>
+		<#local categoryContent=theContent.imageHero.category>
+		
+		<#local imageHeroBlocks = block.getBlocks(theContent, theContent.imageHero.category)>
+		<#if (imageHeroBlocks?size > 0)>
+			<#local imageHeroBlock = imageHeroBlocks[0]>
+			<#if (imageHeroBlock.imageHero)?? && (imageHeroBlock.imageHero.image)?? && imageHeroBlock.imageHero.image?has_content>
+				<#local imageProp = imageHeroBlock.imageHero.image>
+			<#else>
+				<#local imageProp = imageHeroBlock.contentImage>
+			</#if>
+		</#if>
+	<#else>
+		<#local imageProp = propertiesHelper.retrieveAndDisplayConfigText("site.imageHero.image", true)>
+		<#local categoryContent=propertiesHelper.retrieveAndDisplayConfigText("site.imageHero.category")>
+	</#if>
+
+	
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("ecoWeb.imageHero : site.imageHero.image = " + imageProp)}
 	</#if>
@@ -93,7 +110,6 @@
 		<#nested>
 	<#else>
 		<#local image= common.buildRootPathAwareURL(imageProp)>
-		<#local categoryContent=propertiesHelper.retrieveAndDisplayConfigText("site.imageHero.category")>
 		<#local orderBy="order">
 		
 		<section class="imageHeroSection"> 

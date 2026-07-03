@@ -3,6 +3,7 @@ date=2026-06-15
 type=org_openCiLife_block
 category=imageHero
 tags=
+imageHero={"image":"images/mairie.jpg"}
 status=published
 specificClass=title
 displayTitle=false

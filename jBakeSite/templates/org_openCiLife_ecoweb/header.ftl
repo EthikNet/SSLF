@@ -65,12 +65,12 @@
   <body class="${pageSpecificClass}">
   <div id="up"></div>
     <div id="wrap">
-    	<@ecoWeb.imageHero>
+    	<@ecoWeb.imageHero alteredContent>
 	    <#if (alteredContent.displayPreHeader!"true") != "false">
 	    	<div id="preHeader" class="container preHeader ${webleger.site.preheader.class}">
 	    		<#if block??>
 		    		<div id="preHeader_blocks" class="blocks">
-		    			<@block.buildWithCategory content config.site_header_category/>
+		    			<@block.buildWithCategory alteredContent config.site_header_category/>
 					</div>
 				</#if>
 	    	</div>
