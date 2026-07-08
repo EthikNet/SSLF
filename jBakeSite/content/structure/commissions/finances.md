@@ -5,7 +5,7 @@ category=commission
 code=finances
 status=published
 contentImage=images/common/logo_left-small.jpg
-graph={"query":{"type":"membreCommission", "value":"finances", "in":{"category":"personne"}}}
-order=960
+graph={"query":{"type":"commission", "value":"finances", "in":{"category":"personne"}}, "subTemplate":"sslf.commissionForMemberGraphSubTemplate"}
+order=961
 ~~~~~~
 La commission des finances est en charge de ......

@@ -48,7 +48,15 @@
 			
 			<#local extendedContents = getContent(type, contentCategory, filterValue)>
 			<#if (extendedContents?size >1)>
-				<@handleElementTypeMembres extendedContents 1/>
+				<#local subTemplateName = "handleElementGenericRelationTable">
+				<#if (theContent.graph.subTemplate??)>
+					<#local subTemplateName=theContent.graph.subTemplate>
+				</#if>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.build : generating a graph with template : " + subTemplateName + ", for : " + extendedContents?size + " related contents")}
+				</#if>
+				<#local subTemplateInterpretation = "<@${subTemplateName} extendedContents 1 />"?interpret>
+				<@subTemplateInterpretation/>
 			</#if>
 		<#else>
 			<#if logHelper??>
@@ -77,7 +85,7 @@
 		<#case "structure">
 			<@handleElementTypeStructure element level/>
 		<#break>
-		<#case "membreCommission">
+		<#case "commission">
 			<@handleElementTypeMembreCommission element level/>
 		<#break>
 	</#switch>
@@ -97,7 +105,7 @@
 					<#case "structure">
 						<@handleElementTypeStructure theGroup level/>
 					<#break>
-					<#case "membreCommission">
+					<#case "commission">
 						<@handleElementTypeMembreCommission theGroup level/>
 					<#break>
 				</#switch>
@@ -113,18 +121,12 @@
 <#macro handleElementTypeStructure element level>
 	<#local titleLevel = level+1>
 	
-	<#local structure = getChildElement(element.type, element.code)>
-	<#local structureName = element.type + " - " + element.code>
-	<#if structure?has_content && structure?size == 1>
-		<#local structureName = structure[0].title>
-	</#if>
-	
-	<h${titleLevel}>${structureName}</h${titleLevel}>
+	<h${titleLevel}><@buildLink element.type element.code /></h${titleLevel}>
 	<span>Fonction : ${element.fonction}</span>
 </#macro>
 
 <#macro handleElementTypeMembreCommission element level>
-	<#local titleLevel = level+1>
+	<#local titleLevel = level+2>
 	
 	<h${titleLevel}>Membre des comissions : </h${titleLevel}>
 	<table>
@@ -148,10 +150,10 @@
 	</table>
 </#macro>
 
-<#macro handleElementTypeMembres extendedContents level>
+<#macro handleElementGenericRelationTable extendedContents level>
 
 	<#if logHelper??>
-		${logHelper.stackDebugMessage("Graph.handleElementTypeMembres : (level:"+level+") displaying members based on extracted contents : " + common.toString(extendedContents))}
+		${logHelper.stackDebugMessage("Graph.handleElementGenericRelationTable : (level:"+level+") displaying members based on extracted contents : " + common.toString(extendedContents))}
 	</#if>
 	<#local titleLevel = level+1>
 	
@@ -159,17 +161,31 @@
 	<table>
 		<thead>
 			<th>Nom</th>
-			<th>statut</th>
+			<th>Informations</th>
 		</thead>
 		<#list extendedContents as anExtendedContent>
 			<#if (anExtendedContent.data)?? && (anExtendedContent.data.content) ?? && (anExtendedContent.data.related)??>
 				<tr>
-					<td><a href=\"${common.buildRootPathAwareURL(anExtendedContent.data.content.uri)}">${anExtendedContent.data.content.title}</a></td>
-					<td>${anExtendedContent.data.related.statut}</td>
+					<td><a href="${common.buildRootPathAwareURL(anExtendedContent.data.content.uri)}">${anExtendedContent.data.content.title}</a></td>
+					<td>
+						<#if anExtendedContent.data.related?size == 1>
+							<#local extendedContent = []>
+							<#if anExtendedContent.data.related?is_sequence>
+								<#local extendedContent = anExtendedContent.data.related[0]>
+							<#else>
+								<#local extendedContent = anExtendedContent.data.related>
+							</#if>
+							<@buildLink extendedContent.type extendedContent.code/> - ${extendedContent.statut!extendedContent.fonction!"MISSING_STATUT"}
+						<#else>
+							<#list anExtendedContent.data.related as aRelatedContent>
+								<@buildLink aRelatedContent.type aRelatedContent.code/> - ${aRelatedContent.statut!aRelatedContent.fonction!"MISSING_STATUT"} <br/>
+							</#list>
+						</#if>
+					</td>
 				</tr>
 			<#else>
 				<#if logHelper??>
-					${logHelper.stackDebugMessage("Graph.handleElementTypeMembres ERROR : (level:"+level+") invalid extendedContent structure " + common.toString(anExtendedContent))}
+					${logHelper.stackDebugMessage("Graph.handleElementGenericRelationTable ERROR : (level:"+level+") invalid extendedContent structure " + common.toString(anExtendedContent))}
 				</#if>
 			</#if>
 		</#list>
@@ -188,6 +204,30 @@
 </#function>
 
 
+<#macro buildLink(structureType="" code="" defaultToLabel=true)>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("Graph.buildLink : trying to build link for : type : " + structureType + ", code : " + code)}
+	</#if>
+	<#if structureType?has_content>
+		<#if code?has_content>
+			<#local structureInfos = getChildElement(structureType, code)>
+			<#if structureInfos?has_content && structureInfos?size == 1>
+				<a href="${common.buildRootPathAwareURL(structureInfos[0].uri)}">${structureInfos[0].title}</a>
+			<#else>
+				<#if defaultToLabel>
+					${code!"MISSING_CODE"}
+				</#if>
+			</#if>
+		<#else>
+			<#if defaultToLabel>
+				${code!"MISSING_CODE"}
+			</#if>
+		</#if>
+	<#else>
+		${code!"MISSING_STRUCUTRE_AND_CODE"}
+	</#if>
+</#macro>
+
 <#function getContent type inCategory filterValue>
 	<#local extendsContent = []>
 	<#local contents = db.getPublishedContent("org_openCiLife_post")?filter(b -> (b.category)?? && b.category?has_content && b.category==inCategory)>
@@ -197,7 +237,7 @@
 	</#if>
 	
 	<#list contents as aContent>
-		<#local relatedContent = getRelated(aContent type filterValue)>
+		<#local relatedContent = filterRelated(aContent, type, filterValue)>
 		<#if (relatedContent?size>0)>
 			<#local contentId = aContent.category+"/"+aContent.code!"MISSING_CODE">
 			<#local extendsContent = extendsContent + [{"id":contentId, "data":relatedContent}]>
@@ -210,72 +250,78 @@
 	<#return extendsContent>
 </#function>
 
-<#function getRelated theContent inCategory filterValue>
+<#function filterRelated theContent inCategory filterValue>
 	<#local extendedContent = {}>
 		<#if (theContent.graph)?? && theContent.graph?has_content && (theContent.graph.data)?? && theContent.graph.data?has_content>
 			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.isRelated : " + theContent.title + ", checking graph.data")}
+				${logHelper.stackDebugMessage("Graph.filterRelated : " + theContent.title + ", checking graph.data")}
 			</#if>
 			<#local related = searchInList(theContent.graph.data inCategory filterValue)>
 			<#local extendedContent = {"content":theContent, "related":related}>
 		<#else>
 			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.isRelated : " + theContent.title + ", has no graph.data in contentHeader ==> rejected")}
+				${logHelper.stackDebugMessage("Graph.filterRelated : " + theContent.title + ", has no graph.data in contentHeader ==> rejected")}
 			</#if>
 		</#if>
 	<#return extendedContent>
 </#function>
 
 <#function searchInList elements structureType filterValue>
-	<#local related = {}>
+	<#local related = []>
+	<#local parentType = "">
+	<#if (elements.type)?? && elements.type?has_content>
+		<#local parentType = elements.type>
+	</#if>
 	<#list elements as element>
-		<#local related = search(element structureType filterValue)>
-		<#if ((related)?? && related?size >1)>
-			<#break>
-		</#if>
+		<#local related = related + search(element, structureType, filterValue, parentType)>
 	</#list>
 	<#return related>
 </#function>
 
 <#function search element structureType filterValue parentType="">
-	<#local related = {}>
-	<#local found = false>
+	<#local related = []>
+	<#local match = false>
 	<#local elementType = parentType>
 	<#if (element.type)?? && element.type?has_content>
 		<#local elementType = element.type>
 	</#if>
 	
-	<#local found = elementType == structureType
-					&& (element.code)?? && element.code?has_content && element.code == filterValue>
-	<#if found>
-		<#local related = element>
-		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.search : match for " + structureType + ", filter : " + filterValue + "(parentTYpe : " + parentType)}
+	<#local match = elementType == structureType
+					&& (element.code)?? && element.code?has_content && (filterValue == "*" || element.code == filterValue)>
+	<#if match>
+	<#local enchancedElement = element>
+		<#if !(element.type)??>
+			<#local theGroup = []>
+			<#if (element.group)??>
+				<#local theGroup = element.goup>
+			</#if>
+			<#local theFonction = "">
+			<#if (element.fonction)??>
+				<#local theFonction = element.fonction>
+			</#if>
+			<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":element.statut}>
 		</#if>
-	<#else>	
+		<#local related = related + [enchancedElement]>
+	</#if>
+		
+	<#if (element.group)?? && element.group?has_content && (element.group?size>0)>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.search : element NOT match("+structureType+"/"+filterValue+",parentType="+parentType+"), seaching for gorups in : " + common.toString(element))}
-		</#if>		
-		<#if (element.group)?? && element.group?has_content && (element.group?size>0)>
-			<#local parentType = "">
-			<#list element.group as theGroup>
-				<#local elementsList = theGroup>
-				<#if theGroup?is_hash>
-					<#local elementsList = theGroup.elements>
-					<#if (theGroup.type)??>
-						<#local parentType = theGroup.type>
-					</#if>
+			${logHelper.stackDebugMessage("Graph.search : ("+structureType+"/"+filterValue+",parentType="+parentType+"), group found, searching for matching relatedContent : " + common.toString(element))}
+		</#if>	
+		<#local elementType = parentType>
+		<#list element.group as theGroup>
+			<#local elementsList = theGroup>
+			<#if theGroup?is_hash>
+				<#local elementsList = theGroup.elements>
+				<#if (theGroup.type)??>
+					<#local elementType = theGroup.type>
 				</#if>
-				
-				<#list elementsList as element>
-					<#local related = search(element structureType filterValue parentType)>
-					<#if (related)?? && (related?size>0)>
-						<#local related = element>
-						<#break>
-					</#if> 
-				</#list>
+			</#if>
+			
+			<#list elementsList as element>
+				<#local related = related + search(element structureType filterValue elementType)>
 			</#list>
-		</#if>
-		</#if>
+		</#list>
+	</#if>
 	<#return related>
 </#function>

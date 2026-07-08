@@ -86,3 +86,83 @@
 		</div>
 	</div>
 </#macro>
+
+<#macro comissionsParMembresGraphSubTemplate extendedContents level>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("Graph.comissionsParMembresGraphSubTemplate : (level:"+level+") displaying members based on extracted contents : " + common.toString(extendedContents))}
+	</#if>
+	<#local titleLevel = level+1>
+	
+	<h${titleLevel}>Membres : </h${titleLevel}>
+	<table>
+		<thead>
+			<th>Nom</th>
+			<th>commision</th>
+			<th>statut</th>
+		</thead>
+		<#list extendedContents as anExtendedContent>
+			<#if (anExtendedContent.data)?? && (anExtendedContent.data.content) ?? && (anExtendedContent.data.related)??>
+				<tr>
+					<td rowspan="${anExtendedContent.data.related?size}"><a href="${common.buildRootPathAwareURL(anExtendedContent.data.content.uri)}">${anExtendedContent.data.content.title}</a></td>
+					<#if anExtendedContent.data.related?size == 1>
+						<#local extendedContent = []>
+						<#if anExtendedContent.data.related?is_sequence>
+							<#local extendedContent = anExtendedContent.data.related[0]>
+						<#else>
+							<#local extendedContent = anExtendedContent.data.related>
+						</#if>
+						<td><@graph.buildLink extendedContent.type extendedContent.code/></td>
+						<td>${extendedContent.statut!extendedContent.fonction!"MISSING_STATUT"}</td>
+					<#else>
+						<#list anExtendedContent.data.related as aRelatedContent>
+							<td><@graph.buildLink aRelatedContent.type aRelatedContent.code/></td>
+							<td>${aRelatedContent.statut!aRelatedContent.fonction!"MISSING_STATUT"}</td>
+				</tr>
+						</#list>
+					</#if>
+				</tr>
+			<#else>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.comissionsParMembresGraphSubTemplate ERROR : (level:"+level+") invalid extendedContent structure " + common.toString(anExtendedContent))}
+				</#if>
+			</#if>
+		</#list>
+	</table>
+</#macro>
+
+<#macro commissionForMemberGraphSubTemplate extendedContents level>
+	<#local titleLevel = level+2>
+	
+	<h${titleLevel}>Membres : </h${titleLevel}>
+	<table>
+		<thead>
+			<th>Membre</th>
+			<th>statut</th>
+		</thead>
+		<#list extendedContents as anExtendedContent>
+			<#if (anExtendedContent.data)?? && (anExtendedContent.data.content) ?? && (anExtendedContent.data.related)??>
+				<tr>
+					<td rowspan="${anExtendedContent.data.related?size}"><a href="${common.buildRootPathAwareURL(anExtendedContent.data.content.uri)}">${anExtendedContent.data.content.title}</a></td>
+					<#if anExtendedContent.data.related?size == 1>
+						<#local extendedContent = []>
+						<#if anExtendedContent.data.related?is_sequence>
+							<#local extendedContent = anExtendedContent.data.related[0]>
+						<#else>
+							<#local extendedContent = anExtendedContent.data.related>
+						</#if>
+						<td>${extendedContent.statut!extendedContent.fonction!"MISSING_STATUT"}</td>
+					<#else>
+						<#list anExtendedContent.data.related as aRelatedContent>
+							<td>${aRelatedContent.statut!aRelatedContent.fonction!"MISSING_STATUT"}</td>
+				</tr>
+						</#list>
+					</#if>
+				</tr>
+			<#else>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.comissionsParMembresGraphSubTemplate ERROR : (level:"+level+") invalid extendedContent structure " + common.toString(anExtendedContent))}
+				</#if>
+			</#if>
+		</#list>
+	</table>
+</#macro>
