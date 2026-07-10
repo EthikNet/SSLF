@@ -272,6 +272,12 @@
 	border-radius: 99999px;
 	padding: 0.2em;
 }
+
+.personne .imageBeforeTitleSubTemplate .blockTitle .block_title_image_wraper img{
+	border-radius: 100%;
+	width: 150px;
+	height: auto;
+}
     
 #sectionFooter {
 	background-color:${webleger.site.style.secondary.background.color};

@@ -87,82 +87,77 @@
 	</div>
 </#macro>
 
-<#macro comissionsParMembresGraphSubTemplate extendedContents level>
-	<#if logHelper??>
-		${logHelper.stackDebugMessage("Graph.comissionsParMembresGraphSubTemplate : (level:"+level+") displaying members based on extracted contents : " + common.toString(extendedContents))}
-	</#if>
-	<#local titleLevel = level+1>
-	
-	<h${titleLevel}>Membres : </h${titleLevel}>
-	<table>
-		<thead>
-			<th>Nom</th>
-			<th>commision</th>
-			<th>statut</th>
-		</thead>
-		<#list extendedContents as anExtendedContent>
-			<#if (anExtendedContent.data)?? && (anExtendedContent.data.content) ?? && (anExtendedContent.data.related)??>
-				<tr>
-					<td rowspan="${anExtendedContent.data.related?size}"><a href="${common.buildRootPathAwareURL(anExtendedContent.data.content.uri)}">${anExtendedContent.data.content.title}</a></td>
-					<#if anExtendedContent.data.related?size == 1>
-						<#local extendedContent = []>
-						<#if anExtendedContent.data.related?is_sequence>
-							<#local extendedContent = anExtendedContent.data.related[0]>
-						<#else>
-							<#local extendedContent = anExtendedContent.data.related>
-						</#if>
-						<td><@graph.buildLink extendedContent.type extendedContent.code/></td>
-						<td>${extendedContent.statut!extendedContent.fonction!"MISSING_STATUT"}</td>
-					<#else>
-						<#list anExtendedContent.data.related as aRelatedContent>
-							<td><@graph.buildLink aRelatedContent.type aRelatedContent.code/></td>
-							<td>${aRelatedContent.statut!aRelatedContent.fonction!"MISSING_STATUT"}</td>
-				</tr>
-						</#list>
-					</#if>
-				</tr>
-			<#else>
-				<#if logHelper??>
-					${logHelper.stackDebugMessage("Graph.comissionsParMembresGraphSubTemplate ERROR : (level:"+level+") invalid extendedContent structure " + common.toString(anExtendedContent))}
-				</#if>
-			</#if>
-		</#list>
-	</table>
+<#macro personneSubTemplate theContent>
+	<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate"/>>
+		<@block.generateTitle theContent true/>
+		<div class="blockBody">
+			<@block.generateBodyContent theContent/>
+		</div>
+	</div>
 </#macro>
 
-<#macro commissionForMemberGraphSubTemplate extendedContents level>
-	<#local titleLevel = level+2>
-	
-	<h${titleLevel}>Membres : </h${titleLevel}>
-	<table>
+<#macro comissionsParMembresGraphSubTemplate extendedContents level isGrouped>
+	<@graph.displayGroupOfRelations extendedContents level isGrouped "Membres"; groupContent>
+		<table>
+			<thead>
+				<th>Nom</th>
+				<th>commision</th>
+				<th>statut</th>
+			</thead>
+			<@graph.displayRelations groupContent ; content, relations>
+				<tr>
+					<td rowspan="${relations?size}"><a href="${common.buildRootPathAwareURL(content.uri)}">${content.title}</a></td>
+					<@graph.displayARelation relations; relation>
+						<td><@graph.buildLink relation.type relation.code/></td>
+						<td>${relation.statut!relation.fonction!"MISSING_STATUT"}</td>
+					</tr>
+					</@graph.displayARelation>
+				</tr>
+			</@graph.displayRelations>
+		</table>
+	</@graph.displayGroupOfRelations>
+</#macro>
+
+<#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped>
+	<@graph.displayGroupOfRelations extendedContents level isGrouped "Membres"; groupContent>
+		<table>
 		<thead>
 			<th>Membre</th>
 			<th>statut</th>
 		</thead>
-		<#list extendedContents as anExtendedContent>
-			<#if (anExtendedContent.data)?? && (anExtendedContent.data.content) ?? && (anExtendedContent.data.related)??>
+			<@graph.displayRelations groupContent ; content, relations>
 				<tr>
-					<td rowspan="${anExtendedContent.data.related?size}"><a href="${common.buildRootPathAwareURL(anExtendedContent.data.content.uri)}">${anExtendedContent.data.content.title}</a></td>
-					<#if anExtendedContent.data.related?size == 1>
-						<#local extendedContent = []>
-						<#if anExtendedContent.data.related?is_sequence>
-							<#local extendedContent = anExtendedContent.data.related[0]>
-						<#else>
-							<#local extendedContent = anExtendedContent.data.related>
-						</#if>
-						<td>${extendedContent.statut!extendedContent.fonction!"MISSING_STATUT"}</td>
-					<#else>
-						<#list anExtendedContent.data.related as aRelatedContent>
-							<td>${aRelatedContent.statut!aRelatedContent.fonction!"MISSING_STATUT"}</td>
+					<td rowspan="${relations?size}"><a href="${common.buildRootPathAwareURL(content.uri)}">${content.title}</a></td>
+					<@graph.displayARelation relations; relation>
+						<td>${relation.statut!relation.fonction!"MISSING_STATUT"}</td>
+					</tr>
+					</@graph.displayARelation>
 				</tr>
-						</#list>
-					</#if>
-				</tr>
-			<#else>
-				<#if logHelper??>
-					${logHelper.stackDebugMessage("Graph.comissionsParMembresGraphSubTemplate ERROR : (level:"+level+") invalid extendedContent structure " + common.toString(anExtendedContent))}
-				</#if>
-			</#if>
-		</#list>
-	</table>
+			</@graph.displayRelations>
+		</table>
+	</@graph.displayGroupOfRelations>
+</#macro>
+
+<#macro personneParStructureGraphSubTemplate extendedContents level isGrouped>
+	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped "Membres"; groupContent>
+			<@graph.displayRelations groupContent ; theContent, relations>
+				<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate PersonneSynthese"/>>
+					<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate"/>>
+						<#local customCssClass = "block_title_image">
+						<span class="blockTitle">
+							<@common.addImageIcon theContent.contentImage customCssClass theContent.title/>
+							<span class="personneDetail">
+								<a href="${common.buildRootPathAwareURL(theContent.uri)}"><#escape x as x?xml>${theContent.title}</#escape></a>
+								
+								<span class="personneFonctions">
+									<@graph.displayARelation relations; relation>
+										<span>${relation.fonction!"MISSING_FONCTION"}</span>
+									</@graph.displayARelation>
+								</span>
+							</span>
+						</span>
+					</div>
+				</div>
+			</@graph.displayRelations>
+	</@graph.displayGroupOfRelations>
 </#macro>

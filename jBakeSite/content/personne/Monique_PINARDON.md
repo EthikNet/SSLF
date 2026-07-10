@@ -3,6 +3,7 @@ date=2026-07-03
 type=org_openCiLife_post
 category=personne
 subTemplate=sslf.personneSubTemplate
+specificClass=personne
 code=Monique PINARDON
 status=published
 exerpt=Monique bla bla bla
