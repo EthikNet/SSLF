@@ -277,11 +277,13 @@
 	border-radius: 100%;
 	width: 150px;
 	height: auto;
+	border:1px solid ${webleger.site.style.disabled.color};
 }
 .personneSyntheseSmall.imageBeforeTitleSubTemplate .blockTitle .block_title_image_wraper img{
 	border-radius: 100%;
 	width: 50px;
 	height: auto;
+	border:1px solid ${webleger.site.style.disabled.color};
 }
 .personneSyntheseSmall.imageBeforeTitleSubTemplate .blockTitle{
 	font-size: medium;
