@@ -96,26 +96,17 @@
 	</div>
 </#macro>
 
-<#macro comissionsParMembresGraphSubTemplate extendedContents level isGrouped>
-	<@graph.displayGroupOfRelations extendedContents level isGrouped "Membres"; groupContent>
-		<table>
-			<thead>
-				<th>Nom</th>
-				<th>commision</th>
-				<th>statut</th>
-			</thead>
-			<@graph.displayRelations groupContent ; content, relations>
-				<tr>
-					<td rowspan="${relations?size}"><a href="${common.buildRootPathAwareURL(content.uri)}">${content.title}</a></td>
-					<@graph.displayARelation relations; relation>
-						<td><@graph.buildLink relation.type relation.code/></td>
-						<td>${relation.statut!relation.fonction!"MISSING_STATUT"}</td>
-					</tr>
-					</@graph.displayARelation>
-				</tr>
-			</@graph.displayRelations>
-		</table>
-	</@graph.displayGroupOfRelations>
+<#macro comissionsMembresGraphSubTemplate extendedContents level isGrouped>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("sslf.comissionsParMembresGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
+	</#if>
+	<div class="fourPerRow">
+		<@graph.displayGroupOfRelations extendedContents level isGrouped "Membres"; groupContent>
+				<@graph.displayRelations groupContent ; theContent, relations>
+					<@personneWithPhoto theContent relations true/>
+				</@graph.displayRelations>
+		</@graph.displayGroupOfRelations>
+	</div>
 </#macro>
 
 <#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped>
@@ -141,23 +132,35 @@
 <#macro personneParStructureGraphSubTemplate extendedContents level isGrouped>
 	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped "Membres"; groupContent>
 			<@graph.displayRelations groupContent ; theContent, relations>
-				<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate PersonneSynthese"/>>
-					<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate"/>>
-						<#local customCssClass = "block_title_image">
-						<span class="blockTitle">
-							<@common.addImageIcon theContent.contentImage customCssClass theContent.title/>
-							<span class="personneDetail">
-								<a href="${common.buildRootPathAwareURL(theContent.uri)}"><#escape x as x?xml>${theContent.title}</#escape></a>
-								
-								<span class="personneFonctions">
-									<@graph.displayARelation relations; relation>
-										<span>${relation.fonction!"MISSING_FONCTION"}</span>
-									</@graph.displayARelation>
-								</span>
-							</span>
-						</span>
-					</div>
-				</div>
+				<@personneWithPhoto theContent relations />
 			</@graph.displayRelations>
 	</@graph.displayGroupOfRelations>
+</#macro>
+
+<#macro personneWithPhoto theContent relations isSmall=false>
+	<#local customClass = "personneSynthese">
+	<#if isSmall>
+		<#local customClass = "personneSyntheseSmall">
+	</#if>
+	<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate "+customClass/>>
+		<#local customCssClass = "block_title_image">
+		<span class="blockTitle">
+			<@common.addImageIcon theContent.contentImage customCssClass theContent.title/>
+			<span class="personneDetail">
+				<a href="${common.buildRootPathAwareURL(theContent.uri)}"><#escape x as x?xml>${theContent.title}</#escape></a>
+				<#if (relations)?? && (relations?size >0)>
+					<span class="personneFonctions">
+						<@graph.displayARelation relations; relation>
+							<#if (relation.fonction)??>
+								<span>${relation.fonction}</span>
+							</#if>
+							<#if (relation.statut)??>
+								<span>${relation.statut}</span>
+							</#if>
+						</@graph.displayARelation>
+					</span>
+				</#if>
+			</span>
+		</span>
+	</div>
 </#macro>

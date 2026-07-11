@@ -273,10 +273,19 @@
 	padding: 0.2em;
 }
 
-.personne .imageBeforeTitleSubTemplate .blockTitle .block_title_image_wraper img{
+.personne.imageBeforeTitleSubTemplate .blockTitle .block_title_image_wraper img, .personneSynthese.imageBeforeTitleSubTemplate .blockTitle .block_title_image_wraper img{
 	border-radius: 100%;
 	width: 150px;
 	height: auto;
+}
+.personneSyntheseSmall.imageBeforeTitleSubTemplate .blockTitle .block_title_image_wraper img{
+	border-radius: 100%;
+	width: 50px;
+	height: auto;
+}
+.personneSyntheseSmall.imageBeforeTitleSubTemplate .blockTitle{
+	font-size: medium;
+ 	font-weight: normal;
 }
     
 #sectionFooter {

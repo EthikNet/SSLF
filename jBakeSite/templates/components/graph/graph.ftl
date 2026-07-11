@@ -40,7 +40,7 @@
 			<#if theContent.graph.query?is_hash && (theContent.graph.query.type)?? && theContent.graph.query.type?has_content>
 				<#local type = theContent.graph.query.type>
 			</#if>
-			<#local contentCategory = theContent.graph.query.in.category>
+			<#local inFilter = theContent.graph.query.in>
 			<#local filterValue =  theContent.graph.query.value>
 			
 			<#local groupByValue = "">
@@ -49,10 +49,10 @@
 			</#if>
 			
 			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.build : START PROCESSING graph QUERY root type : " + type +", in "  + contentCategory + ", filtring value : " + filterValue + ", grouping by : " + groupByValue)}
+				${logHelper.stackDebugMessage("Graph.build : START PROCESSING graph QUERY root type : " + type +", in "  + common.toString(inFilter) + ", filtring value : " + filterValue + ", grouping by : " + groupByValue)}
 			</#if>
 			
-			<#local extendedContents = getContent(type, contentCategory, filterValue)>
+			<#local extendedContents = getContent(type, inFilter, filterValue)>
 			<#if groupByValue?has_content>
 				<#local extendedContents = groupBy(extendedContents, groupByValue)>
 			</#if>
@@ -131,7 +131,12 @@
 	<#local titleLevel = level+1>
 	
 	<h${titleLevel}><@buildLink element.type element.code /></h${titleLevel}>
-	<span>Fonction : ${element.fonction}</span>
+	<#if (element.fonction)?? && element.fonction?has_content>
+		<span>Fonction : ${element.fonction}</span>
+	</#if>
+	<#if (element.statut)?? && element.statut?has_content>
+		<span>${element.statut}</span>
+	</#if>
 </#macro>
 
 <#macro handleElementTypeMembreCommission element level>
@@ -247,12 +252,22 @@
 	</#if>
 </#macro>
 
-<#function getContent type inCategory filterValue>
+<#function getContent type inFilter filterValue>
 	<#local extendsContent = []>
+	<#local inCategory = inFilter.category>
+	<#local inCategoryOrder = inFilter.order!"">
+	<#local inCategoryOrderDir = inFilter.orderDir!"asc">
 	<#local contents = db.getPublishedContent("org_openCiLife_post")?filter(b -> (b.category)?? && b.category?has_content && b.category==inCategory)>
 		
 	<#if (langHelper)??>
 		<#local contents = contents?filter(ct -> langHelper.isCorectLang(ct, langHelper.getLang(content)))>
+	</#if>
+	
+	<#if (content?size>0) && (inCategoryOrder)?? && inCategoryOrder?has_content>
+		<#local contents = contents?sort_by(inCategoryOrder)>
+		<#if inCategoryOrderDir=="desc">
+			<#local contents = contents.reverse>
+		</#if>
 	</#if>
 	
 	<#list contents as aContent>
@@ -308,12 +323,14 @@
 
 <#function addElement orderElementValue anExtendedContent relatedData="">
 	<#if logHelper??>
-		<#if (relatedData)??>
+		<#if (relatedData)?? && relatedData?has_content>
 			${logHelper.stackDebugMessage("Graph.addElement : element " + anExtendedContent.data.content.title + " for relation : " + relatedData.code + ", will be grouped IN : " + orderElementValue)}
+			<#local anExtendedContent = anExtendedContent + {"matchedDataForGroup":relatedData}>
 		<#else>
 			${logHelper.stackDebugMessage("Graph.addElement : element " + anExtendedContent.data.content.title + " will be grouped IN : " + orderElementValue)}
 		</#if>
 	</#if>
+	
 	<#if !(groupedElements[orderElementValue])??>
 		<#if logHelper??>
 			${logHelper.stackDebugMessage("Graph.addElement : " + orderElementValue + ", does NOT exists yet : creating group")}
@@ -459,7 +476,14 @@
 <#macro displayRelations extendedContents>
 	<#list extendedContents as anExtendedContent>
 		<#if (anExtendedContent.data)?? && (anExtendedContent.data.content) ?? && (anExtendedContent.data.related)??>
-			<#nested anExtendedContent.data.content anExtendedContent.data.related>
+			<#local relationsData = anExtendedContent.data.related>
+			<#if (anExtendedContent.matchedDataForGroup)?? && anExtendedContent.matchedDataForGroup?has_content>
+				<#local relationsData = [anExtendedContent.matchedDataForGroup]>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.displayRelations matchedDataForGroup found, using it for relations : " + common.toString(relationsData))}
+				</#if>
+			</#if>
+			<#nested anExtendedContent.data.content relationsData>
 		<#else>
 			<#if logHelper??>
 				${logHelper.stackDebugMessage("Graph.displayRelations ERROR : (level:"+level+") invalid extendedContent structure " + common.toString(anExtendedContent))}
