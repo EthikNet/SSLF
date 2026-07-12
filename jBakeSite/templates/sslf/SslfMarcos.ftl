@@ -101,7 +101,7 @@
 		${logHelper.stackDebugMessage("sslf.comissionsParMembresGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
 	<div class="fourPerRow">
-		<@graph.displayGroupOfRelations extendedContents level isGrouped "Membres"; groupContent>
+		<@graph.displayGroupOfRelations extendedContents level isGrouped; groupContent>
 				<@graph.displayRelations groupContent ; theContent, relations>
 					<@personneWithPhoto theContent relations true/>
 				</@graph.displayRelations>
@@ -110,6 +110,9 @@
 </#macro>
 
 <#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("sslf.commissionForMemberGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
+	</#if>
 	<@graph.displayGroupOfRelations extendedContents level isGrouped "Membres"; groupContent>
 		<table>
 		<thead>
@@ -130,14 +133,28 @@
 </#macro>
 
 <#macro personneParStructureGraphSubTemplate extendedContents level isGrouped>
-	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped "Membres"; groupContent>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("sslf.personneParStructureGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
+	</#if>
+	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped; groupContent>
 			<@graph.displayRelations groupContent ; theContent, relations>
 				<@personneWithPhoto theContent relations />
 			</@graph.displayRelations>
 	</@graph.displayGroupOfRelations>
 </#macro>
 
-<#macro personneWithPhoto theContent relations isSmall=false>
+<#macro personneParFonctionGraphSubTemplate extendedContents level isGrouped>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("sslf.personneParStructureGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
+	</#if>
+	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped; groupContent>
+			<@graph.displayRelations groupContent ; theContent, relations>
+				<@personneWithPhoto theContent relations true false/>
+			</@graph.displayRelations>
+	</@graph.displayGroupOfRelations>
+</#macro>
+
+<#macro personneWithPhoto theContent relations isSmall=false displayFonction=true>
 	<#local customClass = "personneSynthese">
 	<#if isSmall>
 		<#local customClass = "personneSyntheseSmall">
@@ -151,11 +168,11 @@
 				<#if (relations)?? && (relations?size >0)>
 					<span class="personneFonctions">
 						<@graph.displayARelation relations; relation>
-							<#if (relation.fonction)??>
+							<#if displayFonction && (relation.fonction)?? && relation.fonction?has_content>
 								<span>${relation.fonction}</span>
 							</#if>
-							<#if (relation.statut)??>
-								<span>${relation.statut}</span>
+							<#if (relation.statut)?? && relation.statut?has_content>
+								<span>(${relation.statut})</span>
 							</#if>
 						</@graph.displayARelation>
 					</span>

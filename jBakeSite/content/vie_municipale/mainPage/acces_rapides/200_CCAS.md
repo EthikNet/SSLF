@@ -1,4 +1,4 @@
-title=Conseil municipal
+title=CCAS
 date=2026-06-15
 type=org_openCiLife_post
 category=vieMunicipaleAccesRapide
@@ -7,6 +7,4 @@ contentImage=images/icones/group_personnes.svg
 status=published
 order=200
 ~~~~~~
-##Le maire
-
-## Les adjoints
+TODO le CCAS

@@ -41,30 +41,30 @@
 				<#local type = theContent.graph.query.type>
 			</#if>
 			<#local inFilter = theContent.graph.query.in>
-			<#local filterValue =  theContent.graph.query.value>
+			<#local filterValue =  theContent.graph.query.filter>
 			
-			<#local groupByValue = "">
+			<#local groupByAttribute = "">
 			<#if (theContent.graph.query.groupBy)??>
-				<#local groupByValue = theContent.graph.query.groupBy>
+				<#local groupByAttribute = theContent.graph.query.groupBy>
 			</#if>
 			
 			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.build : START PROCESSING graph QUERY root type : " + type +", in "  + common.toString(inFilter) + ", filtring value : " + filterValue + ", grouping by : " + groupByValue)}
+				${logHelper.stackDebugMessage("Graph.build : START PROCESSING graph QUERY root type : " + type +", in "  + common.toString(inFilter) + ", filtring value : " + filterValue + ", grouping by : " + groupByAttribute)}
 			</#if>
 			
 			<#local extendedContents = getContent(type, inFilter, filterValue)>
-			<#if groupByValue?has_content>
-				<#local extendedContents = groupBy(extendedContents, groupByValue)>
+			<#if groupByAttribute?has_content>
+				<#local extendedContents = groupBy(extendedContents, groupByAttribute)>
 			</#if>
-			<#if (extendedContents?size >1)>
+			<#if (extendedContents?size >=1)>
 				<#local subTemplateName = "handleElementGenericRelationTable">
 				<#if (theContent.graph.subTemplate??)>
 					<#local subTemplateName=theContent.graph.subTemplate>
 				</#if>
 				<#if logHelper??>
-					${logHelper.stackDebugMessage("Graph.build : generating a graph with template : " + subTemplateName + " (gouped by : " + groupByValue + "), for : " + extendedContents?size + " related contents")}
+					${logHelper.stackDebugMessage("Graph.build : generating a graph with template : " + subTemplateName + " (gouped by : " + groupByAttribute + "), for : " + extendedContents?size + " related contents")}
 				</#if>
-				<#local subTemplateInterpretation = "<@${subTemplateName} extendedContents 1 groupByValue?has_content/>"?interpret>
+				<#local subTemplateInterpretation = "<@${subTemplateName} extendedContents 1 groupByAttribute?has_content/>"?interpret>
 				<@subTemplateInterpretation/>
 			</#if>
 		<#else>
@@ -120,8 +120,8 @@
 				</#switch>
 			<#else>
 				<#list theGroup as element>
-				<@recursiveStruture element elementType level+1 />
-			</#list>
+					<@recursiveStruture element elementType level+1 />
+				</#list>
 			</#if>
 		</#list>
 	</#if>
@@ -284,6 +284,112 @@
 	<#return extendsContent>
 </#function>
 
+<#function filterRelated theContent inCategory filterValue>
+	<#local extendedContent = {}>
+		<#if (theContent.graph)?? && theContent.graph?has_content && (theContent.graph.data)?? && theContent.graph.data?has_content>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.filterRelated : " + theContent.title + ", checking graph.data")}
+			</#if>
+			<#local related = searchInList(theContent.graph.data inCategory filterValue)>
+			<#local extendedContent = {"content":theContent, "related":related}>
+		<#else>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.filterRelated : " + theContent.title + ", has no graph.data in contentHeader ==> rejected")}
+			</#if>
+		</#if>
+	<#return extendedContent>
+</#function>
+
+<#function search element structureType filterData parentType="">
+	<#local related = []>
+	<#local match = false>
+	<#local elementType = parentType>
+	<#if (element.type)?? && element.type?has_content>
+		<#local elementType = element.type>
+	</#if>
+	
+	<#local filterDataDetails = filterData?split(":")>
+	<#local filterAttribute = filterDataDetails[0]>
+	<#local filterValue = filterDataDetails[1]>
+	<#local matchedElement = "">
+	
+	<#if elementType == structureType && (element[filterAttribute])?? && element[filterAttribute]?has_content>
+		<#local elementValueToFilterList = element[filterAttribute].split(",")>
+		<#list elementValueToFilterList as anElementFilterValue>
+			
+			<#if !match && (filterValue == "*" || anElementFilterValue == filterValue)>
+				<#local matchedElement = anElementFilterValue>
+				<#local match = true>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.search : matched filter ("+filterAttribute+") on (element) : " + anElementFilterValue + ", against : " + filterValue)}
+				</#if>
+			<#else>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.search : NONE matching filter ("+filterAttribute+") on (element) : " + anElementFilterValue + ", against : " + filterValue)}
+				</#if>
+			</#if>
+		</#list>
+	</#if>
+	
+	<#if match>
+		<#local enchancedElement = element>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.search : preparing enchanced Element, applyinf filter for : " + filterAttribute + ", with value : " + matchedElement)}
+		</#if>
+		<#local theGroup = []>
+		<#if (element.group)??>
+			<#local theGroup = element.group>
+		</#if>
+		<#local theFonction = "">
+		<#if (element.fonction)??>
+			<#local theFonction = element.fonction>
+			<#if filterAttribute == "fonction">
+				<#local theFonction = matchedElement>
+			</#if>
+		</#if>
+		<#local theStatut = "">
+		<#if (element.statut)??>
+			<#local theStatut = element.statut>
+			<#if filterAttribute == "statut">
+				<#local theStatut = matchedElement>
+			</#if>
+		</#if>
+		<#local theRole = "">
+		<#if (element.role)??>
+			<#local theRole = element.role>
+			<#if filterAttribute == "role">
+				<#local theRole = matchedElement>
+			</#if>
+		</#if>
+		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "notFilteredAttribute":{"attribute":filterAttribute, "match":(element[filterValue])!""}}>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.search : matching (enchanced) element : " + common.toString(enchancedElement))}
+		</#if>
+		<#local related = related + [enchancedElement]>
+	</#if>
+		
+	<#if (element.group)?? && element.group?has_content && (element.group?size>0)>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.search : ("+structureType+"/"+filterValue+",parentType="+parentType+"), group found, searching for matching relatedContent : " + common.toString(element))}
+		</#if>	
+		<#local elementType = parentType>
+		<#list element.group as theGroup>
+			<#local elementsList = theGroup>
+			<#if theGroup?is_hash>
+				<#local elementsList = theGroup.elements>
+				<#if (theGroup.type)??>
+					<#local elementType = theGroup.type>
+				</#if>
+			</#if>
+			
+			<#list elementsList as element>
+				<#local related = related + search(element structureType filterData elementType)>
+			</#list>
+		</#list>
+	</#if>
+	<#return related>
+</#function>
+
 <#assign groupedElements = {}>
 <#function groupBy source orderElement>
 	<#if (source?size >0) && orderElement?has_content>
@@ -331,98 +437,38 @@
 		</#if>
 	</#if>
 	
-	<#if !(groupedElements[orderElementValue])??>
-		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.addElement : " + orderElementValue + ", does NOT exists yet : creating group")}
-		</#if>
-		<#local groupOfEelements = {orderElementValue, [anExtendedContent]}>
-	<#else>
-		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.addElement : " + orderElementValue + ", exists addind to existing group")}
-		</#if>
-		<#local groupOfEelements = {orderElementValue, groupedElements[orderElementValue] + [anExtendedContent]}>
-	</#if>
-	<#assign groupedElements = groupedElements + groupOfEelements>
-</#function>
-
-<#function filterRelated theContent inCategory filterValue>
-	<#local extendedContent = {}>
-		<#if (theContent.graph)?? && theContent.graph?has_content && (theContent.graph.data)?? && theContent.graph.data?has_content>
+	<#local splitedOrderElementValue = orderElementValue?split(",")>
+	<#list splitedOrderElementValue as anOrderElementValue>
+		<#local cleanedOrderElementValue = anOrderElementValue?trim>
+		<#if !(groupedElements[cleanedOrderElementValue])??>
 			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.filterRelated : " + theContent.title + ", checking graph.data")}
+				${logHelper.stackDebugMessage("Graph.addElement : " + cleanedOrderElementValue + ", does NOT exists yet : creating group")}
 			</#if>
-			<#local related = searchInList(theContent.graph.data inCategory filterValue)>
-			<#local extendedContent = {"content":theContent, "related":related}>
+			<#local groupOfEelements = {cleanedOrderElementValue, [anExtendedContent]}>
 		<#else>
 			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.filterRelated : " + theContent.title + ", has no graph.data in contentHeader ==> rejected")}
+				${logHelper.stackDebugMessage("Graph.addElement : " + cleanedOrderElementValue + ", exists addind to existing group")}
 			</#if>
+			<#local groupOfEelements = {cleanedOrderElementValue, groupedElements[cleanedOrderElementValue] + [anExtendedContent]}>
 		</#if>
-	<#return extendedContent>
+		<#assign groupedElements = groupedElements + groupOfEelements>
+	</#list>
 </#function>
 
-<#function searchInList elements structureType filterValue>
+<#function searchInList elements structureType filterData>
 	<#local related = []>
 	<#local parentType = "">
 	<#if (elements.type)?? && elements.type?has_content>
 		<#local parentType = elements.type>
 	</#if>
 	<#list elements as element>
-		<#local related = related + search(element, structureType, filterValue, parentType)>
+		<#local related = related + search(element, structureType, filterData, parentType)>
 	</#list>
 	<#return related>
 </#function>
 
-<#function search element structureType filterValue parentType="">
-	<#local related = []>
-	<#local match = false>
-	<#local elementType = parentType>
-	<#if (element.type)?? && element.type?has_content>
-		<#local elementType = element.type>
-	</#if>
-	
-	<#local match = elementType == structureType
-					&& (element.code)?? && element.code?has_content && (filterValue == "*" || element.code == filterValue)>
-	<#if match>
-	<#local enchancedElement = element>
-		<#if !(element.type)??>
-			<#local theGroup = []>
-			<#if (element.group)??>
-				<#local theGroup = element.goup>
-			</#if>
-			<#local theFonction = "">
-			<#if (element.fonction)??>
-				<#local theFonction = element.fonction>
-			</#if>
-			<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":element.statut}>
-		</#if>
-		<#local related = related + [enchancedElement]>
-	</#if>
-		
-	<#if (element.group)?? && element.group?has_content && (element.group?size>0)>
-		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.search : ("+structureType+"/"+filterValue+",parentType="+parentType+"), group found, searching for matching relatedContent : " + common.toString(element))}
-		</#if>	
-		<#local elementType = parentType>
-		<#list element.group as theGroup>
-			<#local elementsList = theGroup>
-			<#if theGroup?is_hash>
-				<#local elementsList = theGroup.elements>
-				<#if (theGroup.type)??>
-					<#local elementType = theGroup.type>
-				</#if>
-			</#if>
-			
-			<#list elementsList as element>
-				<#local related = related + search(element structureType filterValue elementType)>
-			</#list>
-		</#list>
-	</#if>
-	<#return related>
-</#function>
-
-<#function debugExtendedContent extendedContents level=1 baseTitle="NO_BASE_TITLE">
-<#if logHelper??>
+<#function debugExtendedContent extendedContents level=1 baseTitle="NO_BASE_TITLE" logGroup="debugExtendedContent">
+	<#if logHelper??>
 		<#local debugInfos = []>
 		<#local index = 0>
 		<#if extendedContents?is_hash>
@@ -449,15 +495,18 @@
 				<#local index = index+1>
 			</#list>
 		</#if>
-		${logHelper.stackDebugMessage("Graph.displayGroupOfRelations : (level:"+level+") displaying \""+baseTitle+"\" based on extracted contents : " + common.toString(debugInfos))}
+		${logHelper.stackDebugMessage("Graph." + logGroup + " : (level:"+level+") displaying \""+baseTitle+"\" based on extracted contents : " + common.toString(debugInfos))}
 	</#if>
 </#function>
 
 <#macro displayGroupOfRelations extendedContents level isGrouped baseTitle="">
-	${debugExtendedContent(extendedContents level baseTitle)}
+	${debugExtendedContent(extendedContents level baseTitle "displayGroupOfRelations")}
 	
+	<#local title = "">
 	<#local titleLevel = level+1>
-	<#local title = baseTitle + " : ">
+	<#if (baseTitle)?? && baseTitle?has_content>
+		<#local title = baseTitle>
+	</#if>
 	
 	<#local groupedData = extendedContents>
 	<#if !isGrouped>
@@ -466,9 +515,15 @@
 	
 	<#list groupedData as groupName, extendedContents>
 		<#if isGrouped>
-			<#local title = baseTitle + " de " + groupName + " :">
+			<#if (baseTitle)?? && baseTitle?has_content>
+				<#local title = baseTitle + " de " + groupName>
+			<#else>
+				<#local title = groupName>
+			</#if>
 		</#if>
-		<h${titleLevel}>${title}</h${titleLevel}>
+		<#if (title)?? && title?has_content>
+			<h${titleLevel}>${title}</h${titleLevel}>
+		</#if>
 		<#nested extendedContents>
 	</#list>
 </#macro>
