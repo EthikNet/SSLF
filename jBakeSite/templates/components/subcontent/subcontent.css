@@ -46,28 +46,28 @@
 	margin-right: 10px;
 }
 
-.card>a.widget_link, .card>a.widget_link_modal {
+.card.widget_link {
 	display: block;
-	color: black;
+	color: ${webleger.site.style.color};
 	height: 90%;
 }
 
-.card>a.widget_link:hover, .card>a.widget_link_modal:hover {
+.card.widget_link:hover {
 	text-decoration: none;
 }
 
-.card>a.widget_link:hover {
+.card.widget_link:hover {
 	color: ${webleger.site.style.link.text-color.hover};
 }
 
-.card>a.widget_link_modal:hover {
+.card.widget_link_modal:hover {
 	cursor: zoom-in;
 	color: ${webleger.site.style.link.text-color.hover};
 }
 
-.card>a.widget_link:active, .card>a.widget_link_modal:active {
+.card.widget_link:active, .card.widget_link_modal:active {
 	text-decoration: none;
-	color: green;
+	color: ${webleger.site.style.primary.background.color};
 }
 
 .card_exerpt {

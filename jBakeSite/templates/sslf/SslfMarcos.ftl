@@ -133,26 +133,29 @@
 </#macro>
 
 <#macro personneParStructureGraphSubTemplate extendedContents level isGrouped>
+	<@personneParStructure extendedContents level isGrouped />
+</#macro>
+
+<#macro personneParStructureCompactGraphSubTemplate extendedContents level isGrouped>
+	<@personneParStructure extendedContents level isGrouped true/>
+</#macro>
+
+<#macro personneParFonctionGraphSubTemplate extendedContents level isGrouped>
+	<@personneParStructure extendedContents level isGrouped true false/>
+</#macro>
+
+<#macro personneParStructure extendedContents level isGrouped isSmall=false displayFonction=true>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("sslf.personneParStructureGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
 	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped; groupContent>
 			<@graph.displayRelations groupContent ; theContent, relations>
-				<@personneWithPhoto theContent relations />
+				<@personneWithPhoto theContent relations isSmall displayFonction/>
 			</@graph.displayRelations>
 	</@graph.displayGroupOfRelations>
 </#macro>
 
-<#macro personneParFonctionGraphSubTemplate extendedContents level isGrouped>
-	<#if logHelper??>
-		${logHelper.stackDebugMessage("sslf.personneParStructureGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
-	</#if>
-	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped; groupContent>
-			<@graph.displayRelations groupContent ; theContent, relations>
-				<@personneWithPhoto theContent relations true false/>
-			</@graph.displayRelations>
-	</@graph.displayGroupOfRelations>
-</#macro>
+
 
 <#macro personneWithPhoto theContent relations isSmall=false displayFonction=true>
 	<#local customClass = "personneSynthese">

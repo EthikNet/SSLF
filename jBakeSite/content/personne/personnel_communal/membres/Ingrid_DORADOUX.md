@@ -9,6 +9,6 @@ status=published
 exerpt=
 contentImage=images/icones/personnel_communal.svg
 graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Entretient des locaux","role":"personnel communal"}]}
-order=951
+order=981
 ~~~~~~
 Présentation d'Ingrid

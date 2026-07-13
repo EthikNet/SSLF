@@ -9,6 +9,6 @@ status=published
 exerpt=
 contentImage=images/icones/personnel_communal.svg
 graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Ecoles et activités périscolaires","role":"personnel communal", "statut","Agent contractuel"}]}
-order=951
+order=981
 ~~~~~~
 Présentation de Barabara

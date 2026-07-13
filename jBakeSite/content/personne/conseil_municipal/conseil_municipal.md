@@ -5,6 +5,6 @@ category=vieMunicipaleAccesRapide
 status=published
 contentImage=/images/icones/group_personnes.svg
 graph={"query":{"type":"structure", "filter":"role:Conseil municipal", "in":{"category":"personne", "order":"order"}, "groupBy":"related.role"}, "subTemplate":"sslf.personneParStructureGraphSubTemplate"}
-order=850
+order=950
 ~~~~~~
 Le conseil municipal sert à ....

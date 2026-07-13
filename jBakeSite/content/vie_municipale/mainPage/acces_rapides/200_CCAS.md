@@ -5,6 +5,6 @@ category=vieMunicipaleAccesRapide
 tags=
 contentImage=images/icones/group_personnes.svg
 status=published
-order=200
+order=970
 ~~~~~~
 TODO le CCAS

@@ -5,6 +5,6 @@ category=vieMunicipaleAccesRapide
 status=published
 contentImage=/images/icones/personnel_communal.svg
 graph={"query":{"type":"structure", "filter":"role:personnel communal", "in":{"category":"personne", "order":"order"}, "groupBy":"related.fonction"}, "subTemplate":"sslf.personneParFonctionGraphSubTemplate"}
-order=950
+order=980
 ~~~~~~
 Le personnel Communal est là pour .....

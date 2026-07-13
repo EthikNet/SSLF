@@ -121,10 +121,18 @@
 		</#if>
 	</#if>
 	
+	<#local linkTo = "">
+	<#if (listDisplayType=="link" || subContentDisplayContentMode=="link")>
+		<#local linkTo = "data-href=\""+common.buildRootPathAwareURL(subContent.uri)+"\"">
+	</#if>
+	<#if (listDisplayType=="link")>
+		<#local specificContentClass = specificContentClass + " widget_link">
+	</#if>
+	
 	<#if hookHelper??>
 		<@hookHelper.hook "beforeItemSubContent" subContent/>
 	</#if>
-	<div <@generateAnchor subContent/> class="${listDisplayType} content_type_${subContentDisplayContentMode} ${specificContentClass}">
+	<div <@generateAnchor subContent/> class="${listDisplayType} content_type_${subContentDisplayContentMode} ${specificContentClass}" <#if (linkTo?has_content)>${linkTo}</#if>>
 		<#if featauredText?has_content>
 			<div class="featured_label">${featauredText}</div>
 		</#if>
@@ -134,9 +142,6 @@
 			<@hookHelper.hook "beginItemSubContent" subContent/>
 		</#if>
 		<#switch listDisplayType>
-			<#case  "link">
-				<a href="${common.buildRootPathAwareURL(subContent.uri)}" class="widget_link">
-			<#break>
 			<#case "collapse_block">
 				<#local collapseClass = "collapse">
 				<a data-toggle="collapse" href="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}">
@@ -144,23 +149,15 @@
 			<#case "card">
 				<#if (subContentDisplayContentMode == "modalLink")>
 					<@modal.extractContentForModal subContent, "link", listDisplayType, "Plus", subContentDisplayTags />
-				<#elseif (subContentDisplayContentMode == "link")>
-					<a href="${common.buildRootPathAwareURL(subContent.uri)}">
 				</#if>
 			<#break>
 		</#switch>
 		
 		<#nested>
 		<#switch listDisplayType>
-			<#case  "link">
 			<#case "collapse_block">
 				</a>
 				<#break>
-			<#case "card">
-				<#if (subContentDisplayContentMode == "link")>
-					<a href="${common.buildRootPathAwareURL(subContent.uri)}">
-				</#if>
-			<#break>
 		</#switch>
 		
 		<#-->
