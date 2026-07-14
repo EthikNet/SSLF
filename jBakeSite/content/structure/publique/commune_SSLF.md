@@ -5,6 +5,7 @@ category=structure
 code=commune_SSLF
 status=published
 contentImage=images/common/logo_left-small.jpg
-order=950
+graph={"query":{"type":"structure", "filter":"role:personnel communal", "in":{"category":"personne", "order":"order"}, "groupBy":"related.fonction"}, "subTemplate":"sslf.personneParFonctionGraphSubTemplate"}
+order=992
 ~~~~~~
 	

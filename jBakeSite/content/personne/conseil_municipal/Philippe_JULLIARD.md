@@ -8,7 +8,7 @@ code=Philippe JULLIARD
 status=published
 exerpt=
 contentImage=images/personne/Philippe_JULLIARD.jpg
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Conseiller","role":"Conseil municipal","group":[{"type":"commission","elements":[{"code":"personnel communal","statut":"suppléant"},{"code":"affaires scolaires","statut":"titulaire"},{"code":"comission villages agriculture et developpement durable","statut":"suppléant"}]}]}]}
-order=911
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Conseiller","role":"Conseil municipal","sousRole":"conseiller","group":[{"type":"commission","elements":[{"code":"personnel communal","statut":"suppléant"},{"code":"affaires scolaires","statut":"titulaire"},{"code":"villages agriculture et developpement durable","statut":"suppléant"}]}]}]}
+order=958
 ~~~~~~
 Présentation de Philippe

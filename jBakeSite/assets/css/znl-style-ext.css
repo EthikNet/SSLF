@@ -77,6 +77,23 @@
 	color:black;
 }
 
+p {
+	color:${webleger.site.style.muted.foreground};
+}
+
+.minimalCard .blockTitle {
+	font-size:medium;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+.minimalCard .block_title_image_wraper{
+	color:${webleger.site.style.primary.background.color};
+	background-color:hsl(133.55,100%,23.74%,0.2);
+	padding:6px;
+	border-radius:9999px;
+}
+
 .imageHeroSection {
 	    margin-bottom: 2rem;
 }
@@ -104,7 +121,10 @@
 	padding:8px 12px;
 	border-radius:24px;
 }
-
+.title .blockContent p {
+	font-size:large;
+	color:${webleger.site.style.primary.color};
+}
 
 .action_button.btn {
 	padding:12px 36px;
@@ -129,7 +149,7 @@
 	border:1px solid ${webleger.site.style.background.color};
 }
 
-.hp h2 {
+h2 {
 	letter-spacing: -.025em;
 	color:${webleger.site.style.color};
 }
@@ -190,6 +210,8 @@
 }
 
 .panneauPocket_infos {
+	padding:6px;
+	margin-top:12px;
 	border-radius: 25px;
 }
 
@@ -289,6 +311,11 @@
 	font-size: medium;
  	font-weight: normal;
 }
+
+.graphItemsCompactLeft .block_wraping  {
+	justify-content:flex-start;
+	gap:6px;
+}
     
 #sectionFooter {
 	background-color:${webleger.site.style.secondary.background.color};
@@ -353,7 +380,7 @@
 		padding-bottom: 8rem;
 		margin-top:48px;
 	}
-	.title .blockContent p:first-child {
+	.title .blockContent p {
 		width:60%;
 	}
 

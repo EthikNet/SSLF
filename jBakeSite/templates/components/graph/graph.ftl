@@ -217,7 +217,7 @@
 </#macro>
 
 <#function getChildElement structureType="MISSING_TYPE" code="MISSING_CODE">
-	<#local structure = db.getPublishedContent("org_openCiLife_post")?filter(b -> (b.category)?? && b.category?has_content && b.category==structureType)?filter(b -> (b.code)?? && b.code?has_content && b.code==code)>
+	<#local structure = db.getPublishedContent("org_openCiLife_post")?filter(b -> ((b.category)?? && b.category?has_content && b.category==structureType) || structureType=="*")?filter(b -> (b.code)?? && b.code?has_content && b.code==code)>
 	<#if (langHelper)??>
 		<#local structure = structure?filter(ct -> langHelper.isCorectLang(ct, langHelper.getLang(content)))>
 	</#if>
@@ -334,7 +334,7 @@
 	<#if match>
 		<#local enchancedElement = element>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.search : preparing enchanced Element, applyinf filter for : " + filterAttribute + ", with value : " + matchedElement)}
+			${logHelper.stackDebugMessage("Graph.search : preparing enchanced Element, with filter for : " + filterAttribute + ", with value : " + matchedElement)}
 		</#if>
 		<#local theGroup = []>
 		<#if (element.group)??>
@@ -361,7 +361,14 @@
 				<#local theRole = matchedElement>
 			</#if>
 		</#if>
-		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "notFilteredAttribute":{"attribute":filterAttribute, "match":(element[filterValue])!""}}>
+		<#local theSousRole = "">
+		<#if (element.sousRole)??>
+			<#local theSousRole = element.sousRole>
+			<#if filterAttribute == "sousRole">
+				<#local theSousRole = matchedElement>
+			</#if>
+		</#if>
+		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
 		<#if logHelper??>
 			${logHelper.stackDebugMessage("Graph.search : matching (enchanced) element : " + common.toString(enchancedElement))}
 		</#if>
@@ -502,6 +509,7 @@
 <#macro displayGroupOfRelations extendedContents level isGrouped baseTitle="">
 	${debugExtendedContent(extendedContents level baseTitle "displayGroupOfRelations")}
 	
+	<#local linkToContent = true>
 	<#local title = "">
 	<#local titleLevel = level+1>
 	<#if (baseTitle)?? && baseTitle?has_content>
@@ -522,7 +530,13 @@
 			</#if>
 		</#if>
 		<#if (title)?? && title?has_content>
-			<h${titleLevel}>${title}</h${titleLevel}>
+			<h${titleLevel}>
+				<#if linkToContent>
+					<@buildLink "*" groupName />
+				<#else>
+					${title}
+				</#if>
+			</h${titleLevel}>
 		</#if>
 		<#nested extendedContents>
 	</#list>

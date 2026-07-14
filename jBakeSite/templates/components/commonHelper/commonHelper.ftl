@@ -102,16 +102,26 @@ return : text with URL transformed
 			
 			<#local wrapTo="span class=\""+wrapToCssClass+"\"">
 		</#if>
-	
+		
+		<#local imageData = getImageData(image)>
 		<@wrap wrapTo>
 			<#if common.isSvg(image)>
-				<span <#if cssClass?has_content>class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>${image}</span>
+				<span <#if cssClass?has_content>class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>${imageData}</span>
 			<#else>
-				<img src="${common.buildRootPathAwareURL(image)}"<#if cssClass?has_content> class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>
+				<img src="${imageData}"<#if cssClass?has_content> class="${cssClass}"</#if><#if alternativeText?has_content> alt="${alternativeText}"</#if>>
 			</#if>
 		</@wrap>
 	</#if>
 </#macro>
+<#function getImageData(image="")>
+	<#local imageData = image>
+	<#if image?has_content>
+		<#if !common.isSvg(image)>
+			<#local imageData = common.buildRootPathAwareURL(image) >
+		</#if>
+	</#if>
+	<#return imageData>
+</#function>
 
 <#macro wrap wrapTo="">
 	<#if (wrapTo)?? && wrapTo?has_content>

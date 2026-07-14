@@ -28,11 +28,12 @@
     <meta property="og:title" content="<#if (alteredContent.title)??><#escape x as x?xml>${alteredContent.title}</#escape><#else>${propertiesHelper.retrieveAndDisplayConfigText("site.header.title")}</#if>" >
 	<meta property="og:type" content="website" >
 	<meta property="og:url" content="${common.getCanonicalUrl()}" >
-	<#if (alteredContent.contentImage)??>
-		<meta property="og:image" content="${common.buildAbsoluteURL(alteredContent.contentImage)}" >
-	<#else>
-		<meta property="og:image" content="${common.buildRootPathAwareURL(propertiesHelper.retrieveAndDisplayConfigText("site.logoLeft.file"))}" >
+	
+	<#assign pageImageData = common.buildRootPathAwareURL(propertiesHelper.retrieveAndDisplayConfigText("site.header.iconShortcut"))>
+	<#if (pageImageData?has_content)??>
+		<#assign pageImageData = common.getImageData(alteredContent.contentImage)>
 	</#if>
+		<meta property="og:image" content='${pageImageData}'>
 	<#if (alteredContent.excerpt)??>
 		<meta name="og:description" content="${alteredContent.excerpt}">
 	<#else>

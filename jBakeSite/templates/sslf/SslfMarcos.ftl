@@ -87,6 +87,14 @@
 	</div>
 </#macro>
 
+<#macro minimalCardSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+		<#if (item.contentImage)?? && item.contentImage?has_content>
+			<@block.generateTitle item true/>
+		<#else>
+			<@block.generateTitle item/>
+		</#if>
+</#macro>
+
 <#macro personneSubTemplate theContent>
 	<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate"/>>
 		<@block.generateTitle theContent true/>
@@ -100,13 +108,13 @@
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("sslf.comissionsParMembresGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
-	<div class="fourPerRow">
 		<@graph.displayGroupOfRelations extendedContents level isGrouped; groupContent>
+			<div class="block_wraping fourPerRow">
 				<@graph.displayRelations groupContent ; theContent, relations>
 					<@personneWithPhoto theContent relations true/>
 				</@graph.displayRelations>
+			</div>
 		</@graph.displayGroupOfRelations>
-	</div>
 </#macro>
 
 <#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped>
