@@ -5,6 +5,7 @@ category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
 code=Emilie PAGNAT
+imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
 contentImage=images/personne/Emilie_pagnat.jpg

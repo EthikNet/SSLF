@@ -5,6 +5,7 @@ category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
 code=Baptiste TASSIN
+imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
 contentImage=images/icones/personnel_communal.svg

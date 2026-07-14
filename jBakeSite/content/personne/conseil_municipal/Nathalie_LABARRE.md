@@ -5,6 +5,7 @@ category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
 code=Nathalie LABARRE
+imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
 contentImage=images/personne/Nathalie_LABARRE.jpg

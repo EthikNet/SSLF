@@ -2,6 +2,7 @@ title=Conseil des Jeunes
 date=2026-07-13
 type=org_openCiLife_post
 category=vieMunicipaleAccesRapide
+imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
 specificClass=graphItemsCompactLeft

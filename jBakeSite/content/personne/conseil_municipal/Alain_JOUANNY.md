@@ -5,6 +5,7 @@ category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
 code=Alain JOUANNY
+imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
 contentImage=images/personne/Alain_Jouanny.jpg

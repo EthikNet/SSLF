@@ -5,6 +5,7 @@ category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
 code=Cécile MOREAU
+imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
 contentImage=images/icones/personnel_communal.svg

@@ -379,6 +379,7 @@ h2 {
 	.title {
 		padding-bottom: 8rem;
 		margin-top:48px;
+		min-width:1000px;
 	}
 	.title .blockContent p {
 		width:60%;

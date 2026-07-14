@@ -3,6 +3,7 @@ date=2026-07-11
 type=org_openCiLife_post
 category=personne
 subTemplate=sslf.personneSubTemplate
+imageHero={"category":"imageHeroVieMunicipale"}
 specificClass=personne
 code=Sandrine DESMOULIN
 status=published
