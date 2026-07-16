@@ -1,0 +1,17 @@
+.toc_item a {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	gap:6px;
+}
+
+.toc_item a .toc_image_wraper {
+	height:100%;
+	display:flex;
+	flex-wrap:wrap;
+	align-content:center;
+}
+
+.toc_item .toc_image_wraper .toc_image{
+	height:21px;
+}

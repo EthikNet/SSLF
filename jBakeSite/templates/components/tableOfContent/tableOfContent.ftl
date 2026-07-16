@@ -12,29 +12,33 @@ param : content : content to search for include content
 <#macro build theContent>
 	<#if (theContent.toc)??>
 		<#local displayToc=theContent.toc>
+		<#local displayImg = false>
 		<#if displayToc?has_content>
 			<#if logHelper??>
 		 		${logHelper.stackDebugMessage("ToC : display TOC for ${content.uri} with value " + common.toString(displayToc))}
+		 	</#if>
+		 	<#if (theContent.toc.displayImg)?? && theContent.toc.displayImg?has_content>
+		 		<#local displayImg = true>
 		 	</#if>
 		 	<#if block??>
 				<#local subTemplateName = "defaultTocSubTemplate">
 				<#if (displayToc.subTemplate??)>
 					<#local subTemplateName=displayToc.subTemplate>
 				</#if>
-				<#local subTemplateInterpretation = "<@${subTemplateName} displayToc block.getBlocks(theContent) />"?interpret>
+				<#local subTemplateInterpretation = "<@${subTemplateName} displayToc block.getBlocks(theContent) displayImg theContent.uri/>"?interpret>
 				<@subTemplateInterpretation/>
 			</#if>
 		</#if>
 	</#if>
 </#macro>
 
-<#macro defaultTocSubTemplate displayToc blocks>
-	<@blockTocUlLiWithLinkSubTemplate displayToc blocks blocksOrderBy />
+<#macro defaultTocSubTemplate displayToc blocks displayImg mainPageUrl>
+	<@blockTocUlLiWithLinkSubTemplate displayToc blocks displayImg mainPageUrl/>
 </#macro>
 
-<#macro blockTocUlLiWithLinkSubTemplate displayToc blocks>
+<#macro blockTocUlLiWithLinkSubTemplate displayToc blocks displayImg mainPageUrl>
 	<#if logHelper??>
- 		${logHelper.stackDebugMessage("ToC : Building a Lu/LI ToC")}
+ 		${logHelper.stackDebugMessage("ToC : Building a UL/LI ToC")}
  	</#if>
 	<div class="toc">
 		<#local endTag="">
@@ -42,19 +46,25 @@ param : content : content to search for include content
 		
 		<ul class="toc_list">
 		<#list blocks as blockForToc>
-			<#local uri = buildTocUri(blockForToc)>
-			<#if uri?has_content>
-				<a href="${uri}">
-				<#local endTag="</a>">
-			</#if>
-			<li class="toc_item">${blockForToc.title}</li>
-			${endTag}
+			<#local uri = buildTocUri(blockForToc mainPageUrl)>
+			<li class="toc_item">
+				<#if uri?has_content>
+					<a href="${uri}">
+					<#local endTag="</a>">
+				</#if>
+				
+				<#if displayImg && (blockForToc.contentImage)?? && blockForToc.contentImage?has_content>
+					<@common.addImageIcon blockForToc.contentImage "toc_image"/>
+				</#if>
+				<span>${blockForToc.title}</span>
+				${endTag}
+			</li>
 		</#list>
 		</ul>
 	</div>
 </#macro>
 
-<#macro blockTocSelectSubTemplate displayToc blocks>
+<#macro blockTocSelectSubTemplate displayToc blocks mainPageUrl>
 	<#if logHelper??>
  		${logHelper.stackDebugMessage("ToC : Building a Select ToC")}
  	</#if>
@@ -64,7 +74,12 @@ param : content : content to search for include content
 		<option value="">--${displayToc.title!"Naviguation"}--</option>
 		<#list blocks as blockForToc>
 			<#local uri = buildTocUri(blockForToc)>
-			<option value="${uri}" class="toc_item">${blockForToc.title}</option>
+			<option value="${uri}" class="toc_item">
+				<#if displayImg && (blockForToc.contentImage)?? && blockForToc.contentImage?has_content>
+					<@common.addImageIcon blockForToc.contentImage "toc_image"/>
+				</#if>
+				<span>${blockForToc.title}</span>
+			</option>
 			${endTag}
 		</#list>
 		</select>
@@ -78,12 +93,13 @@ param : content : content to search for include content
 	</#if>
 </#macro>
 
-<#function buildTocUri block>
+<#function buildTocUri block mainPageUrl=content.uri>
 	<#local uri = "">
 	<#if (block.anchorId)??>
-		<#local uri = "#" + block.anchorId>
+		<#local uri = mainPageUrl + "#" + block.anchorId>
 	<#else>
-		<#local uri = "#" + common.generatedAnchorId(block.title)>
+		<#local uri = mainPageUrl + "#" + common.generatedAnchorId(block.title)>
 	</#if>
+	<#local uri = common.buildRootPathAwareURL("/" + uri)>
 	<#return uri>
 </#function>

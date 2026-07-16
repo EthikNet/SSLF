@@ -18,7 +18,9 @@
 			<#assign subTemplateInterpretation = "<@${content.subTemplate} content />"?interpret>
 			<@subTemplateInterpretation/>
 		<#else>
+			<@hookHelper.hook "beforeContent" content/>
 			${content.body}
+			<@hookHelper.hook "afterContent" content/>
 		</#if>
 	</#if>
 	

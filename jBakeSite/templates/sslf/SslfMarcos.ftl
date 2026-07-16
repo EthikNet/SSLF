@@ -81,6 +81,7 @@
 			<@common.buildFiles theBlock/>
 			<@common.buildDates theBlock/>
 			<@common.buildDateTimes theBlock/>
+			<@common.buildWebsites theBlock/>
 			
 			<@block.generateBodyContent theBlock/>
 		</div>
@@ -100,6 +101,90 @@
 		<@block.generateTitle theContent true/>
 		<div class="blockBody">
 			<@block.generateBodyContent theContent/>
+		</div>
+	</div>
+</#macro>
+
+<#macro servicesGroupSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<div class="${className}_block" data-href="${common.buildRootPathAwareURL(item.uri)}">
+		<#if featauredText?has_content>
+			<span class="featured_label">${featauredText}</span>
+		</#if>
+		<div class="${className}_header">
+			<#if (item.contentImage)??>
+				<@common.addImageIcon item.contentImage className+"_image " item.title ""/>
+			</#if>
+			<div class="${className}_header_title">
+				<#if displayTitle>						
+					<${(theContent.includeContent.titleTag)!"h3"} class="${className}_title"><#rt>
+						<#if (subContentBeforeTitleImage?has_content)>
+							<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
+						</#if>
+						<#t>${item.title!""}
+					<#lt></${(theContent.includeContent.titleTag)!"h3"}>
+				</#if>
+				<#if (item.exerpt??)>
+					<div class="${className}_exerpt">
+						${item.exerpt!""}
+					</div>
+				</#if>
+			</div>
+		</div>
+		<hr>
+		<div class="${className}_body">
+			<#if (toc)??>
+				<@toc.build item />
+			</#if>
+		</div>
+	</div>
+</#macro>
+
+<#macro servicesSubTemplate theBlock>
+	<#local className = "service">
+	<#local featauredText = "">
+	<#if (theBlock.featured)?? && (theBlock.featured.text)?? && theBlock.featured.text?has_content>
+		<#local featauredText = theBlock.featured.text>
+	</#if>
+	<#local displayTitle = true>
+	<#if (serviceGroup.displayTitle)?? && serviceGroup.display.displayTitle == false>
+			<#local displayTitle = false>
+		</#if>
+	<div <@block.generateAnchor theBlock/> class="block ${className}_block">
+		<#if featauredText?has_content>
+			<span class="featured_label">${featauredText}</span>
+		</#if>
+		<div class="${className}_header">
+			<#if (theBlock.contentImage)??>
+				<@common.addImageIcon theBlock.contentImage className+"_image " theBlock.title ""/>
+			</#if>
+			<div class="${className}_header_title">
+				<#if displayTitle>						
+					<${(theBlock.includeContent.titleTag)!"h3"} class="${className}_title"><#rt>
+						<#t>${theBlock.title!""}
+					<#lt></${(theBlock.includeContent.titleTag)!"h3"}>
+				</#if>
+				<#if (theBlock.exerpt??)>
+					<div class="${className}_exerpt">
+						${theBlock.exerpt!""}
+					</div>
+				</#if>
+			</div>
+		</div>
+		<div class="${className}_body">
+			<@block.generateBodyContent theBlock/>
+			<hr/>
+			<div class="metaDataListInLine greenButtonLikeChildDivs">
+				<@common.buildLocation theBlock/>
+				<@common.buildPhone theBlock/>
+				<@common.buildEmail theBlock/>
+				<@common.buildHours theBlock/>
+				<@common.buildDates theBlock/>
+				<@common.buildDateTimes theBlock/>
+				<@common.buildWebsites theBlock/>
+			</div>
+			<div class="metaDataListInLine">
+				<@common.buildFiles theBlock/>
+			</div>
 		</div>
 	</div>
 </#macro>
