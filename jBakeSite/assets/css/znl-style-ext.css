@@ -354,6 +354,8 @@ h2 {
 	flex-direction: row;
  	align-items: center;
 	text-align: center;
+	object-fit: contain;
+	max-width: 48px;
 }
 .serviceGroup_header .serviceGroup_image svg{
 	padding:4px;

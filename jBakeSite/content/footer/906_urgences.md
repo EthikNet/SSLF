@@ -7,6 +7,5 @@ status=published
 order=906
 ~~~~~~
 SAMU : **15**
-Police / Gendarmerie : **17**
+Gendarmerie : **17**
 Pompiers : **18**
-Numéro européen : **112**

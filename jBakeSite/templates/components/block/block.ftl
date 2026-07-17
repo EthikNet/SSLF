@@ -96,29 +96,25 @@
 	<#local wrapEnable = false>
 	<#local specificClass = "block_wraping">
 	<#local wrapTag = "div">
-	<#if (blockConfig)?? && (blockConfig.wrap)?? && (blockConfig.wrap.enable)?? && (blockConfig.wrap.enable == "true")>
-		<#if logHelper??>
-			${logHelper.stackDebugMessage("block.generateBlockWrap : wraping is enabled")}
+	<#if (blockConfig)?? && (blockConfig.wrap)??>
+		<#if (blockConfig.wrap.enable)?? && (blockConfig.wrap.enable == "true")>
+			<#local wrapEnable = true>
 		</#if>
-		<#local wrapEnable = true>
-	<#else>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("block.generateBlockWrap : wraping is NOT enabled")}
+			${logHelper.stackDebugMessage("block.generateBlockWrap : wraping is enabled ? " + wrapEnable?string("yes","no"))}
 		</#if>
-	</#if>
-	
-	<#if (blockConfig)?? && (blockConfig.wrap)?? && (blockConfig.wrap.specificClass)?? && blockConfig.wrap.specificClass?has_content>
-		<#local specificClass = specificClass + " " + blockConfig.wrap.specificClass>
-	</#if>
-	<#if (blockConfig)?? && (blockConfig.wrap)?? && (blockConfig.wrap.tag)?? && blockConfig.wrap.tag?has_content>
-		<#local wrapTag = blockConfig.wrap.tag>
+		<#if (blockConfig.wrap.specificClass)?? && blockConfig.wrap.specificClass?has_content>
+			<#local specificClass = specificClass + " " + blockConfig.wrap.specificClass>
+		</#if>
+		<#if (blockConfig.wrap.tag)?? && blockConfig.wrap.tag?has_content>
+			<#local wrapTag = blockConfig.wrap.tag>
+		</#if>
 	</#if>
 	
 	<#if wrapEnable>
 		<${wrapTag} class="${specificClass}">
 	</#if>
 	<#nested>
-	
 	<#if wrapEnable>
 		</${wrapTag}>
 	</#if>

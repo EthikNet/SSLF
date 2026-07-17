@@ -99,7 +99,7 @@
 	<#if (allLegalContents?size>0)>
 		<ul class="${classes}">
 			<#list allLegalContents?sort_by("date") as legalContent>
-				<li><a href=${common.buildRootPathAwareURL(legalContent.uri)}>${legalContent.title}</a></li>
+				<li><a href="${common.buildRootPathAwareURL(legalContent.uri)}">${legalContent.title}</a></li>
 			</#list>
 		</ul>
 	</#if>

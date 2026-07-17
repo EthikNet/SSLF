@@ -71,7 +71,8 @@
 	    	<div id="preHeader" class="container preHeader ${webleger.site.preheader.class}">
 	    		<#if block??>
 		    		<div id="preHeader_blocks" class="blocks">
-		    			<@block.buildWithCategory alteredContent config.site_header_category/>
+		    			<@block.buildWithCategory alteredContent config.site_header_category  "order" {"ignore_page_config":true}
+		    			/>
 					</div>
 				</#if>
 	    	</div>

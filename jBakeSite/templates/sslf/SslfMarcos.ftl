@@ -147,8 +147,8 @@
 	</#if>
 	<#local displayTitle = true>
 	<#if (serviceGroup.displayTitle)?? && serviceGroup.display.displayTitle == false>
-			<#local displayTitle = false>
-		</#if>
+		<#local displayTitle = false>
+	</#if>
 	<div <@block.generateAnchor theBlock/> class="block ${className}_block">
 		<#if featauredText?has_content>
 			<span class="featured_label">${featauredText}</span>
@@ -159,14 +159,12 @@
 			</#if>
 			<div class="${className}_header_title">
 				<#if displayTitle>						
-					<${(theBlock.includeContent.titleTag)!"h3"} class="${className}_title"><#rt>
-						<#t>${theBlock.title!""}
-					<#lt></${(theBlock.includeContent.titleTag)!"h3"}>
+					<${(theBlock.includeContent.titleTag)!"h3"} class="${className}_title">
+						${theBlock.title!""}
+					</${(theBlock.includeContent.titleTag)!"h3"}>
 				</#if>
 				<#if (theBlock.exerpt??)>
-					<div class="${className}_exerpt">
-						${theBlock.exerpt!""}
-					</div>
+					<div class="${className}_exerpt">${theBlock.exerpt!""}</div>
 				</#if>
 			</div>
 		</div>
@@ -182,9 +180,11 @@
 				<@common.buildDateTimes theBlock/>
 				<@common.buildWebsites theBlock/>
 			</div>
-			<div class="metaDataListInLine">
-				<@common.buildFiles theBlock/>
-			</div>
+			<#if (theContent.files)?? && theContent.files?has_content && (theContent.files.data)?? && theContent.files.data?has_content>
+				<div class="metaDataListInLine">
+					<@common.buildFiles theBlock/>
+				</div>
+			</#if>
 		</div>
 	</div>
 </#macro>

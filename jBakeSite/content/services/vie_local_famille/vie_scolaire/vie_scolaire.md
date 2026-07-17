@@ -5,6 +5,7 @@ category=vieLocalFamille
 includeBlocks={"category":"vieScolaire", "wrap":{"enable":"true", "specificClass":"service_items twoPerRow"}}
 toc={"title":"Sommaire", "displayImg":true}
 hooks={"data":[{"position":"beforeContent", "action":"toc.build", "renderOnce":true, "order":80}]}
+imageHero={"category":"imageHeroServices"}
 tags=
 status=published
 specificClass=servicesPage
@@ -12,6 +13,6 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Collège, école, restauration, bus scolaire.
 
 displayTags=false
-order=300
+order=302
 ~~~~~~
 ## Tous les services scolaires
