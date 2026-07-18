@@ -1,5 +1,5 @@
-title=Défibrillateurs
-date=2026-07-14
+title=Defibrillateurs
+date=2026-07-18
 type=org_openCiLife_post
 category=sante
 includeBlocks={"category":"defribilateur", "wrap":{"enable":"true", "specificClass":"service_items twoPerRow"}}
@@ -8,7 +8,10 @@ hooks={"data":[{"position":"beforeContent", "action":"toc.build", "renderOnce":t
 imageHero={"category":"imageHeroServices"}
 tags=
 status=published
-order=302
-~~~~~~
+contentImage=images/icones/DAE_sign.svg
+exerpt=Afin de renforcer la sécurité des habitants
 
-TODO !!!
+displayTags=false
+order=308
+~~~~~~
+	
