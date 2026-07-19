@@ -1,7 +1,7 @@
 title=Déchèteries
 date=2026-07-19
 type=org_openCiLife_block
-category=dechets_menages
+category=autres_dechets
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
