@@ -9,7 +9,7 @@ contentImage=images/services/logo_Maximum.png
 exerpt=Afin de faciliter l'élimination des objets volumineux
 anchorId=encombrants
 
-order=310
+order=304
 ~~~~~~
 Afin de faciliter l'élimination des objets volumineux, la CCHLeM organise un service de collecte des encombrants en complément des déchèteries.
 Cette prestation est incluse dans le financement du service déchets et permet de lutter contre les dépôts sauvages.

@@ -13,7 +13,7 @@ phone=05 55 12 12 87
 email= contact@syded87.org
 websites=https://www.syded87.org/fr/
 
-order=308
+order=302
 ~~~~~~
 Gérées par le SYDED, elles permettent de déposer : déchets verts, gravats, encombrants, métaux, bois, déchets électriques et électroniques, déchets dangereux ménagers.
 
