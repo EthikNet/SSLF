@@ -15,23 +15,30 @@ Afin de renforcer la sécurité des habitants et d’améliorer la prise en char
 
 Ces équipements permettent d’intervenir rapidement en cas d’arrêt cardiaque, en complément de l’alerte des secours. Simples d’utilisation, ils guident l’utilisateur par des instructions vocales et peuvent être utilisés par toute personne témoin d’une urgence.
 
-> **Résidence du Cèdre (EHPAD) – 2 rue Léon-Mercier**
+> **Résidence du Cèdre (EHPAD)**
+> 2 rue Léon-Mercier
 
-> **Collège Fabre d’Églantine – 11 rue du 8 Mai 1945**
-> accessible aux horaires d’ouverture de l’établissement
+> **Collège Fabre d’Églantine**
+> 11 rue du 8 Mai 1945
+> *accessible aux horaires d’ouverture de l’établissement*
 
-> **Stade du Mondelet – 18 avenue Maxime-Letourneur**
-> accessible 24h/24 et 7j/7
+> **Stade du Mondelet**
+> 18 avenue Maxime-Letourneur
+> *accessible 24h/24 et 7j/7*
 
-> **Cabinet du Docteur Bourrel – 14 rue du 8 Mai 1945**
+> **Cabinet du Docteur Bourrel**
+> 14 rue du 8 Mai 1945
 
-> **Cabinet infirmier – 2 place de l’Église, à l’extérieur**
-> accessible 24h/24 et 7j/7
+> **Cabinet infirmier**
+> 2 place de l’Église, à l’extérieur
+> *accessible 24h/24 et 7j/7*
 
-> **Mairie de Saint-Sulpice-les-Feuilles – dans le sas d’entrée**
-> accessible 24h/24 et 7j/7
+> **Mairie de Saint-Sulpice-les-Feuilles**
+> dans le sas d’entrée
+> *accessible 24h/24 et 7j/7*
 
 En cas d’urgence, appelez immédiatement les secours :
+
 - 15 : SAMU 
 - 18 : Sapeurs-pompiers 
 - 112 : Numéro d’urgence européen

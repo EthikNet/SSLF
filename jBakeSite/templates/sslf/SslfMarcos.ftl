@@ -178,6 +178,7 @@
 				<@common.buildHours theBlock/>
 				<@common.buildDates theBlock/>
 				<@common.buildDateTimes theBlock/>
+				<@common.buildFreeDate theBlock/>
 				<@common.buildWebsites theBlock/>
 			</div>
 			<#if (theContent.files)?? && theContent.files?has_content && (theContent.files.data)?? && theContent.files.data?has_content>

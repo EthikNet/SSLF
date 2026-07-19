@@ -332,6 +332,10 @@ h2 {
 .service_items {
 	gap:24px;
 }
+
+.serviceGroup_block {
+	background-color:white;
+}
 .serviceGroup_header, .service_header {
 	display: flex;
 	flex-wrap: wrap;
@@ -360,7 +364,7 @@ h2 {
 .serviceGroup_header .serviceGroup_image svg{
 	padding:4px;
 }
-.service_header .service_image svg {
+.service_header .service_image svg{
 	padding:6px;
 	border-radius:16px;
 }
@@ -412,6 +416,9 @@ h2 {
 	padding-left:6px;
 	border-top-left-radius: inherit;
 	border-top-right-radius: inherit;
+}
+.service_block .blockContent img{
+	max-width:100%;
 }
 .service_block blockquote{
 	display: flex;
