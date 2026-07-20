@@ -1,15 +1,41 @@
-title=Tiers-Lieu La Papotte
+title=Tiers-Lieu La Papote
 date=2026-07-14
 type=org_openCiLife_post
 category=vieLocalFamille
-includeBlocks={"category":"laPapotte", "wrap":{"enable":"true", "specificClass":"service_items twoPerRow"}}
+includeBlocks={"category":"laPapote", "wrap":{"enable":"true", "specificClass":"service_items twoPerRow"}}
 toc={"title":"Sommaire", "displayImg":true}
 hooks={"data":[{"position":"beforeContent", "action":"toc.build", "renderOnce":true, "order":80}]}
 imageHero={"category":"imageHeroServices"}
 tags=
 status=published
-contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="light_green round"  aria-hidden="true" data-tsd-source="/src/routes/services.index.tsx:239:11"><path d="M10 2v2"></path><path d="M14 2v2"></path><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"></path><path d="M6 2v2"></path></svg>
+specificClass=servicesPage
+contentImage=/images/services/logo-papote.png
 exerpt=Coworking, formations, aide au numérique.
 order=308
 ~~~~~~
-	
+### La poapote vous propose
+
+
+#### Pour travailler : 
+
+De nombreux équipement pour travailler : Internet par fibre optique, wifi, imprimante-scanner, matériel pour visioconférences, paperboad.
+
+Des espaces de détente : salon, jardin avec terrasse, cuisine équipée.
+
+Un accès 24/24h – 7/7j : accès autonome et sécurisé à votre espace de travail
+
+
+#### Pour apprendre
+
+Des ateliers et des formationstout au long de l'année. Consultez [l'agenda](https://lapapote.com/?page_id=21317) pour plus d'informations.
+
+#### Pour se divertir
+
+En collaboration avec les habitants et les acteurs du territoire, l’association La Papote imagine et met en place des activités et événements qui viennent renforcer la vie locale.
+
+#### Pour s'informer
+
+La Papote a pour vocation de devenir le lieu où les habitants du territoire iront lorsqu’ils auront une interrogation sur des sujets tels que la vie associative, l’accès aux droits, le tourisme, l’emploi et la formation, le numérique …
+
+
+**Une équipe à votre écoute !**

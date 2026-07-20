@@ -368,6 +368,9 @@ h2 {
 	padding:6px;
 	border-radius:16px;
 }
+.service_header img.service_image{
+	border-radius:16px;
+}
 .serviceGroup_header .serviceGroup_header_title, .service_header .service_header_title{
 	width:70%;
 	color:${webleger.site.style.muted.foreground};
@@ -389,6 +392,11 @@ h2 {
 	width:24px;
 	height:24px;
 	padding:3px;
+	border-radius:6px;
+}
+.serviceGroup_block .toc .toc_item img, .servicesPage .toc .toc_item img{
+	width:24px;
+	height:24px;
 	border-radius:6px;
 }
 

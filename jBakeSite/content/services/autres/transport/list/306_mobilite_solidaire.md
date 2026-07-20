@@ -1,7 +1,7 @@
 title=Mobilité solidaire
 date=2026-07-17
 type=org_openCiLife_block
-category=aide_personne
+category=transport
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
