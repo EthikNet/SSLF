@@ -9,17 +9,20 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Collège public de secteur — de la 6ᵉ à la 3ᵉ
 anchorId=college
 
-phone=05 55 76 00 00
-websites=Site officiel|https://www.ac-limoges.fr
+location=11 rue du 8 mai 1945
+phone=05 55 76 75 83
+email=ce.0870049f@ac-limoges.fr
 order=304
 ~~~~~~
-Le collège du secteur accueille les élèves de la commune et des communes voisines. Le ramassage scolaire est organisé chaque jour depuis Saint-Sulpice-les-Feuilles.
+Le collège du secteur accueille les élèves de la commune et de communes voisines. Le ramassage scolaire est organisé chaque jour par la Région.
+
+![photo de l'école maternelle](${webleger.build.host}/images/services/college_batiment.jpg)
 
 > **Adresse**
-> Collège Jean-Monnet — 87160 (à compléter)
+> Collège Fabre Églantine, 11 rue du 8 mai 1945 87160 Saint-Sulpice-Les-Feuilles
 
 > **Horaires de classe**
-> Lun–Ven · 8h30–16h30 (mercredi : 12h30)
+> lundi au vendredi : 8h30-12h30 / 14h-17h05
 
 > **Niveaux**
 > 6ᵉ → 3ᵉ

@@ -15,4 +15,6 @@ exerpt=Collège, école, restauration, bus scolaire.
 displayTags=false
 order=302
 ~~~~~~
-## Tous les services scolaires
+## Cité scolaire Fabre d'Eglantine
+
+![photo de la Cité scolaire Fabre d'Eglantine](${webleger.build.host}/images/services/cite_scolaire_fabre_eglantine.jpg)

@@ -14,17 +14,25 @@ email=cantine@saint-sulpice-les-feuilles.fr
 files={"data":[{"location":"#", "label":"Menus du mois (PDF)", "main":true}, {"location":"#", "label":"Règlement de la cantine (PDF)"}, {"location":"#", "label":"Inscription / facturation"}]}
 order=306
 ~~~~~~
-La cantine municipale propose chaque midi des repas préparés sur place, avec une part importante de produits locaux et bio. Les menus sont validés par une diététicienne et affichés chaque semaine.
+Le restaurant scolaire propose chaque midi des repas préparés sur place, avec une part de produits locaux et bio. Les menus sont publiés sur le site internet et sur facebook chaque semaine.
 
 > **Lieu**
 > Restaurant scolaire — groupe scolaire
 
+### Ecoles
 > **Service**
-> 11h45–13h15 les jours de classe
+> 12h-12h40 les jours de classe
 
 > **Tarif**
-> 3,80 € / repas (à confirmer)
+> 2,50 € / repas
+> Inscription et vente des tickets à la mairie, facturation à chaque fin de période
+> PAI pris en compte
 
-- Inscription au mois ou à la semaine
-- Régimes alimentaires & PAI pris en compte
-- Plus de 50 % de produits locaux
+### Collège
+> **Service**
+> à partir de 12h40 les jours de classe
+
+> **Tarif**
+> en fonction du quotient familial
+> Inscription et facturation par le secrétariat du collège
+> PAI pris en compte
