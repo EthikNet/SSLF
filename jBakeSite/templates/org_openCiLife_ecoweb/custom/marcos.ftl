@@ -49,7 +49,7 @@
 </#macro>
 
 <#macro displayTags content, label="Tags", style="list">
-	<#if (content.tags)?? && (content.tags?size > 0) && !((block.displayTags)?? && block.displayTags == "false")>
+	<#if (content.tags)?? && (content.tags?size > 0) && !((content.displayTags)?? && content.displayTags == "false")>
 		<#if (label)?? && (label?has_content)>
 			<span>Tags : </span>
 		</#if>

@@ -148,7 +148,7 @@
 			<#break>
 			<#case "card">
 				<#if (subContentDisplayContentMode == "modalLink")>
-					<@modal.extractContentForModal subContent, "link", listDisplayType, "Plus", subContentDisplayTags />
+					<@modal.extractContentForModal subContent, "link", listDisplayType, subContentModaleShowMoreButton, subContentDisplayTags />
 				</#if>
 			<#break>
 		</#switch>
@@ -249,6 +249,7 @@ param : content : content to search for include content
 			<#local subContentBeforeTitleImage = (content.includeContent.display.beforeTitleImage)!"">
 			
 			<#local subContentmodaleCloseButton = (content.includeContent.display.closeButton)!"close">
+			<#local subContentModaleShowMoreButton = (content.includeContent.display.showMoreLabel)!"voir plus">
 			<#local subContentMoreInfoLinkLabel = (content.includeContent.display.moreInfoLinkLabel)!"">
 			<#local subContentDisplayTags = (content.includeContent.display.displayTags)!false>
 			
@@ -413,7 +414,7 @@ param : content : content to search for include content
 						</#if>
 						<#if (subContentDisplayContentMode == "modal")>
 						<td>
-							<@modal.extractContentForModal altSubContent, "button", listDisplayType, "voir plus", subContentDisplayTags />
+							<@modal.extractContentForModal altSubContent, "button", listDisplayType, subContentModaleShowMoreButton, subContentDisplayTags />
 						</td>
 						</#if>
 						<#if subContentDisplayContentMode == "visible">
@@ -498,7 +499,7 @@ param : content : content to search for include content
 						</#if>
 						
 						<#if (subContentDisplayContentMode == "modal")>
-							<@modal.extractContentForModal altSubContent, "button", listDisplayType, "voir plus", subContentDisplayTags />
+							<@modal.extractContentForModal altSubContent, "button", listDisplayType, subContentModaleShowMoreButton, subContentDisplayTags />
 						</#if>
 						<#if (subContentDisplayContentMode == "visible" || subContentDisplayContentMode == "modalLink")>
 							<div class="${listDisplayType}_content<#if subContentDisplayContentMode == "modalLink"> contentHidden</#if>">

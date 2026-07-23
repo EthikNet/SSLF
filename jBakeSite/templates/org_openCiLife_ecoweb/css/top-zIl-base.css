@@ -9,6 +9,18 @@
   margin: 0 auto;
 }
 
+/* Clear Fix hacks */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
 
 .navbar .container-fluid {
 	display:flex;

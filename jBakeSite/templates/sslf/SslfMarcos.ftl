@@ -81,6 +81,7 @@
 			<@common.buildFiles theBlock/>
 			<@common.buildDates theBlock/>
 			<@common.buildDateTimes theBlock/>
+			<@common.buildFreeDate theBlock/>
 			<@common.buildWebsites theBlock/>
 			
 			<@block.generateBodyContent theBlock/>
@@ -249,8 +250,6 @@
 	</@graph.displayGroupOfRelations>
 </#macro>
 
-
-
 <#macro personneWithPhoto theContent relations isSmall=false displayFonction=true>
 	<#local customClass = "personneSynthese">
 	<#if isSmall>
@@ -276,5 +275,20 @@
 				</#if>
 			</span>
 		</span>
+	</div>
+</#macro>
+
+<#macro cardWithImageSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<div class="image_cover_wrapper">
+		<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
+	</div>
+	<div class="block_content">
+		<@block.generateTitle item/>
+		<div class="blockDetail">
+			<#if (item.exerpt)??>
+				${item.exerpt}
+			</#if>
+		</div>
+		<span class="labelShowMore">En  savoir plus</span>
 	</div>
 </#macro>
