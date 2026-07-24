@@ -308,6 +308,8 @@
 				${item.exerpt}
 			</#if>
 		</div>
-		<span class="labelShowMore">En  savoir plus</span>
+		<#local subContentModaleShowMoreButton="En savoir plus">
+		<#local subContentDisplayTags=false>
+		<@modal.extractContentForModal item, "button", className, subContentModaleShowMoreButton, subContentDisplayTags />
 	</div>
 </#macro>
