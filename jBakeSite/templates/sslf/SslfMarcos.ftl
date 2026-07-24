@@ -280,7 +280,26 @@
 
 <#macro cardWithImageSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
 	<div class="image_cover_wrapper">
-		<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
+		<#if (item.contentImage)??>
+			<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
+		</#if>
+	</div>
+	<div class="block_content">
+		<@block.generateTitle item/>
+		<div class="blockDetail">
+			<#if (item.exerpt)??>
+				${item.exerpt}
+			</#if>
+		</div>
+		<span class="labelShowMore">En  savoir plus</span>
+	</div>
+</#macro>
+
+<#macro cardVillageSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<div class="image_cover_wrapper">
+		<#if (item.contentImage)??>
+			<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
+		</#if>
 	</div>
 	<div class="block_content">
 		<@block.generateTitle item/>

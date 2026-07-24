@@ -488,15 +488,17 @@ h2 {
 	display:flex;
 	flex-direction:column;
 	gap:12px;
-	min-height:250px
+	flex-wrap:wrap;
+	min-height:250px;
 }
 
-.blockWithImageSmall {
+.blockWithImageSmall{
 	border:1px solid grey;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	overflow: hidden;
 	display: flex;
+	
 	flex-direction:column;
 	height:100%;
 	width:30%;
@@ -513,7 +515,7 @@ h2 {
 	max-width:inherit;
 	margin:0 !important;
 }
-.blockWithImageSmall .block_content {
+.blockWithImageSmall .block_content{
 	padding:12px;
 	color:${webleger.site.style.muted.foreground};
 }
@@ -522,7 +524,7 @@ h2 {
 	font-weight:normal;
 	color:${webleger.site.style.color};
 }
-.blockWithImageSmall .labelShowMore {
+.blockWithImageSmall .labelShowMore{
 	font-weight:bold;
 	color:${webleger.site.style.primary.background.color};
 }

@@ -57,6 +57,10 @@ $(document).ready(function(){
 		$(targetList).filter(function() {
 			var currentElement = $(this);
 			var currentCard = currentElement.parent().parent();
+			// handle Modal card
+			if(currentCard.prop("tagName") == "A") {
+				currentCard = currentCard.parent();
+			}
 			
 			var cardfilterStatus = []
 			buttonsChoice.each(function(buttonIndex){
