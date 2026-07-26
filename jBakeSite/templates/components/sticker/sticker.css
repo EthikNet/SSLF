@@ -10,6 +10,12 @@
 	top: 1rem;
 	right: 1rem;
 }
+.sticker_left_absolute {
+	justify-content: left;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
 .sticker_centered {
 	justify-content: center;
 }

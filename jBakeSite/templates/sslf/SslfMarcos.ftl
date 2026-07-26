@@ -313,3 +313,46 @@
 		<@modal.extractContentForModal item, "button", className, subContentModaleShowMoreButton, subContentDisplayTags />
 	</div>
 </#macro>
+
+<#macro cardActeurEcoSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<div class="image_cover_wrapper">
+		<#if (item.contentImage)??>
+			<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
+		</#if>
+	</div>
+	<div class="acteurEcoCategorie ${className}_acteurEcoCategorie">${item.acteurEcoCategorie!""}</div>
+	<div class="block_title">
+		<${(item.includeContent.titleTag)!"h3"} class="${className}_title">
+			${item.title!""}
+		</${(item.includeContent.titleTag)!"h3"}>
+	</div>
+	
+	<#if (item.exerpt??)>
+		<div class="${className}_exerpt">
+			${item.exerpt!""}
+		</div>
+	</#if>
+	<hr/>
+	<div class="${className}_body">
+	
+		<@common.buildLocation item/>
+		<@common.buildPhone item/>
+		<@common.buildEmail item/>
+		<@common.buildHours item/>
+		<@common.buildDates item/>
+		<@common.buildDateTimes item/>
+		<@common.buildFreeDate item/>
+	
+		<@block.generateBodyContent item/>
+		<hr/>
+		<div class="metaDataListInLine greenButtonLikeChildDivs">
+			<@common.buildWebsites item/>
+			<@common.buildFaceBook item/>
+		</div>
+		<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
+			<div class="metaDataListInLine">
+				<@common.buildFiles item/>
+			</div>
+		</#if>
+	</div>
+</#macro>

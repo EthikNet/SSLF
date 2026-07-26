@@ -449,14 +449,14 @@ h2 {
 	color:${webleger.site.style.color};
 }
 
-.service_block .greenButtonLikeChildDivs > div{
+.service_block .greenButtonLikeChildDivs > div, .blockWithImageSmall .greenButtonLikeChildDivs > div{
 	color:black;
 	border-radius:12px;
 	padding:3px 6px;
 	font-weight: bold;
 	background-color:${webleger.site.style.primary.background.color.light};
 }
-.service_block .dowloadLink {
+.service_block .dowloadLink, .blockWithImageSmall .dowloadLink {
 	padding:3px 6px;
 }
 
@@ -605,6 +605,26 @@ h2 {
 	max-width:inherit;
 }
 
+.annuaire .blockWithImageSmall{
+	position:relative;
+}
+
+.annuaire .blockWithImageSmall_exerpt {
+	font-weight:bold;
+	text-align:center;
+}
+
+.topLeftIcon {
+	display:flex;
+	font-size:X-Large;
+	background-color:white;
+	border-radius:9999px;
+	justify-content: center;
+	align-items: center;
+	width:40px;
+	height:auto
+}
+
 .objectClasse {
 	display:flex;
 	gap:12px;
@@ -620,6 +640,15 @@ h2 {
 	float:right;
 	padding-left: 12px;
 	width:48%;
+}
+
+.acteurEcoCategorie {
+	text-transform: uppercase;
+	color:${webleger.site.style.impact.color};
+}
+
+.acteurEcoCategorie .blockWithImageSmall_title{
+	margin-top:6px;
 }
 
 #sectionFooter {
