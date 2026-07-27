@@ -498,10 +498,8 @@ h2 {
 	border-top-right-radius: 20px;
 	overflow: hidden;
 	display: flex;
-	
 	flex-direction:column;
 	height:100%;
-	width:30%;
 	min-height: 310px;
 }
 .blockWithImageSmall .image_cover_wrapper{
@@ -754,6 +752,12 @@ h2 {
 	
 	.blockWithImageSmall_list{
 		flex-direction:row;
+	}
+	.blockWithImageSmall{
+		width:30%;
+	}
+	.annuaire .blockWithImageSmall{
+		min-height: 500px;
 	}
 	
 	.footerSecondRow {

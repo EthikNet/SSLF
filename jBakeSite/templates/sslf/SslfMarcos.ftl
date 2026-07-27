@@ -344,15 +344,21 @@
 		<@common.buildFreeDate item/>
 	
 		<@block.generateBodyContent item/>
-		<hr/>
-		<div class="metaDataListInLine greenButtonLikeChildDivs">
-			<@common.buildWebsites item/>
-			<@common.buildFaceBook item/>
-		</div>
-		<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
-			<div class="metaDataListInLine">
-				<@common.buildFiles item/>
+		<#if acteurEcoHasCustomProperties(item)>
+			<hr/>
+			<div class="metaDataListInLine greenButtonLikeChildDivs">
+				<@common.buildWebsites item/>
+				<@common.buildFaceBook item/>
 			</div>
+			<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
+				<div class="metaDataListInLine">
+					<@common.buildFiles item/>
+				</div>
+			</#if>
 		</#if>
 	</div>
 </#macro>
+
+<#function acteurEcoHasCustomProperties item>
+	<#return ((item.facebook)?? && item.facebook?has_content) || ((item.websites)?? && item.websites?has_content)>
+</#function>
