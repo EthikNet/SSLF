@@ -10,7 +10,7 @@ displayTitle=false
 enableGlossary=false
 stickers={"disposition":"left", "data":[{"label":"Annuaire", "specificClass":"btn-semi-transparent"}]}
 hooks={"data":[{"position":"afterBlockImageHero", "action":"sslf.vaguesSvg", "renderOnce":true, "order":35}, {"position":"beforeBlockBody", "action":"sticker.build", "renderOnce":true}]}
-order=602
+order=606
 ~~~~~~
 #Vie économique
 
