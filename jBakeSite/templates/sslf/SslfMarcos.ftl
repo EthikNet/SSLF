@@ -362,7 +362,6 @@
 	<#return ((item.facebook)?? && item.facebook?has_content) || ((item.websites)?? && item.websites?has_content)>
 </#function>
 
-
 <#macro cardAssoSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
 	<div class="assoCategorie ${className}_assoCategorie">${item.AssoCategorie!""}</div>
 	<div class="block_title">
@@ -403,4 +402,141 @@
 	</#if>
 </#macro>
 
+<#macro cardProjetSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<div class="projetHeader">
+		<#if (item.contentImage)??>
+			<@common.addImageIcon item.contentImage className+"_image" item.title/>
+		</#if>
+		<div class="project_infos">
+			<div class="projetDuree ${className}_projetDuree">${item.projetDuree!""}</div>
+			<div class="block_title">
+				<${(item.includeContent.titleTag)!"h3"} class="${className}_title">
+					${item.title!""}
+				</${(item.includeContent.titleTag)!"h3"}>
+			</div>
+		</div>
+	</div>
+	<#if (item.exerpt??)>
+		<div class="${className}_exerpt">
+			${item.exerpt!""}
+		</div>
+	</#if>
+	<div class="${className}_body">
+		<@buildBeneficiaires item/>
+		<@buildPorteur item/>
+		<@buildPartenaires item/>
+		<@buildFinanceurs item/>
+		<@buildChronology item/>
+		
+		<@common.buildResponsable item/>
+		<@common.buildLocation item/>
+		<@common.buildPhone item/>
+		<@common.buildEmail item/>
+		<@common.buildHours item/>
+		<@common.buildDates item/>
+		<@common.buildDateTimes item/>
+		<@common.buildFreeDate item/>
+		<@common.buildWebsites item/>
+		<@common.buildFaceBook item/>
+	
+		<@block.generateBodyContent item/>
+	</div>
+	<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
+		<div class="metaDataListInLine">
+			<@common.buildFiles item/>
+		</div>
+	</#if>
+</#macro>
 
+
+<#macro buildBeneficiaires theContent>
+	<#if (theContent.beneficiaires)?? && theContent.beneficiaires?has_content>
+		<#local beneficiairesItems = theContent.beneficiaires?split(",")>
+		<#if (beneficiairesItems?size > 0)>
+			<div class="elementWithIconSmallWrap">
+				<div class="beneficiaires"><span class="label">Bénéficiaires : </span>
+					<#list beneficiairesItems as beneficiairesItem>
+						${beneficiairesItem}
+					</#list>
+				</div>
+			</div>
+		</#if>
+	</#if>
+</#macro>
+
+<#macro buildPorteur theContent>
+	<#if (theContent.porteur)?? && theContent.porteur?has_content>
+		<#local porteursItems = theContent.porteur?split(",")>
+		<#if (porteursItems?size > 0)>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
+				<div class="porteur"><span class="label">Porteur : </span>
+					<#list porteursItems as porteursItem>
+						${porteursItem}
+					</#list>
+				</div>
+			</div>
+		</#if>
+	</#if>
+</#macro>
+
+<#macro buildPartenaires theContent>
+	<#if (theContent.partenaires)?? && theContent.partenaires?has_content>
+		<#local partenairesItems = theContent.partenaires?split(",")>
+		<#if (partenairesItems?size > 0)>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
+				<div class="partenaires"><span class="label">Partenaires : </span>
+					<#list partenairesItems as partenairesItem>
+						${partenairesItem}
+					</#list>
+				</div>
+			</div>
+		</#if>
+	</#if>
+</#macro>
+
+<#macro buildFinanceurs theContent>
+	<#if (theContent.financeurs)?? && theContent.financeurs?has_content>
+		<#local financeursItems = theContent.financeurs?split(",")>
+		<#if (financeursItems?size > 0)>
+		<div class="elementWithIconSmallWrap">
+				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"></path><path d="M15 6h1v4"></path><path d="m6.134 14.768.866-.5 2 3.464"></path><circle cx="16" cy="8" r="6"></circle></svg></div>
+				<div class="financeurs"><span class="label">Financeurs : </span>
+					<#list financeursItems as financeursItem>
+						${financeursItem}
+					</#list>
+				</div>
+			</div>
+		</#if>
+	</#if>
+</#macro>
+
+<#macro buildChronology theContent>
+	<#if (theContent.chronology)?? && theContent.chronology?has_content && (theContent.chronology.data)??  && theContent.chronology.data?has_content>
+		<div class="chronology">
+			<h4>Chronolgie</h4>
+			<ol>
+				<#list theContent.chronology.data as chronologyItem>
+					<#local icone="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M10.1 2.182a10 10 0 0 1 3.8 0'></path><path d='M13.9 21.818a10 10 0 0 1-3.8 0'></path><path d='M17.609 3.721a10 10 0 0 1 2.69 2.7'></path><path d='M2.182 13.9a10 10 0 0 1 0-3.8'></path><path d='M20.279 17.609a10 10 0 0 1-2.7 2.69'></path><path d='M21.818 10.1a10 10 0 0 1 0 3.8'></path><path d='M3.721 6.391a10 10 0 0 1 2.7-2.69'></path><path d='M6.391 20.279a10 10 0 0 1-2.69-2.7'></path></svg>">
+					<#local displayDate = chronologyItem.date!"2026"?date>
+					<#local state = chronologyItem.state!"à venir">
+					<#local label = chronologyItem.label!"à définir">
+					<#switch chronologyItem.state>
+						<#case "passé">
+							<#local icone="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='green' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='12' r='10'></circle><path d='m9 12 2 2 4-4'></path></svg>">
+							<#break>
+						<#case "en cours">
+							<#local icone="<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='orange' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><circle cx='12' cy='12' r='10'></circle><circle cx='12' cy='12' r='1'></circle></svg>">
+							<#break>
+					</#switch>
+					<li>
+						<span class="chronolgy_icone">${icone}</span>
+						<div class="chronolgy_date">${displayDate} · ${state}</div>
+						<div class="chronolgy_label">${label}</div>
+					</li>
+				</#list>
+			</ol>
+		</div>
+	</#if>
+</#macro>

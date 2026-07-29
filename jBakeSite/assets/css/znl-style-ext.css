@@ -449,14 +449,14 @@ h2 {
 	color:${webleger.site.style.color};
 }
 
-.service_block .greenButtonLikeChildDivs > div, .blockWithImageSmall .greenButtonLikeChildDivs > div{
+.service_block .greenButtonLikeChildDivs > div, .blockWithImageSmall .greenButtonLikeChildDivs > div, .blockWithImageMedium .greenButtonLikeChildDivs > div{
 	color:black;
 	border-radius:12px;
 	padding:3px 6px;
 	font-weight: bold;
 	background-color:${webleger.site.style.primary.background.color.light};
 }
-.service_block .dowloadLink, .blockWithImageSmall .dowloadLink {
+.service_block .dowloadLink, .blockWithImageSmall .dowloadLink, .blockWithImageMedium .dowloadLink {
 	padding:3px 6px;
 }
 
@@ -484,7 +484,7 @@ h2 {
 	padding-left:0;
 }
 
-.blockWithImageSmall_list{
+.blockWithImageSmall_list, .blockWithImageMedium_list{
 	display:flex;
 	flex-direction:column;
 	gap:12px;
@@ -492,7 +492,7 @@ h2 {
 	min-height:250px;
 }
 
-.blockWithImageSmall{
+.blockWithImageSmall, .blockWithImageMedium{
 	border:1px solid grey;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
@@ -501,6 +501,7 @@ h2 {
 	flex-direction:column;
 	height:100%;
 	min-height: 310px;
+	background-color:white;
 }
 .blockWithImageSmall .image_cover_wrapper{
 	height:150px;
@@ -513,18 +514,23 @@ h2 {
 	max-width:inherit;
 	margin:0 !important;
 }
-.blockWithImageSmall .block_content{
+.blockWithImageSmall .block_content, .blockWithImageMedium .block_content{
 	padding:12px;
 	color:${webleger.site.style.muted.foreground};
 }
-.blockWithImageSmall .blockTitle{
+.blockWithImageSmall .blockTitle, .blockWithImageMedium .blockTitle{
 	font-size:150%;
 	font-weight:normal;
 	color:${webleger.site.style.color};
 }
-.blockWithImageSmall .labelShowMore{
+.blockWithImageSmall .labelShowMore, .blockWithImageMedium .labelShowMore{
 	font-weight:bold;
 	color:${webleger.site.style.primary.background.color};
+}
+.blockWithImageSmall hr,  .blockWithImageMedium hr{
+	width:90%;
+	margin-top:6px;
+	margin-bottom:6px;
 }
 
 .listAsMiniCard ul {
@@ -603,11 +609,6 @@ h2 {
 	max-width:inherit;
 }
 
-.blockWithImageSmall hr {
-	width:90%;
-	margin-top:6px;
-	margin-bottom:6px;
-}
 
 .vieEconomique .annuaire .blockWithImageSmall, .associations .annuaire .blockWithImageSmall{
 	position:relative;
@@ -639,6 +640,53 @@ h2 {
 	height: 2em;
 }
 
+
+.blockWithImageMedium {
+	padding-left:12px;
+}
+.projetHeader {
+	display: flex;
+}
+.blockWithImageMedium_image_wraper{
+	width:25%;
+}
+.blockWithImageMedium_image_wraper img, .blockWithImageMedium_image_wraper svg{
+	width:100%;
+	height:auto;
+}
+.project_infos {
+	margin-left:12px;
+}
+
+.chronology ol {
+	position:relative;
+	padding-left:1.75rem;
+	border-left:2px solid grey;
+	margin-left:12px;
+}
+.chronology ol > li{
+	position:relative;
+	list-style: none;
+	color:${webleger.site.style.color};
+}
+.chronology ol > li .chronolgy_icone {
+	position:absolute;
+	left:-29px;
+	top:0.125rem;
+	background-color:white;
+}
+.chronology ol > li .chronolgy_date {
+	text-transform: uppercase;
+	letter-spacing:.05em;
+	margin-top: 12px;
+	color:${webleger.site.style.muted.foreground};
+}
+.chronology ol > li .chronolgy_label {
+	font-weight: 600;
+	color:${webleger.site.style.color};
+}
+
+
 .topLeftIcon {
 	display:flex;
 	font-size:X-Large;
@@ -668,8 +716,9 @@ h2 {
 	width:48%;
 }
 
-.acteurEcoCategorie, .assoCategorie {
+.acteurEcoCategorie, .assoCategorie, .projetDuree {
 	text-transform: uppercase;
+	letter-spacing:.05em;
 	color:${webleger.site.style.impact.color};
 }
 .assoCategorie {
@@ -782,6 +831,9 @@ h2 {
 	}
 	.blockWithImageSmall{
 		width:30%;
+	}
+	.blockWithImageMedium {
+		width:48%;
 	}
 	.vieEconomique .annuaire .blockWithImageSmall{
 		height: 445px;
