@@ -1,4 +1,4 @@
-title=Situation géographique
+title=Situation géographique title
 date=2026-07-21
 type=org_openCiLife_block
 category=imageHeroSituationGeo

@@ -18,6 +18,9 @@
 .iconWrap {
 	width:24px;
 	height:auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .iconWrap svg, .iconWrap img{
 	width: 24px;
@@ -31,6 +34,8 @@
 }
 
 .dowloadLink {
+	display:flex;
+	align-items:center;
 	border-radius: 29px;
 	padding: 0 12px;
 	margin: 6px;

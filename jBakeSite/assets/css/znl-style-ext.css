@@ -603,13 +603,40 @@ h2 {
 	max-width:inherit;
 }
 
-.annuaire .blockWithImageSmall{
-	position:relative;
+.blockWithImageSmall hr {
+	width:90%;
+	margin-top:6px;
+	margin-bottom:6px;
 }
 
-.annuaire .blockWithImageSmall_exerpt {
+.vieEconomique .annuaire .blockWithImageSmall, .associations .annuaire .blockWithImageSmall{
+	position:relative;
+}
+.vieEconomique .annuaire .blockWithImageSmall_exerpt{
 	font-weight:bold;
 	text-align:center;
+	height:4em;
+}
+.vieEconomique .annuaire .block_title, .associations .annuaire .block_title {
+	height:4em;
+}
+.associations .annuaire .block_title{
+	margin-right:50px;
+}
+.vieEconomique .annuaire .blockContent > p > img, .associations .annuaire .blockContent > p > img {
+	height:100px;
+	width:auto;
+}
+.vieEconomique .annuaire .blockWithImageSmall_body, .associations .annuaire .blockWithImageSmall_body {
+	overflow: overlay;
+	scrollbar-width: thin;
+	scrollbar-color: ${webleger.site.style.primary.background.color} ${webleger.site.style.primary.background.color.light};
+}
+.vieEconomique .annuaire .blockWithImageSmall_title, .associations .annuaire .blockWithImageSmall_title {
+	display:flex;
+	align-items:center;
+	margin-top:6px;
+	height: 2em;
 }
 
 .topLeftIcon {
@@ -620,7 +647,8 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	width:40px;
-	height:auto
+	height:auto;
+	border:1px solid grey;
 }
 
 .objectClasse {
@@ -640,13 +668,12 @@ h2 {
 	width:48%;
 }
 
-.acteurEcoCategorie {
+.acteurEcoCategorie, .assoCategorie {
 	text-transform: uppercase;
 	color:${webleger.site.style.impact.color};
 }
-
-.acteurEcoCategorie .blockWithImageSmall_title{
-	margin-top:6px;
+.assoCategorie {
+	margin-left:6px
 }
 
 #sectionFooter {
@@ -756,14 +783,18 @@ h2 {
 	.blockWithImageSmall{
 		width:30%;
 	}
-	.annuaire .blockWithImageSmall{
-		min-height: 500px;
+	.vieEconomique .annuaire .blockWithImageSmall{
+		height: 445px;
+	}
+	
+	.associations .annuaire .blockWithImageSmall{
+		height: 300px;
 	}
 	
 	.footerSecondRow {
 		width:50% !important;
 		margin-top: 24px;
-		padding-top: 24px
+		padding-top: 24px;
 		border-top: 1px solid ${webleger.site.style.secondary.hr.color};
 	}
 }

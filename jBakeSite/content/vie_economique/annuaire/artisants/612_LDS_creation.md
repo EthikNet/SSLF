@@ -17,4 +17,4 @@ order=612
 ~~~~~~
 Couturière et diverses créations textiles sur la commune de SSLF. Ouverture sur RDV
 
-![Logo LDS création](${webleger.build.host}/images/vie_economique/artisant/LDS_creation.jpg)
+![Logo LDS création](${webleger.build.host}/images/vie_economique/artisan/LDS_creation.jpg)

@@ -315,11 +315,11 @@
 </#macro>
 
 <#macro cardActeurEcoSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
-	<div class="image_cover_wrapper">
-		<#if (item.contentImage)??>
+	<#if (item.contentImage)??>
+		<div class="image_cover_wrapper">
 			<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
-		</#if>
-	</div>
+		</div>
+	</#if>
 	<div class="acteurEcoCategorie ${className}_acteurEcoCategorie">${item.acteurEcoCategorie!""}</div>
 	<div class="block_title">
 		<${(item.includeContent.titleTag)!"h3"} class="${className}_title">
@@ -332,9 +332,8 @@
 			${item.exerpt!""}
 		</div>
 	</#if>
-	<hr/>
 	<div class="${className}_body">
-	
+		<@common.buildResponsable item/>
 		<@common.buildLocation item/>
 		<@common.buildPhone item/>
 		<@common.buildEmail item/>
@@ -344,21 +343,64 @@
 		<@common.buildFreeDate item/>
 	
 		<@block.generateBodyContent item/>
-		<#if acteurEcoHasCustomProperties(item)>
-			<hr/>
-			<div class="metaDataListInLine greenButtonLikeChildDivs">
-				<@common.buildWebsites item/>
-				<@common.buildFaceBook item/>
-			</div>
-			<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
-				<div class="metaDataListInLine">
-					<@common.buildFiles item/>
-				</div>
-			</#if>
-		</#if>
 	</div>
+	<#if acteurEcoHasCustomProperties(item)>
+		<hr/>
+		<div class="metaDataListInLine greenButtonLikeChildDivs">
+			<@common.buildWebsites item/>
+			<@common.buildFaceBook item/>
+		</div>
+		<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
+			<div class="metaDataListInLine">
+				<@common.buildFiles item/>
+			</div>
+		</#if>
+	</#if>
 </#macro>
 
 <#function acteurEcoHasCustomProperties item>
 	<#return ((item.facebook)?? && item.facebook?has_content) || ((item.websites)?? && item.websites?has_content)>
 </#function>
+
+
+<#macro cardAssoSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<div class="assoCategorie ${className}_assoCategorie">${item.AssoCategorie!""}</div>
+	<div class="block_title">
+		<${(item.includeContent.titleTag)!"h3"} class="${className}_title">
+			${item.title!""}
+		</${(item.includeContent.titleTag)!"h3"}>
+	</div>
+	
+	<#if (item.exerpt??)>
+		<div class="${className}_exerpt">
+			${item.exerpt!""}
+		</div>
+	</#if>
+	<div class="${className}_body">
+	
+		<@common.buildResponsable item/>
+		<@common.buildLocation item/>
+		<@common.buildPhone item/>
+		<@common.buildEmail item/>
+		<@common.buildHours item/>
+		<@common.buildDates item/>
+		<@common.buildDateTimes item/>
+		<@common.buildFreeDate item/>
+	
+		<@block.generateBodyContent item/>
+	</div>
+	<#if acteurEcoHasCustomProperties(item)>
+		<hr/>
+		<div class="metaDataListInLine greenButtonLikeChildDivs">
+			<@common.buildWebsites item/>
+			<@common.buildFaceBook item/>
+		</div>
+		<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
+			<div class="metaDataListInLine">
+				<@common.buildFiles item/>
+			</div>
+		</#if>
+	</#if>
+</#macro>
+
+

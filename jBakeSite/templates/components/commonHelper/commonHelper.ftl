@@ -294,7 +294,7 @@ param : theObject : object to transform in String
 		 	</#if>
 			<div class="elementWithIconSmallWrap">
 				<div class="iconWrap">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-tsd-source="/src/routes/services.vie-scolaire.tsx:218:17"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
 				</div>
 				<#local webSiteDatas = aWebsite?split("|")>
 				<#local websiteText = webSiteDatas[0]?trim>
@@ -305,7 +305,7 @@ param : theObject : object to transform in String
 				<#if webSiteDatas?size == 2>
 					<#local websiteUrl = webSiteDatas[1]?trim>
 				</#if>
-				<div class="website"><a href="${websiteUrl}">${websiteText}</a></div>
+				<div class="website"><a href="${websiteUrl}">site web</a></div>
 			</div>
 		</#list>
 	</#if>
@@ -380,7 +380,7 @@ param : theObject : object to transform in String
 		<#local emailItems = theContent.email?split(",")>
 		<#list emailItems as emailItem>
 			<div class="elementWithIconSmallWrap">
-				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-tsd-source="/src/routes/services.vie-scolaire.tsx:215:17"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
+				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
 				<div class="email"><a href="mailto:${emailItem}">${emailItem}</a></div>
 			</div>
 		</#list>
@@ -398,3 +398,16 @@ param : theObject : object to transform in String
 		</#list>
 	</#if>
 </#macro>
+
+<#macro buildResponsable theContent>
+	<#if (theContent.responsable)?? && theContent.responsable?has_content>
+		<#local responsableItems = theContent.responsable?split(",")>
+		<#list responsableItems as responsableItem>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+				<div class="responsable">${responsableItem}</div>
+			</div>
+		</#list>
+	</#if>
+</#macro>
+

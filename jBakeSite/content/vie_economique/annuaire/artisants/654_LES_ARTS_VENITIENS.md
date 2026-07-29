@@ -14,4 +14,4 @@ email=veneziana2012@gmail.com
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=654
 ~~~~~~
-![exemple de création de LES ARTS VENITIENS](${webleger.build.host}/images/vie_economique/artisant/LES_ARTS_VENITIENS_exemple.jpg)
+![exemple de création de LES ARTS VENITIENS](${webleger.build.host}/images/vie_economique/artisan/LES_ARTS_VENITIENS_exemple.jpg)
