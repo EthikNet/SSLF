@@ -7,7 +7,8 @@ tags=
 status=published
 exerpt=boucherie charcuterie traiteur
 stickers={"disposition":"left_absolute", "data":[{"label":"🥩", "specificClass":"topLeftIcon"}]}
-contentImage=images/vie_economique/commercant.jpg
+contentImage=/images/vie_economique/commerce/logo_toutes_Les_Saveurs_Du_Bonheur.png
+contentImageSpecificClass=objectContain
 location=LARRAUD Fabrice 11 Boismandé
 phone=05 55 76 74 46
 email=larraudfabrice@aol.fr
@@ -16,4 +17,4 @@ facebook=https://www.facebook.com/p/Restaurant-toutes-Les-Saveurs-Du-Bonheur-100
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=612
 ~~~~~~
-![Logo toutes Les Saveurs Du Bonheur](${webleger.build.host}/images/vie_economique/commerce/logo_toutes_Les_Saveurs_Du_Bonheur.png)
+	

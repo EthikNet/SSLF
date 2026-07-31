@@ -316,7 +316,11 @@
 
 <#macro cardActeurEcoSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
 	<#if (item.contentImage)??>
-		<div class="image_cover_wrapper">
+		<#local imageSpecificClass = "">
+		<#if (item.contentImageSpecificClass)?? && item.contentImageSpecificClass?has_content>
+			<#local imageSpecificClass = item.contentImageSpecificClass>
+		</#if>
+		<div class="image_cover_wrapper<#if imageSpecificClass?has_content> ${imageSpecificClass}</#if>">
 			<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
 		</div>
 	</#if>
@@ -539,4 +543,45 @@
 			</ol>
 		</div>
 	</#if>
+</#macro>
+
+<#macro cardMinimalSubTemplate theContent>
+	<#local className="minimalBlock">
+	<#local specificClass="">
+	<#if (theContent.specificClass)?? && theContent.specificClass?has_content>
+	<#local specificClass=theContent.specificClass>
+		</#if>
+	<div class="block ${className}<#if specificClass?has_content> ${specificClass}</#if>">
+		<#if (theContent.exerpt??)>
+			<div class="${className}_exerpt">
+				${theContent.exerpt!""}
+			</div>
+		</#if>
+		<div class="${className}_body">
+		
+			<@block.generateBodyContent theContent/>
+			
+			<@buildBeneficiaires theContent/>
+			<@buildPorteur theContent/>
+			<@buildPartenaires theContent/>
+			<@buildFinanceurs theContent/>
+			<@buildChronology theContent/>
+			
+			<@common.buildResponsable theContent/>
+			<@common.buildLocation theContent/>
+			<@common.buildPhone theContent/>
+			<@common.buildEmail theContent/>
+			<@common.buildHours theContent/>
+			<@common.buildDates theContent/>
+			<@common.buildDateTimes theContent/>
+			<@common.buildFreeDate theContent/>
+			<@common.buildWebsites theContent/>
+			<@common.buildFaceBook theContent/>
+		</div>
+		<#if (theContent.files)?? && theContent.files?has_content && (theContent.files.data)?? && theContent.files.data?has_content>
+			<div class="metaDataListInLine">
+				<@common.buildFiles theContent "<hr/>"/>
+			</div>
+		</#if>
+	</div>
 </#macro>

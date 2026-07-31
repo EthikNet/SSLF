@@ -1,7 +1,7 @@
 title=Dr CARON Michel
 date=2026-07-20
 type=org_openCiLife_block
-category=medecins
+category=medecins,contact_utile
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published

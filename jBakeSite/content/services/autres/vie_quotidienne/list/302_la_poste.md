@@ -1,7 +1,7 @@
 title=La poste
 date=2026-07-19
 type=org_openCiLife_block
-category=vie_quatodienne
+category=vie_quatodienne,contact_utile
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published

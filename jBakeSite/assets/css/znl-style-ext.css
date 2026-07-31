@@ -28,6 +28,10 @@
 	opacity:50%;
 }
 
+.objectContain, .objectContain img {
+	object-fit:contain !important;
+}
+
 .elementWithIconSmallWrap.main .btn-default {
 	color:${webleger.site.style.primary.background.color.medium}
 }
@@ -686,6 +690,45 @@ h2 {
 	color:${webleger.site.style.color};
 }
 
+.mairie_infos {
+	padding:12px;
+}
+.mairie_infos .elementWithIconSmallWrap{
+	margin-top:12px;
+}
+.mairie_infos, .mairie_infos .location, .mairie_infos .phone, .mairie_infos .email, .mairie_infos .hours {
+	font-size:larger;
+}
+.mairie_infos .iconWrap{
+	width:48px;
+	height:auto;
+}
+.mairie_infos .iconWrap svg{
+	width:48px;
+	height:auto;
+	color:${webleger.site.style.impact.color} !important;
+}
+
+.num_urgence .elementWithIconSmallWrap .iconWrap{
+	width:60px;
+	height:60px;
+	border-radius:99999px;
+	margin:12px;
+	background-color:${webleger.site.style.destructive.background.color};
+}
+.num_urgence .elementWithIconSmallWrap .iconWrap svg{
+	width:36px;
+	height:auto;
+	color:${webleger.site.style.destructive.color};
+}
+
+.minimalBlock{
+	border:1px solid grey;
+	border-radius: 20px;
+	display: flex;
+	flex-direction:column;
+	background-color:white;
+}
 
 .topLeftIcon {
 	display:flex;
