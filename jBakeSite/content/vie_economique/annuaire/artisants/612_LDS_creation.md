@@ -7,7 +7,7 @@ tags=
 status=published
 exerpt=Couturière
 stickers={"disposition":"left_absolute", "data":[{"label":"👠", "specificClass":"topLeftIcon"}]}
-contentImage=images/vie_economique/artisan.jpg
+contentImage=images/vie_economique/artisan/LDS_creation.jpg
 location=Mme LASNIER Stéphanie 23 rue du 8 mai
 phone=06 65 09 44 37
 email=byldscreation@gmail.com
@@ -16,5 +16,3 @@ hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "ren
 order=612
 ~~~~~~
 Couturière et diverses créations textiles sur la commune de SSLF. Ouverture sur RDV
-
-![Logo LDS création](${webleger.build.host}/images/vie_economique/artisan/LDS_creation.jpg)

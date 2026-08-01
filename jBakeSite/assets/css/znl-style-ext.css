@@ -32,6 +32,10 @@
 	object-fit:contain !important;
 }
 
+.card {
+	background-color:${webleger.site.style.card.background.color};
+}
+
 .elementWithIconSmallWrap.main .btn-default {
 	color:${webleger.site.style.primary.background.color.medium}
 }
@@ -47,6 +51,7 @@
 	justify-content: start;
 	flex-wrap: wrap;
 	gap: 6px;
+	padding-left:6px;
 	margin-bottom:12px;
 }
 
@@ -338,7 +343,7 @@ h2 {
 }
 
 .serviceGroup_block {
-	background-color:white;
+	background-color:${webleger.site.style.card.background.color};
 }
 .serviceGroup_header, .service_header {
 	display: flex;
@@ -457,10 +462,11 @@ h2 {
 	color:black;
 	border-radius:12px;
 	padding:3px 6px;
-	font-weight: bold;
+	font-weight: 620;
+	font-size:small;
 	background-color:${webleger.site.style.primary.background.color.light};
 }
-.service_block .dowloadLink, .blockWithImageSmall .dowloadLink, .blockWithImageMedium .dowloadLink {
+.publication_block .dowloadLink, .service_block .dowloadLink, .blockWithImageSmall .dowloadLink, .blockWithImageMedium .dowloadLink {
 	padding:3px 6px;
 }
 
@@ -496,16 +502,19 @@ h2 {
 	min-height:250px;
 }
 
-.blockWithImageSmall, .blockWithImageMedium{
-	border:1px solid grey;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
+.blockWithImageSmall, .blockWithImageMedium, .defaultBlock, .defaultCard{
+	border-radius: 20px;
+	box-shadow: 0 1px 2px hsl(136.86 69.9% 7.58% / 0.04), 0 8px 24px -12px hsl(136.86 69.9% 7.58% / 0.12);
 	overflow: hidden;
 	display: flex;
 	flex-direction:column;
 	height:100%;
+	border:1px solid ${webleger.site.style.border.color};
+	background-color:${webleger.site.style.card.background.color};
+}
+
+.blockWithImageSmall, .blockWithImageMedium{
 	min-height: 310px;
-	background-color:white;
 }
 .blockWithImageSmall .image_cover_wrapper{
 	height:150px;
@@ -525,6 +534,7 @@ h2 {
 .blockWithImageSmall .blockTitle, .blockWithImageMedium .blockTitle{
 	font-size:150%;
 	font-weight:normal;
+	padding-left:6px;
 	color:${webleger.site.style.color};
 }
 .blockWithImageSmall .labelShowMore, .blockWithImageMedium .labelShowMore{
@@ -545,8 +555,8 @@ h2 {
 	padding-left:0;
 }
 .listAsMiniCard ul li {
-	background-color:white;
-	border:1px solid grey;
+	background-color:${webleger.site.style.card.background.color};
+	border:1px solid ${webleger.site.style.border.color};
 	border-radius:12px;
     line-height: 20px;
     padding: 12px 0 12px 12px;
@@ -581,13 +591,13 @@ h2 {
 }
 
 .tableFullSizeNoInternalBorder table {
-	background-color:white;
-	border:1px solid grey;
+	background-color:${webleger.site.style.card.background.color};
+	border:1px solid ${webleger.site.style.border.color};
 	border-radius:12px;
 	width:100%;
 }
 .tableFullSizeNoInternalBorder table tr {
-	border:1px solid grey;
+	border:1px solid ${webleger.site.style.border.color};
 }
 .tableFullSizeNoInternalBorder table tr td {
 	border:none;
@@ -635,12 +645,17 @@ h2 {
 .vieEconomique .annuaire .blockWithImageSmall_body, .associations .annuaire .blockWithImageSmall_body {
 	overflow: overlay;
 	scrollbar-width: thin;
+	padding-left:6px;
 	scrollbar-color: ${webleger.site.style.primary.background.color} ${webleger.site.style.primary.background.color.light};
+}
+.vieEconomique .annuaire .elementWithIconSmallWrap, .associations .annuaire .elementWithIconSmallWrap {
+	margin-top:3px;
 }
 .vieEconomique .annuaire .blockWithImageSmall_title, .associations .annuaire .blockWithImageSmall_title {
 	display:flex;
 	align-items:center;
 	margin-top:6px;
+	padding-left:6px;
 	height: 2em;
 }
 
@@ -665,7 +680,7 @@ h2 {
 .chronology ol {
 	position:relative;
 	padding-left:1.75rem;
-	border-left:2px solid grey;
+	border-left:2px solid ${webleger.site.style.border.color};
 	margin-left:12px;
 }
 .chronology ol > li{
@@ -677,7 +692,7 @@ h2 {
 	position:absolute;
 	left:-29px;
 	top:0.125rem;
-	background-color:white;
+	background-color:${webleger.site.style.card.background.color};
 }
 .chronology ol > li .chronolgy_date {
 	text-transform: uppercase;
@@ -723,11 +738,11 @@ h2 {
 }
 
 .minimalBlock{
-	border:1px solid grey;
+	border:1px solid ${webleger.site.style.border.color};
 	border-radius: 20px;
 	display: flex;
 	flex-direction:column;
-	background-color:white;
+	background-color:${webleger.site.style.card.background.color};
 }
 
 .topLeftIcon {
@@ -739,7 +754,7 @@ h2 {
 	align-items: center;
 	width:40px;
 	height:auto;
-	border:1px solid grey;
+	border:1px solid ${webleger.site.style.border.color};
 }
 
 .objectClasse {
@@ -747,11 +762,11 @@ h2 {
 	gap:12px;
 }
 .objectClasse .block {
-	border:2px solid grey;
+	border:2px solid ${webleger.site.style.border.color};
 	border-radius:12px;
-	background-color:white;
 	padding:6px;
 	width:48%;
+	background-color:${webleger.site.style.card.background.color};
 }
 .objectClasse .block img {
 	float:right;
@@ -762,6 +777,7 @@ h2 {
 .acteurEcoCategorie, .assoCategorie, .projetDuree {
 	text-transform: uppercase;
 	letter-spacing:.05em;
+	padding-left:6px;
 	color:${webleger.site.style.impact.color};
 }
 .assoCategorie {
@@ -806,7 +822,7 @@ h2 {
 	border-top: 1px solid ${webleger.site.style.secondary.hr.color};
 }
 .lastInRow{
-	text-align: right;
+	text-align: right !important;
 }
 
 

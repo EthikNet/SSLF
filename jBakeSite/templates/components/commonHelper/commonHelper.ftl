@@ -262,12 +262,24 @@ param : theObject : object to transform in String
 
 <#macro buildPhone theContent>
 	<#if (theContent.phone)?? && theContent.phone?has_content>
-		<div class="elementWithIconSmallWrap">
-			<div class="iconWrap">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+		<#local phoneItems = theContent.phone?split(",")>
+		<#list phoneItems as phoneItem>
+			<#local phoneDatas = phoneItem?split("|")>
+				<#local phoneLabel = phoneDatas[0]?trim>
+				<#local phoneNumber = phoneDatas[0]?trim>
+				<#if logHelper??>
+			 		${logHelper.stackDebugMessage("common.buildPhone : phoneDatas : " + toString(phoneDatas))}
+			 	</#if>
+				<#if phoneDatas?size == 2>
+					<#local phoneNumber = phoneDatas[1]?trim>
+				</#if>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+				</div>
+				<div class="phone"><a href="tel:${phoneNumber}"><#if phoneDatas?size == 2>${phoneLabel} (</#if>${phoneNumber}<#if phoneDatas?size == 2>)</#if></a></div>
 			</div>
-			<div class="phone"><a href="tel:${theContent.phone}">${theContent.phone}</a></div>
-		</div>
+		</#list>
 	</#if>
 </#macro>
 

@@ -585,3 +585,33 @@
 		</#if>
 	</div>
 </#macro>
+
+<#macro lienVersArticleSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<div class="${className}_block" data-href="${common.buildRootPathAwareURL(item.uri)}">
+		<#if featauredText?has_content>
+			<span class="featured_label">${featauredText}</span>
+		</#if>
+		<div class="${className}_body">
+			<#if (item.contentImage)??>
+				<@common.addImageIcon item.contentImage className+"_image" item.title/>
+			</#if>
+			
+			<#if displayTitle>						
+				<h3 class="${className}_title"><#rt>
+				<#if (subContentBeforeTitleImage?has_content)>
+					<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
+				</#if>
+					<#t>${item.title!""}
+				<#lt></h3>
+			</#if>
+			
+			<#if (item.exerpt??)>
+				<div class="${className}_exerpt">
+					${item.exerpt!""}
+				</div>
+			</#if>
+			
+			<@common.buildFiles item "<hr/>"/>
+		</div>
+	</div>
+</#macro>

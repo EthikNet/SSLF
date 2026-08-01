@@ -9,5 +9,4 @@ order=908
 - [Contacts](${webleger.build.host}/contacts.html)
 - [Mes démarches](${webleger.build.host}/mes_demarches.html)
 - [Agenda](${webleger.build.host}/agenda.html)
-- [Mentions légales](${webleger.build.host}/mentions_legales.html)
 - [Accessibilité](${webleger.build.host}/accessibilité.html)

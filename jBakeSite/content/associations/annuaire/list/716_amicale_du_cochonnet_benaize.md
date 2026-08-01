@@ -7,10 +7,10 @@ status=published
 exerpt=
 stickers={"disposition":"right", "data":[{"label":"🔘", "specificClass":"topLeftIcon"}]}
 exerpt=
-responsable=M. Fabrice PATURAUD
-location=La Grimière, 87160 MAILHAC SUR BENAIZE
-phone=06 87 70 39 62, Sonia: 06 10 12 75 19
-email=fbpatu@gmail.com
+responsable=M. Gérard GORGE
+location=La Maison Verte, 87160 MAILHAC SUR BENAIZE
+phone=06.19.94.44.30,GUERIN Marie-Joelle|06.35.90.16.15
+email=g.charpente@gmail.com,guerinjo@gmail.com
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=716
 ~~~~~~
