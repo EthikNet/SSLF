@@ -32,6 +32,12 @@
 }
 .navbar-brand {
 	float:none !important;
+	
+}
+.navbar-text {
+	float:none !important;
+	display:inline-block;
+    vertical-align: middle;
 }
 
 #mainContent {

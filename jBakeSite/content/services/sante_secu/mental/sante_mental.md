@@ -9,7 +9,7 @@ imageHero={"category":"imageHeroServices"}
 tags=
 status=published
 specificClass=servicesPage
-contentImage=images/services/logo_kine.png
+contentImage=images/services/logo_psy.jpg
 exerpt=Santé mental
 order=318
 ~~~~~~

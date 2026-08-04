@@ -145,12 +145,18 @@
 	  </button>
 	  <#if (config.site_menu_brand_src)?? && config.site_menu_brand_src?has_content>
     	<a class="navbar-brand" href="${webleger.build.host}/index.html">
-    	<img
-    		<#if (config.site_menu_brand_specificClass)?? && config.site_menu_brand_specificClass?has_content> class="${config.site_menu_brand_specificClass}"</#if> 
-    		<#if (config.site_menu_brand_alt)?? && config.site_menu_brand_alt?has_content> alt="${config.site_menu_brand_alt}"</#if> 
-    		src="${common.buildRootPathAwareURL(config.site_menu_brand_src)}"/>
+	    	<img
+	    		<#if (config.site_menu_brand_specificClass)?? && config.site_menu_brand_specificClass?has_content> class="${config.site_menu_brand_specificClass}"</#if> 
+	    		<#if (config.site_menu_brand_alt)?? && config.site_menu_brand_alt?has_content> alt="${config.site_menu_brand_alt}"</#if> 
+	    		src="${common.buildRootPathAwareURL(config.site_menu_brand_src)}"
+	    	/>
+			<#if (config.site_menu_brand_text)?? && config.site_menu_brand_text?has_content>
+				<p class="navbar-text<#if (config.site_menu_brand_text_specificClass)?? && config.site_menu_brand_text_specificClass?has_content> ${config.site_menu_brand_text_specificClass}</#if>"> 
+					${config.site_menu_brand_text}
+				</p>
+			</#if>
     	</a>
-    </#if>
+	</#if>
 	</div>
 	<div class="navbar-collapse collapse">
 	  <ul class="nav navbar-nav" role="menubar">

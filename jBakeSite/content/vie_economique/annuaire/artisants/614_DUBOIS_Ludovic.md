@@ -11,6 +11,7 @@ contentImage=images/vie_economique/artisan.jpg
 location=12 rue des châtaigniers
 phone=05 55 76 09 75
 email=entreprise.ludovicdubois@laposte.net
+freeDates=Lundi au Vendredi de 7h45 à 19h
 facebook=https://www.facebook.com/p/EIRL-Dubois-Ludovic-100092674912099/
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=614

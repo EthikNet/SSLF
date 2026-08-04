@@ -353,6 +353,7 @@
 		<div class="metaDataListInLine greenButtonLikeChildDivs">
 			<@common.buildWebsites item/>
 			<@common.buildFaceBook item/>
+			<@common.buildInstagram item/>
 		</div>
 		<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
 			<div class="metaDataListInLine">
@@ -397,6 +398,7 @@
 		<div class="metaDataListInLine greenButtonLikeChildDivs">
 			<@common.buildWebsites item/>
 			<@common.buildFaceBook item/>
+			<@common.buildInstagram item/>
 		</div>
 		<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
 			<div class="metaDataListInLine">
@@ -442,6 +444,7 @@
 		<@common.buildFreeDate item/>
 		<@common.buildWebsites item/>
 		<@common.buildFaceBook item/>
+		<@common.buildInstagram item/>
 	
 		<@block.generateBodyContent item/>
 	</div>
@@ -577,6 +580,7 @@
 			<@common.buildFreeDate theContent/>
 			<@common.buildWebsites theContent/>
 			<@common.buildFaceBook theContent/>
+			<@common.buildInstagram theContent/>
 		</div>
 		<#if (theContent.files)?? && theContent.files?has_content && (theContent.files.data)?? && theContent.files.data?has_content>
 			<div class="metaDataListInLine">
@@ -587,31 +591,26 @@
 </#macro>
 
 <#macro lienVersArticleSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
-	<div class="${className}_block" data-href="${common.buildRootPathAwareURL(item.uri)}">
-		<#if featauredText?has_content>
-			<span class="featured_label">${featauredText}</span>
+	<#if featauredText?has_content>
+		<span class="featured_label">${featauredText}</span>
+	</#if>
+	<#if (item.contentImage)??>
+		<@common.addImageIcon item.contentImage className+"_image" item.title/>
+	</#if>
+	<div class="${className}_body">
+		<#if displayTitle>						
+			<h3 class="${className}_title"><#rt>
+			<#if (subContentBeforeTitleImage?has_content)>
+				<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
+			</#if>
+				<#t>${item.title!""}
+			<#lt></h3>
 		</#if>
-		<div class="${className}_body">
-			<#if (item.contentImage)??>
-				<@common.addImageIcon item.contentImage className+"_image" item.title/>
-			</#if>
-			
-			<#if displayTitle>						
-				<h3 class="${className}_title"><#rt>
-				<#if (subContentBeforeTitleImage?has_content)>
-					<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
-				</#if>
-					<#t>${item.title!""}
-				<#lt></h3>
-			</#if>
-			
-			<#if (item.exerpt??)>
-				<div class="${className}_exerpt">
-					${item.exerpt!""}
-				</div>
-			</#if>
-			
-			<@common.buildFiles item "<hr/>"/>
-		</div>
+		
+		<#if (item.exerpt??)>
+			<div class="${className}_exerpt">
+				${item.exerpt!""}
+			</div>
+		</#if>
 	</div>
 </#macro>

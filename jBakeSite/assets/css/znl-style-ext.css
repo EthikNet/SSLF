@@ -7,6 +7,12 @@
 	background-color: rgb(250,250,250,0.5);
 	backdrop-filter: blur(4px);
 }
+.brandText {
+	color: black;
+	max-width:120px;
+	font-weight:bold;
+	font-style: italic;
+}
 
 .breadcrumb li a {
     border-radius:15px;
@@ -384,6 +390,10 @@ h2 {
 	width:70%;
 	color:${webleger.site.style.muted.foreground};
 }
+.serviceGroup_header .serviceGroup_header_title h3, .service_header .service_header_title h3{
+	margin:0;
+	vertical-align: middle;
+}
 .serviceGroup_block hr, .service_block hr {
 	width:90%;
 	color:${webleger.site.style.muted.foreground};
@@ -391,6 +401,10 @@ h2 {
 
 .serviceGroup_block .toc .toc_title {
 	display:none;
+}
+
+.serviceGroup_block .toc .toc_label{
+	text-align: start;
 }
 .serviceGroup_block .toc .toc_item {
 	list-style: none;
@@ -502,7 +516,15 @@ h2 {
 	min-height:250px;
 }
 
-.blockWithImageSmall, .blockWithImageMedium, .defaultBlock, .defaultCard{
+.defaultBlock_list{
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction: row;
+	gap: 12px;
+	justify-content: space-evenly;
+}
+
+.blockWithImageSmall, .blockWithImageMedium, .defaultBlock, .defaultCard, .vieEconomique .linkToAgenda{
 	border-radius: 20px;
 	box-shadow: 0 1px 2px hsl(136.86 69.9% 7.58% / 0.04), 0 8px 24px -12px hsl(136.86 69.9% 7.58% / 0.12);
 	overflow: hidden;
@@ -511,6 +533,19 @@ h2 {
 	height:100%;
 	border:1px solid ${webleger.site.style.border.color};
 	background-color:${webleger.site.style.card.background.color};
+}
+
+.defaultBlock, .defaultCard {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 6px;
+	padding:12px;
+	width:98%;
+}
+.defaultBlock_image svg{
+	width:48px;
+	height:auto;
 }
 
 .blockWithImageSmall, .blockWithImageMedium{
@@ -555,14 +590,14 @@ h2 {
 	padding-left:0;
 }
 .listAsMiniCard ul li {
-	background-color:${webleger.site.style.card.background.color};
-	border:1px solid ${webleger.site.style.border.color};
 	border-radius:12px;
     line-height: 20px;
-    padding: 12px 0 12px 12px;
+    padding: 12px 6px 12px 12px;
     display: flex;
     gap: 12px;
     align-items: center;
+	background-color:${webleger.site.style.card.background.color};
+	border:1px solid ${webleger.site.style.border.color};
 }
 .listAsMiniCard ul li strong{
 	display:block;
@@ -635,6 +670,14 @@ h2 {
 .vieEconomique .annuaire .block_title, .associations .annuaire .block_title {
 	height:4em;
 }
+.vieEconomique .linkToAgenda .blockIcon .svg{
+	width:48px;
+	height:auto;
+}
+.vieEconomique .linkToAgenda{
+	padding:12px;
+}
+
 .associations .annuaire .block_title{
 	margin-right:50px;
 }
@@ -825,7 +868,6 @@ h2 {
 	text-align: right !important;
 }
 
-
 @media screen and (min-width: 640px) {
 	#preHeader_blocks {
 		flex-direction: row-reverse;
@@ -846,18 +888,11 @@ h2 {
 	.title {
 		padding-bottom: 8rem;
 		margin-top:48px;
-		min-width:1000px;
+		min-width:640px;
 	}
+	
 	.title .blockContent p {
 		width:60%;
-	}
-
-	.paneauPocketGroup {
-		flex-direction:column;
-		width:100% !important;
-	}
-	#paneauPocketGroup .block {
-		width:100%;
 	}
 	#panneauPocket_infos .actions_list {
 		flex-direction:column;
@@ -869,12 +904,11 @@ h2 {
 		flex-direction:row;
 	}
 	.publication_list .publication{
-		width:98%;
+		width:45%;
 	}
 	.publication_list .full{
 		width:45%;
 	}
-	
 	.serviceGroup_list {
 		display:flex;
 		flex-wrap: wrap;
@@ -889,10 +923,13 @@ h2 {
 		flex-direction:row;
 	}
 	.blockWithImageSmall{
-		width:30%;
+		width:48%;
 	}
 	.blockWithImageMedium {
-		width:48%;
+		width:98%;
+	}
+	.associations .annuaire .blockWithImageSmall{
+		height: 300px;
 	}
 	.vieEconomique .annuaire .blockWithImageSmall{
 		height: 445px;
@@ -907,5 +944,21 @@ h2 {
 		margin-top: 24px;
 		padding-top: 24px;
 		border-top: 1px solid ${webleger.site.style.secondary.hr.color};
+	}
+}
+
+@media screen and (min-width: 900px){
+	.title {
+		min-width:900px;
+	}
+	
+	.publication_list .publication{
+		width:45%;
+	}
+	.blockWithImageSmall{
+		width:30%;
+	}
+	.blockWithImageMedium {
+		width:48%;
 	}
 }

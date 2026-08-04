@@ -1,7 +1,7 @@
 title=chemin rando title
 date=2026-07-21
 type=org_openCiLife_block
-category=imageHerocheminRando
+category=imageHeroCheminRando
 tags=
 status=published
 imageHero={"image":"images/tourisme.jpg"}

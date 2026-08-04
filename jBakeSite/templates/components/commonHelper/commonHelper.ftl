@@ -413,13 +413,13 @@ param : theObject : object to transform in String
 	</#if>
 </#macro>
 
-<#macro buildResponsable theContent>
-	<#if (theContent.responsable)?? && theContent.responsable?has_content>
-		<#local responsableItems = theContent.responsable?split(",")>
-		<#list responsableItems as responsableItem>
+<#macro buildInstagram theContent>
+	<#if (theContent.instagram)?? && theContent.instagram?has_content>
+		<#local instagramItems = theContent.instagram?split(",")>
+		<#list instagramItems as instagramItem>
 			<div class="elementWithIconSmallWrap">
-				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-				<div class="responsable">${responsableItem}</div>
+				<div class="iconWrap"><img src="${buildRootPathAwareURL("images/common/instagram.png")}"/></div>
+				<div class="facebook"><a href="${instagramItem}">Instagram</a></div>
 			</div>
 		</#list>
 	</#if>

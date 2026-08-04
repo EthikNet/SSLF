@@ -56,7 +56,7 @@ param : content : content to search for include content
 				<#if displayImg && (blockForToc.contentImage)?? && blockForToc.contentImage?has_content>
 					<@common.addImageIcon blockForToc.contentImage "toc_image"/>
 				</#if>
-				<span>${blockForToc.title}</span>
+				<span class="toc_label">${blockForToc.title}</span>
 				${endTag}
 			</li>
 		</#list>

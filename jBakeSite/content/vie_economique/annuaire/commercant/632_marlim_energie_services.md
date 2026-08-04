@@ -2,7 +2,7 @@ title=Marlim energie services
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique
-acteurEcoCategorie=Commerce
+acteurEcoCategorie=commerce
 tags=
 status=published
 exerpt=Négociant en vins, spiritueux et alcools
@@ -16,3 +16,4 @@ freeDates=Lundi au jeudi 8h00-12h00 / 14h00-18h00,Vendredi 8h00-12h00 /14h00-17h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=632
 ~~~~~~
+	
