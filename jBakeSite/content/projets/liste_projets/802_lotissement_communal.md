@@ -12,7 +12,7 @@ porteur=Commune de Saint-Sulpice-les-Feuilles
 partenaires=CCHLEM, Conseil départemental 87
 financeurs=État (DETR), Région Nouvelle-Aquitaine, Commune
 chronology={"data":[{"date":"2024","state":"passé","label":"Étude de faisabilité"},{"date":"2025","state":"en cours","label":"Acquisitions foncières"},{"date":"2026","state":"à venir","label":"Démarrage des travaux"},{"date":"2027","state":"à venir","label":"Mise en vente des parcelles"}]}
-files={"data":[{"location":"${webleger.build.host}/fichiers/sante/residence_du_cedre_mai2026.pdf", "label":"Infos lotissements.pdf", "main":true}]}
+files={"data":[{"location":"fichiers/sante/residence_du_cedre_mai2026.pdf", "label":"Infos lotissements.pdf", "main":true}]}
 order=802
 ~~~~~~
 	

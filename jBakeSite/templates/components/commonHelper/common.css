@@ -29,7 +29,7 @@
 	padding: 0.2em;
 }
 .location, .phone, .hours{
-	font-size: small;
+	font-size: smaller;
 	line-height: 1.5em;
 }
 

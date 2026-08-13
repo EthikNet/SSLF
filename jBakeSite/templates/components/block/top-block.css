@@ -108,13 +108,13 @@
 		width:98%
 	}
 	.threePerRow .card, .threePerRow .block, .threePerRow .block_wraping, .threePerRow .defaultBlock, .threePerRow .defaultCard{
-		width:45%
+		width:48%
 	}
 	.fourPerRow .card, .fourPerRow .block, .fourPerRow .block_wraping, .fourPerRow .defaultBlock, .fourPerRow .defaultCard{
-		width:30%
+		width:31%
 	}
 	.fivePerRow .card, .fivePerRow .block, .fivePerRow .block_wraping, .fivePerRow .defaultBlock, .fivePerRow .defaultCard{
-		width:23%
+		width:24%
 	}
 	
 	.block_wraping {
@@ -127,13 +127,13 @@
 		width:98%
 	}
 	.twoPerRow .card, .twoPerRow .block, .twoPerRow .block_wraping, .twoPerRow .defaultBlock, .twoPerRow .defaultCard{
-		width:45%
+		width:48%
 	}
 	.threePerRow .card, .threePerRow .block, .threePerRow .block_wraping, .threePerRow .defaultBlock, .threePerRow .defaultCard{
-		width:30%
+		width:31%
 	}
 	.fourPerRow .card, .fourPerRow .block, .fourPerRow .block_wraping, .fourPerRow .defaultBlock, .fourPerRow .defaultCard{
-		width:23%
+		width:24%
 	}
 	.fivePerRow .card, .fivePerRow .block, .fivePerRow .block_wraping, .fivePerRow .defaultBlock, .fivePerRow .defaultCard{
 		width:18%

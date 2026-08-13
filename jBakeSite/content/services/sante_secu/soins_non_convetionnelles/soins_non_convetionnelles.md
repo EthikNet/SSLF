@@ -1,4 +1,4 @@
-title=Santé mental
+title=Soins non convetionnelles
 date=2026-07-21
 type=org_openCiLife_post
 category=sante_secu
@@ -10,7 +10,7 @@ tags=
 status=published
 specificClass=servicesPage
 contentImage=images/services/logo_psy.jpg
-exerpt=Santé mental
+exerpt=Autres soins
 order=320
 ~~~~~~
 	

@@ -10,8 +10,7 @@ tags=
 status=published
 specificClass=servicesPage
 contentImage=images/icones/DAE_sign.svg
-exerpt=Afin de renforcer la sécurité des habitants
-
+exerpt=Pour aider aux secours d'urgence
 displayTags=false
 order=308
 ~~~~~~

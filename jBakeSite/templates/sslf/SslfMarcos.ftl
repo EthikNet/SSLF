@@ -23,42 +23,40 @@
 </#macro>
 
 <#macro publication theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage type>
-	<div class="${className}_block" data-href="${common.buildRootPathAwareURL(item.uri)}">
-		<#if featauredText?has_content>
-			<span class="featured_label">${featauredText}</span>
-		</#if>
-		<div class="${className}_body">
-			<div class="${className}_identification">
-				<@common.addImageIcon '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>' className+"_image" "dates"/>
-				${item.date?date?string.long} · ${item.pubCateg!"Général"}
-			</div>
-			<#if (item.contentImage)??>
-				<@common.addImageIcon item.contentImage className+"_image" item.title/>
-			</#if>
-			
-			<#if displayTitle>						
-				<h3 class="${className}_title"><#rt>
-				<#if (subContentBeforeTitleImage?has_content)>
-					<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
-				</#if>
-					<#t>${item.title!""}
-				<#lt></h3>
-			</#if>
-			
-			<#if (item.exerpt??)>
-				<div class="${className}_exerpt">
-					${item.exerpt!""}
-				</div>
-			</#if>
-			
-			<#if type!="compact">
-				<div class="${className}_content">
-					${item.body!""}
-				</div>
-				
-				<@common.buildFiles item "<hr/>"/>
-			</#if>
+	<#if featauredText?has_content>
+		<span class="featured_label">${featauredText}</span>
+	</#if>
+	<div class="${className}_body">
+		<div class="${className}_identification">
+			<@common.addImageIcon '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>' className+"_image" "dates"/>
+			<span>${item.date?date?string.long} · ${item.pubCateg!"Général"}</span>
 		</div>
+		<#if (item.contentImage)??>
+			<@common.addImageIcon item.contentImage className+"_image" item.title/>
+		</#if>
+		
+		<#if displayTitle>						
+			<h3 class="${className}_title"><#rt>
+			<#if (subContentBeforeTitleImage?has_content)>
+				<img src="${common.buildRootPathAwareURL(subContentBeforeTitleImage)}" class="widget_title_image icon">
+			</#if>
+				<#t>${item.title!""}
+			<#lt></h3>
+		</#if>
+		
+		<#if (item.exerpt??)>
+			<div class="${className}_exerpt">
+				${item.exerpt!""}
+			</div>
+		</#if>
+		
+		<#if type!="compact">
+			<div class="${className}_content">
+				${item.body!""}
+			</div>
+			
+			<@common.buildFiles item "<hr/>"/>
+		</#if>
 	</div>
 </#macro>
 
@@ -78,13 +76,15 @@
 			<@common.buildPhone theBlock/>
 			<@common.buildEmail theBlock/>
 			<@common.buildHours theBlock/>
-			<@common.buildFiles theBlock/>
 			<@common.buildDates theBlock/>
 			<@common.buildDateTimes theBlock/>
 			<@common.buildFreeDate theBlock/>
 			<@common.buildWebsites theBlock/>
 			
 			<@block.generateBodyContent theBlock/>
+			
+			<hr/>
+			<@common.buildFiles theBlock/>
 		</div>
 	</div>
 </#macro>

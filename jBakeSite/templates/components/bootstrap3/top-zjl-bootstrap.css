@@ -347,7 +347,8 @@ body {
 	font-size: ${webleger.site.style.font.size};
 	line-height: ${webleger.site.style.lineHeight};
 	color: ${webleger.site.style.color};
-	background-color: ${webleger.site.style.background.color}
+	background-color: ${webleger.site.style.background.color};
+	${webleger.site.style.body.customCss};
 }
 
 input,
