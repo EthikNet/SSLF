@@ -16,8 +16,7 @@ order=302
 ~~~~~~
 Tout au long de l’année le réseau lecture du haut limousin en marche organise des actions culturelles :
 
-- Les enfants avec les écoles, les accueils de loisirs, le multi accueil, enfants accompagnés de leurs
-- « nounous » via les relais assistantes maternelles,
+- Les enfants avec les écoles, les accueils de loisirs, le multi accueil, enfants accompagnés de leurs « nounous » via les relais assistantes maternelles,
 - Résidents de la maison de retraite
 - Je lis j’élis
 - Coqueliconte
@@ -38,4 +37,4 @@ Tout au long de l’année le réseau lecture du haut limousin en marche organis
 
 ![Photo de l'entrée de la médiathèque](${webleger.build.host}/images/services/mediatheque_batiment_interieur_1.jpg)  ![Photo de l'entrée de la médiathèque](${webleger.build.host}/images/services/mediatheque_batiment_interieur_2.jpg)
 
-La médiathèque de Magnac-Lavalle peut aussi vous accueillire : 05 55 60 60 28 !
+La médiathèque de Magnac-Laval peut aussi vous accueillir : 05 55 60 60 28 !

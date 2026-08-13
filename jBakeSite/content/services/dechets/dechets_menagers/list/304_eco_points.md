@@ -1,12 +1,12 @@
 title=Eco points
 date=2026-07-19
 type=org_openCiLife_block
-category=dechets_menages
+category=dechets_menagers
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/cchlem_Mouton_LOL.png
-exerpt=Le tri un enjeu majeur
+exerpt=Le tri, un enjeu majeur
 anchorId=eco_points
 
 order=304

@@ -1,4 +1,4 @@
-title=Que faire en cas de décès d'un proche ?
+title=Que faire en cas de décès d'un proche ?
 date=2026-07-21
 type=org_openCiLife_post
 category=demarches

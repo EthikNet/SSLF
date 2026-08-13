@@ -1,4 +1,4 @@
-title=team arvei
+title=Team Arvei
 date=2026-08-04
 type=org_openCiLife_block
 category=acteur_economique

@@ -1,7 +1,7 @@
 title=Psychiatre Dr HEID Christian
 date=2026-07-21
 type=org_openCiLife_block
-category=sante_mental
+category=sante_mentale
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published

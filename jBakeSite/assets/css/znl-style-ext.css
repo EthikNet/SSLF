@@ -356,6 +356,7 @@ h2 {
 	flex-wrap: wrap;
 	flex-direction: row;
 	gap: 12px;
+	padding:6px;
 }
 .service_header {
 	border-bottom: 1px solid lightgrey;
@@ -388,6 +389,7 @@ h2 {
 }
 .serviceGroup_header .serviceGroup_header_title, .service_header .service_header_title{
 	width:70%;
+	padding:12px;
 	color:${webleger.site.style.muted.foreground};
 }
 .serviceGroup_header .serviceGroup_header_title h3, .service_header .service_header_title h3{
@@ -622,7 +624,7 @@ h2 {
 .listBulding ul li:not(:has(img)){
 	background-repeat: no-repeat;
 	padding-left:45px;
-	background:url(${webleger.build.host}/images/icones/bulding.svg) no-repeat 15px  center; 
+	background:url(${webleger.build.host}/images/icones/bulding.svg) no-repeat 15px  center, #fff; 
 }
 
 .tableFullSizeNoInternalBorder table {
@@ -666,6 +668,9 @@ h2 {
 	font-weight:bold;
 	text-align:center;
 	height:4em;
+}
+.vieEconomique .annuaire .blockWithImageSmall_exerpt:first-letter{
+	text-transform: uppercase;
 }
 .vieEconomique .annuaire .block_title, .associations .annuaire .block_title {
 	height:4em;

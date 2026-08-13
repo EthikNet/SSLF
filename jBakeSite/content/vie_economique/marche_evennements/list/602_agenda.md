@@ -10,4 +10,4 @@ specificClass=linkToAgenda
 hooks={"data":[{"position":"afterBlockBody", "action":"action.build", "renderOnce":true, "order":35}]}
 order=602
 ~~~~~~
-Tous les évènnements sont visible sur notre Agenda.
+Tous les événements  sont visibles sur notre agenda.

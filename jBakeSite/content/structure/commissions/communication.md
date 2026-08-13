@@ -1,4 +1,4 @@
-title=communication
+title=Communication
 date=2026-07-14
 type=org_openCiLife_post
 category=commission

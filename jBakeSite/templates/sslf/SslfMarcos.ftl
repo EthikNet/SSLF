@@ -297,9 +297,11 @@
 
 <#macro cardVillageSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
 	<div class="image_cover_wrapper">
+		<#local vilageImage = "images/tourisme/villages/les_villages.jpg">
 		<#if (item.contentImage)??>
-			<img src="${common.buildRootPathAwareURL(item.contentImage)}" class="image_cover">
+			<#local vilageImage = item.contentImage>
 		</#if>
+		<img src="${common.buildRootPathAwareURL(vilageImage)}" class="image_cover">
 	</div>
 	<div class="block_content">
 		<@block.generateTitle item/>

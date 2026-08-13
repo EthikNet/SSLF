@@ -14,7 +14,7 @@ phone=05 55 76 73 32
 email=mairie@sslf.fr
 order=302
 ~~~~~~
-Située juste dérière la mairie.
+Située juste derrière la mairie.
 
 ![Photo des anciennes écoles](${webleger.build.host}/images/services/ancienne_ecole_batiment.jpg)
 

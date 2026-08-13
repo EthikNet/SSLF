@@ -9,7 +9,7 @@ imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
 contentImage=images/icones/personnel_communal.svg
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Entretient des batiments et maintenances diverses","role":"personnel communal", "statut":"Assistant de prévention"}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Entretien des batiments et maintenances diverses","role":"personnel communal", "statut":"Assistant de prévention"}]}
 order=981
 ~~~~~~
 Présentation de David

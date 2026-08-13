@@ -1,4 +1,4 @@
-title=En directe
+title=En direct
 date=2026-06-17
 type=org_openCiLife_block
 category=homepage

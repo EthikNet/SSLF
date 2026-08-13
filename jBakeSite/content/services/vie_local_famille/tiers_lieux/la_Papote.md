@@ -13,12 +13,12 @@ contentImage=/images/services/logo-papote.png
 exerpt=Coworking, formations, aide au numérique.
 order=308
 ~~~~~~
-### La poapote vous propose
+### La Papote vous propose
 
 
 #### Pour travailler : 
 
-De nombreux équipement pour travailler : Internet par fibre optique, wifi, imprimante-scanner, matériel pour visioconférences, paperboad.
+De nombreux équipements pour travailler : Internet par fibre optique, wifi, imprimante-scanner, matériel pour visioconférences, paperboad.
 
 Des espaces de détente : salon, jardin avec terrasse, cuisine équipée.
 
@@ -27,7 +27,7 @@ Un accès 24/24h – 7/7j : accès autonome et sécurisé à votre espace de tra
 
 #### Pour apprendre
 
-Des ateliers et des formationstout au long de l'année. Consultez [l'agenda](https://lapapote.com/?page_id=21317) pour plus d'informations.
+Des ateliers et des formations tout au long de l'année. Consultez [l'agenda](https://lapapote.com/?page_id=21317) pour plus d'informations.
 
 #### Pour se divertir
 

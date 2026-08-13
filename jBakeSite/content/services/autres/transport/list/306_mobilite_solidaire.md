@@ -18,7 +18,7 @@ order=306
 Service de transport d’utilité sociale destiné aux résidents des communes du Haut-Limousin-en-Marche et de Gartempe Saint-Pardoux.
 
 > **Objectif**
-> aciliter les déplacements des personnes isolées ou sans moyens de transport, en renforçant le lien social dans la région
+> Faciliter les déplacements des personnes isolées ou sans moyens de transport, en renforçant le lien social dans la région
 
 > **Adresse**
 > Association Mobilité Solidaire Rurale (MSoR) C/o Mairie de Bellac 14 place de la République BP 73 87300 Bellac 

@@ -12,6 +12,6 @@ anchorId=stade_du_mondelet
 location=A préciser
 order=304
 ~~~~~~
-Doté d’un stade en gazon naturel avec éclairage et vestiaires, il accueil principalement le club de football local.
+Doté d’un stade en gazon naturel avec éclairage et vestiaires, il accueille principalement le club de football local.
 
-![photo du bâtiment résidence du cèdre](${webleger.build.host}/images/services/photo_stade_du_Mondelet.jpg)
+![photo du Stade du Mondelet](${webleger.build.host}/images/services/photo_stade_du_Mondelet.jpg)

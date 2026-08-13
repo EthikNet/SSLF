@@ -12,6 +12,6 @@ status=published
 specificClass=servicesPage
 
 displayTags=false
-order=320
+order=322
 ~~~~~~
 	

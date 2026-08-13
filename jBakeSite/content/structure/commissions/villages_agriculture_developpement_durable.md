@@ -1,4 +1,4 @@
-title=villages agriculture et developpement durable
+title=Villages agriculture et developpement durable
 date=2026-07-14
 type=org_openCiLife_post
 category=commission

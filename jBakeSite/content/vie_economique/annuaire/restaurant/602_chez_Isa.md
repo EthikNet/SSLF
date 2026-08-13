@@ -1,4 +1,4 @@
-title=central bar "chez Isa"
+title=central bar "Chez Isa"
 date=2026-07-31
 type=org_openCiLife_block
 category=acteur_economique

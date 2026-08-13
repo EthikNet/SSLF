@@ -1,4 +1,4 @@
-title=alerte téléphonique 'GALA'
+title=Alerte téléphonique 'GALA'
 date=2026-07-14
 type=org_openCiLife_post
 category=commission

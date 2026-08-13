@@ -7,7 +7,7 @@
     <booleanAttribute key="M2_OFFLINE" value="false"/>
     <stringAttribute key="M2_PROFILES" value=""/>
     <listAttribute key="M2_PROPERTIES">
-        <listEntry value="webleger.build.host=${webleger.build.host.prefered.protocol}${webleger.build.host.prefered.protocol}://ethiknet.github.io/SSLF/"/>
+        <listEntry value="webleger.build.host=${webleger.build.host.prefered.protocol}://ethiknet.github.io/SSLF/"/>
         <listEntry value="webleger.site.header.robots=noindex, nofollow"/>
         <listEntry value="webleger.build.host.prefered.protocol=https"/>
     </listAttribute>

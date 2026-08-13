@@ -14,4 +14,4 @@ order=502
 ~~~~~~
 #Tourisme
 
-Un territoire vivant, nature et patrimoine au cœur du Limousin.
+Un territoire vivant : nature et patrimoine au cœur du Limousin.

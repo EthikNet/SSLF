@@ -1,7 +1,7 @@
 title=Fasciathérapeute PHILIPPON Daniel
 date=2026-07-21
 type=org_openCiLife_block
-category=sante_mental
+category=soins_non_convetionnelles
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published

@@ -1,4 +1,4 @@
-title=crédit agricole
+title=Crédit Agricole
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique
