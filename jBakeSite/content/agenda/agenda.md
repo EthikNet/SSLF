@@ -10,6 +10,7 @@ displayTitle=false
 displayBreadcrumb=false
 displayTags=false
 specificClass=agenda
+help={"category":"aide_calendrier"}
 order=900
 ~~~~~~
 	

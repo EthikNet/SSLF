@@ -1,0 +1,12 @@
+.help-group:has(.btn-default) {
+	height:32px;
+}
+.help-group:has(.btn-lg) {
+	height:44px;
+}
+.help-group:has(.btn-sm) {
+	height:28px;
+}
+.help-group:has(.btn-xs) {
+	height:20px;
+}

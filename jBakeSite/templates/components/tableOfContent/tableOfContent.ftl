@@ -64,7 +64,7 @@ param : content : content to search for include content
 	</div>
 </#macro>
 
-<#macro blockTocSelectSubTemplate displayToc blocks mainPageUrl>
+<#macro blockTocSelectSubTemplate displayToc blocks displayImg mainPageUrl>
 	<#if logHelper??>
  		${logHelper.stackDebugMessage("ToC : Building a Select ToC")}
  	</#if>

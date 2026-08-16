@@ -18,12 +18,16 @@
     	<link rel="canonical" href="${common.getCanonicalUrl()}">
     </#if>
     <#if alteredContent.type == "org_openCiLife_block" || ((alteredContent.status)?? && alteredContent.status == "draft")>
-    	<meta name="robots" content="noindex, nofollow" >
+    	<meta name="robots" content="noindex, nofollow">
     <#else>
-    	<#assign robotsVal = propertiesHelper.retrieveAndDisplayConfigText("site.header.robots")>
-    	<#if robotsVal?has_content>
-    		<meta name="robots" content="${robotsVal}" >
-    	</#if>
+    	<#if (alteredContent.robots)?? && alteredContent.robots?has_content>
+    		<meta name="robots" content="${alteredContent.robots}">
+    	<#else>
+	    	<#assign robotsVal = propertiesHelper.retrieveAndDisplayConfigText("site.header.robots")>
+	    	<#if robotsVal?has_content>
+	    		<meta name="robots" content="${robotsVal}">
+	    	</#if>
+	    </#if>
     </#if>
     <meta property="og:title" content="<#if (alteredContent.title)??><#escape x as x?xml>${alteredContent.title}</#escape><#else>${propertiesHelper.retrieveAndDisplayConfigText("site.header.title")}</#if>" >
 	<meta property="og:type" content="website" >
