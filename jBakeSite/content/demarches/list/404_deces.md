@@ -6,15 +6,13 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 demarcheCategory=Décès & cimetière
 status=published
-exerpt=Que faire en cas de décès d'un proche ?
-anchorId=deces
-
+exerpt=Démarches à suivre lors du décès d'un proche ?
 order=404
 ~~~~~~
 ## Il faut faire constater le décès par un médecin, qui établit un certificat de décès
 
-En cas de décès au domicile, appelez le médecin de votre choix.
-En cas de décès à l’hôpital, à la clinique, en EHPAD ou à la maison de retraite, le médecin de l’établissement établira le certificat.
+- En cas de décès au domicile, appelez le médecin de votre choix.
+- En cas de décès à l’hôpital, à la clinique, en EHPAD ou à la maison de retraite, le médecin de l’établissement établira le certificat.
 
 ## Ensuite il faut contacter un opérateur funéraire
 Saint Sulpice les Feuilles : **Pompes funèbres et chambre funéraire FAURIE**
@@ -23,7 +21,7 @@ Saint Sulpice les Feuilles : **Pompes funèbres et chambre funéraire FAURIE**
 > Tél : 05 55 76 70 06
 > https://www.pompes-funebres-faurie.fr/
 
-Rappel : le choix de l’opérateur funéraire vous appartient.
+**Rappel : le choix de l’opérateur funéraire vous appartient.**
 
 ## Les documents nécessaires à présenter au conseiller funéraire
 
