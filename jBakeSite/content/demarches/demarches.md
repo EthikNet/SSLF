@@ -6,9 +6,9 @@ includeContent={"type":"org_openCiLife_post", "category":"demarches", "specificC
 imageHero={"category":"imageHeroDemarches"}
 status=published
 displayDate=false
-displayTitle=false
 displayBreadcrumb=false
 displayTags=false
+help={"category":"aide_demarches"}
 order=400
 ~~~~~~
 	

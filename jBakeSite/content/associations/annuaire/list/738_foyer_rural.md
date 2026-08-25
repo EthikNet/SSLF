@@ -4,7 +4,6 @@ type=org_openCiLife_block
 category=association
 AssoCategorie=culture & loisirs
 status=published
-exerpt=
 stickers={"disposition":"right", "data":[{"label":"🏠", "specificClass":"topLeftIcon"}]}
 exerpt=
 responsable=M. Alain BRUN

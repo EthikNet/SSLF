@@ -9,7 +9,7 @@ imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
 contentImage=images/personne/Clarisse_VARENNE.jpg
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Conseillère","role":"Conseil municipal","sousRole":"conseiller","group":[{"type":"commission","elements":[{"code":"manifestations - réceptions","statut":"suppléante"},{"code":"affaires scolaires","statut":"suppléante"},{"code":"communication","statut":"suppléante"},{"code":"ados et jeunes","statut":"titulaire"},{"code":"villages agriculture et developpement durable","statut":"titulaire"}]}]}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Conseillère","role":"Conseil municipal","sousRole":"conseiller","group":[{"type":"commission","elements":[{"code":"manifestations - réceptions","statut":"suppléante"},{"code":"affaires scolaires","statut":"suppléante"},{"code":"communication","statut":"suppléante"},{"code":"ados et jeunes","statut":"titulaire"},{"code":"villages agriculture et développement durable","statut":"titulaire"}]}]}]}
 order=958
 ~~~~~~
 Présentation de Clarisse

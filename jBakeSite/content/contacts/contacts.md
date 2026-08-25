@@ -10,6 +10,7 @@ displayTitle=false
 displayBreadcrumb=false
 displayTags=false
 specificClass=contact
+help={"category":"aide_contact"}
 order=950
 ~~~~~~
 	

@@ -10,6 +10,7 @@ displayTitle=false
 displayBreadcrumb=false
 displayTags=false
 specificClass=associations
+help={"category":"aide_associations"}
 order=700
 ~~~~~~
 	

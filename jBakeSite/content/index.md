@@ -8,6 +8,7 @@ displayTitle=false
 displayBreadcrumb=false
 displayTags=false
 specificClass=hp
+help={"category":"aide_hp"}
 order=001
 ~~~~~~
 	

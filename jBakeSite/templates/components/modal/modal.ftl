@@ -26,6 +26,20 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 					<div class="modal-body-content">
 					</div>
 				</div>
+				<div class="modal-metaData">
+					<@common.buildResponsable item/>
+					<@common.buildLocation item/>
+					<@common.buildPhone item/>
+					<@common.buildEmail item/>
+					<@common.buildHours item/>
+					<@common.buildDates item/>
+					<@common.buildDateTimes item/>
+					<@common.buildFreeDate item/>
+					<@common.buildWebsites item/>
+					<@common.buildFaceBook item/>
+					<@common.buildInstagram item/>
+					</div>
+				</div>
 				<div class="modal-footer">
 					<a id="modalMoreInfoLink"  class="btn btn-primary moreInfoHidden" href="#">${moreInfosLinkLabel}</a>
 					<button type="button" class="btn btn-default" data-dismiss="modal">${closeButtonlabel}</button>

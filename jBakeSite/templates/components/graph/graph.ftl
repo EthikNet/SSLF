@@ -248,7 +248,7 @@
 			</#if>
 		</#if>
 	<#else>
-		${code!"MISSING_STRUCUTRE_AND_CODE"}
+		${code!"MISSING_STRUCTURE_AND_CODE"}
 	</#if>
 </#macro>
 
