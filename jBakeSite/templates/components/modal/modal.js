@@ -58,10 +58,48 @@ $('#basicModal').on('show.bs.modal', function (event) {
 	}
     
     modal.find('.modal-tags').empty().append(tags);
+	
+	displayElement(widget, modal, widgetContentClassPrefix, "responsable");
+	displayElement(widget, modal, widgetContentClassPrefix, "location");
+	displayElement(widget, modal, widgetContentClassPrefix, "phone");
+	displayElement(widget, modal, widgetContentClassPrefix, "email");
+	displayElement(widget, modal, widgetContentClassPrefix, "hours");
+	displayElement(widget, modal, widgetContentClassPrefix, "dates");
+	displayElement(widget, modal, widgetContentClassPrefix, "dateTimes");
+	displayElement(widget, modal, widgetContentClassPrefix, "freeDate");
+	displayElement(widget, modal, widgetContentClassPrefix, "websites");
+	displayElement(widget, modal, widgetContentClassPrefix, "faceBook");
+	displayElement(widget, modal, widgetContentClassPrefix, "instagram");
+	displayElement(widget, modal, widgetContentClassPrefix, "files");
 
     modal.attr('aria-inert', false);
  })
- 
+
+function displayElement(widget, modal, widgetContentClassPrefix, elementType){
+	var searchFor = '.'+widgetContentClassPrefix+'-'+elementType;
+	var elementContent = widget.find(searchFor).html();
+	var elementContentExists = null != elementContent && elementContent.length != 0;
+	console.log ("modal : '"+elementType+"' ("+searchFor+") exists ? " + elementContentExists);
+	
+	var modalElementSelector = 'modal-'+elementType+'';
+	if(elementContentExists){
+		if (modal.find('.'+modalElementSelector).length == 0){
+			var metaDataSelector = '.modal-metaData';
+			if(modal.find(metaDataSelector) == 0){
+				console.log ("modal : "+metaDataSelector+" does not exists in modal, cannot add element '"+modalElementSelector+"'");
+			}else{
+				console.log ("modal : appending content to "+metaDataSelector+" for '"+modalElementSelector+"'");
+				modal.find(metaDataSelector).append('<div class="'+modalElementSelector+'">' + elementContent + '</div>');
+			}
+		}else{
+			console.log ("modal : ."+modalElementSelector+" already exists, replacing content");
+			modal.find('.'+modalElementSelector).replaceWith('<div class="'+modalElementSelector+'">' + elementContent + '</div>');
+		}
+	}else{
+		modal.find('.'+modalElementSelector).remove();
+	}
+}
+
 $('#basicModal').on('hidden.bs.modal', function () {
 	console.log ("modal :is hidding");
     var modal = $(this);

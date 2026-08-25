@@ -23,23 +23,9 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 				</div>
 				<div class="modal-body">
 					<div class="modal-image"></div>
-					<div class="modal-body-content">
-					</div>
+					<div class="modal-body-content"></div>
 				</div>
-				<div class="modal-metaData">
-					<@common.buildResponsable item/>
-					<@common.buildLocation item/>
-					<@common.buildPhone item/>
-					<@common.buildEmail item/>
-					<@common.buildHours item/>
-					<@common.buildDates item/>
-					<@common.buildDateTimes item/>
-					<@common.buildFreeDate item/>
-					<@common.buildWebsites item/>
-					<@common.buildFaceBook item/>
-					<@common.buildInstagram item/>
-					</div>
-				</div>
+				<div class="modal-metaData"></div>
 				<div class="modal-footer">
 					<a id="modalMoreInfoLink"  class="btn btn-primary moreInfoHidden" href="#">${moreInfosLinkLabel}</a>
 					<button type="button" class="btn btn-default" data-dismiss="modal">${closeButtonlabel}</button>
@@ -50,7 +36,7 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 </#macro>
 
 <#-- !!!! if  interactionType="link" the link end tag must be added MANUALLY. This macro only create the *start* link tag (and required content for modal bases on extract param) -->
-<#macro extractContentForModal theContent interactionType="button", cssPrefix="widget", buttonLabel="Détails", displayTags=false, extract=["title", "contentImage", "content", "moreInfoLink"], theModalId="basicModal">
+<#macro extractContentForModal theContent interactionType="button", cssPrefix="widget", buttonLabel="Détails", displayTags=false, extract=["title", "contentImage", "content", "moreInfoLink", "metaData"], theModalId="basicModal">
 	<#if (theContent.body)?? && theContent.body?has_content>
 		<#switch interactionType>
 			<#case "button">
@@ -83,7 +69,28 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 		</#if>
 	</#if>
 	
+	<#if extract?seq_contains("metaData")>
+		<@extractMetaDataContent theContent cssPrefix "responsable" />
+		<@extractMetaDataContent theContent cssPrefix "location" />
+		<@extractMetaDataContent theContent cssPrefix "phone" />
+		<@extractMetaDataContent theContent cssPrefix "email" />
+		<@extractMetaDataContent theContent cssPrefix "hours" />
+		<@extractMetaDataContent theContent cssPrefix "dates" />
+		<@extractMetaDataContent theContent cssPrefix "dateTimes" />
+		<@extractMetaDataContent theContent cssPrefix "freeDate" />
+		<@extractMetaDataContent theContent cssPrefix "websites" />
+		<@extractMetaDataContent theContent cssPrefix "faceBook" />
+		<@extractMetaDataContent theContent cssPrefix "instagram" />
+		<@extractMetaDataContent theContent cssPrefix "files" />
+	</#if>
+	
 	<#if displayTags>
 		<span class="${cssPrefix}_tags contentHidden"><@ecoWeb.displayTags theContent/></span>
+	</#if>
+</#macro>
+
+<#macro extractMetaDataContent theContent cssPrefix elementType>
+	<#if (theContent[elementType])??>
+		<span class="${cssPrefix}-${elementType} contentHidden"><@common.buildMetaData theContent elementType /></span>
 	</#if>
 </#macro>

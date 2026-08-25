@@ -246,6 +246,40 @@ param : theObject : object to transform in String
 	<#return theList>
 </#function>
 
+<#macro buildMetaData theContent elementType>
+	<#switch elementType>
+		<#case "location">
+			<@buildLocation theContent />
+		<#break>
+		<#case "phone">
+			<@buildPhone theContent />
+		<#break>
+		<#case "hours">
+			<@buildHours theContent />
+		<#break>
+		<#case "websites">
+			<@buildWebsites buildWebsites />
+		<#break>
+		<#case "files">
+			<@buildFiles theContent />
+		<#break>
+		<#case "dates">
+			<@buildDates theContent />
+		<#break>
+		<#case "email">
+			<@buildEmail theContent />
+		<#break>
+		<#case "faceBook">
+			<@buildFaceBook theContent />
+		<#break>
+		<#case "instagram">
+			<@buildInstagram theContent />
+		<#break>
+		<#case "responsable">
+			<@buildResponsable theContent />
+		<#break>
+	</#switch>
+</#macro>
 
 <#macro buildLocation theContent>
 	<#if (theContent.location)?? && theContent.location?has_content>

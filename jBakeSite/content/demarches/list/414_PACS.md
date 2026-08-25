@@ -6,7 +6,8 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 demarcheCategory=État civil
 status=published
-exerpt=Comment réaliser un mariage Civil
+exerpt=Comment réaliser un PACS
+files={"data":[{"location":"fichiers/etat_civil/2-erfa_52176#03_PACS_NOTICE.pdf", "label":"notice explicative", "icon":"images/icones/dowload.svg", "main":true},{"location":"fichiers/etat_civil/4-Cerfa_15726-02-Convention_de_PACS.pdf", "label":"Convention de PACS", "icon":"images/icones/dowload.svg"},{"location":"fichiers/etat_civil/3-cerfa_15725-03_Déclaration_conjointe_de_PACS.pdf", "label":"Déclaration conjointe de PACS", "icon":"images/icones/dowload.svg"}]}
 order=414
 ~~~~~~
 ## La démarche
@@ -21,12 +22,12 @@ Les futurs partenaires :
 - ne doivent pas avoir de liens familiaux directs entre eux
 
 ##Les pièces à fournir 
-Consulter la [notice explicative](${webleger.build.host}/fichiers/etat_civil/2-erfa_52176#03_PACS_NOTICE.pdf) de déclaration, modification et dissolution d'un PACS ci-dessous.
+Consulter la notice explicative de déclaration, modification et dissolution d'un PACS ci-dessous.
 
 ## Vous pouvez utiliser :
 
-- [Convention de PACS](${webleger.build.host}/fichiers/etat_civil/4-Cerfa_15726-02-Convention_de_PACS.pdf)
-- [Déclaration conjointe de PACS](${webleger.build.host}/fichiers/etat_civil/3-cerfa_15725-03_Déclaration_conjointe_de_PACS.pdf)
+- Convention de PACS
+- Déclaration conjointe de PACS
 
 ## Le dépôt du dossier  
 Les pièces sont à adresser :
