@@ -1,0 +1,1 @@
+function stringToArray(b){return JSON.parse(b)}function trim(b,c){var a=b;a.charAt(0)===c&&(a=jsonText.slice(1));a.charAt(a.length-1)===c&&(a=jsonText.slice(-1));return a}function toJson(b){return JSON.parse(b)};
