@@ -47,6 +47,7 @@
 					<configuration>
 						<scmBranch>gh-pages</scmBranch>
 						<content>${jbake.outputDirectory}</content>
+						<tryUpdate>true</tryUpdate>
 					</configuration>
 				</plugin>
 
