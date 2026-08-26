@@ -21,13 +21,15 @@ param : closeButtonlabel : *default* : close : label of the botom close button
       			<div class="modal-header">
 					<span class="modal-tags"></span>
 				</div>
+				<div class="modal-afterHeader"></div>
+				
 				<div class="modal-body">
 					<div class="modal-image"></div>
 					<div class="modal-body-content"></div>
 				</div>
-				<div class="modal-metaData"></div>
+				<div class="modal-beforeFooter"></div>
 				<div class="modal-footer">
-					<a id="modalMoreInfoLink"  class="btn btn-primary moreInfoHidden" href="#">${moreInfosLinkLabel}</a>
+					<a id="modalMoreInfoLink" class="btn btn-primary moreInfoHidden" href="#">${moreInfosLinkLabel}</a>
 					<button type="button" class="btn btn-default" data-dismiss="modal">${closeButtonlabel}</button>
 				</div>
 			</div>
@@ -81,7 +83,7 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 		<@extractMetaDataContent theContent cssPrefix "websites" />
 		<@extractMetaDataContent theContent cssPrefix "faceBook" />
 		<@extractMetaDataContent theContent cssPrefix "instagram" />
-		<@extractMetaDataContent theContent cssPrefix "files" />
+		<@extractMetaDataContent theContent cssPrefix "files" "div class=\"metaDataListInLine\""/>
 	</#if>
 	
 	<#if displayTags>
@@ -89,8 +91,12 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 	</#if>
 </#macro>
 
-<#macro extractMetaDataContent theContent cssPrefix elementType>
+<#macro extractMetaDataContent theContent cssPrefix elementType wrapTo="">
 	<#if (theContent[elementType])??>
-		<span class="${cssPrefix}-${elementType} contentHidden"><@common.buildMetaData theContent elementType /></span>
+		<span class="${cssPrefix}-${elementType} contentHidden">
+			<@common.wrap wrapTo>
+				<@common.buildMetaData theContent elementType />
+			</@common.wrap>
+		</span>
 	</#if>
 </#macro>

@@ -508,6 +508,10 @@ h2 {
 	background-color:${webleger.site.style.secondary.color};
 }
 
+.demarches .content_type_modal .showMore:hover {
+	background-color: ${webleger.site.style.background.color};
+}
+
 .tourisme h2{
 	font-size:80%;
 	font-weight: 700;

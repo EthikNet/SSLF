@@ -70,25 +70,29 @@ $('#basicModal').on('show.bs.modal', function (event) {
 	displayElement(widget, modal, widgetContentClassPrefix, "websites");
 	displayElement(widget, modal, widgetContentClassPrefix, "faceBook");
 	displayElement(widget, modal, widgetContentClassPrefix, "instagram");
-	displayElement(widget, modal, widgetContentClassPrefix, "files");
+	displayElement(widget, modal, widgetContentClassPrefix, "files", ".modal-afterHeader");
 
     modal.attr('aria-inert', false);
  })
 
-function displayElement(widget, modal, widgetContentClassPrefix, elementType){
+function displayElement(widget, modal, widgetContentClassPrefix, elementType, hookPosition){
 	var searchFor = '.'+widgetContentClassPrefix+'-'+elementType;
 	var elementContent = widget.find(searchFor).html();
 	var elementContentExists = null != elementContent && elementContent.length != 0;
+	
+	if(null == hookPosition || hookPosition.length == 0){
+		var hookPosition = ".modal-beforeFooter";
+	}
 	console.log ("modal : '"+elementType+"' ("+searchFor+") exists ? " + elementContentExists);
 	
 	var modalElementSelector = 'modal-'+elementType+'';
 	if(elementContentExists){
 		if (modal.find('.'+modalElementSelector).length == 0){
-			var metaDataSelector = '.modal-metaData';
+			var metaDataSelector = hookPosition;
 			if(modal.find(metaDataSelector) == 0){
 				console.log ("modal : "+metaDataSelector+" does not exists in modal, cannot add element '"+modalElementSelector+"'");
 			}else{
-				console.log ("modal : appending content to "+metaDataSelector+" for '"+modalElementSelector+"'");
+				console.log ("modal : appending content to "+metaDataSelector+" for '"+modalElementSelector+"' in '"+hookPosition+"'");
 				modal.find(metaDataSelector).append('<div class="'+modalElementSelector+'">' + elementContent + '</div>');
 			}
 		}else{
