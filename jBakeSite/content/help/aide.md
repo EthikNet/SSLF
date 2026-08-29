@@ -10,6 +10,7 @@ status=published
 displayDate=false
 displayTitle=false
 displayTags=false
+specificClass=aide
 hooks={"data":[{"position":"afterBody", "action":"toc.build", "renderOnce":true, "order":30}]}
 order=9990
 ~~~~~~

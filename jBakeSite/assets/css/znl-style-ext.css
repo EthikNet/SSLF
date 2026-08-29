@@ -525,6 +525,10 @@ h2 {
 	padding-left:0;
 }
 
+.aide .block img{
+	max-width:400px;
+}
+
 .blockWithImageSmall_list, .blockWithImageMedium_list{
 	display:flex;
 	flex-direction:column;
@@ -939,6 +943,10 @@ h2 {
 		flex-direction:row;
 	}
 	
+	.aide .block img{
+		max-width:600px;
+	}
+	
 	.listAsMiniCard ul li {
 		width:48%;
 	}
@@ -985,6 +993,11 @@ h2 {
 	.publication_list .publication{
 		width:45%;
 	}
+	
+	.aide .block img{
+		max-width:1000px;
+	}
+	
 	.blockWithImageSmall{
 		width:30%;
 	}
