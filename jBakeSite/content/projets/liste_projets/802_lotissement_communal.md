@@ -3,7 +3,6 @@ date=2026-07-29
 type=org_openCiLife_block
 category=projet
 projetDuree=court terme
-tags=
 status=published
 exerpt=Création de parcelles pour faciliter l'accès au logement.
 contentImage=images/vie_economique/artisan.jpg

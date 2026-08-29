@@ -10,6 +10,7 @@ displayTitle=false
 displayBreadcrumb=false
 displayTags=false
 specificClass=projets
+help={"category":"aide_projets"}
 order=800
 ~~~~~~
 	

@@ -17,7 +17,7 @@ Le contenu **associations.md** est la page principale, qui inclue chacune des as
 
 ## Structure d'une association
 
-![Google Structure d'une association](${webleger.build.host}/images/aide/assocation_exemple.jpg)
+![Structure d'une association](${webleger.build.host}/images/aide/assocation_exemple.jpg)
 
 **title=Foyer rural** <= Nom de l'assoiciation : est afifcher en gras et en Vert
 **date=2026-07-28** <= date de création du contenu. N'est pas affiché.
@@ -26,7 +26,7 @@ Le contenu **associations.md** est la page principale, qui inclue chacune des as
 **AssoCategorie=culture & loisirs** <= Type d'addociation. Est affiché en premier dans le bloque.
 **status=published** <= Le status du contenu. **published** pour être affiché. **Draft** si le contenu ne doit plus être affiché.
 **stickers={"disposition":"right", "data":[{"label":"🏠", "specificClass":"topLeftIcon"}]}** <= Icone de l'association. Changer uniquement le *label*. Il est possible de chercher d'autre emotIcone sur le site : [https://emojipedia.org/fr/emoticons](https://emojipedia.org/fr/emoticons).
-**exerpt=* <= résumé de l'association, n'est pas affiché.
+**exerpt=** <= résumé de l'association, n'est pas affiché.
 **responsable=M. Alain BRUN** <= Nom du resposable de l'association. Est affiché en premier dans la zone de contenu del'assocation
 **location=10 Avenue Armand Marsaud, 87160 SAINT SULPICE LES FEUILLES** <= adresse de l'aocciation. Affiché en dessous du responsable.
 **phone=05.55.76.79.92,06.40.06.56.37** <= Numéro de téléphonne de l'assoication. Il est possible d'en préciser plusieur séparé par une virgule.

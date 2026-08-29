@@ -10,6 +10,7 @@ displayTitle=false
 displayBreadcrumb=false
 displayTags=false
 specificClass=vieMunicipale
+help={"category":"aide_personnes"}
 order=200
 ~~~~~~
 	
