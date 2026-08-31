@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Terrain multisports en accès libre
 anchorId=city_stade
 
-location=A préciser
+location=4 route d'Arnac-la-Poste
 order=308
 ~~~~~~
 Permet la pratique du football, du basket-ball, du handball et d’autres activités de plein air. Il constitue un lieu de rencontre apprécié des jeunes de la commune.

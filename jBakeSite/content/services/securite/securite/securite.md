@@ -1,7 +1,7 @@
 title=Sécurité
 date=2026-07-19
 type=org_openCiLife_post
-category=sante_secu
+category=secu
 includeBlocks={"category":"securite", "wrap":{"enable":"true", "specificClass":"service_items twoPerRow"}}
 toc={"title":"Sommaire", "displayImg":true}
 hooks={"data":[{"position":"beforeContent", "action":"toc.build", "renderOnce":true, "order":80}]}

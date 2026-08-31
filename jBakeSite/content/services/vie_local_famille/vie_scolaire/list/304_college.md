@@ -16,7 +16,7 @@ order=304
 ~~~~~~
 Le collège du secteur accueille les élèves de la commune et de communes voisines. Le ramassage scolaire est organisé chaque jour par la Région.
 
-![photo de l'école maternelle](${webleger.build.host}/images/services/college_batiment.jpg)
+![photo de l'école maternelle](${webleger.build.host}/images/services/college_batiment2.jpg)
 
 > **Adresse**
 > Collège Fabre Églantine, 11 rue du 8 mai 1945 87160 Saint-Sulpice-Les-Feuilles

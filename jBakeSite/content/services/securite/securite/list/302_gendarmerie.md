@@ -6,7 +6,6 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_gendarmerie.svg
-exerpt=todo
 anchorId=gendarmerie
 
 phone=05 55 76 66 00

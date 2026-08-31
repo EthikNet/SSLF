@@ -10,7 +10,7 @@ exerpt=Services postaux et bancaires
 anchorId=la_poste
 
 phone=3631
-freeDate=Lundi, Mardi, Jeudi, Vendredi, Samedi : 10h00-12h30. Mercredi : 10h00–12h30 / 14h00-17h00
+freeDate=Lundi Mardi Jeudi  Vendredi Samedi : 10h00-12h30, Mercredi : 10h00–12h30 / 14h00-17h00
 order=302
 ~~~~~~
 Receveur :  RODRIGUEZ Guillaume

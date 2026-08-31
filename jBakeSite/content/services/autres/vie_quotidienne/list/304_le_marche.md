@@ -14,7 +14,7 @@ order=304
 ~~~~~~
 Le marché hebdomadaire de Saint-Sulpice-les-Feuilles est un rendez-vous apprécié qui anime le centre-bourg et favorise les échanges entre habitants. Il met en valeur les producteurs et commerçants locaux tout en proposant une offre variée de produits de qualité. Véritable lieu de convivialité, il contribue au dynamisme économique et social de la commune. 
 
-![photo du marché hebdomadaire de Saint-Sulpice-Les-Feuilles](${webleger.build.host}/images/services/photo_marche.jpg) 
+![photo du marché hebdomadaire de Saint-Sulpice-Les-Feuilles](${webleger.build.host}/images/services/marche_nouvel_emplacement.jpg) 
 
 Différents stands sont présents sur le marché toute l’année ou en saison :
 

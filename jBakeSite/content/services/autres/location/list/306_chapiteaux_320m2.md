@@ -9,11 +9,12 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Louez la maison des loisirs pour vos évènnements
 anchorId=loc_maison_loisirs
 
-location=Salle verte derrière la mairie
+location=terrain Aubrun Bossard
 phone=05 55 76 73 32
 email=mairie@sslf.fr
 order=306
 ~~~~~~
+Les tables et bancs sont inclus.
 
 ![Photo du bâtiment de la maison des loisirs](${webleger.build.host}/images/services/chapiteau_300m2.jpg)
 
@@ -25,5 +26,3 @@ order=306
 > **Réservations**
 > Auprès de la mairie
 > Tél : 05 55 76 73 32
-
-Besoin de tables et de bancs ? Nous vous proposons à la location pour 2 € par jour (1 table et 2 bancs), caution de 100 €.

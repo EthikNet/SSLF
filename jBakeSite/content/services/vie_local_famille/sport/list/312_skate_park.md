@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Structure moderne en béton en extérieur
 anchorId=skate_park
 
-location=A préciser
+location=4 route d'Arnac-la-Poste
 order=312
 ~~~~~~
 Structure moderne en béton conçue pour le skateboard, le BMX, le roller et la trottinette. Ses modules variés permettent aussi bien l’initiation que la pratique plus confirmée.

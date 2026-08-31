@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Principalement pour le footBall
 anchorId=stade_du_mondelet
 
-location=A préciser
+location=4 route d'Arnac-la-Poste
 order=304
 ~~~~~~
 Doté d’un stade en gazon naturel avec éclairage et vestiaires, il accueille principalement le club de football local.

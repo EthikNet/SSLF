@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Equipement couvert et polyvalent
 anchorId=halle_des_sports
 
-location=A préciser
+location=4 route d'Arnac-la-Poste
 order=302
 ~~~~~~
 La Halle des sports permet la pratique de nombreux sports collectifs et individuels tels que le basket-ball, le handball, le volley-ball, le badminton ou encore le tennis. Elle accueille les activités scolaires et associatives.

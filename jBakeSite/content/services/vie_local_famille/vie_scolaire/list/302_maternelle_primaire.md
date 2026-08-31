@@ -12,13 +12,12 @@ anchorId=primaire
 files={"data":[{"location":"#", "label":"Fiche d'inscription périscolaire", "main":true}, {"location":"#", "label":"Réglement intérieur"}]}
 location=Rue de l'École, 87160 Saint-Sulpice-les-Feuilles
 phone=05 55 76 00 00
-email=ecole.saint-sulpice@ac-limoges.fr
+email=ce.0871004U@ac-limoges.fr
 freeDate=Lun/Mar/Jeu/Ven · 9h00–12h00 / 13h30–16h30
 order=302
 ~~~~~~
 Directrice : Marie-Claire TIXIER
 Tél : 05 55 76 93 47
-Mail : ce.0871004U@ac-limoges.fr
 
 L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans. Le ramassage scolaire est organisé chaque jour par la Région.
 
@@ -44,7 +43,7 @@ L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans. L
 ![photo de l'école maternelle](${webleger.build.host}/images/services/ecole_elementaire_batiment.jpg)
 
 > **Du cycle II → CP + CE1 + CE2**
-> tel : 05 55 76 77 91
+> tel : 05 55 76 93 47
 
 > **Début du cycle III → CM1 + CM2**
 > tel : 05 55 76 72 30

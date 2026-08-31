@@ -8,6 +8,8 @@ status=published
 contentImage=images/services/logo_Maximum.png
 exerpt=Afin de faciliter l'élimination des objets volumineux
 anchorId=encombrants
+phone=05 55 76 73 32
+email=mairie@sslf.fr
 
 order=304
 ~~~~~~

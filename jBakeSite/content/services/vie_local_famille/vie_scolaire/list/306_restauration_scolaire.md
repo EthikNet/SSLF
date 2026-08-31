@@ -9,12 +9,13 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Cantine municipale — repas équilibrés et produits locaux
 anchorId=resteauScolaire
 
-phone=05 55 76 81 24
-email=cantine@saint-sulpice-les-feuilles.fr
+phone=05 55 76 04 23
 files={"data":[{"location":"#", "label":"Menus du mois (PDF)", "main":true}, {"location":"#", "label":"Règlement de la cantine (PDF)"}, {"location":"#", "label":"Inscription / facturation"}]}
 order=306
 ~~~~~~
 Le restaurant scolaire propose chaque midi des repas préparés sur place, avec une part de produits locaux et bio. Les menus sont publiés sur le site internet et sur facebook chaque semaine.
+
+![photo de l'école maternelle](${webleger.build.host}/images/services/restaurant_scolaire_batiment.jpg)
 
 > **Lieu**
 > Restaurant scolaire — groupe scolaire

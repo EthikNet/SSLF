@@ -11,8 +11,8 @@ anchorId=mobilite_solidaire
 
 phone=06 33 65 17 47
 email=contact@msor.fr
-web=https://msor.fr/
-freeDate=Lundi au vendredi, de 9h à 12h
+websites=https://msor.fr/
+freeDate=Lundi au vendredi : de 9h à 12h
 order=306
 ~~~~~~
 Service de transport d’utilité sociale destiné aux résidents des communes du Haut-Limousin-en-Marche et de Gartempe Saint-Pardoux.

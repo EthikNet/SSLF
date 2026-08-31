@@ -13,9 +13,8 @@ order=306
 ~~~~~~
 Des distributions gratuites de composteurs ont été organisées par la CCHLeM et des projets de compostage collectif sont progressivement déployés sur la commune Saint-Sulpice-les-Feuilles.
 
-### OU trouver les composts collectifs ?
+### Où trouver les composts collectifs ?
 
-> **Emballages recyclables, papier, verre**
 > - Lotissement Le Mondelet
 > - Parking Maison Hallet
 > - HLM Alsace Lorraine

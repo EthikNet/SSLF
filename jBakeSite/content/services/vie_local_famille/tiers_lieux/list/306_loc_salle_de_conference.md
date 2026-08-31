@@ -12,9 +12,10 @@ anchorId=loc_papote_salle_conf
 location=9 rue du Commerce, 87160 Saint-Sulpice-Les-Feuilles
 phone=07 48 10 75 27
 email=resa@lapapote.com
+websites=https://lapapote.com/
 order=306
 ~~~~~~
-Un bureau privatif.
+Salle de conférence.
 
 ![Photo des anciennes écoles](${webleger.build.host}/images/services/la_papote_salle_conference.jpg)
 

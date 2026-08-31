@@ -15,8 +15,6 @@ order=308
 ~~~~~~
 Des jeux et activités sont proposés et encadrés par le personnel communal. La garderie accueille les enfants dans le bâtiment du Cycle 2 pour les élèves du CP au CM2 et à la maternelle pour les plus petits.
 
-![photo de l'école maternelle](${webleger.build.host}/images/services/accueil_periscolaire_batiment.jpg)
-
 > **Lieu**
 > Restaurant scolaire — groupe scolaire
 

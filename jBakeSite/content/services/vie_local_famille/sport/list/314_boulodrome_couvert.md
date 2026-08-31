@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Espace dédié à la pétanque
 anchorId=boulodrome
 
-location=A préciser
+location=4 route d'Arnac-la-Poste
 order=314
 ~~~~~~
 Espace dédié à la pétanque, il favorise la pratique sportive conviviale et les rencontres intergénérationnelles.

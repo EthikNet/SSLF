@@ -6,11 +6,10 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_pompiers.png
-exerpt=Courage et dévouement
-anchorId=gendarmerie
+anchorId=pompiers
 
 phone=18
-location=Route de Saint-Hilaire, 87160 Saint-Sulpice-les-Feuilles
+location=Rue du dc ferdinand renaud, 87160 Saint-Sulpice-les-Feuilles
 
 order=304
 ~~~~~~

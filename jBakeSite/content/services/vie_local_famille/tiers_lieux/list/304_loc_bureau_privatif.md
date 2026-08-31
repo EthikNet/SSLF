@@ -12,6 +12,7 @@ anchorId=loc_papote_bureau
 location=9 rue du Commerce, 87160 Saint-Sulpice-Les-Feuilles
 phone=07 48 10 75 27
 email=resa@lapapote.com
+websites=https://lapapote.com/
 order=304
 ~~~~~~
 Un bureau privatif.

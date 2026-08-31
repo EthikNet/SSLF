@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Principalement pour les collègiens
 anchorId=stade_du_college
 
-location=A préciser
+location=4 route d'Arnac-la-Poste
 order=306
 ~~~~~~
 Ce stade en centre bourg est utilisé essentiellement par le collège et l’école.
