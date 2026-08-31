@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 demarcheCategory=État civil
 status=published
-exerpt=Dans quelles cas effectuer une demande de permis de construire ?
+exerpt=Demande ou renouvellement d’une carte nationale d’identité ou d’un passeport
 order=416
 ~~~~~~
 ## Demande ou renouvellement d’une carte nationale d’identité ou d’un passeport

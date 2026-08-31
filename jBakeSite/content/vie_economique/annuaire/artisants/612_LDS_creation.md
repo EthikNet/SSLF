@@ -8,6 +8,7 @@ status=published
 exerpt=Couturière
 stickers={"disposition":"left_absolute", "data":[{"label":"👠", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan/LDS_creation.jpg
+contentImageSpecificClass=objectContain
 location=Mme LASNIER Stéphanie 23 rue du 8 mai
 phone=06 65 09 44 37
 email=byldscreation@gmail.com
