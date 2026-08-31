@@ -343,6 +343,18 @@ h2 {
  	font-weight: normal;
 }
 
+.personneNoDetails .blockTitle {
+	font-size:125%;
+}
+
+.personne .personneInfo {
+	display:block;
+}
+
+.relationTitle:first-letter {
+    text-transform: uppercase;
+}
+
 .graphItemsCompactLeft .block_wraping  {
 	justify-content:flex-start;
 	gap:6px;
@@ -486,7 +498,7 @@ h2 {
 	border-radius:12px;
 	padding:3px 6px;
 	font-weight: 620;
-	font-size:small;
+	font-size:medium;
 	background-color:${webleger.site.style.primary.background.color.light};
 }
 .publication_block .dowloadLink, .service_block .dowloadLink, .blockWithImageSmall .dowloadLink, .blockWithImageMedium .dowloadLink {

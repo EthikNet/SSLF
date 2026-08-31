@@ -1,4 +1,4 @@
-title=Isabelle JOLY
+title=Manon Gueunier
 date=2026-07-11
 type=org_openCiLife_post
 category=personne
@@ -8,8 +8,7 @@ code=Isabelle JOLY
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-contentImage=images/icones/personnel_communal.svg
 graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Entretien des locaux","role":"personnel communal", "statut":"Agent contractuel"}]}
 order=981
 ~~~~~~
-Présentation d'Isabelle
+	

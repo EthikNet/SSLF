@@ -7,8 +7,8 @@ tags=
 status=published
 contentImage=images/icones/poubelle.svg
 contentImageSpecificClass=light_green round
-dates=2026-06-17
-phone=05 55 76 81 30
+dates=2026-09-10
+phone=05 55 76 73 32
 order=168
 ~~~~~~
-inscription téléphonique **requise**
+inscription en mairie **requise** : 05 55 76 73 32

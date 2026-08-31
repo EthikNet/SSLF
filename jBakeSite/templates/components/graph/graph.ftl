@@ -97,6 +97,9 @@
 		<#case "commission">
 			<@handleElementTypeMembreCommission element level/>
 		<#break>
+		<#case "délégations">
+			<@handleElementTypeDelegation element level />
+		<#break>
 	</#switch>
 	
 	<#if (element.group)?? && element.group?has_content>
@@ -117,6 +120,9 @@
 					<#case "commission">
 						<@handleElementTypeMembreCommission theGroup level/>
 					<#break>
+					<#case "délégations">
+						<@handleElementTypeDelegation theGroup level />
+					<#break>
 				</#switch>
 			<#else>
 				<#list theGroup as element>
@@ -131,11 +137,18 @@
 	<#local titleLevel = level+1>
 	
 	<h${titleLevel}><@buildLink element.type element.code /></h${titleLevel}>
+	
+	<#if (element.role)?? && element.role?has_content>
+		<span class="personneInfo personneRole">Rôle : ${element.role}</span>
+	</#if>
 	<#if (element.fonction)?? && element.fonction?has_content>
-		<span>Fonction : ${element.fonction}</span>
+		<span class="personneInfo personneFonction">Fonction : ${element.fonction}</span>
+	</#if>
+	<#if (element.poste)?? && element.poste?has_content>
+		<span class="personneInfo personnePoste">Poste : ${element.poste}</span>
 	</#if>
 	<#if (element.statut)?? && element.statut?has_content>
-		<span>${element.statut}</span>
+		<span class="personneInfo personneStatut">Statut : ${element.statut}</span>
 	</#if>
 </#macro>
 
@@ -149,24 +162,39 @@
 			<th>statut</th>
 		</thead>
 		<#list element.elements as membreCommission>
-			<#local commissionType = membreCommission.type!"commission">
-			<#local commission = getChildElement(commissionType, membreCommission.code)>
-			<#local commissionName = membreCommission.code!"MISSING_CODE">
-			<#if commission?has_content && commission?size == 1>
-				<#local commissionName = "<a href=\"" + common.buildRootPathAwareURL(commission[0].uri)  + "\">" + commission[0].title + "</a>">
-			</#if>
-			
 			<tr>
-				<td>${commissionName}</td>
+				<td><@buildLink membreCommission.type!"commission" membreCommission.code/></td>
 				<td>${membreCommission.statut}</td>
 			</tr>
 		</#list>
 	</table>
 </#macro>
 
+<#macro handleElementTypeDelegation element level>
+	<#local titleLevel = level+2>
+	
+	<h${titleLevel}>Délégations : </h${titleLevel}>
+	<#if (element.elements)??>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.handleElementTypeDelegation (level:"+level+") displaying : " + element.elements?size + " delegations from : " + common.toString(element))}
+		</#if>
+		<ul class="delegation">
+			<#list element.elements as delegateTo>
+				<li><@buildLink delegateTo.type!"délégations" delegateTo.code/></li>
+			</#list>
+		</ul>
+		
+	<#else>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.handleElementTypeDelegation (level:"+level+") displaying : 1 delegation from : " + common.toString(element))}
+		</#if>
+		<@buildLink element.type element.code/>
+	</#if>
+</#macro>
+
 <#macro handleElementGenericRelationTable extendedContents level isGrouped>
 	<#if logHelper??>
-		${logHelper.stackDebugMessage("Graph.handleElementGenericRelationTable : (level:"+level+") grouped="+isGrouped+", displaying members based on extracted contents : " + common.toString(extendedContents))}
+		${logHelper.stackDebugMessage("Graph.handleElementGenericRelationTable : (level:"+level+") grouped="+isGrouped?string('yes', 'no')+", displaying members based on extracted contents : " + common.toString(extendedContents))}
 	</#if>
 	<#local titleLevel = level+1>
 	
@@ -180,7 +208,11 @@
 		<#if isGrouped>
 			<#local tableTitle = "Membres de " + groupName + " :">
 		</#if>
-		<h${titleLevel}>${tableTitle}</h${titleLevel}>
+		<#local plurializeTitleChar = "">
+		<#if (anExtendedContent?size > 1)>
+			<#local plurializeTitleChar = "s">
+		</#if>
+		<h${titleLevel} class="relationTitle">${tableTitle}${plurializeTitleChar}</h${titleLevel}>
 		<table>
 			<thead>
 				<th>Nom</th>
@@ -228,9 +260,14 @@
 </#function>
 
 
-<#macro buildLink(structureType="" code="" defaultToLabel=true)>
+<#macro buildLink(structureType="" code="" defaultToLabel=true plurial=false)>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("Graph.buildLink : trying to build link for : type : " + structureType + ", code : " + code)}
+	</#if>
+	
+	<#local defaultCodeDisplay = code>
+	<#if plurial>
+		<#local defaultCodeDisplay = defaultCodeDisplay+"s">
 	</#if>
 	<#if structureType?has_content>
 		<#if code?has_content>
@@ -239,16 +276,16 @@
 				<a href="${common.buildRootPathAwareURL(structureInfos[0].uri)}">${structureInfos[0].title}</a>
 			<#else>
 				<#if defaultToLabel>
-					${code!"MISSING_CODE"}
+					${defaultCodeDisplay!"MISSING_CODE"}
 				</#if>
 			</#if>
 		<#else>
 			<#if defaultToLabel>
-				${code!"MISSING_CODE"}
+				${defaultCodeDisplay!"MISSING_CODE"}
 			</#if>
 		</#if>
 	<#else>
-		${code!"MISSING_STRUCTURE_AND_CODE"}
+		${defaultCodeDisplay!"MISSING_STRUCTURE_AND_CODE"}
 	</#if>
 </#macro>
 
@@ -368,7 +405,14 @@
 				<#local theSousRole = matchedElement>
 			</#if>
 		</#if>
-		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
+		<#local thePoste = "">
+		<#if (element.poste)??>
+			<#local thePoste = element.poste>
+			<#if filterAttribute == "poste">
+				<#local thePoste = matchedElement>
+			</#if>
+		</#if>
+		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "poste":thePoste, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
 		<#if logHelper??>
 			${logHelper.stackDebugMessage("Graph.search : matching (enchanced) element : " + common.toString(enchancedElement))}
 		</#if>
@@ -506,10 +550,9 @@
 	</#if>
 </#function>
 
-<#macro displayGroupOfRelations extendedContents level isGrouped baseTitle="">
+<#macro displayGroupOfRelations extendedContents level isGrouped baseTitle="" linkToContent=true>
 	${debugExtendedContent(extendedContents level baseTitle "displayGroupOfRelations")}
 	
-	<#local linkToContent = true>
 	<#local title = "">
 	<#local titleLevel = level+1>
 	<#if (baseTitle)?? && baseTitle?has_content>
@@ -530,9 +573,14 @@
 			</#if>
 		</#if>
 		<#if (title)?? && title?has_content>
-			<h${titleLevel}>
+			<#local plurial = false>
+			<#if (extendedContents?size >1)>
+				<#local plurial = true>
+				<#local title = title+"s">
+			</#if>
+			<h${titleLevel} class="relationTitle">
 				<#if linkToContent>
-					<@buildLink "*" groupName />
+					<@buildLink "*" groupName true plurial/>
 				<#else>
 					${title}
 				</#if>

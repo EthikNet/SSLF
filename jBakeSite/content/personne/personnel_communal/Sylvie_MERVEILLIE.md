@@ -8,8 +8,7 @@ code=Sylvie MERVEILLIE
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-contentImage=images/icones/personnel_communal.svg
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Secrétaire de mairie","role":"personnel communal"}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Service Administratif","role":"personnel communal", "poste":"secrétaire générale de mairie"}]}
 order=981
 ~~~~~~
-Présentation de Sylvie
+	

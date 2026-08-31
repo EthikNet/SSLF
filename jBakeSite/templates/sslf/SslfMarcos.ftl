@@ -239,26 +239,31 @@
 	<@personneParStructure extendedContents level isGrouped true false/>
 </#macro>
 
-<#macro personneParStructure extendedContents level isGrouped isSmall=false displayFonction=true>
+<#macro personneParStructure extendedContents level isGrouped isSmall=false displayFonction=true linkToContent=true>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("sslf.personneParStructureGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
-	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped; groupContent>
+	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped "" linkToContent; groupContent >
 			<@graph.displayRelations groupContent ; theContent, relations>
 				<@personneWithPhoto theContent relations isSmall displayFonction/>
 			</@graph.displayRelations>
 	</@graph.displayGroupOfRelations>
 </#macro>
 
-<#macro personneWithPhoto theContent relations isSmall=false displayFonction=true>
+<#macro personneWithPhoto theContent relations isSmall=false displayFonction=true displayRole=false displayPoste=true>
 	<#local customClass = "personneSynthese">
 	<#if isSmall>
 		<#local customClass = "personneSyntheseSmall">
 	</#if>
+	<#if ! (theContent.contentImage)??>
+		<#local customClass = "personneNoDetails">
+	</#if>
 	<div <@block.generateAnchor theContent/> <@block.generateCssClass theContent "imageBeforeTitleSubTemplate "+customClass/>>
 		<#local customCssClass = "block_title_image">
 		<span class="blockTitle">
-			<@common.addImageIcon theContent.contentImage customCssClass theContent.title/>
+			<#if (theContent.contentImage)??>
+				<@common.addImageIcon theContent.contentImage customCssClass theContent.title/>
+			</#if>
 			<span class="personneDetail">
 				<a href="${common.buildRootPathAwareURL(theContent.uri)}"><#escape x as x?xml>${theContent.title}</#escape></a>
 				<#if (relations)?? && (relations?size >0)>
@@ -266,6 +271,9 @@
 						<@graph.displayARelation relations; relation>
 							<#if displayFonction && (relation.fonction)?? && relation.fonction?has_content>
 								<span>${relation.fonction}</span>
+							</#if>
+							<#if displayPoste && (relation.poste)?? && relation.poste?has_content>
+								<span><${relation.poste}></span>
 							</#if>
 							<#if (relation.statut)?? && relation.statut?has_content>
 								<span>(${relation.statut})</span>

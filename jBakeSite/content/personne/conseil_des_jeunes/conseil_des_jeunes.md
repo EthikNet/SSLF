@@ -8,7 +8,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" view
 specificClass=graphItemsCompactLeft
 graph={"query":{"type":"structure", "filter":"role:Conseil des Jeunes", "in":{"category":"personne", "order":"order"}, "groupBy":"related.role"}, "subTemplate":"sslf.personneParStructureCompactGraphSubTemplate"}
 help={"category":"aide_personnes"}
-order=960
+order=970
 ~~~~~~
 Le Conseil des Jeunes de Saint-Sulpice-les-Feuilles est une instance citoyenne qui permet aux jeunes de participer activement à la vie de la commune. Créé pour sensibiliser les adolescents à la citoyenneté et au fonctionnement d’une collectivité, il leur donne l’occasion de proposer des idées, de mener des actions concrètes et de représenter la jeunesse locale.
 

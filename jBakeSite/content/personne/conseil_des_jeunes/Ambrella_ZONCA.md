@@ -10,6 +10,6 @@ status=published
 exerpt=
 contentImage=images/icones/personnel_communal.svg
 graph={"data":[{"type":"structure","code":"commune_SSLF","role":"Conseil des Jeunes"}]}
-order=961
+order=971
 ~~~~~~
 Présentation de Ambrella

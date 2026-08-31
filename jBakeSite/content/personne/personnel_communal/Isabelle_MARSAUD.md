@@ -8,8 +8,7 @@ code=Isabelle MARSAUD
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-contentImage=images/icones/personnel_communal.svg
 graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Entretien des locaux","role":"personnel communal", "statut":"Agent contractuel"}]}
 order=981
 ~~~~~~
-Présentation d'Isabelle
+	

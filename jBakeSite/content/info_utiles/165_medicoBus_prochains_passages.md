@@ -7,7 +7,7 @@ tags=
 status=published
 contentImage=images/icones/medical.svg
 contentImageSpecificClass=blue round
-hours=Mar. 9 juin · 9h–12h · Place du Marché,Mar. 23 juin · 9h–12h · Place du Marché,Mar. 7 juil. · 9h–12h · Boismandé
+hours=Mar. 9 juin · 9h–12h,Mar. 23 juin · 9h–12h,Mar. 7 juil. · 9h–12h
 order=165
 ~~~~~~
-	
+Devant la mairie

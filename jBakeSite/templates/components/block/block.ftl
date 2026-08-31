@@ -161,7 +161,7 @@
 		<#if (block.beforeTitleImage?has_content)>
 			<@common.addImageIcon block.beforeTitleImage customCssClass block.title/>
 		</#if>
-		<#if (contentImageBefore)>
+		<#if (block.contentImage)?? && contentImageBefore>
 			<@common.addImageIcon block.contentImage customCssClass block.title/>
 		</#if>
 		<span><#escape x as x?xml>${block.title}</#escape></span>

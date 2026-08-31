@@ -8,8 +8,7 @@ code=Baptiste TASSIN
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-contentImage=images/icones/personnel_communal.svg
 graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Entretien des batiments et maintenances diverses","role":"personnel communal"}]}
 order=981
 ~~~~~~
-Présentation de Baptiste
+	

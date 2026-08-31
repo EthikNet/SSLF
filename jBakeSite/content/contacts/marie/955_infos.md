@@ -1,4 +1,4 @@
-title=Infos contact Maire
+title=Infos contact Mairie
 date=2026-06-17
 type=org_openCiLife_block
 category=contact_mairie_detail

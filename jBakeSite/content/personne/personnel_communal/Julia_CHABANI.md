@@ -8,8 +8,7 @@ code=Julia CHABANI
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-contentImage=images/icones/personnel_communal.svg
 graph={"data":[{"type":"structure","code":"la papotte","fonction":"Chargée de mission","role":"personnel communal", "statut":"Agent contractuel"}]}
 order=981
 ~~~~~~
-Présentation de Julia
+	
