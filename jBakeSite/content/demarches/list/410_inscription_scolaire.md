@@ -1,4 +1,4 @@
-title=Demande d’acte d’état civil
+title=Inscription soclaire
 date=2026-08-24
 type=org_openCiLife_post
 category=demarches
@@ -7,9 +7,7 @@ tags=
 demarcheCategory=Scolaire
 status=published
 exerpt=Fiche d'inscription ecoles et garderie
+files={"data":[{"location":"fichiers/scolaire/Fiche_inscription_Ecole.docx", "label":"Inscription à l'école", "icon":"images/icones/dowload.svg"},{"location":"fichiers/scolaire/Fiche_d_inscription_garderie_2026-2027.docx", "label":"Inscription à la garderie", "icon":"images/icones/dowload.svg"}]}
 order=410
 ~~~~~~
-Pouv vous inscrire veuillez remplir : 
-
-- [Pour une inscription à l'école](${webleger.build.host}/fichiers/scolaire/Fiche_inscription_Ecole.docx) 
-- [pour une inscription à la garderie](${webleger.build.host}/fichiers/scolaire/Fiche_d_inscription_garderie_2026-2027.docx)
+Pouv vous inscrire veuillez remplir un des documents ci-dessus.

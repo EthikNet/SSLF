@@ -8,7 +8,7 @@ imageHero={"category":"imageHeroVillages"}
 specificClass=tourisme
 exerpt=Histoire des hameaux de la commune.
 displayTags=false
-contentImage=/images/tourisme/villages/les_villages.jpg
+contentImage=/images/tourisme/villages/moulin_lavaupot.jpg
 order=510
 ~~~~~~
 	
