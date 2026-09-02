@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=L’EHPAD Résidence du Cèdre est un établissement public géré par le C.C.A.S
 anchorId=residence_Cedre
 
-files={"data":[{"location":"${webleger.build.host}/fichiers/sante/residence_du_cedre_mai2026.pdf", "label":"plaquette", "main":true}]}
+files={"data":[{"location":"${webleger.build.host}/fichiers/sante/residence_du_cedre_mai2026.pdf", "label":"plaquette", "icon":"images/icones/dowload.svg", "main":true}]}
 location=2 léon mercier, 87160 Saint-Sulpice-les-Feuilles
 phone=05 55 76 66 00
 email=residenceducedre@wanadoo.fr

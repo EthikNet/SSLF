@@ -1,4 +1,4 @@
-title=MADRIGAL B HALM Sabine
+title=Filographe Justin ETRE
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique
@@ -7,11 +7,11 @@ tags=
 status=published
 exerpt=créatrice denteliere
 stickers={"disposition":"left_absolute", "data":[{"label":"🪡", "specificClass":"topLeftIcon"}]}
-contentImage=images/vie_economique/artisan.jpg
+contentImage=images/vie_economique/artisan/Filographe_logo.jpg
 location=14 Maillasson
-phone=05 55 47 60 91
-email=madrigalb@orange.fr
+email=contact@dentellemetierdart.fr
+websites=https://www.filographe.fr/
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=620
 ~~~~~~
-	
+![exemple de création de Filographe](${webleger.build.host}/images/vie_economique/artisan/filographe_creation.jpg)

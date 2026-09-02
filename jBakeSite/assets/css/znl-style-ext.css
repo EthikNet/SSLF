@@ -722,8 +722,8 @@ h2 {
 	margin-right:50px;
 }
 .vieEconomique .annuaire .blockContent > p > img, .associations .annuaire .blockContent > p > img {
-	height:100px;
-	width:auto;
+	height:auto;
+	max-width:95%;
 }
 .vieEconomique .annuaire .blockWithImageSmall_body, .associations .annuaire .blockWithImageSmall_body {
 	overflow: overlay;
@@ -864,7 +864,8 @@ h2 {
 	color:${webleger.site.style.impact.color};
 }
 .assoCategorie {
-	margin-left:6px
+	margin-left:6px;
+	min-height: 2.8em;
 }
 
 #sectionFooter {
@@ -973,14 +974,10 @@ h2 {
 		width:98%;
 	}
 	.associations .annuaire .blockWithImageSmall{
-		height: 300px;
+		height: 400px;
 	}
 	.vieEconomique .annuaire .blockWithImageSmall{
 		height: 445px;
-	}
-	
-	.associations .annuaire .blockWithImageSmall{
-		height: 300px;
 	}
 	
 	.footerSecondRow {

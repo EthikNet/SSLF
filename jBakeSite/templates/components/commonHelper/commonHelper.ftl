@@ -283,14 +283,27 @@ param : theObject : object to transform in String
 
 <#macro buildLocation theContent>
 	<#if (theContent.location)?? && theContent.location?has_content>
-		<div class="elementWithIconSmallWrap">
-			<div class="iconWrap">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground" aria-hidden="true">
-					<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle>
-				</svg>
+		<#local mapPrefixe="https://www.google.com/maps/place/">
+		<#local locationItems = theContent.location?split(";")>
+		<#list locationItems as locationItem>
+			<#local locationDatas = locationItem?split("|")>
+			<#local locationLabel = locationDatas[0]?trim>
+			<#local locationAdress = locationDatas[0]?trim>
+			<#if logHelper??>
+		 		${logHelper.stackDebugMessage("common.buildLocation : phoneDatas : " + toString(locationDatas))}
+		 	</#if>
+			<#if locationDatas?size == 2>
+				<#local locationAdress = locationDatas[1]?trim>
+			</#if>
+			<div class="elementWithIconSmallWrap">
+				<div class="iconWrap">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground" aria-hidden="true">
+						<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle>
+					</svg>
+				</div>
+				<div class="location"><a href="${mapPrefixe}${locationAdress?url}"><#if locationDatas?size == 2>${locationLabel} : </#if>${locationAdress}</a></div>
 			</div>
-			<div class="location">${theContent.location}</div>
-		</div>
+		</#list>
 	</#if>
 </#macro>
 
