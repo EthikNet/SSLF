@@ -11,7 +11,7 @@ anchorId=dr_bourrel
 
 phone=06 20 87 99 33 
 email=medicobus-occitane@protonmail.com
-websites=www.maiia.com
+website=www.maiia.com
 location=devant la Mairie 2 Voie de la Reine
 order=306
 ~~~~~~

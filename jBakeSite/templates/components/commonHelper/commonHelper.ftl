@@ -257,7 +257,7 @@ param : theObject : object to transform in String
 		<#case "hours">
 			<@buildHours theContent />
 		<#break>
-		<#case "websites">
+		<#case "website">
 			<@buildWebsites buildWebsites />
 		<#break>
 		<#case "files">
@@ -345,8 +345,8 @@ param : theObject : object to transform in String
 </#macro>
 
 <#macro buildWebsites theContent>
-	<#if (theContent.websites)?? && theContent.websites?has_content>
-		<#local websitesItems = theContent.websites?split(",")>
+	<#if (theContent.website)?? && theContent.website?has_content>
+		<#local websitesItems = theContent.website?split(",")>
 		<#list websitesItems as aWebsite>
 			<#if logHelper??>
 		 		${logHelper.stackDebugMessage("common.buildWebsites : Building a WebSite URL with data : " + aWebsite)}

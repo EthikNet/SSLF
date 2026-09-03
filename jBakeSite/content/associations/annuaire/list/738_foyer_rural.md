@@ -10,7 +10,7 @@ responsable=M. Alain BRUN
 location=10 Avenue Armand Marsaud, 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 79 92,06 40 06 56 37
 email=alain.brun84@orange.fr
-websites=www.foyer-rural-st-sulpice-les-feuilles.fr
+website=www.foyer-rural-st-sulpice-les-feuilles.fr
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=738
 ~~~~~~

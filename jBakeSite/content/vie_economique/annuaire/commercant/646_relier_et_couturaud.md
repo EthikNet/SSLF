@@ -11,7 +11,7 @@ contentImage=images/vie_economique/commerce/relier_et_couturaud_logo.jpg
 contentImageSpecificClass=objectContain
 location=6 avenue Colleville
 phone=05 58 78 84 13
-freeDates=Lundi de 13h30-18h00,Mardi au vendredi de 8h00-12h00 / 13h30-18h00, Samedi de 8h00-12h00
+freeDate=Lundi de 13h30-18h00,Mardi au vendredi de 8h00-12h00 / 13h30-18h00, Samedi de 8h00-12h00
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=646
 ~~~~~~

@@ -11,7 +11,7 @@ anchorId=ligne_bus_602
 
 location=place de la Mairie
 phone=05 55 10 31 00
-websites=https://www.rrthv.com/
+website=https://www.rrthv.com/
 freeDate=1 fois par jour
 order=304
 ~~~~~~

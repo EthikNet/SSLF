@@ -10,7 +10,7 @@ stickers={"disposition":"left_absolute", "data":[{"label":"🪡", "specificClass
 contentImage=images/vie_economique/artisan/Filographe_logo.jpg
 location=14 Maillasson
 email=contact@dentellemetierdart.fr
-websites=https://www.filographe.fr/
+website=https://www.filographe.fr/
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=620
 ~~~~~~

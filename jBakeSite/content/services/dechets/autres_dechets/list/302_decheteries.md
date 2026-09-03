@@ -11,7 +11,7 @@ anchorId=decheteries
 
 phone=05 55 12 12 87
 email= contact@syded87.org
-websites=https://www.syded87.org/fr/
+website=https://www.syded87.org/fr/
 
 order=302
 ~~~~~~

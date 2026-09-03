@@ -10,7 +10,7 @@ stickers={"disposition":"left_absolute", "data":[{"label":"🥫", "specificClass
 contentImage=images/vie_economique/commerce/Carrefour_express_deventure.jpg
 location=PIBOUL Romain 22 Rue du Commerce
 phone=05 55 76 75 65
-freeDates=Lundi au Samedi 8h-20h,Dimanche 9h-13h
+freeDate=Lundi au Samedi 8h-20h,Dimanche 9h-13h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=604
 ~~~~~~

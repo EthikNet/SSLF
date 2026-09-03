@@ -10,7 +10,7 @@ exerpt=Maximum est une ESS qui œuvre à la fois pour la protection de l’envir
 anchorId=ressourcerie_maximum
 
 phone=05 55 76 22 78
-websites=https://www.associationmaximum.com/
+website=https://www.associationmaximum.com/
 freeDate=du lundi au samedi 9h-12h / 13h30-17h30
 
 order=306

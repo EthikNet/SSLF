@@ -11,9 +11,9 @@ contentImage=/images/vie_economique/artisan/DROCHON_Automobiles_deventure.jpg
 location=POUJAUD Céline 13 Voie de la Reine
 phone=05 55 76 94 04
 email=contact@drochonautomobiles.com
-websites=https://www.drochonautomobiles.com/
+website=https://www.drochonautomobiles.com/
 facebook=https://www.facebook.com/drochonautomobiles/
-freeDates=Lundi au mardi 8h-12h / 14h-18h
+freeDate=Lundi au mardi 8h-12h / 14h-18h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=640
 ~~~~~~

@@ -11,7 +11,7 @@ contentImage=images/vie_economique/artisan.jpg
 location=Moulin de Lavaupot
 phone=07 82 11 72 88
 email=contact@lesmielsdumoulin.fr
-websites=https://www.lesmielsdumoulin.fr/
+website=https://www.lesmielsdumoulin.fr/
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=602
 ~~~~~~

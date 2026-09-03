@@ -10,7 +10,7 @@ stickers={"disposition":"left_absolute", "data":[{"label":"🚬", "specificClass
 contentImage=images/vie_economique/commerce/BAILLY_Sylvain_deventure.jpg
 location=3 Rue du Commerce
 phone=05 55 76 28 00
-freeDates=Mardi au samedi 7h30-12h30 / 14h30-19h00,Dimanche 8h30-12h30
+freeDate=Mardi au samedi 7h30-12h30 / 14h30-19h00,Dimanche 8h30-12h30
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=638
 ~~~~~~

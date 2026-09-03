@@ -10,7 +10,7 @@ stickers={"disposition":"left_absolute", "data":[{"label":"🪮", "specificClass
 contentImage=images/vie_economique/commerce/LIGNEAU_Nadine.jpg
 location=1 Rue du Commerce
 phone=05 55 76 75 20
-freeDates=Mardi, Jeudi, Vendredi, samedi : 9h30-12h 14h-18h30
+freeDate=Mardi, Jeudi, Vendredi, samedi : 9h30-12h 14h-18h30
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=624
 ~~~~~~

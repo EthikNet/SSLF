@@ -10,7 +10,7 @@ stickers={"disposition":"left_absolute", "data":[{"label":"🍗", "specificClass
 contentImage=images/vie_economique/commercant.jpg
 location=Place de l’Eglise
 phone=06 65 47 66 86
-freeDates=Dimanche matin 
+freeDate=Dimanche matin 
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=616
 ~~~~~~

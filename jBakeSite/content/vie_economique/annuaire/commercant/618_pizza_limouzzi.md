@@ -9,7 +9,7 @@ exerpt=distributeur pizza
 stickers={"disposition":"left_absolute", "data":[{"label":"🍕", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/commerce/pizza_limouzzi.jpg
 location=Rue Jean Jaurès
-freeDates=7j/7 24h/24
+freeDate=7j/7 24h/24
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=618
 ~~~~~~

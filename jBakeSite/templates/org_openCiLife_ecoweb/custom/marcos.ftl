@@ -84,9 +84,11 @@
 
 <#macro imageHero theContent>
 
+	<#local enableMaskProp=propertiesHelper.retrieveAndDisplayConfigText("site.imageHero.mask")>
+	<#local enableMask=(enableMaskProp)?? && enableMaskProp=="true">
+	
 	<#if (theContent.imageHero)?? && (theContent.imageHero.category)?? && theContent.imageHero.category?has_content>
 		<#local categoryContent=theContent.imageHero.category>
-		
 		<#local imageHeroBlocks = block.getBlocks(theContent, theContent.imageHero.category)>
 		<#if (imageHeroBlocks?size > 0)>
 			<#local imageHeroBlock = imageHeroBlocks[0]>
@@ -113,8 +115,10 @@
 		<#local orderBy="order">
 		
 		<section class="imageHeroSection"> 
-			<img class="imgHero" src="${image}"> 
-			<div class="imageHeroMask"></div> 
+			<img class="imgHero" src="${image}">
+			<#if enableMask>
+				<div class="imageHeroMask"></div>
+			</#if>
 			
 			<#nested>
 			

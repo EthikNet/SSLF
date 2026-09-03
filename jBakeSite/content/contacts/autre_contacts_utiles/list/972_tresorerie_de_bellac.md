@@ -7,7 +7,7 @@ status=published
 specificClass=autre_contact_utile
 phone=05 55 60 93 20
 location=1 Rue Thiers 87300 BELLAC
-websites=www.impots.gouv.fr
+website=www.impots.gouv.fr
 email=sgc.bellac@dgfip.finances.gouv.fr
 order=972
 ~~~~~~

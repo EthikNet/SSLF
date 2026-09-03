@@ -67,7 +67,7 @@ $('#basicModal').on('show.bs.modal', function (event) {
 	displayElement(widget, modal, widgetContentClassPrefix, "dates");
 	displayElement(widget, modal, widgetContentClassPrefix, "dateTimes");
 	displayElement(widget, modal, widgetContentClassPrefix, "freeDate");
-	displayElement(widget, modal, widgetContentClassPrefix, "websites");
+	displayElement(widget, modal, widgetContentClassPrefix, "website");
 	displayElement(widget, modal, widgetContentClassPrefix, "faceBook");
 	displayElement(widget, modal, widgetContentClassPrefix, "instagram");
 	displayElement(widget, modal, widgetContentClassPrefix, "files", ".modal-afterHeader");

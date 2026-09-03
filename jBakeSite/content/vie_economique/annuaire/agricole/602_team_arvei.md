@@ -14,7 +14,7 @@ phone=06 13 83 43 18
 email=alexandra.audoin@wanadoo.fr
 facebook=https://www.facebook.com/p/Team-Arve%C3%AF-61581353124164/
 instagram=https://www.instagram.com/team_arvei/
-freeDates=Lundi au vendredi 10h00 à 19h00
+freeDate=Lundi au vendredi 10h00 à 19h00
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=602
 ~~~~~~

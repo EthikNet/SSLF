@@ -374,7 +374,7 @@
 </#macro>
 
 <#function acteurEcoHasCustomProperties item>
-	<#return ((item.facebook)?? && item.facebook?has_content) || ((item.websites)?? && item.websites?has_content)>
+	<#return ((item.facebook)?? && item.facebook?has_content) || ((item.website)?? && item.website?has_content)>
 </#function>
 
 <#macro cardAssoSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>

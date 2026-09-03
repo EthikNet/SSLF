@@ -10,8 +10,8 @@ stickers={"disposition":"left_absolute", "data":[{"label":"🌱", "specificClass
 contentImage=images/vie_economique/commerce/viv_les_fleurs_deventure.jpg
 location=LAPERGUE Vivianne 5bis Boismandé
 phone=06 23 80 43 03
-websites=https://www.vivlesfleurs.com/
-freeDates=Mardi, jeudi, vendredi, samedi 9h00-12h00 / 14h00-18h00,Mercredi 9h00-12h00
+website=https://www.vivlesfleurs.com/
+freeDate=Mardi, jeudi, vendredi, samedi 9h00-12h00 / 14h00-18h00,Mercredi 9h00-12h00
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=634
 ~~~~~~

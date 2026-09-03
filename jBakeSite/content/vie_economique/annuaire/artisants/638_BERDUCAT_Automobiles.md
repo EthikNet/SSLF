@@ -10,7 +10,7 @@ stickers={"disposition":"left_absolute", "data":[{"label":"🧑‍🔧", "specif
 contentImage=images/vie_economique/artisan.jpg
 location=BERDUCAT Fabrice 13 rte de la Souterraine
 phone=05 55 76 75 92
-freeDates=Lundi au mardi 8h-12h / 14h-18h
+freeDate=Lundi au mardi 8h-12h / 14h-18h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=638
 ~~~~~~

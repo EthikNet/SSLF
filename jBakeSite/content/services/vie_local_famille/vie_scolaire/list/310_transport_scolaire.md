@@ -10,7 +10,7 @@ exerpt=Ramassage scolaire – Ecoles & collège
 anchorId=transport_scolaire
 
 phone=0970 870 870
-websites=https://transports.nouvelle-aquitaine.fr/transports-scolaires
+website=https://transports.nouvelle-aquitaine.fr/transports-scolaires
 freedates=du lundi au samedi 8h-19h
 order=310
 ~~~~~~

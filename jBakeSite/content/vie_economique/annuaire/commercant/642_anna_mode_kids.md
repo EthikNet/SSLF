@@ -11,7 +11,7 @@ contentImage=images/vie_economique/commerce/Anna_mode_kids_deventure.jpg
 location=RAYMOND Déborah 14 Place de l’Eglise
 phone=06 33 78 10 03, 05 44 25 49 65
 email=a.modekids@yahoo.com
-freeDates=Mardi au samedi 9h30-12h00 / 14h00-18h30
+freeDate=Mardi au samedi 9h30-12h00 / 14h00-18h30
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=642
 ~~~~~~

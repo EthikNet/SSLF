@@ -10,6 +10,7 @@ exerpt=Tous les mardis de 8h à 13h
 anchorId=le_marche
 location=Sur le parking derrière l'église
 freeDate=Les Mardis : 8h00-13h00, Foire les 21 de chaque mois
+specificClass=imageFloatLeft
 order=304
 ~~~~~~
 Le marché hebdomadaire de Saint-Sulpice-les-Feuilles est un rendez-vous apprécié qui anime le centre-bourg et favorise les échanges entre habitants. Il met en valeur les producteurs et commerçants locaux tout en proposant une offre variée de produits de qualité. Véritable lieu de convivialité, il contribue au dynamisme économique et social de la commune. 

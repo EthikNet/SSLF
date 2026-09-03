@@ -9,9 +9,9 @@ stickers={"disposition":"right", "data":[{"label":"🚗", "specificClass":"topLe
 exerpt=
 phone=06 33 65 17 47
 email=contact@msor.fr
-freeDates=lundi au vendredi : de 9h à 12h
+freeDate=lundi au vendredi : de 9h à 12h
 location=Association Mobilité Solidaire Rurale (MSoR) C/o Mairie de Bellac 14 place de la République BP 73 87300 Bellac
-websites=https://msor.fr/
+website=https://msor.fr/
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=752
 ~~~~~~

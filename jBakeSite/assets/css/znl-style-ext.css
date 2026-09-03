@@ -122,20 +122,30 @@ p {
 }
 
 .minimalCard .block_title_image_wraper{
-	color:${webleger.site.style.primary.background.color};
 	background-color:hsl(133.55,100%,23.74%,0.2);
 	padding:6px;
 	border-radius:9999px;
+	color:${webleger.site.style.primary.background.color};
 }
 
 .imageHeroSection {
 	margin-bottom: 2rem;
 }
-
+.imageHeroSection .blockContent h1, .imageHeroSection .blockContent h2,.imageHeroSection .blockContent h3,.imageHeroSection .blockContent h4, .imageHeroSection .blockContent p{
+	border-radius:6px;
+	padding: 12px 12px 12px 3px;
+	font-weight: bolder;
+	letter-spacing: 0.11em;
+	background-color:${webleger.site.style.primary.background.color.medium};
+}
+.imageHeroSection .blockContent h1, .imageHeroSection .blockContent h2,.imageHeroSection .blockContent h3,.imageHeroSection .blockContent h4 {
+	display:inline-block;
+}
 .vaguesSvg {
 	z-index:5;
 	color:${webleger.site.style.background.color};
 }
+
 #beforeMainContent {
 	z-index:6;
 }
@@ -149,7 +159,7 @@ p {
 	color:${webleger.site.style.primary.color};
 }
 .title .sticker_list  {
-	display: inline-block;
+	display:block;
 }
 .title .sticker_list .sticker {
 	padding:8px 12px;
@@ -177,10 +187,11 @@ p {
 	color:${webleger.site.style.background.color}!important;
 }
 .btn-semi-transparent {
-	background-color: rgb(250,250,250,0.25);
+	background-color: rgb(250,250,250,0.5);
 	backdrop-filter:blur(8px);
 	border-color:transparent!important;
 	border:1px solid ${webleger.site.style.background.color};
+	color:${webleger.site.style.muted.foreground};
 }
 
 h2 {
@@ -977,7 +988,7 @@ h2 {
 		height: 400px;
 	}
 	.vieEconomique .annuaire .blockWithImageSmall{
-		height: 445px;
+		height: 575px;
 	}
 	
 	.footerSecondRow {

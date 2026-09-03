@@ -11,7 +11,7 @@ contentImage=images/vie_economique/artisan/RODIER_Pascal_deventure.jpg
 location=5 Voie de la Reine
 phone=05 55 76 79 37
 email=pascalrodier@orange.fr
-websites=https://magasin.blancbrun.fr/magasin/blanc-brun-st-sulpice-les-feuilles
+website=https://magasin.blancbrun.fr/magasin/blanc-brun-st-sulpice-les-feuilles
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=628
 ~~~~~~

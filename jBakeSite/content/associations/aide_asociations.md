@@ -31,7 +31,7 @@ Le contenu **associations.md** est la page principale, qui inclue chacune des as
 **location=10 Avenue Armand Marsaud, 87160 SAINT SULPICE LES FEUILLES** <= adresse de l'aocciation. Affiché en dessous du responsable.
 **phone=05.55.76.79.92,06.40.06.56.37** <= Numéro de téléphonne de l'assoication. Il est possible d'en préciser plusieur séparé par une virgule.
 **email=alain.brun84@orange.fr** <= E-mail de contact de l'asociation.
-**websites=www.foyer-rural-st-sulpice-les-feuilles.fr** <= Site web de l'association. Est afifcher sous forme de badge en bas du bloque.
+**website=www.foyer-rural-st-sulpice-les-feuilles.fr** <= Site web de l'association. Est afifcher sous forme de badge en bas du bloque.
 **hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}** <= Ne pas modifié ! Permet d'afficher l'icone.
 **order=738** <= Ordre d'affichage de l'association par rapport aux autres.
 

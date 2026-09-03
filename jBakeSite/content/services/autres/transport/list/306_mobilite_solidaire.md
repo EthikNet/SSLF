@@ -11,7 +11,7 @@ anchorId=mobilite_solidaire
 
 phone=06 33 65 17 47
 email=contact@msor.fr
-websites=https://msor.fr/
+website=https://msor.fr/
 freeDate=Lundi au vendredi : de 9h à 12h
 order=306
 ~~~~~~

@@ -11,7 +11,7 @@ anchorId=mediatheque
 
 location=20, Place de l'Église (sous le porche)
 phone=05 18 04 00 14
-websites=https://mediatheques.hautlimousinenmarche.fr/st-sulpice-les-feuilles
+website=https://mediatheques.hautlimousinenmarche.fr/st-sulpice-les-feuilles
 order=302
 ~~~~~~
 Tout au long de l’année le réseau lecture du haut limousin en marche organise des actions culturelles :

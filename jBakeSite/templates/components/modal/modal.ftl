@@ -80,7 +80,7 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 		<@extractMetaDataContent theContent cssPrefix "dates" />
 		<@extractMetaDataContent theContent cssPrefix "dateTimes" />
 		<@extractMetaDataContent theContent cssPrefix "freeDate" />
-		<@extractMetaDataContent theContent cssPrefix "websites" />
+		<@extractMetaDataContent theContent cssPrefix "website" />
 		<@extractMetaDataContent theContent cssPrefix "faceBook" />
 		<@extractMetaDataContent theContent cssPrefix "instagram" />
 		<@extractMetaDataContent theContent cssPrefix "files" "div class=\"metaDataListInLine\""/>

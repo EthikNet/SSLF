@@ -12,7 +12,7 @@ contentImageSpecificClass=objectContain
 location=MANGIN Jean-Luc 5 bis rue des Bouguillons
 phone=05 55 76 71 02
 email=marlim23vins.com
-freeDates=Lundi au jeudi 8h00-12h00 / 14h00-18h00,Vendredi 8h00-12h00 /14h00-17h00
+freeDate=Lundi au jeudi 8h00-12h00 / 14h00-18h00,Vendredi 8h00-12h00 /14h00-17h00
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=632
 ~~~~~~
