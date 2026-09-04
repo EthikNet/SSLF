@@ -59,6 +59,7 @@
 			<#list theContent.includeContent.userFilters.filters as filter>
 				<#local allValues = []>
 				<#local allLabel = filter.allLabel!"Tous">
+				<#local allowMultiple = filter.allowMultiple!"true">
 			  	<#list subContents as subContent>
 			  	<#if (filter.element)?? && (subContent[filter.element])??>
 			  			<#local subContentValues = subContent[filter.element]>
@@ -81,7 +82,7 @@
 			  	</#if>
 				<div>
 					<span>${filter.label}</span>
-					<div class="btn-toolbar filterElements" role="toolbar" data-target-list="${theTarget}">
+					<div class="btn-toolbar filterElements" role="toolbar" data-target-list="${theTarget}" data-allow-multiple="${allowMultiple}">
 					  <div class="btn-group">
 					    <button type="button" class="btn btn-default userFilter_all">${allLabel}</button>
 					  </div>

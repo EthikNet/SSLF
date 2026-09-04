@@ -5,6 +5,8 @@ $(document).ready(function(){
 	var subContentBlock = userFiltersDiv.parent();
 	var allFiltersGroup = userFiltersDiv.find(".filterElements");
 	
+	
+	
 	console.log ("UserFilters : filtering using : " + allFiltersGroup.size() + " filterGroups");
 	
 	//init
@@ -19,9 +21,13 @@ $(document).ready(function(){
 	var handleLast = [];
 	//add class for filtering
 	allFiltersGroup.each(function() {
-		var allowMultiple = true;
 		var currentGroup = $(this);
+		var allowMultiple = false;
 		var targetList = currentGroup.data('targetList');
+		var multipleAttribute = currentGroup.data('allowMultiple');
+		if (multipleAttribute !=null && multipleAttribute==true){
+			var allowMultiple = true
+		}
 		var buttonsChoice = currentGroup.find(".userFilter_choices .btn");
 		
 		var buttonAll = currentGroup.find(".userFilter_all");
@@ -36,6 +42,7 @@ $(document).ready(function(){
 		
 		if (!allowMultiple || isAllButtonActive) {
 			buttonsChoice.removeClass('activeFilter');
+			clickedButton.toggleClass('activeFilter');
 		}
 		
 		if(isAllButtonActive || allChoiceButtonActive || !atLeastOneChoiceButtonActive){
@@ -88,7 +95,11 @@ $(document).ready(function(){
 			})
 			
 			var displayCard = cardfilterStatus.indexOf(true) >=0;
-			console.log ("====== '" + currentCard.find(".card_title").text()  + "' cardfilterStatus : " + cardfilterStatus.join(",") + ", global visible : " + displayCard);
+			var cardTitle = currentCard.find(".card_title").text();
+			if(cardTitle.size == 0){
+				var cardTitle = currentCard.find(".block_title").text();
+			}
+			console.log ("====== '" + cardTitle  + "' cardfilterStatus : " + cardfilterStatus.join(",") + ", global visible : " + displayCard);
 			
 			if(!displayCard){
 				console.log ("======== ' Hidding element");
