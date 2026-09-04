@@ -136,11 +136,14 @@ p {
 	padding: 12px 12px 12px 3px;
 	font-weight: bold;
 	letter-spacing: 0.05em;
-	color:${webleger.site.style.muted.foreground};
-	background-color:rgb(250,250,250,0.5);
+	color: ${webleger.site.style.primary.background.color};
+	background-color:hsl(92.14,57.32%,97.13%,0.7);
 }
 .imageHeroSection .blockContent h1, .imageHeroSection .blockContent h2,.imageHeroSection .blockContent h3,.imageHeroSection .blockContent h4 {
 	display:inline-block;
+}
+.imageHeroSection .title .blockContent p {
+	color: ${webleger.site.style.primary.background.color};
 }
 .vaguesSvg {
 	z-index:5;
@@ -166,10 +169,6 @@ p {
 	padding:8px 12px;
 	border-radius:24px;
 }
-.title .blockContent p {
-	font-size:large;
-	color:${webleger.site.style.muted.foreground};
-}
 
 .action_button.btn {
 	padding:12px 36px;
@@ -179,7 +178,7 @@ p {
 	position:relative;
 	z-index:5;
 	border-color:${webleger.site.style.color};
-	color:${webleger.site.style.background.color};
+	color:${webleger.site.style.primary.color};
 }
 .action_button.btn-default {
 	color:${webleger.site.style.primary.background.color}!important;
