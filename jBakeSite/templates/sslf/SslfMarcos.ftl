@@ -278,6 +278,32 @@
 							<#if (relation.statut)?? && relation.statut?has_content>
 								<span>(${relation.statut})</span>
 							</#if>
+							<ul class="personneSyntheseFeatured">
+								<@graph.filterRelation theContent "*" "onSynthses:*"; onSytheseRelation>
+									<#local theType = onSytheseRelation.type!"">
+									<#if theType == "structure">
+										<#local typeLabel = "">
+									<#else>
+										<#local typeLabel = theType + " : ">
+									</#if>
+									
+									<#local theStatut = onSytheseRelation.statut!"">
+									<#if theStatut == "">
+										<#local statusLabel = "">
+									<#else>
+										<#local statusLabel = " (" + theStatut + ")">
+									</#if>
+									
+									<#local theFonction = onSytheseRelation.fonction!"">
+									<#if theFonction == "">
+										<#local theFonction = "">
+									<#else>
+										<#local theFonction = " (" + theFonction + ")">
+									</#if>
+									
+									<li>${typeLabel}${onSytheseRelation.code!"MISSING_CODE"}${statusLabel}${theFonction}</li>
+								</@graph.filterRelation>
+							</ul>
 						</@graph.displayARelation>
 					</span>
 				</#if>

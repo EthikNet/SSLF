@@ -6,6 +6,7 @@ CircuitCategorie=à pied
 tags=
 status=published
 contentImage=images/tourisme/chemin_rando/photo_sentier_oiseau.jpg
+files={"data":[{"location":"fichiers/tourisme/chemin_rando/circuit_de_randonnee_les_oiseaux.pdf", "label":"Brochure de la rando", "icon":"images/icones/dowload.svg"}]}
 order=502
 ~~~~~~
 Ce circuit d’environ **10 à 12 km** se parcourt en près de **3 heures**. Accessible au plus grand nombre, il vous conduit jusqu’aux rives de l’étang de Gensais, en traversant des espaces naturels propices à l’observation de la faune et de la flore locales. 

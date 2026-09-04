@@ -9,4 +9,4 @@ specificClass=graphItemsCompactLeft
 graph={"query":{"type":"commission", "filter":"code:communication", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
 order=961
 ~~~~~~
-La commission de la communication est en charge de ......
+	

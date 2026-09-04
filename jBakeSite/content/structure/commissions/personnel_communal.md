@@ -9,4 +9,4 @@ specificClass=graphItemsCompactLeft
 graph={"query":{"type":"commission", "filter":"code:personnel communal", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
 order=961
 ~~~~~~
-La commission du personnel communal est en charge de ......
+	

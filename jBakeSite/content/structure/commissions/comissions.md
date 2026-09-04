@@ -8,4 +8,4 @@ specificClass=graphItemsCompactLeft
 graph={"query":{"type":"commission", "filter":"code:*", "in":{"category":"personne", "order":"order"}, "groupBy":"related.code"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
 order=959
 ~~~~~~
-Les commissions servent à ...
+	

@@ -12,4 +12,4 @@ contentImage=images/personne/Nathalie_LABARRE.jpg
 graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Conseillère","role":"Conseil municipal","sousRole":"conseiller","group":[{"type":"commission","elements":[{"code":"finances","statut":"titulaire"},{"code":"manifestations - réceptions","statut":"titulaire"},{"code":"affaires scolaires","statut":"titulaire"},{"code":"communication","statut":"titulaire"}]},{"type":"délégations","elements":[{"code":"affaires scolaires"}]}]}]}
 order=957
 ~~~~~~
-Présentation de Nathalie
+	

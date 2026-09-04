@@ -6,6 +6,7 @@ CircuitCategorie=à pied
 tags=
 status=published
 contentImage=images/tourisme/chemin_rando/photo_sentier_ramiers_millefeuilles.jpg
+files={"data":[{"location":"fichiers/tourisme/chemin_rando/circuit de randonnee_les_ramiers_milles_feuilles.pdf", "label":"Brochure de la rando", "icon":"images/icones/dowload.svg"}]}
 order=504
 ~~~~~~
 Avec ses **25 km** de parcours, cette randonnée offre une immersion complète dans les paysages du territoire. Durant environ **6 h 30 de marche**, les randonneurs traversent chemins bocagers, étangs, cours d'eau et petits hameaux typiques du Limousin. 

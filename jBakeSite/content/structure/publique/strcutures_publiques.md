@@ -6,4 +6,4 @@ specificClass=graphItemsCompactLeft
 graph={"query":{"type":"structure", "filter":"type:structure", "in":{"category":"personne", "order":"order"}, "groupBy":"related.code"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
 order=990
 ~~~~~~
-Liste des structures publiques en relations avec la commune.
+	

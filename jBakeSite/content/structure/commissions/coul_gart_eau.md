@@ -9,4 +9,4 @@ specificClass=graphItemsCompactLeft
 graph={"query":{"type":"commission", "filter":"code:coul Gart Eau", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
 order=961
 ~~~~~~
-La commission coul Gart Eau est en charge de ......
+	

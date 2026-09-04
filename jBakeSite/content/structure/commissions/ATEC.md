@@ -9,4 +9,4 @@ specificClass=graphItemsCompactLeft
 graph={"query":{"type":"commission", "filter":"code:ATEC", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
 order=961
 ~~~~~~
-La commission ATEC est en charge de ......
+	

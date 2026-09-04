@@ -1,7 +1,9 @@
-title=Édifice emblématique
+title=L'église : édifice emblématique
 date=2026-07-23
 type=org_openCiLife_block
-category=patrimoine
+category=patrimoine, site_remarquable
+contentImage=/images/tourisme/eglise_ssl_avant.jpg
+siteRemarquableCategorie=patrimoine
 tags=
 status=published
 specificClass=imageFloatLeft

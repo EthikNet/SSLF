@@ -350,8 +350,9 @@
 	<#local filterValue = filterDataDetails[1]>
 	<#local matchedElement = "">
 	
-	<#if elementType == structureType && (element[filterAttribute])?? && element[filterAttribute]?has_content>
+	<#if (structureType=="*" || elementType == structureType) && (element[filterAttribute])?? && element[filterAttribute]?has_content>
 		<#local elementValueToFilterList = element[filterAttribute].split(",")>
+		
 		<#list elementValueToFilterList as anElementFilterValue>
 			
 			<#if !match && (filterValue == "*" || anElementFilterValue == filterValue)>
@@ -619,5 +620,22 @@
 	
 	<#list cleanRelations as aRelation>
 		<#nested aRelation>
+	</#list>
+</#macro>
+
+<#macro filterRelation theContent categoryFilter filters>
+	<#local onSyntheseRelations = []>
+	<#if (theContent.graph)?? && theContent.graph?has_content>
+		<#local onSyntheseRelations = filterRelated(theContent, categoryFilter, filters)>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.displayOnSynthese : Filtering content of " + theContent.title + "(category : " + categoryFilter + ", filters : " + filters +") => " + onSyntheseRelations?size + " matches (details : " + common.toString(onSyntheseRelations) + ")")}
+		</#if>
+	</#if>
+	<#list onSyntheseRelations as content, relateds>
+		<#if relateds?is_sequence>
+			<#list relateds as related>
+				<#nested related>
+			</#list>
+		</#if>
 	</#list>
 </#macro>

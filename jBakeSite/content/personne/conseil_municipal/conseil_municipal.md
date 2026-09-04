@@ -9,4 +9,4 @@ graph={"query":{"type":"structure", "filter":"role:Conseil municipal", "in":{"ca
 help={"category":"aide_personnes"}
 order=950
 ~~~~~~
-Le conseil municipal sert à ....
+	

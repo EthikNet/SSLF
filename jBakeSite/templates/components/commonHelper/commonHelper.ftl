@@ -142,6 +142,8 @@ param : theObject : object to transform in String
 	<#local stringVal = "">
 	<#if theObject?is_string>
 		<#local stringVal = "\"" + theObject + "\"">
+	<#elseif theObject?is_method>
+		<#local stringVal = "__METHOD__">
 	<#elseif (theObject?is_hash)>
 		<#local stringVal = stringVal + "{" />
 		<#local separator = "">

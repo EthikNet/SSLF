@@ -8,4 +8,4 @@ contentImage=images/common/logo_left-small.jpg
 graph={"query":{"type":"structure", "filter":"code:Conseil départementale de la Haute Vienne", "in":{"category":"personne", "order":"order"}, "groupBy":"related.fonction"}, "subTemplate":"sslf.personneParFonctionGraphSubTemplate"}
 order=992
 ~~~~~~
-Le Communauté de Communes du Haut Limousin en Marche sert à ....
+	
