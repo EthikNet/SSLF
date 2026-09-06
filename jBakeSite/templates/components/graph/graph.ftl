@@ -2,6 +2,7 @@
 	<#return {"componnentVersion":2, "name":"Graph", "description":"Allow strcutured Graphs based on content", "version":"0.1.0", "recommandedNamespace":"graph", "require":[{"value":"stripe", "type":"contentHeader"}, {"value":"webleger.component.stripe.apiKey", "type":"config"}], "uses":[{"value":"langHelper", "type":"lib"}, {"value":"logHelper", "type":"lib"}]}>
 </#function>
 
+<#global pageUseHierarchy=false />
 <#function init>
 	<#return "" />
 </#function>
@@ -18,6 +19,20 @@
 </#function>
 
 <#function addFooterScripts()>
+	<#if pageUseHierarchy>
+		<#if ressourcesHelper??>
+			${ressourcesHelper.addFooterRessource({"tagType":"script", "src":"templates/components/graph/copyToAssets/noAgregation/orgChart.js", "order":40})}
+			${ressourcesHelper.addFooterRessource({"tagType":"link", "href":"templates/components/graph/copyToAssets/noAgregation/orgChart.css", "order":42, "rel":"stylesheet"})}
+		<#else>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("graph.addFooterScripts : ERROR cannot add footer script, missing 'ressourcesHelper' component")}
+			</#if>
+		</#if>
+		<#else>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("graph.addFooterScripts : Graph component are not use in this page, no script added")}
+		</#if>
+	</#if>
 	<#return "" />
 </#function>
 
@@ -35,8 +50,9 @@
 			<#list theContent.graph.data as firstLevelElement>
 				<@recursiveStruture firstLevelElement type 1 />
 			</#list>
-			
-		<#elseif (theContent.graph.query)?? && theContent.graph.query?has_content>
+		</#if>
+		
+		<#if (theContent.graph.query)?? && theContent.graph.query?has_content>
 			<#if theContent.graph.query?is_hash && (theContent.graph.query.type)?? && theContent.graph.query.type?has_content>
 				<#local type = theContent.graph.query.type>
 			</#if>
@@ -46,6 +62,11 @@
 			<#local groupByAttribute = "">
 			<#if (theContent.graph.query.groupBy)??>
 				<#local groupByAttribute = theContent.graph.query.groupBy>
+			</#if>
+			
+			<#local graphId="hierarchyChart">
+			<#if (theContent.graph.query.graphId)?? && theContent.graph.query.graphId?has_content>
+				<#local graphId=theContent.graph.query.graphId>
 			</#if>
 			
 			<#if logHelper??>
@@ -62,15 +83,11 @@
 					<#local subTemplateName=theContent.graph.subTemplate>
 				</#if>
 				<#if logHelper??>
-					${logHelper.stackDebugMessage("Graph.build : generating a graph with template : " + subTemplateName + " (gouped by : " + groupByAttribute + "), for : " + extendedContents?size + " related contents")}
+					${logHelper.stackDebugMessage("Graph.build : generating a graph with template : " + subTemplateName + " (gouped by : " + groupByAttribute + "), with name = " + graphId + ", for : " + extendedContents?size + " related contents")}
 				</#if>
-				<#local subTemplateInterpretation = "<@${subTemplateName} extendedContents 1 groupByAttribute?has_content/>"?interpret>
+				<#local subTemplateInterpretation = "<@${subTemplateName} extendedContents 1 groupByAttribute?has_content graphId/>"?interpret>
 				<@subTemplateInterpretation/>
 			</#if>
-		<#else>
-			<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.build ERROR : graph in contentHeader found but not supported, should be data or query")}
-		</#if>
 		</#if>
 	<#else>
 		<#if logHelper??>
@@ -192,7 +209,7 @@
 	</#if>
 </#macro>
 
-<#macro handleElementGenericRelationTable extendedContents level isGrouped>
+<#macro handleElementGenericRelationTable extendedContents level isGrouped queryName>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("Graph.handleElementGenericRelationTable : (level:"+level+") grouped="+isGrouped?string('yes', 'no')+", displaying members based on extracted contents : " + common.toString(extendedContents))}
 	</#if>
@@ -246,6 +263,12 @@
 			</#list>
 		</table>
 	</#list>
+</#macro>
+
+<#macro buildOrgChartHierarchyGraphSubTemplate extendedContents level isGrouped graphId>
+	<#global pageUseHierarchy=true />
+	<#local graphData = "">
+	<div id="${graphId}" class="hierarchyGraph" data-graph-data="${graphData}"></div>
 </#macro>
 
 <#function getChildElement structureType="MISSING_TYPE" code="MISSING_CODE">

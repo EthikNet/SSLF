@@ -150,24 +150,24 @@ p {
 	color:${webleger.site.style.background.color};
 }
 
-#beforeMainContent {
-	z-index:6;
-}
-
-.title {
+.imageHeroSection .title {
 	padding-bottom: 2rem;
 	margin-top:12px;
 }
 
-.title, .title h1 {
+.imageHeroSection .title, .title h1 {
 	color:${webleger.site.style.primary.background.color};
 }
-.title .sticker_list  {
+.imageHeroSection .title .sticker_list  {
 	display:block;
 }
-.title .sticker_list .sticker {
+.imageHeroSection .title .sticker_list .sticker {
 	padding:8px 12px;
 	border-radius:24px;
+}
+
+#beforeMainContent {
+	z-index:6;
 }
 
 .action_button.btn {
@@ -953,13 +953,13 @@ h2 {
 	.imageHeroSection {
 	    margin-bottom: 5rem;
 	}
-	.title {
+	.imageHeroSection  .title {
 		padding-bottom: 8rem;
 		margin-top:48px;
 		min-width:640px;
 	}
 	
-	.title .blockContent p {
+	.imageHeroSection  .title .blockContent p {
 		width:60%;
 	}
 	#panneauPocket_infos .actions_list {
@@ -1016,7 +1016,7 @@ h2 {
 }
 
 @media screen and (min-width: 900px){
-	.title {
+	.imageHeroSection  .title {
 		min-width:900px;
 	}
 	.faceBookNews {

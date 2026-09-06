@@ -191,7 +191,7 @@
 	</div>
 </#macro>
 
-<#macro comissionsMembresGraphSubTemplate extendedContents level isGrouped>
+<#macro comissionsMembresGraphSubTemplate extendedContents level isGrouped graphId>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("sslf.comissionsParMembresGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
@@ -204,7 +204,7 @@
 		</@graph.displayGroupOfRelations>
 </#macro>
 
-<#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped>
+<#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped graphId>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("sslf.commissionForMemberGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
@@ -227,15 +227,15 @@
 	</@graph.displayGroupOfRelations>
 </#macro>
 
-<#macro personneParStructureGraphSubTemplate extendedContents level isGrouped>
+<#macro personneParStructureGraphSubTemplate extendedContents level isGrouped graphId>
 	<@personneParStructure extendedContents level isGrouped />
 </#macro>
 
-<#macro personneParStructureCompactGraphSubTemplate extendedContents level isGrouped>
+<#macro personneParStructureCompactGraphSubTemplate extendedContents level isGrouped graphId>
 	<@personneParStructure extendedContents level isGrouped true/>
 </#macro>
 
-<#macro personneParFonctionGraphSubTemplate extendedContents level isGrouped>
+<#macro personneParFonctionGraphSubTemplate extendedContents level isGrouped graphId>
 	<@personneParStructure extendedContents level isGrouped true false/>
 </#macro>
 
