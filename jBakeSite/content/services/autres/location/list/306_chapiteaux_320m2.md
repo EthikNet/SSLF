@@ -21,7 +21,6 @@ Les tables et bancs sont inclus.
 > **Tarifs**
 > - Habitants de la commune : 100 € / jour, 200 € / week-end
 > - Habitants Hors commune : 200 € / jour, 250 € / week-end
-> - Cautions : 500 €
 
 > **Réservations**
 > Auprès de la mairie

@@ -21,7 +21,6 @@ Située juste derrière la mairie.
 > **Tarifs**
 > - Habitants de la commune : 30 € / jour
 > - Habitants Hors commune : 50 € / jour
-> - Cautions : aucune
 
 > **Réservations**
 > Auprès de la mairie

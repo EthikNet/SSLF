@@ -20,7 +20,7 @@ order=304
 > **Tarifs**
 > - Habitants de la commune : 105 € / jour, 160 € / week-end
 > - Habitants Hors commune : 125 € / jour, 190 € / week-end
-> - Cautions : 500 € + 100 € ménage
+> - Forfait ménage : 100 euros
 
 > **Réservations**
 > Auprès de la mairie

@@ -82,16 +82,16 @@ Il faut préciser :
 
 Voici un exemple à partir du contenu **personnes.md** : 
 
-``graph={"query":{"type":"structure", "filter":"code:*", "in":{"category":"personne", "order":"order"}, "groupBy":"related.code"}, "subTemplate":"sslf.personneParStructureGraphSubTemplate"}``
+``graph={"query":[{"type":"structure", "filter":"code:*", "in":{"category":"personne", "order":"order"}, "groupBy":"related.code", "subTemplate":"sslf.personneParStructureGraphSubTemplate"}]}``
 
 Le contenu affichera : tous les contenus définissant un lien (graph.data) de ``type`` : ``structure`` ayant un code (n'importe lequel), défini dans des contenus de ``category`` : ``personne``. Les personnes seront ordonnées via leur attribut d'entête ``order`` et seront regroupées par ``code``. Les détails d'affichage seront traités par le sous-template ``sslf.personneParStructureGraphSubTemplate``.
 
 Voici un autre exemple provenant de **personnel_communal.md**
 
-``graph={"query":{"type":"structure", "filter":"role:personnel communal", "in":{"category":"personne", "order":"order"}, "groupBy":"related.fonction"}, "subTemplate":"sslf.personneParFonctionGraphSubTemplate"}``
+``graph={"query":[{"type":"structure", "filter":"role:personnel communal", "in":{"category":"personne", "order":"order"}, "groupBy":"related.fonction", "subTemplate":"sslf.personneParFonctionGraphSubTemplate"}]}``
 
 Il est similaire au précédent sauf qu'on ne veut afficher que les contenus définissant une relation de type strucutre avec un ``role`` égale à ``personnel communal`` et le regroupement se fera par ``fonction``.
 
 Un aute exemple, pour une commission : **affaires_scolaires.md**.
 
-``graph={"query":{"type":"commission", "filter":"code:affaires scolaires", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}``
+``graph={"query":[{"type":"commission", "filter":"code:affaires scolaires", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"} "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}]}``

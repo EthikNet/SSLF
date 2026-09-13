@@ -15,3 +15,5 @@ order=304
 Doté d’un stade en gazon naturel avec éclairage et vestiaires, il accueille principalement le club de football local.
 
 ![photo du Stade du Mondelet](${webleger.build.host}/images/services/photo_stade_du_Mondelet.jpg)
+
+![photo du Stade du Mondelet](${webleger.build.host}/images/services/stade_mondelet_tribunes.jpg)

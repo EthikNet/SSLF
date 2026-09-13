@@ -6,7 +6,7 @@ code=appels d'offres
 status=published
 contentImage=images/common/logo_left-small.jpg
 specificClass=graphItemsCompactLeft
-graph={"query":{"type":"commission", "filter":"code:appels d'offres", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
+graph={"query":[{"type":"commission", "filter":"code:appels d'offres", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut", "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}]}
 order=961
 ~~~~~~
 	

@@ -1,30 +1,19 @@
 
-  document.addEventListener('DOMContentLoaded', function () {
-
-  var datasource = {
-    'name': 'Lao Lao',
-    'title': 'general manager',
-    'children': [
-      { 'name': 'Bo Miao', 'title': 'department manager' },
-      { 'name': 'Su Miao', 'title': 'department manager',
-        'children': [
-          { 'name': 'Tie Hua', 'title': 'senior engineer' },
-          { 'name': 'Hei Hei', 'title': 'senior engineer',
-            'children': [
-              { 'name': 'Dan Dan', 'title': 'engineer' }
-            ]
-          },
-          { 'name': 'Pang Pang', 'title': 'senior engineer' }
-        ]
-      },
-      { 'name': 'Hong Miao', 'title': 'department manager' }
-    ]
-  };
-
-  var oc = new OrgChart({
-    chartContainer: '#chart-container',
-    'data' : datasource,
-    'nodeContent': 'title'
-  });
-
+$(document).ready(function(){
+	$(".hierarchyGraph").each(function () {
+		var divGraphContainer = $(this);
+		buildGraph(divGraphContainer.attr('id'), divGraphContainer.data('graphData'));
+	})
 });
+
+function buildGraph(graphId, graphData){
+	console.log("Building Hierachical Graph : id : " + graphId + " with data source size : " + graphData.length + " characters");
+
+	cleanGraphData = JSON.parse(graphData.replace(/(\r\n|\n|\r|\t)/gm, "").replace(/'/gm, '"'));
+	var oc = new OrgChart({
+		chartContainer: '#'+graphId,
+		'data' : cleanGraphData,
+		'nodeContent': 'title'
+	});
+
+};

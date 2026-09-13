@@ -8,7 +8,7 @@ code=Sylvie MERVEILLIE
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Service Administratif","role":"personnel communal", "poste":"secrétaire générale de mairie"}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Service Administratif","role":"personnel communal", "poste":"secrétaire générale de mairie", "hierarchy":[{"code":"personnel communal", "parent":{"type":"personne", "code":"Dominique DELPEUCH"}}]}]}
 order=981
 ~~~~~~
 	

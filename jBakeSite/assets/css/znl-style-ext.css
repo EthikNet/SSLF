@@ -386,6 +386,9 @@ h2 {
 	justify-content:flex-start;
 	gap:6px;
 }
+.graphItemsCompactLeft .personneDetail .personneSyntheseFeatured  {
+	display:none;
+}
 
 .service_items {
 	gap:24px;
@@ -934,6 +937,10 @@ h2 {
 }
 .lastInRow{
 	text-align: right !important;
+}
+
+.help-group {
+	display:none;
 }
 
 @media screen and (min-width: 640px) {

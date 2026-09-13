@@ -16,4 +16,7 @@ order=302
 
 2 assistantes maternelles accueil les enfant de 2 mois à 4 ans.
 
+![MaM a petits pas : bâtiment](${webleger.build.host}/images/services/mam_batiment.jpg)
+
+
 ![Affiche MaM a petits pas](${webleger.build.host}/images/services/mam.jpg)

@@ -13,3 +13,5 @@ location=4 route d'Arnac-la-Poste
 order=306
 ~~~~~~
 Ce stade en centre bourg est utilisé essentiellement par le collège et l’école.
+
+![photo du Stade du collège](${webleger.build.host}/images/services/stade_college.jpg)

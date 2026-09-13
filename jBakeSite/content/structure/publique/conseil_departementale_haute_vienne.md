@@ -5,7 +5,7 @@ category=structure
 code=Conseil départementale de la Haute Vienne
 status=published
 contentImage=images/common/logo_left-small.jpg
-graph={"query":{"type":"structure", "filter":"code:Conseil départementale de la Haute Vienne", "in":{"category":"personne", "order":"order"}, "groupBy":"related.fonction"}, "subTemplate":"sslf.personneParFonctionGraphSubTemplate"}
+graph={"query":[{"type":"structure", "filter":"code:Conseil départementale de la Haute Vienne", "in":{"category":"personne", "order":"order"}, "groupBy":"related.fonction", "subTemplate":"sslf.personneParFonctionGraphSubTemplate"}]}
 order=992
 ~~~~~~
 	

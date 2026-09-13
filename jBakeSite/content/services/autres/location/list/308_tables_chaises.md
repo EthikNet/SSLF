@@ -17,7 +17,6 @@ La mairie vous proposes de louer des tables et de chaises pour vos évènnements
 
 > **Tarifs**
 > - 2 € par jour (1 table et 2 bancs)
-> - caution de 100 €
 
 > **Réservations**
 > Auprès de la mairie

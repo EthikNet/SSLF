@@ -8,7 +8,7 @@ code=Jocelyne CILLERO
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Ecoles et activités périscolaires","role":"personnel communal", "statut":"Agent contractuel"}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Ecoles et activités périscolaires","role":"personnel communal", "statut":"Agent contractuel", "hierarchy":[{"code":"personnel communal", "parent":{"type":"personne", "code":"Ophélie PROVOST"}}]}]}
 order=981
 ~~~~~~
 	

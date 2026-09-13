@@ -6,7 +6,7 @@ code=finances
 status=published
 contentImage=images/common/logo_left-small.jpg
 specificClass=graphItemsCompactLeft
-graph={"query":{"type":"commission", "filter":"code:finances", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"}, "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}
+graph={"query":[{"type":"commission", "filter":"code:finances", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut", "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}]}
 order=961
 ~~~~~~
 	

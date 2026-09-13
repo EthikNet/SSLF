@@ -14,15 +14,8 @@ phone=06 13 83 43 18
 email=alexandra.audoin@wanadoo.fr
 facebook=https://www.facebook.com/p/Team-Arve%C3%AF-61581353124164/
 instagram=https://www.instagram.com/team_arvei/
-freeDate=Lundi au vendredi 10h00 à 19h00
+freeDate=Mercredi 14h00 à 19h00 et Samedi 9h 19h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=602
 ~~~~~~
-Implanté à Saint-Sulpice-les-Feuilles, Team Arveï propose des activités équestres pour tous les niveaux, du débutant au cavalier confirmé.
-Dirigé par Alexandra Audoin, enseignante certifiée en Équitation Alexander®, le centre développe une approche pédagogique axée sur le fonctionnement corporel du cavalier, la gestion des émotions et la qualité de la relation avec le cheval.
-Le centre propose des cours d'équitation, des stages, la préparation et le passage des Galops, des sorties régulières en concours ainsi que des formules de demi-pension. Les cavaliers bénéficient d'installations adaptées comprenant un manège couvert et une carrière extérieure.
-Team Arveï contribue ainsi à la diversité des activités sportives et de loisirs proposés sur la commune.
-
-Cours les mercredis après-midi et les samedis.
-
-![logo qualit equidé](${webleger.build.host}/images/vie_economique/agricole/team_arvei_label_qualite.jpg)
+Équitation Alexander®, cours d'équitation, stages, la préparation et le passage des Galops, des sorties régulières en concours ainsi que des formules de demi-pension.

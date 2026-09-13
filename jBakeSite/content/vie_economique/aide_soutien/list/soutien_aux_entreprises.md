@@ -8,4 +8,4 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" view
 imageHero={"category":"imageHeroVieEconomique"}
 order=602
 ~~~~~~
-TODO
+La mairie propose des aides aux entreprises. Contactez-nous pour plus d'informations.

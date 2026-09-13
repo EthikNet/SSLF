@@ -4,11 +4,11 @@ type=org_openCiLife_post
 category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
-code=Ophélie PROVOST
+code=Laura Bouyat
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Service Administratif","role":"personnel communal", "statut":"Agent à mi-temps", "poste":"secrétaire adjointe"}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Service Administratif","role":"personnel communal", "statut":"Agent à mi-temps", "poste":"secrétaire adjointe", "hierarchy":[{"code":"personnel communal", "parent":{"type":"personne", "code":"MERVEILLIE Sylvie"}}]}]}
 order=982
 ~~~~~~
 	

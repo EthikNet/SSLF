@@ -1,5 +1,5 @@
 <#function getComponnentInfo>
-	<#return {"componnentVersion":2, "name":"Graph", "description":"Allow strcutured Graphs based on content", "version":"0.1.0", "recommandedNamespace":"graph", "require":[{"value":"stripe", "type":"contentHeader"}, {"value":"webleger.component.stripe.apiKey", "type":"config"}], "uses":[{"value":"langHelper", "type":"lib"}, {"value":"logHelper", "type":"lib"}]}>
+	<#return {"componnentVersion":2, "name":"Graph", "description":"Allow strcutured Graphs based on content", "version":"0.1.0", "recommandedNamespace":"graph", "require":[{"value":"sequenceHelper", "type":"lib"}], "uses":[ {"value":"logHelper", "type":"lib"}]}>
 </#function>
 
 <#global pageUseHierarchy=false />
@@ -53,41 +53,43 @@
 		</#if>
 		
 		<#if (theContent.graph.query)?? && theContent.graph.query?has_content>
-			<#if theContent.graph.query?is_hash && (theContent.graph.query.type)?? && theContent.graph.query.type?has_content>
-				<#local type = theContent.graph.query.type>
-			</#if>
-			<#local inFilter = theContent.graph.query.in>
-			<#local filterValue =  theContent.graph.query.filter>
-			
-			<#local groupByAttribute = "">
-			<#if (theContent.graph.query.groupBy)??>
-				<#local groupByAttribute = theContent.graph.query.groupBy>
-			</#if>
-			
-			<#local graphId="hierarchyChart">
-			<#if (theContent.graph.query.graphId)?? && theContent.graph.query.graphId?has_content>
-				<#local graphId=theContent.graph.query.graphId>
-			</#if>
-			
-			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.build : START PROCESSING graph QUERY root type : " + type +", in "  + common.toString(inFilter) + ", filtring value : " + filterValue + ", grouping by : " + groupByAttribute)}
-			</#if>
-			
-			<#local extendedContents = getContent(type, inFilter, filterValue)>
-			<#if groupByAttribute?has_content>
-				<#local extendedContents = groupBy(extendedContents, groupByAttribute)>
-			</#if>
-			<#if (extendedContents?size >=1)>
-				<#local subTemplateName = "handleElementGenericRelationTable">
-				<#if (theContent.graph.subTemplate??)>
-					<#local subTemplateName=theContent.graph.subTemplate>
+			<#list theContent.graph.query as aQuery>
+				<#if aQuery?is_hash && (aQuery.type)?? && aQuery.type?has_content>
+					<#local type = aQuery.type>
 				</#if>
+				<#local inFilter = aQuery.in>
+				<#local filterValue =  aQuery.filter>
+				
+				<#local groupByAttribute = "">
+				<#if (aQuery.groupBy)??>
+					<#local groupByAttribute = aQuery.groupBy>
+				</#if>
+				
+				<#local options = {}>
+				<#if (aQuery.options)?? && aQuery.options?has_content>
+					<#local options=aQuery.options>
+				</#if>
+				
 				<#if logHelper??>
-					${logHelper.stackDebugMessage("Graph.build : generating a graph with template : " + subTemplateName + " (gouped by : " + groupByAttribute + "), with name = " + graphId + ", for : " + extendedContents?size + " related contents")}
+					${logHelper.stackDebugMessage("Graph.build : START PROCESSING graph QUERY root type : " + type +", in "  + common.toString(inFilter) + ", filtring value : " + filterValue + ", grouping by : " + groupByAttribute)}
 				</#if>
-				<#local subTemplateInterpretation = "<@${subTemplateName} extendedContents 1 groupByAttribute?has_content graphId/>"?interpret>
-				<@subTemplateInterpretation/>
-			</#if>
+				
+				<#local extendedContents = getContent(type, inFilter, filterValue)>
+				<#if groupByAttribute?has_content>
+					<#local extendedContents = groupBy(extendedContents, groupByAttribute)>
+				</#if>
+				<#if (extendedContents?size >=1)>
+					<#local subTemplateName = "handleElementGenericRelationTable">
+					<#if (aQuery.subTemplate??)>
+						<#local subTemplateName=aQuery.subTemplate>
+					</#if>
+					<#if logHelper??>
+						${logHelper.stackDebugMessage("Graph.build : generating a graph with template : " + subTemplateName + " (gouped by : " + groupByAttribute + "), with " + options?size + " options, for : " + extendedContents?size + " related contents")}
+					</#if>
+					<#local subTemplateInterpretation = "<@${subTemplateName} extendedContents 1 groupByAttribute?has_content options/>"?interpret>
+					<@subTemplateInterpretation/>
+				</#if>
+			</#list>
 		</#if>
 	<#else>
 		<#if logHelper??>
@@ -265,11 +267,161 @@
 	</#list>
 </#macro>
 
-<#macro buildOrgChartHierarchyGraphSubTemplate extendedContents level isGrouped graphId>
+<#macro buildOrgChartHierarchyGraphSubTemplate extendedContents level isGrouped options>
 	<#global pageUseHierarchy=true />
-	<#local graphData = "">
+	
+	<#local graphId=sequenceHelper.getValue(options, "graphId", "hierarchyChart")>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("Graph.buildOrgChartHierarchyGraphSubTemplate Building heirarchy graph, graphId : " + graphId)}
+	</#if>
+	<#local graphData = buildHierarchy(extendedContents, isGrouped, options)>
 	<div id="${graphId}" class="hierarchyGraph" data-graph-data="${graphData}"></div>
 </#macro>
+
+
+
+<#function buildHierarchy extendedContents isGrouped options>
+	<#local hierarchicalExtendedContents = {"childToParentCache":[], "data":[], "notAddedChild":[]}>
+	<#local graphData = "{
+    'name': 'Lao Lao',
+    'title': 'general manager',
+    'children': [
+      { 'name': 'Bo Miao', 'title': 'department manager' },
+      { 'name': 'Su Miao', 'title': 'department manager',
+        'children': [
+          { 'name': 'Tie Hua', 'title': 'senior engineer' },
+          { 'name': 'Hei Hei', 'title': 'senior engineer',
+            'children': [
+              { 'name': 'Dan Dan', 'title': 'engineer' }
+            ]
+          },
+          { 'name': 'Pang Pang', 'title': 'senior engineer' }
+        ]
+      },
+      { 'name': 'Hong Miao', 'title': 'department manager' }
+    ]
+  }">
+	<#local groupedData = extendedContents>
+	<#if !isGrouped>
+		<#local groupedData = {"NOT_GROUPED", extendedContents}>
+	</#if>
+	
+	<#list groupedData as groupName, extendedContents>
+		<#if (extendedContents?size > 0)>
+			<#list extendedContents as extendedContent>
+				<#local hierarchicalExtendedContents = handleExtendedContent(hierarchicalExtendedContents, extendedContent, options)>
+			</#list>
+		</#if>
+		<#list 0..100 as _>
+			<#if !((hierarchicalExtendedContents.notAddedChild)?? && hierarchicalExtendedContents.notAddedChild?size==0)>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.buildHierarchy : all Child handled !")}
+				</#if>
+				<#break>
+			</#if>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.buildHierarchy : (notAddedChild) handling child, remaning : " + hierarchicalExtendedContents.notAddedChild?size)}
+			</#if>
+			<#list hierarchicalExtendedContents.notAddedChild as extendedContent>
+				<#local hierarchicalExtendedContents = handleExtendedContent(hierarchicalExtendedContents, extendedContent, options)>
+			</#list>
+		</#list>
+		
+	</#list>
+	
+  <#return graphData>
+</#function>
+
+<#function handleExtendedContent hierarchicalExtendedContents extendedContent options>
+	<#local hierarchyCode = sequenceHelper.getValue(options, "hierarchyCode", "__NOT_SPECIFIED__")>>
+	<#if (extendedContent.data.related)?? && extendedContent.data.related?has_content && (extendedContent.data.related?size > 0)>
+		<#list extendedContent.data.related as related>
+			<#if (related.hierarchy)?? && related.hierarchy?is_sequence && (related.hierarchy?size >0)>
+				<#list related.hierarchy as aHierarchy>
+					<#if aHierarchy.code == hierarchyCode>
+						<#local parent = {"type":"__TOP__", "code":"__NONE__"}>
+							<#if (aHierarchy.parent)?? && (aHierarchy.parent.type)?? && (aHierarchy.parent.code)??>
+								<#local parent = aHierarchy.parent>
+							</#if>
+						<#if logHelper??>
+							${logHelper.stackDebugMessage("Graph.buildHierarchy : for : " + aHierarchy.code + ", adding : " + extendedContent.id + " as a child of : " + common.toString(parent))}
+						</#if>
+						<#local hierarchicalExtendedContents = handleChildreeen(hierarchicalExtendedContents, extendedContent, related, parent, options)>
+					</#if>
+				</#list>
+			<#else>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.buildHierarchy : (INVALID) " + extendedContent.id + " as no VALID hierarchy attribute : " + common.toString(related.hierarchy))}
+				</#if>
+			</#if>
+		</#list>
+	</#if>
+	<#return hierarchicalExtendedContents>
+</#function>
+
+<#function handleChildreeen(currentList, extendedContent, related, parent, options)>
+	<#local returnList = currentList>
+	<#if (currentList?size > 0)>
+		<#local parentId = parent.type+"/"+parent.code>
+		<#local alreadyAddedParentHierarchy = sequenceHelper.getValue(returnList.childToParentCache, parentId)>
+		<#if parent.code == "__NONE__"> <#-- ROOT -->
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.addChildreeen : " + extendedContent.id + " added as TOP level element")}
+			</#if>
+			<#local returnList = returnList  + {"data":returnList.data + [extendedContent]}>
+			<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:"__TOP__"}]}>
+		<#elseif alreadyAddedParentHierarchy == ""> <#-- Parent not added-->
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.addChildreeen : " + extendedContent.id + " parent not exists (yet ?) : " + common.toString(parent) + ", stored to be handled later")}
+			</#if>
+			<#local returnList = returnList + {"notAddedChild":returnList.notAddedChild + [extendedContent]}>
+		<#else>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.addChildreeen : " + extendedContent.id + " adding to his parent (ParentHierarchy : " + common.toString(alreadyAddedParentHierarchy)+")")}
+			</#if>
+			<#-- 
+			<#local parentData = sequenceHelper.getValue(returnList.data, parentId, "", "id", "data")>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.addChildreeen : parent already exists : " + parentId + " adding : " + extendedContent.id + " as a child")}
+			</#if>
+				
+			<#if alreadyAddedParentHierarchy =="__TOP__">
+				<#--  add the child -- >
+				<#local parentData = sequenceHelper.appendToListInHash(parentData, "childreen", extendedContent, true)>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.addChildreeen : parentData " + parentData.childreen?size + " childs after modification : " + common.toString(parentData))}
+				</#if>
+				<#local returnList = sequenceHelper.upateHash(returnList, "data", extendedContent, true, true)>
+				<#-- update childToParentCache, -- >
+				<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:alreadyAddedParentHierarchy}]}>
+				<#-- remove from "notAddedChild" -- >
+				<#local notAddedChild = sequenceHelper.removeInHash(returnList.notAddedChild, "id", true, extendedContent.id)>
+				<#local returnList = returnList + {"notAddedChild":notAddedChild}>
+			<#else>
+				 -->
+				 <#local returnList = sequenceHelper.upateHash(returnList, "data", extendedContent, true, true, "childreen")>
+				 
+				 <#-- update childToParentCache, -->
+				<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:alreadyAddedParentHierarchy}]}>
+				<#-- remove from "notAddedChild" -->
+				<#local notAddedChild = sequenceHelper.removeInHash(returnList.notAddedChild, "id", true, extendedContent.id)>
+				<#local returnList = returnList + {"notAddedChild":notAddedChild}>
+			</#if>
+			<#-- Check for "notAddedChild" if some can be handled 
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.addChildreeen : handling notAdedChild with : " + (returnList.notAddedChild?size)!0 + " elements")}
+			</#if>
+			<#list returnList.notAddedChild as aNotAddedChild>
+				<#local returnList = handleExtendedContent(returnList, aNotAddedChild, options)>
+			</#list>-->
+	</#if>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("Graph.addChildreeen : hierarchical list after adding handling child : childToParentCache?size : " 
+			+returnList.childToParentCache?size + ", data?size : " + returnList.data?size + ", notAddedChild?size : " + returnList.notAddedChild?size
+			+ " Full data : " + common.toString(returnList))}
+	</#if>
+	<#return returnList>
+</#function>
 
 <#function getChildElement structureType="MISSING_TYPE" code="MISSING_CODE">
 	<#local structure = db.getPublishedContent("org_openCiLife_post")?filter(b -> ((b.category)?? && b.category?has_content && b.category==structureType) || structureType=="*")?filter(b -> (b.code)?? && b.code?has_content && b.code==code)>
@@ -378,7 +530,7 @@
 		
 		<#list elementValueToFilterList as anElementFilterValue>
 			
-			<#if !match && (filterValue == "*" || anElementFilterValue == filterValue)>
+			<#if !match && (filterValue == "*" || anElementFilterValue?trim == filterValue?trim)>
 				<#local matchedElement = anElementFilterValue>
 				<#local match = true>
 				<#if logHelper??>
@@ -436,7 +588,12 @@
 				<#local thePoste = matchedElement>
 			</#if>
 		</#if>
-		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "poste":thePoste, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
+		
+		<#local theHierarchy = "">
+		<#if (element.hierarchy)??>
+			<#local theHierarchy = element.hierarchy>
+		</#if>
+		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "poste":thePoste, "hierarchy":theHierarchy, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
 		<#if logHelper??>
 			${logHelper.stackDebugMessage("Graph.search : matching (enchanced) element : " + common.toString(enchancedElement))}
 		</#if>

@@ -8,7 +8,7 @@ code=Cécile MOREAU
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Ecoles et activités périscolaires","role":"personnel communal"}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Ecoles et activités périscolaires","role":"personnel communal", "hierarchy":[{"code":"personnel communal", "parent":{"type":"personne", "code":"Ophélie PROVOST"}}]}]}
 order=981
 ~~~~~~
 	

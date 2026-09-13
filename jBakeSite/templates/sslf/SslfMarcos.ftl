@@ -191,7 +191,7 @@
 	</div>
 </#macro>
 
-<#macro comissionsMembresGraphSubTemplate extendedContents level isGrouped graphId>
+<#macro comissionsMembresGraphSubTemplate extendedContents level isGrouped options>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("sslf.comissionsParMembresGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
@@ -204,7 +204,7 @@
 		</@graph.displayGroupOfRelations>
 </#macro>
 
-<#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped graphId>
+<#macro commissionForMemberGraphSubTemplate extendedContents level isGrouped options>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("sslf.commissionForMemberGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
@@ -227,21 +227,21 @@
 	</@graph.displayGroupOfRelations>
 </#macro>
 
-<#macro personneParStructureGraphSubTemplate extendedContents level isGrouped graphId>
+<#macro personneParStructureGraphSubTemplate extendedContents level isGrouped options>
 	<@personneParStructure extendedContents level isGrouped />
 </#macro>
 
-<#macro personneParStructureCompactGraphSubTemplate extendedContents level isGrouped graphId>
+<#macro personneParStructureCompactGraphSubTemplate extendedContents level isGrouped options>
 	<@personneParStructure extendedContents level isGrouped true/>
 </#macro>
 
-<#macro personneParFonctionGraphSubTemplate extendedContents level isGrouped graphId>
+<#macro personneParFonctionGraphSubTemplate extendedContents level isGrouped options>
 	<@personneParStructure extendedContents level isGrouped true false/>
 </#macro>
 
 <#macro personneParStructure extendedContents level isGrouped isSmall=false displayFonction=true linkToContent=true>
 	<#if logHelper??>
-		${logHelper.stackDebugMessage("sslf.personneParStructureGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
+		${logHelper.stackDebugMessage("sslf.personneParStructure : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
 	<@graph.displayGroupOfRelations extendedContents level+1 isGrouped "" linkToContent; groupContent >
 			<@graph.displayRelations groupContent ; theContent, relations>

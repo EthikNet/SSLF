@@ -8,7 +8,7 @@ code=Ophélie PROVOST
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Service Administratif","role":"personnel communal"}]}
+graph={"data":[{"type":"structure","code":"commune_SSLF","fonction":"Service Administratif","role":"personnel communal", "hierarchy":[{"code":"personnel communal", "parent":{"type":"personne", "code":"Sylvie MERVEILLIE"}}]}]}
 order=981
 ~~~~~~
 	

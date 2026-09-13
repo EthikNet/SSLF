@@ -29,3 +29,5 @@ Des jeux et activités sont proposés et encadrés par le personnel communal. La
 
 ### Pause méridienne
 Le personnel communal accompagne également les enfants durant le déjeuner et la récréation. L’équipe assure leur sécurité, veille au respect des règles de vie collective et apporte une aide au repas aux plus jeunes afin de favoriser leur autonomie.
+
+![photo de la garderie](${webleger.build.host}/images/services/periscolaire_garderie.jpg)

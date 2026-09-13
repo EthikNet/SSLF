@@ -8,7 +8,7 @@ code=Josiane PARLEBAS
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-graph={"data":[{"type":"structure","code":"Conseil départementale de la Haute Vienne","fonction":"Ecoles et activités périscolaires","role":"personnel communal", "statut":"Mise à disposition au département"}]}
+graph={"data":[{"type":"structure","code":"Conseil départementale de la Haute Vienne","fonction":"Ecoles et activités périscolaires","role":"personnel communal", "statut":"Mise à disposition au département", "hierarchy":[{"code":"personnel communal", "parent":{"type":"personne", "code":"Ophélie PROVOST"}}]}]}
 order=981
 ~~~~~~
 	
