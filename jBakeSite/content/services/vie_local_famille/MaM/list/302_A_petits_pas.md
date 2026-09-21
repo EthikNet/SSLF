@@ -9,6 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=2 assistantes maternelles pour accompagner vos enfants
 anchorId=a_petits_pas
 phone=Christelle|06 73 16 01 73, Laetitia|06 73 03 13 92
+facebook=https://www.facebook.com/people/MAM-%C3%80-Petits-Pas/61592579207157/
 location=4 rue du stade
 order=302
 ~~~~~~

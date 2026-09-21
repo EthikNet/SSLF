@@ -9,9 +9,9 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=École maternelle & élémentaire
 anchorId=primaire
 
-files={"data":[{"location":"#", "label":"Fiche d'inscription périscolaire", "main":true}, {"location":"#", "label":"Réglement intérieur"}]}
-location=Rue de l'École, 87160 Saint-Sulpice-les-Feuilles
-phone=05 55 76 00 00
+files={"data":[{"location":"/fichiers/scolaire/Fiche_inscription_Ecole.docx", "label":"Fiche d'inscription", "main":true}]}
+location=11 rue du 8 mai, 87160 Saint-Sulpice-les-Feuilles
+phone=05 55 76 93 47
 email=ce.0871004U@ac-limoges.fr
 freeDate=Lun/Mar/Jeu/Ven · 9h00–12h00 / 13h30–16h30
 order=302

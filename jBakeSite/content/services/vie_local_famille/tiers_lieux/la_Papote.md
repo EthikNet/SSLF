@@ -37,6 +37,9 @@ En collaboration avec les habitants et les acteurs du territoire, l’associatio
 
 La Papote a pour vocation de devenir le lieu où les habitants du territoire iront lorsqu’ils auront une interrogation sur des sujets tels que la vie associative, l’accès aux droits, le tourisme, l’emploi et la formation, le numérique …
 
+#### Pour découvrir
+
+Pour découvrir notre ville et sa région, venez vous renseigner au point infos sur place durant les heures d'ouverture.
 
 **Une équipe à votre écoute !**
 

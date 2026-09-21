@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/ocMobile.png
-exerpt=Depistage_audition_vison
+exerpt=Depistage audition vison
 anchorId=dr_enom_marc
 
 phone=06 81 01 67 21

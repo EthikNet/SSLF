@@ -10,7 +10,7 @@ exerpt=Cantine municipale — repas équilibrés et produits locaux
 anchorId=resteauScolaire
 
 phone=05 55 76 04 23
-files={"data":[{"location":"#", "label":"Menus du mois (PDF)", "main":true}, {"location":"#", "label":"Règlement de la cantine (PDF)"}, {"location":"#", "label":"Inscription / facturation"}]}
+files={"data":[{"location":"/fichiers/scolaire/menus_cantine.pdf", "label":"Menus", "main":true}]}
 order=306
 ~~~~~~
 Le restaurant scolaire propose chaque midi des repas préparés sur place, avec une part de produits locaux et bio. Les menus sont publiés sur le site internet et sur facebook chaque semaine.

@@ -12,8 +12,8 @@ anchorId=solidaribus
 location=parking place du monument aux morts
 phone=05 55 04 20 00
 email=solidaribus.spf87@orange.fr
-freeDate=1fois par mois
-order=304
+freeDate=2e jeudi matin de chaque mois 
+order=308
 ~~~~~~
 Toute personne rencontrant des difficultés sociales pourra se présenter à la permanence, munie de ses justificatifs de situation, pour bénéficier de l'aide du Secours Populaire.
 

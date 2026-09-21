@@ -1,4 +1,4 @@
-title=Laura Bouyat
+title=Laura BOUYAT-CANOT
 date=2026-08-31
 type=org_openCiLife_post
 category=personne

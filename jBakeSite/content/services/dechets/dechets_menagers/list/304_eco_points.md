@@ -22,9 +22,9 @@ Les éco-points sont répartis sur l'ensemble de la commune :
 > **dans le Bourg**
 > - Écoles - Rue du 8 mai 1945 (sauf verre)
 > - HLM Maison des Loisirs - Avenue de l'avenir
-> - Rue du Docteur Ferdinand Renault
+> - Espace Aubrun Bossard
 > - Avenue Colleville
-> - Cimetière route de Puifferat
+> - Cimetière : route de Puifferat
 > - Le Mondelet - Avenue Maxime Letourneur
 
 > **Emballages recyclables, papier, verre**
@@ -35,8 +35,7 @@ Les éco-points sont répartis sur l'ensemble de la commune :
 > - Le Noyer 
 
 > **Cartons**
-> - Cimetière
-> - espace aubrun bossard
+> - Cimetière :  route de Puifferat
 
 > **Textiles**
 > - rue du stade à la croix rouge

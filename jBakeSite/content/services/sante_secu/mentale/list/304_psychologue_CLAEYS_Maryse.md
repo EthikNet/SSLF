@@ -6,8 +6,8 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_psy.jpg
-exerpt=Psychiatre
-anchorId=Dr_HEID_Christian
+exerpt=Psychologue
+anchorId=CLAEYS_Maryse
 
 phone=06 61 50 65 35
 location=2 La Roche

@@ -22,6 +22,10 @@
 	<@publication theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage "full" />
 </#macro>
 
+<#macro publicationSubTemplate theContent>
+	<@publication theContent theContent "publicationFull" "" true "publication" "" "full" />
+</#macro>
+
 <#macro publication theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage type>
 	<#if featauredText?has_content>
 		<span class="featured_label">${featauredText}</span>
@@ -181,8 +185,11 @@
 				<@common.buildDateTimes theBlock/>
 				<@common.buildFreeDate theBlock/>
 				<@common.buildWebsites theBlock/>
+				<@common.buildFaceBook theBlock />
+				<@common.buildInstagram theBlock />
+				<@common.buildResponsable theBlock />
 			</div>
-			<#if (theContent.files)?? && theContent.files?has_content && (theContent.files.data)?? && theContent.files.data?has_content>
+			<#if (theBlock.files)?? && theBlock.files?has_content && (theBlock.files.data)?? && theBlock.files.data?has_content>
 				<div class="metaDataListInLine">
 					<@common.buildFiles theBlock/>
 				</div>

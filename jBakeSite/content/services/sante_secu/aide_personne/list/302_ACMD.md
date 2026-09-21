@@ -9,7 +9,7 @@ contentImage=images/services/ACMD_small.png
 exerpt=Aide Collective pour le Maintien à Domicile depuis 1982
 anchorId=acmd
 
-location=Rue de l'École, 87160 Saint-Sulpice-les-Feuilles
+location=avenue de l'avenir, 87160 Saint-Sulpice-les-Feuilles
 phone=05 55 76 79 49
 email=acmd87@outlook.fr
 web=https://acmd87.fr/
@@ -24,6 +24,6 @@ L’Association Aide Collective pour le Maintien à Domicile a été fondée en 
 > **Horaires du bureau**
 > Lundi au Vendredi de 8h30 à 12h00 
 
-- Assistance aux personnes âgées
+- assistance aux personnes âgées
 - préparation des repas et courses
 - entretien du logement, du linge.

@@ -11,7 +11,8 @@ anchorId=transport_scolaire
 
 phone=0970 870 870
 website=https://transports.nouvelle-aquitaine.fr/transports-scolaires
-freedates=du lundi au samedi 8h-19h
+location=14, Rue François de Sourdis 33077 Bordeaux Cedex
+freedate=du lundi au samedi 8h-19h
 order=310
 ~~~~~~
 Le transport scolaire est organisé par la Région Nouvelle Aquitaine. Plusieurs arrêts desservent les villages de la commune et communes rattachées chaque matin et soir.

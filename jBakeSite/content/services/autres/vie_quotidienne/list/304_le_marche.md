@@ -30,10 +30,8 @@ Différents stands sont présents sur le marché toute l’année ou en saison 
 - Larraud Fabrice : boucher, charcutier, traiteur
 - Frédéric Delpeuch : brasserie l'Epopée 
 - Mariane Velghe : fileuse de laine
-- Frédéric Reynaert saucissons
-- Volailles la Brablézienne 
-- Quinette et Co
-- Gaec des sources : produits laitiers de vache
+- Frédéric Reynaert : saucissons, Volailles la Drablézienne 
+- Quinette et Co : Gaec des sources : produits laitiers de vache
 - Decobecq Sylvana : vêtements
 
 La commune cherche à développer le marché, faites-le savoir autour de vous !

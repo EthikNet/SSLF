@@ -13,6 +13,6 @@ location=Blavot Claire 21 le Virvalais
 phone=06 51 30 94 50
 email=claire@blavot.net
 web=https://www.secours-catholique.org/
-order=310
+order=312
 ~~~~~~
 TODO Description

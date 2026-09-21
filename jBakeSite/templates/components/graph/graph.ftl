@@ -329,7 +329,24 @@
 		
 	</#list>
 	
+	<#local graphData = common.toString(hierarchicalExtendedContents)?replace("\"","'")>
+	
   <#return graphData>
+</#function>
+
+<#function toOrgChart extendedContents>
+	<#local orgChartData = "">
+	<#if (extendedContents)?? && (extendedContents.data)??>
+		<#list extendedContents.data as aContent>
+			<#local name = aContent.data[1].code>
+			<#local title=aContent.data[1].fonction>
+			<#local childreen = "[]">
+			<#list aContent.related as related>
+				
+			</#list>
+			<#local orgChartData = orgChartData + ", {'name':'"+name+"', 'title':'"+title+"', 'childreen':"+childreen+"}">
+		</#list>
+	</#if>
 </#function>
 
 <#function handleExtendedContent hierarchicalExtendedContents extendedContent options>

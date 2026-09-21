@@ -12,7 +12,6 @@ anchorId=FAURIE
 phone=05 55 76 70 06
 location=5  Impasse des Bouguillons
 email=faurie.87@orange.fr
-website=https://drochon-faurie-ambulance.fr
 order=302
 ~~~~~~
 Ambulance et VSL FAURIE

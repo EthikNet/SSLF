@@ -10,4 +10,4 @@ specificClass=footerLogoMessage
 anchorId=contact
 order=902
 ~~~~~~
-Commune de la Haute-Vienne, au cœur du Limousin. Site officiel d'information.
+située au nord du Limousin.

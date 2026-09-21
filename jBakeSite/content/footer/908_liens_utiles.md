@@ -6,7 +6,6 @@ tags=
 status=published
 order=908
 ~~~~~~
-- [Contacts](${webleger.build.host}/contacts.html)
-- [Mes démarches](${webleger.build.host}/mes_demarches.html)
-- [Agenda](${webleger.build.host}/agenda.html)
-- [Accessibilité](${webleger.build.host}/accessibilité.html)
+- [Contacts](${webleger.build.host}/contacts/contacts.html)
+- [Mes démarches](${webleger.build.host}/demarches/demarches.html)
+- [Agenda](${webleger.build.host}/agenda/agenda.html)

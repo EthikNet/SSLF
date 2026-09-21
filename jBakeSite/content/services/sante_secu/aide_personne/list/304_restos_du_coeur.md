@@ -13,7 +13,7 @@ location=Derrière la mairie Voie de la Reine 87160 ST SULPICE LES FEUILLES
 phone=05.55.60.42.71
 email=ad87.saint-sulpice@restosducoeur.org
 freeDate=distribution tous les mardis matins
-order=312
+order=304
 ~~~~~~
 Distribution de nouriture.
 

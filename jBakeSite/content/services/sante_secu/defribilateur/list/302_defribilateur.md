@@ -23,7 +23,7 @@ Ces équipements permettent d’intervenir rapidement en cas d’arrêt cardiaqu
 > *accessible aux horaires d’ouverture de l’établissement*
 
 > **Stade du Mondelet**
-> 18 avenue Maxime-Letourneur
+> 4 route d'arnac la poste
 > *accessible 24h/24 et 7j/7*
 
 > **Cabinet du Docteur Bourrel**
@@ -35,6 +35,7 @@ Ces équipements permettent d’intervenir rapidement en cas d’arrêt cardiaqu
 
 > **Mairie de Saint-Sulpice-les-Feuilles**
 > dans le sas d’entrée
+> 2 voie de la reine
 > *accessible 24h/24 et 7j/7*
 
 En cas d’urgence, appelez immédiatement les secours :
