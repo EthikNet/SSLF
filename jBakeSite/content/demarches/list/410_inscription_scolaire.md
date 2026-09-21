@@ -1,4 +1,4 @@
-title=Inscription soclaire
+title=Inscription scolaire
 date=2026-08-24
 type=org_openCiLife_post
 category=demarches
