@@ -8,10 +8,12 @@ status=published
 exerpt=terrassement-travaux publics
 stickers={"disposition":"left_absolute", "data":[{"label":"🛣️", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan/LOIZEAU_TP_deventure.jpg
-location=LOIZEAU Kylian Les Rochers
+responsable=LOIZEAU Kylian
+location=Les Rochers 87160 SAINT SULPICE LES FEUILLES
 email=loizeaustephane0356@orange.fr
 phone=05 55 76 91 44
-fredate=lundi au vendredi 8h-12h-13h30-17h30
+facebook=https://www.facebook.com/people/SAS-Loizeau/100089850006734/
+freeDate=lundi au vendredi 8h-12h-13h30-17h30
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=668
 ~~~~~~

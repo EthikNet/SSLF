@@ -26,11 +26,12 @@ Différents stands sont présents sur le marché toute l’année ou en saison 
 - Poissonnerie, Emmanuelle Autor
 - Nong’s cuisine (cuisine thaïlandaise)
 - Cuisine Libanaise
-- Chèvrerie du Poney Fringant : fromages ; 
+- Chèvrerie du Poney Fringant : fromages
 - Larraud Fabrice : boucher, charcutier, traiteur
 - Frédéric Delpeuch : brasserie l'Epopée 
 - Mariane Velghe : fileuse de laine
-- Frédéric Reynaert : saucissons, Volailles la Drablézienne 
+- Frédéric Reynaert : saucissons, 
+- Volailles la Drablézienne 
 - Quinette et Co : Gaec des sources : produits laitiers de vache
 - Decobecq Sylvana : vêtements
 

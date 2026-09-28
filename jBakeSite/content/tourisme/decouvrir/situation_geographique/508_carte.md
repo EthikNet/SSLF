@@ -9,3 +9,5 @@ hooks={"data":[{"position":"afterBlockBody", "action":"map.build", "renderOnce":
 order=508
 ~~~~~~
 ### Localisation
+
+Pour découvrir notre térittoire : [https://www.visitlimousin.com/haut-limousin/](https://www.visitlimousin.com/haut-limousin/)

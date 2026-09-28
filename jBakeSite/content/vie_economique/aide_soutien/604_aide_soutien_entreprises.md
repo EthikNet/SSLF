@@ -6,6 +6,7 @@ includeContent={"type":"org_openCiLife_post", "category":"aide_soutien_entrepris
 status=published
 imageHero={"category":"imageHeroVieEconomique"}
 hooks={"data":[{"position":"afterBlockBody", "action":"block.build", "renderOnce":true, "order":25}]}
+anchorId=aide_entreprise
 order=604
 ~~~~~~
 	

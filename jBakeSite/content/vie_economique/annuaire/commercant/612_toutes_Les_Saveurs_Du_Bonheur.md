@@ -1,4 +1,4 @@
-title=Toutes les Saveurs du Bonheur
+title=LARRAUD traiteur
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique
@@ -9,7 +9,8 @@ exerpt=boucherie charcuterie traiteur
 stickers={"disposition":"left_absolute", "data":[{"label":"🥩", "specificClass":"topLeftIcon"}]}
 contentImage=/images/vie_economique/commerce/logo_toutes_Les_Saveurs_Du_Bonheur.png
 contentImageSpecificClass=objectContain
-location=LARRAUD Fabrice 11 Boismandé
+responsable=LARRAUD Fabrice
+location=11 Boismandé 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 74 46
 email=larraudfabrice@aol.fr
 freeDate=Lundi au dimanche 6h-22h

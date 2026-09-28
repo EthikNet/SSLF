@@ -1,4 +1,4 @@
-title=Oui Rock Chorale
+title=Chorale Oui rock
 date=2026-07-28
 type=org_openCiLife_block
 category=association

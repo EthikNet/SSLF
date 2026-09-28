@@ -11,4 +11,4 @@ displayTags=false
 contentImage=/images/tourisme/villages/moulin_lavaupot.jpg
 order=510
 ~~~~~~
-	
+Page en cours de construction.

@@ -81,7 +81,7 @@ $(document).ready(function(){
 				var i;
 				for (i = 0; i < curentElementsValues.length; ++i) {
 					var anElementValue = curentElementsValues[i];
-					isCardShouldBeVisible = buttonValue.toLowerCase().indexOf(anElementValue.toLowerCase()) > -1;
+					isCardShouldBeVisible = buttonValue.toLowerCase() === anElementValue.toLowerCase();
 					if(isCardShouldBeVisible) {
 						break;
 					}

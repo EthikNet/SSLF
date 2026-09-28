@@ -312,26 +312,34 @@
 				<#local hierarchicalExtendedContents = handleExtendedContent(hierarchicalExtendedContents, extendedContent, options)>
 			</#list>
 		</#if>
-		<#list 0..100 as _>
-			<#if !((hierarchicalExtendedContents.notAddedChild)?? && hierarchicalExtendedContents.notAddedChild?size==0)>
-				<#if logHelper??>
-					${logHelper.stackDebugMessage("Graph.buildHierarchy : all Child handled !")}
-				</#if>
-				<#break>
-			</#if>
-			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.buildHierarchy : (notAddedChild) handling child, remaning : " + hierarchicalExtendedContents.notAddedChild?size)}
-			</#if>
-			<#list hierarchicalExtendedContents.notAddedChild as extendedContent>
-				<#local hierarchicalExtendedContents = handleExtendedContent(hierarchicalExtendedContents, extendedContent, options)>
-			</#list>
-		</#list>
-		
 	</#list>
+	
+	<#local hierarchicalExtendedContents = handleNotAddedChild(hierarchicalExtendedContents, options)>
 	
 	<#local graphData = common.toString(hierarchicalExtendedContents)?replace("\"","'")>
 	
   <#return graphData>
+</#function>
+
+<#function handleNotAddedChild hierarchicalExtendedContents options maxLoop = 10>
+	<#local updatedHierarchicalExtendedContents = hierarchicalExtendedContents>
+	<#list 0..maxLoop as _>
+		<#if (hierarchicalExtendedContents.notAddedChild)??>
+			<#if hierarchicalExtendedContents.notAddedChild?size==0>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.handleNotAddedChild : all Child handled !")}
+				</#if>
+				<#break>
+			</#if>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.handleNotAddedChild : handling child, remaning : " + hierarchicalExtendedContents.notAddedChild?size)}
+			</#if>
+			<#list hierarchicalExtendedContents.notAddedChild as extendedContent>
+				<#local updatedHierarchicalExtendedContents = handleExtendedContent(hierarchicalExtendedContents, extendedContent, options)>
+			</#list>
+		</#if>
+	</#list>
+	<#return updatedHierarchicalExtendedContents>
 </#function>
 
 <#function toOrgChart extendedContents>
@@ -378,8 +386,8 @@
 
 <#function handleChildreeen(currentList, extendedContent, related, parent, options)>
 	<#local returnList = currentList>
+	<#local parentId = parent.type+"/"+parent.code>
 	<#if (currentList?size > 0)>
-		<#local parentId = parent.type+"/"+parent.code>
 		<#local alreadyAddedParentHierarchy = sequenceHelper.getValue(returnList.childToParentCache, parentId)>
 		<#if parent.code == "__NONE__"> <#-- ROOT -->
 			<#if logHelper??>
@@ -387,50 +395,46 @@
 			</#if>
 			<#local returnList = returnList  + {"data":returnList.data + [extendedContent]}>
 			<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:"__TOP__"}]}>
+			<#local returnList = handleNotAddedChild(returnList, options)>
 		<#elseif alreadyAddedParentHierarchy == ""> <#-- Parent not added-->
 			<#if logHelper??>
 				${logHelper.stackDebugMessage("Graph.addChildreeen : " + extendedContent.id + " parent not exists (yet ?) : " + common.toString(parent) + ", stored to be handled later")}
 			</#if>
-			<#local returnList = returnList + {"notAddedChild":returnList.notAddedChild + [extendedContent]}>
+			<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:parentId}]}>
+			<#local returnList = returnList + {"notAddedChild":returnList.notAddedChild + [{extendedContent.id:extendedContent}]}>
 		<#else>
 			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.addChildreeen : " + extendedContent.id + " adding to his parent (ParentHierarchy : " + common.toString(alreadyAddedParentHierarchy)+")")}
+				${logHelper.stackDebugMessage("Graph.addChildreeen : " + extendedContent.id + " adding to his parent (ParentHierarchy : " + parentId + " -> " + common.toString(alreadyAddedParentHierarchy)+")")}
 			</#if>
-			<#-- 
+			
 			<#local parentData = sequenceHelper.getValue(returnList.data, parentId, "", "id", "data")>
 			<#if logHelper??>
 				${logHelper.stackDebugMessage("Graph.addChildreeen : parent already exists : " + parentId + " adding : " + extendedContent.id + " as a child")}
 			</#if>
 				
 			<#if alreadyAddedParentHierarchy =="__TOP__">
-				<#--  add the child -- >
+				<#--  add the child -->
 				<#local parentData = sequenceHelper.appendToListInHash(parentData, "childreen", extendedContent, true)>
 				<#if logHelper??>
 					${logHelper.stackDebugMessage("Graph.addChildreeen : parentData " + parentData.childreen?size + " childs after modification : " + common.toString(parentData))}
 				</#if>
-				<#local returnList = sequenceHelper.upateHash(returnList, "data", extendedContent, true, true)>
-				<#-- update childToParentCache, -- >
-				<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:alreadyAddedParentHierarchy}]}>
-				<#-- remove from "notAddedChild" -- >
-				<#local notAddedChild = sequenceHelper.removeInHash(returnList.notAddedChild, "id", true, extendedContent.id)>
+				<#local returnList = sequenceHelper.upateHash(returnList, "data", parentData, true, true)> -->
+				<#-- update childToParentCache, -->
+				<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:parent}]}>
+				<#-- remove from "notAddedChild" -->
+				<#local notAddedChild = sequenceHelper.removeInHash(returnList.notAddedChild, "id", extendedContent.id)>
 				<#local returnList = returnList + {"notAddedChild":notAddedChild}>
+				<#local returnList = handleNotAddedChild(returnList, options)>
 			<#else>
-				 -->
-				 <#local returnList = sequenceHelper.upateHash(returnList, "data", extendedContent, true, true, "childreen")>
+				 <#--   --local returnList = sequenceHelper.upateHash(returnList, "data", extendedContent, true, true, "childreen") -->
 				 
 				 <#-- update childToParentCache, -->
-				<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:alreadyAddedParentHierarchy}]}>
+				<#local returnList = returnList  + {"childToParentCache":returnList.childToParentCache + [{extendedContent.id:parent}]}>
 				<#-- remove from "notAddedChild" -->
-				<#local notAddedChild = sequenceHelper.removeInHash(returnList.notAddedChild, "id", true, extendedContent.id)>
+				<#local notAddedChild = sequenceHelper.removeInHash(returnList.notAddedChild, "id", extendedContent.id)>
 				<#local returnList = returnList + {"notAddedChild":notAddedChild}>
 			</#if>
-			<#-- Check for "notAddedChild" if some can be handled 
-			<#if logHelper??>
-				${logHelper.stackDebugMessage("Graph.addChildreeen : handling notAdedChild with : " + (returnList.notAddedChild?size)!0 + " elements")}
-			</#if>
-			<#list returnList.notAddedChild as aNotAddedChild>
-				<#local returnList = handleExtendedContent(returnList, aNotAddedChild, options)>
-			</#list>-->
+		</#if>
 	</#if>
 	<#if logHelper??>
 		${logHelper.stackDebugMessage("Graph.addChildreeen : hierarchical list after adding handling child : childToParentCache?size : " 

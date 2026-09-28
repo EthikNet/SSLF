@@ -6,6 +6,7 @@ includeBlocks={"category":"marche_evenements", "wrap":{"enable":"true", "specifi
 status=published
 imageHero={"category":"imageHeroVieEconomique"}
 hooks={"data":[{"position":"afterBlockBody", "action":"block.build", "renderOnce":true, "order":25}]}
+anchorId=marche_event
 order=602
 ~~~~~~
 	

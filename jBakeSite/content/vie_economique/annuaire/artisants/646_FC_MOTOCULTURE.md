@@ -8,12 +8,13 @@ status=published
 exerpt=motoculture
 stickers={"disposition":"left_absolute", "data":[{"label":"🚜", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan/FC_MOTOCULTURE.jpg
-location=FOURMY Christophe 14 Av. Jean, Jaurès
+responsable=FOURMY Christophe
+location=14 Av. Jean, Jaurès 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 91 23
 email=fc-motoculture@orange.fr
 website=https://www.fcmotoculture.com/
 facebook=https://www.facebook.com/fcmotoculture/
-freedates=Lundi 14h-18h, mardi 8h30-12h/14h-18h, mercredi au vendredi 8h30-12h/14h-18h30, samedi 8h30-12h
+freeDate=Lundi 14h-18h, mardi 8h30-12h/14h-18h, mercredi au vendredi 8h30-12h/14h-18h30, samedi 8h30-12h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=646
 ~~~~~~

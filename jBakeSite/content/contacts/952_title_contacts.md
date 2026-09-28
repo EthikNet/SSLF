@@ -14,4 +14,4 @@ order=952
 ~~~~~~
 #Contacts
 
-Mairie, urgences, déchèterie et tiers-lieu : tous les contacts en un coup d'œil.
+Mairie, urgences et autres contacts utiles : tous les contacts en un coup d'œil.

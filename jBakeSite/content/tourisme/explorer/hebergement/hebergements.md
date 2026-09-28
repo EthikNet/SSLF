@@ -12,4 +12,4 @@ displayTags=false
 contentImage=images/tourisme/hebergements.jpg
 order=514
 ~~~~~~
-Retrouver tous les hébergements à proximité sur le site [https://www.visitlimousin.com/](https://www.visitlimousin.com/).
+Retrouver tous les hébergements à proximité sur le site [https://www.visitlimousin.com/haut-limousin/ou-dormir-en-haut-limousin/](https://www.visitlimousin.com/haut-limousin/ou-dormir-en-haut-limousin/).

@@ -90,12 +90,12 @@ return : the value assoicaited with the key or the default value
 						<#if optionKey == serarchKey>
 							<#local returnValue = optionValue>
 							<#if logHelper??>
-								${logHelper.stackDebugMessage("Graph.getValue : " + optionKey + " FOUND wil return : " + common.toString(returnValue))}
+								${logHelper.stackDebugMessage("sequenceHelper.getValue : " + optionKey + " FOUND wil return : " + common.toString(returnValue))}
 							</#if>
 							<#break>
 						</#if>
 						<#if logHelper??>
-							${logHelper.stackDebugMessage("Graph.getValue : " + optionKey + " NOT eq " + serarchKey)}
+							${logHelper.stackDebugMessage("sequenceHelper.getValue : " + optionKey + " NOT eq " + serarchKey)}
 						</#if>
 					</#list>
 				<#else>
@@ -103,22 +103,23 @@ return : the value assoicaited with the key or the default value
 					<#if (element[attributKey])??>
 						 <#if element[attributKey] == serarchKey>
 							<#if logHelper??>
-								${logHelper.stackDebugMessage("Graph.getValue : " + serarchKey + " FOUND from : " + attributKey)}
+								${logHelper.stackDebugMessage("sequenceHelper.getValue : " + serarchKey + " FOUND from : " + attributKey + "returning attribute : " + attributToReturn)}
 							</#if>
 							<#if (element[attributToReturn])??>
 								<#local returnValue = element[attributToReturn]>
 								<#if logHelper??>
-									${logHelper.stackDebugMessage("Graph.getValue : " + attributToReturn + " wil return : " + common.toString(returnValue))}
+									${logHelper.stackDebugMessage("sequenceHelper.getValue : " + attributToReturn + " wil return : " + common.toString(returnValue))}
 								</#if>
+								<#break>
 							</#if>
 						<#else>
 							<#if logHelper??>
-								${logHelper.stackDebugMessage("Graph.getValue : '" + attributKey + "'==>" + element[attributKey] + " NOT eq " + serarchKey)}
+								${logHelper.stackDebugMessage("sequenceHelper.getValue : '" + attributKey + "'==>" + element[attributKey] + " NOT eq " + serarchKey)}
 							</#if>
 						</#if>
 					<#else>
 						<#if logHelper??>
-							${logHelper.stackDebugMessage("Graph.getValue : NO '" + attributKey + "' to compare value with : " + serarchKey + " in : " + common.toString(element))}
+							${logHelper.stackDebugMessage("sequenceHelper.getValue : NO '" + attributKey + "' to compare value with : " + serarchKey + " in : " + common.toString(element))}
 						</#if>
 					</#if>
 				</#if>
@@ -129,6 +130,9 @@ return : the value assoicaited with the key or the default value
 </#function>
 
 <#function appendToListInHash hash property newVal createIfNotExist=true>
+	<#if logHelper??>
+			${logHelper.stackDebugMessage("sequenceHelper.appendToListInHash : adding an element in : " +  property + ", on hash")}
+		</#if>
 	<#return upateHash(hash, property, newVal, createIfNotExist, true)>
 </#function>
 
@@ -136,10 +140,10 @@ return : the value assoicaited with the key or the default value
 	<#local returnHash = hash>
 	<#if createIfNotExist || (returnHash[property])??>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.upateHash : creating NEW element : " +  property + ", on hash")}
+			${logHelper.stackDebugMessage("sequenceHelper.upateHash : creating NEW element : " +  property + ", on hash")}
 		</#if>
 		<#if isInList>
-			<#local currentPropValue = returnHash[property]>
+			<#local currentPropValue = returnHash[property]![]>
 			<#local appendedProperty =  currentPropValue + [newVal]>
 			<#local returnHash = returnHash + {property:appendedProperty}>
 		<#else>
@@ -147,7 +151,13 @@ return : the value assoicaited with the key or the default value
 		</#if>
 	</#if>
 	<#if recursiveProperty != "__NONE__">
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("sequenceHelper.upateHash : try to update : " +  recursiveProperty + ", on hash")}
+		</#if>
 		<#if (returnHash[recursiveProperty])??>
+			<#if logHelper??>
+					${logHelper.stackDebugMessage("sequenceHelper.upateHash : " +  recursiveProperty + ", found updating")}
+				</#if>
 			<#if returnHash[recursiveProperty]?is_sequence>
 				<#local childsAfterUpdate = []>
 				<#list returnHash[recursiveProperty] as aChild>
@@ -155,23 +165,28 @@ return : the value assoicaited with the key or the default value
 					<#local childsAfterUpdate = childsAfterUpdate + [upateHash(aChild, "data", extendedContent, true, true, "childreen")]>
 				</#list>
 				<#local returnHash = returnHash + {recursiveProperty:childsAfterUpdate}>
+			<#else>
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("sequenceHelper.upateHash : WARN: " +  recursiveProperty + ", is not a sequence")}
+				</#if>
 			</#if>
 		</#if>
 	</#if>
 	<#return returnHash>
 </#function>
 
-<#function removeInHash hash property inList=false searchKey="">
-	<#local returnHash = {}>
-	<#if inList>
+<#function removeInHash hash property searchKey="">
+	<#local returnHash = []>
+	<#if hash?is_sequence>
 		<#list hash as element>
 			<#if (element[property])?? && element[property] == searchKey>
 				<#-- ignore -->
 			<#else>
-				<#local returnHash = [element]>
+				<#local returnHash = returnHash + [element]>
 			</#if>
 		</#list>
 	<#else>
+			<#local returnHash = {}>
 		<#list hash as key, value>
 			<#if key != property>
 				<#local returnHash = returnHash + {key:value}>

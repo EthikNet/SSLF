@@ -9,7 +9,7 @@ order=506
 ~~~~~~
 ### Rattachements administratifs
 
-- ![logo Nouvelle Acquitaine](${webleger.build.host}/images/services/logo_nouvelle_acquitaine.svg) <span>**Région** Nouvelle-Aquitaine</span>
-- ![logo Haute Vienne](${webleger.build.host}/images/tourisme/logo_departement_haute_vienne.png) <span>**Département** Haute-Vienne (87)</span>
+- ![logo Nouvelle Acquitaine](${webleger.build.host}/images/services/logo_nouvelle_acquitaine.svg) <span>**Région** [Nouvelle-Aquitaine](https://www.nouvelle-aquitaine.fr/)</span>
+- ![logo Haute Vienne](${webleger.build.host}/images/tourisme/logo_departement_haute_vienne.png) <span>**Département** [Haute-Vienne (87)](https://www.haute-vienne.fr/)</span>
 - <span>**Canton** Châteauponsac</span>
-- ![logo CCHLeM](${webleger.build.host}/images/tourisme/logo_cchlem.jpg) <span>**Intercommunalité** Communauté de Communes du Haut Limousin en Marche (CCHLEM)</span>
+- ![logo CCHLeM](${webleger.build.host}/images/tourisme/logo_cchlem.jpg) <span>**Intercommunalité** [Communauté de Communes du Haut Limousin en Marche (CCHLEM)](https://hautlimousinenmarche.fr/)</span>

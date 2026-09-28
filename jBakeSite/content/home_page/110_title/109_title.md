@@ -15,4 +15,4 @@ order=109
 ~~~~~~
 #Bienvenue à Saint-Sulpice-les-Feuilles
 
-Une commune vivante au cœur du Limousin : située au nord du Limousin.
+Une commune vivante, située au nord du Limousin.

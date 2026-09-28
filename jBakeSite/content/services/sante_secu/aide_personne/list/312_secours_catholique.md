@@ -15,4 +15,4 @@ email=claire@blavot.net
 web=https://www.secours-catholique.org/
 order=312
 ~~~~~~
-TODO Description
+Distribution de nourriture : un vendredi sur 2, 13h à 15h

@@ -9,12 +9,12 @@ exerpt=Centre Equestre & Poney club
 stickers={"disposition":"left_absolute", "data":[{"label":"🐎", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/agricole/team_arvei_logo.jpg
 contentImageSpecificClass=objectContain
-location=Alexandra Audoin 2 les jarlus
+location=Alexandra Audoin 2 les jarlus 87160 SAINT SULPICE LES FEUILLES
 phone=06 13 83 43 18
 email=alexandra.audoin@wanadoo.fr
 facebook=https://www.facebook.com/p/Team-Arve%C3%AF-61581353124164/
 instagram=https://www.instagram.com/team_arvei/
-freeDate=Mercredi 14h00 à 19h00 et Samedi 9h 19h
+freeDate=Mercredi 14h00 à 19h00, Samedi 9h 19h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=602
 ~~~~~~
