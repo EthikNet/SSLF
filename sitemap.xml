@@ -17,10 +17,6 @@
         <lastmod>2026-08-31</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//demarches/list/410_inscription_scolaire.html</loc>
-        <lastmod>2026-08-24</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//demarches/list/408_demande_acte_etat_civil.html</loc>
         <lastmod>2026-08-24</lastmod>
     </url>
@@ -42,6 +38,10 @@
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//demarches/list/412_mariage_civil.html</loc>
+        <lastmod>2026-08-24</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//demarches/list/410_inscription_scolaire.html</loc>
         <lastmod>2026-08-24</lastmod>
     </url>
     <url>
@@ -169,10 +169,6 @@
         <lastmod>2026-07-17</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//services/vie_local_famille/mediatheque/mediatheque.html</loc>
-        <lastmod>2026-07-14</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//structure/publique/CCHLEM.html</loc>
         <lastmod>2026-07-14</lastmod>
     </url>
@@ -277,8 +273,8 @@
         <lastmod>2026-07-14</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//personne/conseil_des_jeunes/Emmanuel_GLANE.html</loc>
-        <lastmod>2026-07-13</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//services/vie_local_famille/mediatheque/mediatheque.html</loc>
+        <lastmod>2026-07-14</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//personne/conseil_des_jeunes/conseil_des_jeunes.html</loc>
@@ -325,8 +321,8 @@
         <lastmod>2026-07-13</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//personne/personnel_communal/Marlene_FORSTER.html</loc>
-        <lastmod>2026-07-12</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//personne/conseil_des_jeunes/Emmanuel_GLANE.html</loc>
+        <lastmod>2026-07-13</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//personne/conseil_municipal/Jean-Claude_PETRUCHA.html</loc>
@@ -357,8 +353,8 @@
         <lastmod>2026-07-12</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//personne/conseil_municipal/Nathalie_LABARRE.html</loc>
-        <lastmod>2026-07-11</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//personne/personnel_communal/Marlene_FORSTER.html</loc>
+        <lastmod>2026-07-12</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//personne/personnel_communal/Marie-france_JOUANNY.html</loc>
@@ -457,12 +453,12 @@
         <lastmod>2026-07-11</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//personne/conseil_municipal/Monique_PINARDON.html</loc>
-        <lastmod>2026-07-03</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//personne/conseil_municipal/Nathalie_LABARRE.html</loc>
+        <lastmod>2026-07-11</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//structure/publique/commune_SSLF.html</loc>
-        <lastmod>2026-07-02</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//personne/conseil_municipal/Monique_PINARDON.html</loc>
+        <lastmod>2026-07-03</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//structure/commissions/finances.html</loc>
@@ -474,6 +470,10 @@
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//personne/personnes.html</loc>
+        <lastmod>2026-07-02</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//structure/publique/commune_SSLF.html</loc>
         <lastmod>2026-07-02</lastmod>
     </url>
     <url>
@@ -517,6 +517,18 @@
         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/liberal/606_FIPS_cabinet_comptable.html</loc>
+        <lastmod>2026-09-25</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//contacts/autre_contacts_utiles/list/982_deceheterie.html</loc>
+        <lastmod>2026-09-25</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/assurance/602_Groupama.html</loc>
+        <lastmod>2026-09-25</lastmod>
+    </url>
+    <url>
         <loc>https://ethiknet.github.io/SSLF//services/vie_local_famille/sport/list/316_centre_equestre_team_arvei.html</loc>
         <lastmod>2026-09-13</lastmod>
     </url>
@@ -545,11 +557,11 @@
         <lastmod>2026-08-28</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//contacts/aide_contact.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//personne/aide_personnes.html</loc>
         <lastmod>2026-08-17</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//personne/aide_personnes.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//contacts/aide_contact.html</loc>
         <lastmod>2026-08-17</lastmod>
     </url>
     <url>
@@ -653,10 +665,6 @@
         <lastmod>2026-07-29</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/aide_soutien/604_aide_soutien_entreprises.html</loc>
-        <lastmod>2026-07-28</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//associations/annuaire/list/726_team_quad_de_l_eschalier_87.html</loc>
         <lastmod>2026-07-28</lastmod>
     </url>
@@ -673,7 +681,15 @@
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/marche_evennements/list/602_agenda.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
         <loc>https://ethiknet.github.io/SSLF//associations/annuaire/list/718_festi_boismande.html</loc>
+        <lastmod>2026-07-28</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/marche_evennements/602_marche_evenements.html</loc>
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
@@ -681,15 +697,7 @@
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/marche_evennements/list/602_agenda.html</loc>
-        <lastmod>2026-07-28</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//associations/annuaire/list/714_avenir_nord_foot_87.html</loc>
-        <lastmod>2026-07-28</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/marche_evennements/602_marche_evenements.html</loc>
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
@@ -769,12 +777,12 @@
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//associations/annuaire/list/728_ACCA.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/aide_soutien/604_aide_soutien_entreprises.html</loc>
         <lastmod>2026-07-28</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/commercant/634_viv_les_fleurs.html</loc>
-        <lastmod>2026-07-27</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//associations/annuaire/list/728_ACCA.html</loc>
+        <lastmod>2026-07-28</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/commercant/632_marlim_energie_services.html</loc>
@@ -873,7 +881,35 @@
         <lastmod>2026-07-27</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/672_GALAMON_peinture.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/commercant/634_viv_les_fleurs.html</loc>
+        <lastmod>2026-07-27</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/art/654_LES_ARTS_VENITIENS.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/638_BERDUCAT_Automobiles.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/art/620_Filographe_Justin_ETRE.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/636_NEW-WAVE_ENERGIE.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/art/618_PEUTH_France_EIRL_MOREL_Cedric.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/634_CHARME_ET_CHIC_TRESORS.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/art/612_LDS_creation.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -881,7 +917,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/670_DUMONTIER_Eveline.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/art/604_CASSONE_Patricia.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -889,7 +925,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/668_LOIZEAU_TP.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/672_GALAMON_peinture.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -897,7 +933,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/666_ESSO_A20_limoge.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/670_DUMONTIER_Eveline.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -905,7 +941,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/664_ESSO_A20_paris.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/668_LOIZEAU_TP.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -913,7 +949,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/662_AVIA_Station_Drochon.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/666_ESSO_A20_limoge.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -921,23 +957,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/660_BERDUCAT_Automobiles.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/620_Filographe_Justin_ETRE.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/658_SARL_ADPC_23.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/618_PEUTH_France_EIRL_MOREL_Cedric.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/656_ROY_Sylvain.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/664_ESSO_A20_paris.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -945,7 +965,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/654_LES_ARTS_VENITIENS.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/662_AVIA_Station_Drochon.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -953,15 +973,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/652_GALAMON_Nicolas.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/612_LDS_creation.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/650_COLE_David.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/660_BERDUCAT_Automobiles.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -969,7 +981,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/648_EI_BARBARIN_Aurelien.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/658_SARL_ADPC_23.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -977,7 +989,7 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/646_FC_MOTOCULTURE.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/656_ROY_Sylvain.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -985,11 +997,19 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/644_PREVET_Nathalie.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/650_COLE_David.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/604_CASSONE_Patricia.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/648_EI_BARBARIN_Aurelien.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/646_FC_MOTOCULTURE.html</loc>
+        <lastmod>2026-07-26</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/644_PREVET_Nathalie.html</loc>
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
@@ -1001,36 +1021,12 @@
         <lastmod>2026-07-26</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/638_BERDUCAT_Automobiles.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/636_NEW-WAVE_ENERGIE.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/634_CHARME_ET_CHIC_TRESORS.html</loc>
-        <lastmod>2026-07-26</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//vie_economique/602_title_vie_economique.html</loc>
         <lastmod>2026-07-25</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//vie_economique/annuaire/artisants/602_les_miels_des_moulins.html</loc>
         <lastmod>2026-07-25</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/villages/list/596_virevalais.html</loc>
-        <lastmod>2026-07-24</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/villages/list/560_le_monteil.html</loc>
-        <lastmod>2026-07-24</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/villages/list/520_cheniant.html</loc>
-        <lastmod>2026-07-24</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/villages/list/595_la_villauge.html</loc>
@@ -1257,8 +1253,16 @@
         <lastmod>2026-07-24</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/patrimoine/objets_classes/508_la_pieta_en_bois.html</loc>
-        <lastmod>2026-07-23</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/villages/list/596_virevalais.html</loc>
+        <lastmod>2026-07-24</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/villages/list/560_le_monteil.html</loc>
+        <lastmod>2026-07-24</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/villages/list/520_cheniant.html</loc>
+        <lastmod>2026-07-24</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/patrimoine/objets_classes/506_la_cene.html</loc>
@@ -1313,6 +1317,10 @@
         <lastmod>2026-07-23</lastmod>
     </url>
     <url>
+        <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/patrimoine/objets_classes/508_la_pieta_en_bois.html</loc>
+        <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
         <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/situation_geographique/508_carte.html</loc>
         <lastmod>2026-07-22</lastmod>
     </url>
@@ -1323,10 +1331,6 @@
     <url>
         <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/situation_geographique/504_distances.html</loc>
         <lastmod>2026-07-22</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//services/vie_local_famille/vie_scolaire/list/310_transport_scolaire.html</loc>
-        <lastmod>2026-07-21</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//services/vie_local_famille/vie_scolaire/list/308_accueil_periscolaire.html</loc>
@@ -1385,10 +1389,6 @@
         <lastmod>2026-07-21</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//associations/annuaire/702_annuaire.html</loc>
-        <lastmod>2026-07-21</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//tourisme/decouvrir/00_decouvrire.html</loc>
         <lastmod>2026-07-21</lastmod>
     </url>
@@ -1398,6 +1398,10 @@
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//services/sante_secu/autre_medical/list/302_ambulance_FAURIE.html</loc>
+        <lastmod>2026-07-21</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//associations/annuaire/702_annuaire.html</loc>
         <lastmod>2026-07-21</lastmod>
     </url>
     <url>
@@ -1429,12 +1433,8 @@
         <lastmod>2026-07-21</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//services/sante_secu/medecin/list/304_Dr_CARON_Michel.html</loc>
-        <lastmod>2026-07-20</lastmod>
-    </url>
-    <url>
-        <loc>https://ethiknet.github.io/SSLF//services/autres/location/list/306_chapiteaux_320m2.html</loc>
-        <lastmod>2026-07-20</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//services/vie_local_famille/vie_scolaire/list/310_transport_scolaire.html</loc>
+        <lastmod>2026-07-21</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//services/vie_local_famille/mediatheque/list/302_mediatheque_SSLF.html</loc>
@@ -1470,6 +1470,14 @@
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//services/sante_secu/medecin/list/306_medicobus.html</loc>
+        <lastmod>2026-07-20</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//services/sante_secu/medecin/list/304_Dr_CARON_Michel.html</loc>
+        <lastmod>2026-07-20</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//services/autres/location/list/306_chapiteaux_320m2.html</loc>
         <lastmod>2026-07-20</lastmod>
     </url>
     <url>
@@ -1537,10 +1545,6 @@
         <lastmod>2026-07-19</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//services/sante_secu/aide_personne/list/302_ACMD.html</loc>
-        <lastmod>2026-07-17</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//services/sante_secu/defribilateur/list/302_defribilateur.html</loc>
         <lastmod>2026-07-17</lastmod>
     </url>
@@ -1566,6 +1570,10 @@
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//services/sante_secu/aide_personne/list/304_restos_du_coeur.html</loc>
+        <lastmod>2026-07-17</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//services/sante_secu/aide_personne/list/302_ACMD.html</loc>
         <lastmod>2026-07-17</lastmod>
     </url>
     <url>
@@ -1693,10 +1701,6 @@
         <lastmod>2026-06-19</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//home_page/120_en_direct/list/121_panneauPocketGroupe.html</loc>
-        <lastmod>2026-06-17</lastmod>
-    </url>
-    <url>
         <loc>https://ethiknet.github.io/SSLF//home_page/120_en_direct/list/120_facebook.html</loc>
         <lastmod>2026-06-17</lastmod>
     </url>
@@ -1721,11 +1725,11 @@
         <lastmod>2026-06-17</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//vie_municipale/mainPage/206_actus_et_documents.html</loc>
-        <lastmod>2026-06-15</lastmod>
+        <loc>https://ethiknet.github.io/SSLF//home_page/120_en_direct/list/121_panneauPocketGroupe.html</loc>
+        <lastmod>2026-06-17</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//services/sante_secu/306_sante.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//vie_municipale/mainPage/206_actus_et_documents.html</loc>
         <lastmod>2026-06-15</lastmod>
     </url>
     <url>
@@ -1733,11 +1737,15 @@
         <lastmod>2026-06-15</lastmod>
     </url>
     <url>
-        <loc>https://ethiknet.github.io/SSLF//home_page/110_title/109_title.html</loc>
+        <loc>https://ethiknet.github.io/SSLF//services/sante_secu/306_sante.html</loc>
         <lastmod>2026-06-15</lastmod>
     </url>
     <url>
         <loc>https://ethiknet.github.io/SSLF//vie_municipale/mainPage/202_title_vie_municipal.html</loc>
+        <lastmod>2026-06-15</lastmod>
+    </url>
+    <url>
+        <loc>https://ethiknet.github.io/SSLF//home_page/110_title/109_title.html</loc>
         <lastmod>2026-06-15</lastmod>
     </url>
     <url>
