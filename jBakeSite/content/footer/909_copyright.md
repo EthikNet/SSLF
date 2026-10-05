@@ -9,4 +9,4 @@ displayTitle=false
 order=909
 ~~~~~~
 © 2026 Mairie de Saint-Sulpice-les-Feuilles. Tous droits réservés.
-Crédit photo : Marlène FORSTER, Amandine HUG, Alain JOUANNY
+Crédit photo : Marlène FORSTER, Amandine HUG, Alain JOUANNY, Alexandre Poupard

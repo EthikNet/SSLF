@@ -10,4 +10,4 @@ specificClass=footerLogoMessage
 anchorId=contact
 order=902
 ~~~~~~
-située au nord du Limousin.
+Commune située au nord du Limousin.

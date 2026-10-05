@@ -8,6 +8,7 @@ status=published
 exerpt=créateur dentelier
 stickers={"disposition":"left_absolute", "data":[{"label":"🪡", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan/Filographe_logo.jpg
+responsable=Justin ETRE
 location=14 Maillasson 87160 SAINT SULPICE LES FEUILLES
 email=contact@dentellemetierdart.fr
 website=https://www.filographe.fr/

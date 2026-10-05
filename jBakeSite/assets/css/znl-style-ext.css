@@ -891,6 +891,7 @@ h2 {
 	text-transform: uppercase;
 	letter-spacing:.05em;
 	padding-left:6px;
+	margin-right: 24px;
 	color:${webleger.site.style.impact.color};
 }
 .assoCategorie {

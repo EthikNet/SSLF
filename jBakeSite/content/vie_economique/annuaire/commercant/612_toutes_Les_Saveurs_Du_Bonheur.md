@@ -13,7 +13,6 @@ responsable=LARRAUD Fabrice
 location=11 Boismandé 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 74 46
 email=larraudfabrice@aol.fr
-freeDate=Lundi au dimanche 6h-22h
 facebook=https://www.facebook.com/p/Restaurant-toutes-Les-Saveurs-Du-Bonheur-100063502419332/
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=612
