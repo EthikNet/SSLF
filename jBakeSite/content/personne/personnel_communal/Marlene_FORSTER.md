@@ -8,7 +8,7 @@ code=Marlène FORSTER
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=
-graph={"data":[{"type":"structure","code":"la papotte","fonction":"Chargée de mission","role":"personnel communal", "statut":"Agent contractuel"}]}
+graph={"data":[{"type":"structure","code":"la papote","fonction":"Chargée de mission","role":"personnel communal", "statut":"Agent contractuel"}]}
 order=981
 ~~~~~~
 	

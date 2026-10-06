@@ -4,7 +4,7 @@ type=org_openCiLife_post
 category=publication
 pubAnnee=2026,2027
 pubCateg=Travaux
-status=published
+status=draft
 exerpt=Lancement des études pour la rénovation intérieure de l'église.
 order=211
 ~~~~~~

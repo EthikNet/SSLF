@@ -1,4 +1,4 @@
-title=BOUSSARDON Robin et Adélaïde
+title=BOUSSARDON
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique
@@ -8,6 +8,7 @@ status=published
 exerpt=maconnerie
 stickers={"disposition":"left_absolute", "data":[{"label":"🧱", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan/BOUSSARDON_deventure.jpg
+responsable=BOUSSARDON Robin et Adélaïde
 location=3 Puifférat 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 76 62
 email=catherine.boussardon@orange.fr

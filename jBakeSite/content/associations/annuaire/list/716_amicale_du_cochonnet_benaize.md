@@ -10,7 +10,7 @@ exerpt=
 responsable=M. Gérard GORGE
 location=La Maison Verte 87160 MAILHAC SUR BENAIZE
 phone=06 19 94 44 30,GUERIN Marie-Joelle|06 35 90 16 15
-email=g.charpente@gmail.com,guerinjo@gmail.com
+email=amicalecochonnetdelabenaize87@gmail.com
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=716
 ~~~~~~

@@ -4,7 +4,7 @@ type=org_openCiLife_post
 category=publication
 pubAnnee=2024,2025,2026
 pubCateg=Informations
-status=published
+status=draft
 exerpt=Les personnes vulnérables peuvent s'inscrire au registre communal pour bénéficier d'un suivi.
 order=211
 ~~~~~~

@@ -1,4 +1,4 @@
-title=Filographe Justin ETRE
+title=Filographe
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique

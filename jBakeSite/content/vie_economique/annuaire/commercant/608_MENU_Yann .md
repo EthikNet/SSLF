@@ -1,4 +1,4 @@
-title=Boulangerie patisserie MENU Yann 
+title=Boulangerie patisserie
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique
@@ -8,6 +8,7 @@ status=published
 exerpt=boulangerie patisserie
 stickers={"disposition":"left_absolute", "data":[{"label":"🥖", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/commerce/MENU_Yann.jpg
+responsable=MENU Yann 
 location=6 Place de L’Église 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 95 06
 freeDate=Lundi mardi jeudi vendredi et samedi 7h30-12h45 / 15h00-19h00,Dimanche 7h30-12h00

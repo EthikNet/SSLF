@@ -1,4 +1,4 @@
-title=Annuaire
+title=Annuaire des entreprises
 date=2026-07-21
 type=org_openCiLife_block
 category=associations

@@ -1,4 +1,4 @@
-title=NORISKO AUTO REYNAUD Cédric
+title=NORISKO AUTO
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique
@@ -8,6 +8,7 @@ status=published
 exerpt=controle technique
 stickers={"disposition":"left_absolute", "data":[{"label":"🚪", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan/Norisko_controle_technique.jpg
+responsable=REYNAUD Cédric
 location=4 Route de la Souterraine 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 77 48
 email=reynaudto@orange.fr

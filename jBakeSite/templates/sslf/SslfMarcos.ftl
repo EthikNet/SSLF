@@ -301,14 +301,14 @@
 										<#local statusLabel = " (" + theStatut + ")">
 									</#if>
 									
+									<#local thePoste = onSytheseRelation.poste!"">
+									
 									<#local theFonction = onSytheseRelation.fonction!"">
-									<#if theFonction == "">
-										<#local theFonction = "">
-									<#else>
+									<#if theFonction != "">
 										<#local theFonction = " (" + theFonction + ")">
 									</#if>
 									
-									<li>${typeLabel}${onSytheseRelation.code!"MISSING_CODE"}${statusLabel}${theFonction}</li>
+									<li>${typeLabel}${onSytheseRelation.code!"MISSING_CODE"}${statusLabel}<#if thePoste !=""> : ${thePoste} </#if>${theFonction}</li>
 								</@graph.filterRelation>
 							</ul>
 						</@graph.displayARelation>
