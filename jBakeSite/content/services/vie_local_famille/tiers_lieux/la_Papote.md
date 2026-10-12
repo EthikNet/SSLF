@@ -10,7 +10,7 @@ tags=
 status=published
 specificClass=servicesPage
 contentImage=/images/services/logo-papote.png
-exerpt=Coworking, formations, aide au numérique.
+exerpt=Travailler, apprendre, se divertir, s'informer.
 order=308
 ~~~~~~
 ### La Papote vous propose

@@ -17,10 +17,6 @@ order=306
 ~~~~~~
 Salle de conférence.
 
-- rdv entre pros
-- actions avec/des partenaires
-- animation de la vie sociale
-
 ![Photo des anciennes écoles](${webleger.build.host}/images/services/la_papote_salle_conference.jpg)
 
 > **Tarifs**

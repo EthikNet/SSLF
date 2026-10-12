@@ -1,5 +1,5 @@
 <#function getComponnentInfo>
-	<#return {"componnentVersion":1, "name":"tableOfContent", "description":"Add subContent in content", "recommandedNamespace":"toc", "version":"0.1.0", "require":[{"value":"toc", "type":"contentHeader"}, {"value":"block", "type":"componnent"}], "uses":[{"value":"langHelper", "type":"lib"}, {"value":"logHelper", "type":"lib"}]}>
+	<#return {"componnentVersion":1, "name":"tableOfContent", "description":"Add Table of content for Blocks", "recommandedNamespace":"toc", "version":"0.1.0", "require":[{"value":"toc", "type":"contentHeader"}, {"value":"block", "type":"componnent"}], "uses":[{"value":"langHelper", "type":"lib"}, {"value":"logHelper", "type":"lib"}]}>
 </#function>
 
 <#function init>
