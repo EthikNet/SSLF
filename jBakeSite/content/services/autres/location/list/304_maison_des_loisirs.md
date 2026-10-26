@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Louez la maison des loisirs pour vos évènnements
 anchorId=loc_maison_loisirs
 
-location=adresse au 6 avenue de l'avenir
+location=adresse au 6 avenue de l'avenir 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 73 32
 email=mairie@sslf.fr
 order=304

@@ -2,7 +2,7 @@ title=DROCHON Automobiles
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique
-acteurEcoCategorie=artisan
+acteurEcoCategorie=commerce
 tags=
 status=published
 exerpt=garages
@@ -16,6 +16,6 @@ website=https://www.drochonautomobiles.com/
 facebook=https://www.facebook.com/drochonautomobiles/
 freeDate=Lundi au mardi 8h-12h / 14h-18h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
-order=640
+order=639
 ~~~~~~
 	

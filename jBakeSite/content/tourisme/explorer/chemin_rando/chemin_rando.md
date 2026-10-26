@@ -14,4 +14,4 @@ order=512
 ~~~~~~
 Amoureux de nature et de grands espaces, découvrez les sentiers de randonnée de Saint-Sulpice-les-Feuilles, au cœur du Haut Limousin. Deux circuits balisés vous invitent à parcourir des paysages variés entre étangs, chemins creux, villages de caractère et panoramas sur la campagne limousine.
 
-Vous pouvez aussi trovuer d'autres lieux et randonées sur [https://www.visitlimousin.com/](https://www.visitlimousin.com/).
+Vous pouvez aussi trouver d'autres lieux et randonées sur [https://www.visitlimousin.com/](https://www.visitlimousin.com/?search_query=randonn%C3%A9e+saint+sulpice+les+feuilles&search_filter=areas%3Amain).

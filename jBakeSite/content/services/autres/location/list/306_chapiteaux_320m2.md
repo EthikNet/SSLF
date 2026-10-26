@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Louez les chapiteaux pour vos évènnements
 anchorId=loc_chapiteaux
 
-location=Espace Aubrun Bossard
+location=Espace Aubrun Bossard 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 73 32
 email=mairie@sslf.fr
 order=306

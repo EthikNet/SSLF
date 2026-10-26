@@ -9,20 +9,16 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Collège public de secteur — de la 6ᵉ à la 3ᵉ
 anchorId=college
 
-location=11 rue du 8 mai 1945
+location=11 rue du 8 mai 1945 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 75 83
 email=ce.0870049f@ac-limoges.fr
+freeDate=Lun-Ven · 8h30–12h30 / 14h00–17h05
 order=304
 ~~~~~~
-Le collège du secteur accueille les élèves de la commune et de communes voisines. Le ramassage scolaire est organisé chaque jour par la Région.
+Le collège du secteur accueille les élèves de la commune et des communes voisines. Le ramassage scolaire est organisé chaque jour par la Région.
 
 ![photo de l'école maternelle](${webleger.build.host}/images/services/college_batiment2.jpg)
 
-> **Adresse**
-> Collège Fabre Églantine, 11 rue du 8 mai 1945 87160 Saint-Sulpice-Les-Feuilles
-
-> **Horaires de classe**
-> lundi au vendredi : 8h30-12h30 / 14h-17h05
 
 > **Niveaux**
 > 6ᵉ → 3ᵉ

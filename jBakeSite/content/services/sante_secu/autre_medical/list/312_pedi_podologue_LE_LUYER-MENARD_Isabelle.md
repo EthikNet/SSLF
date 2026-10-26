@@ -6,14 +6,11 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_podolgue.png
-exerpt=Pédicure - Podologue
+exerpt=Pédicure
 anchorId=le_luyer-menard_isabelle
 
 phone=05 55 68 15 77
-location=2 Rue du Stade
+location=2 Rue du Stade 87160 SAINT SULPICE LES FEUILLES
 order=312
 ~~~~~~
-Pédicure - Podologue LE LUYER-MENARD Isabelle (sur R-V & à domicile)
-
-> **Adresse**
-> 2 Rue du Stade
+Sur R-V & à domicile

@@ -9,8 +9,8 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=L’EHPAD Résidence du Cèdre est un établissement public géré par le C.C.A.S
 anchorId=residence_Cedre
 
-files={"data":[{"location":"${webleger.build.host}/fichiers/sante/residence_du_cedre_mai2026.pdf", "label":"plaquette", "icon":"images/icones/dowload.svg", "main":true}]}
-location=2 léon mercier, 87160 Saint-Sulpice-les-Feuilles
+files={"data":[{"location":"fichiers/sante/residence_du_cedre_mai2026.pdf", "label":"Téléchargez la plaquette !", "icon":"images/icones/dowload.svg", "main":true}]}
+location=2 léon mercier 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 66 00
 email=residenceducedre@wanadoo.fr
 freeDate=Du lundi au vendredi 9h00 – 13h00 / 14h00 – 16h00
@@ -23,15 +23,9 @@ order=302
 > **Directeur**
 > DAVID Nicolas
 
-> **adresse**
-> 2 Rue Léon Mercier 87160 Saint-Sulpice-Les-Feuilles
-
 - Ouvert en 1972, rénové et agrandi en 2007.
 - 28 chambres dont 2 doubles, toutes équipées d’un système d’appel 24h/24.
 - Espaces extérieurs arborés et sécurisés.
 - Présence d’espaces communs : bibliothèque, salons et salle d’animation.
 - Accompagnement assuré par une équipe pluridisciplinaire.
 - Animations variées : ateliers mémoire, gymnastique douce, sorties, cinéma, loto, rencontres intergénérationnelles, spectacles et repas à thème.
-
-
-[Téléchargez la plaquette !](${webleger.build.host}/fichiers/sante/residence_du_cedre_mai2026.pdf)

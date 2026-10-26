@@ -290,6 +290,15 @@
 						<outputDirectory>${jbake.inputDirectory}</outputDirectory>
 						<escapeString>\</escapeString>
 						<propertiesEncoding>ISO-8859-1</propertiesEncoding>
+							<nonFilteredFileExtensions>
+								<nonFilteredFileExtension>pdf</nonFilteredFileExtension>
+								<nonFilteredFileExtension>docx</nonFilteredFileExtension>
+								<nonFilteredFileExtension>jpg</nonFilteredFileExtension>
+								<nonFilteredFileExtension>jpeg</nonFilteredFileExtension>
+								<nonFilteredFileExtension>png</nonFilteredFileExtension>
+								<nonFilteredFileExtension>xls</nonFilteredFileExtension>
+								<nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
+							</nonFilteredFileExtensions>
 						<resources>
 							<resource>
 								<directory>${project.basedir}/jBakeSite</directory>

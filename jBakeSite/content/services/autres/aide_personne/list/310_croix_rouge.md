@@ -9,7 +9,7 @@ contentImage=images/services/croix_rouge_logo.jpg
 exerpt=Boutique solidaire
 anchorId=croix_rouge
 
-location=29 rue du commerce 87160 Saint-Sulpice-les-Feuilles
+location=29 rue du commerce 87160 SAINT SULPICE LES FEUILLES
 phone=06 75 23 77 54
 order=310
 ~~~~~~
@@ -28,7 +28,10 @@ Deux boutiques pour acheter d'occasion et solidaire.
 > 2 rue du stade 87160 Saint-Sulpice-les-Feuilles
 > **Horraires**
 > - mardi 14h-17h 
-> -vendredi 14h-17h
+> - vendredi 14h-17h
 
 - boutique solidaire, 
-- vêtements et accessoires de seconde main.
+- vêtements et accessoires de seconde main,
+- distribution de bons alimentaires, 
+- accès aux droits et aux services, 
+- accompagner et orienter.

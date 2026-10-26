@@ -6,13 +6,13 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 demarcheCategory=Travaux
 status=published
-exerpt=Dans quelles cas effectuer une déclaration préalable de travaux ?
+exerpt=Dans quels cas effectuer une déclaration préalable de travaux ?
 order=406
 ~~~~~~
 La déclaration préalable de travaux est une autorisation d’urbanisme obligatoire pour certains projets de construction ou de modification d’un bâtiment existant, de faible importance. Les demandes sont faites à la mairie mais sont instruites par le service urbanisme de la Communauté de Communes du Haut Limousin en Marche.
 
 ## Quels travaux sont concernés ?
-Elle concerne notamment :
+Le permis de construire est notamment exigé pour :
 
 - les extensions de petite surface, de 5 à 19m2,
 - les modifications de l’aspect extérieur d’un bâtiment (façade, toiture, ouvertures…), 

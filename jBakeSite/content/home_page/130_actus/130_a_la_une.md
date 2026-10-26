@@ -10,4 +10,4 @@ hooks={"data":[{"position":"afterBlockBody", "action":"block.build", "renderOnce
 order=130
 ~~~~~~
 ## Dernières publications & agenda
-Comptes-rendus, actualités et prochains rendez-vous de la commune.
+Comptes-rendus du conseil, arrêtés, bulletins, informations, actualités et prochains rendez-vous de la commune.

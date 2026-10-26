@@ -12,10 +12,7 @@ anchorId=dr_bourrel
 phone=06 20 87 99 33 
 email=medicobus-occitane@protonmail.com
 website=https://www.maiia.com
-location=devant la Mairie 2 Voie de la Reine
+location=devant la Mairie 2 Voie de la Reine 87160 SAINT SULPICE LES FEUILLES
 order=306
 ~~~~~~
 Le médicobus se déplace régulièrement sur Saint-Sulpice-Les-Feuilles : prendre RDV avec une sage femme.
-
-> **Adresse**
-> devant la Mairie 2 Voie de la Reine

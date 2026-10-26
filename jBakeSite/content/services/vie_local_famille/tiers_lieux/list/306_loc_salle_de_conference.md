@@ -9,7 +9,7 @@ contentImage=/images/services/la_papote_divertir.svg
 exerpt=Louez la salle de conférence (80-100 personnes)
 anchorId=loc_papote_salle_conf
 
-location=9 rue du Commerce, 87160 Saint-Sulpice-Les-Feuilles
+location=9 rue du Commerce 87160 SAINT SULPICE LES FEUILLES
 phone=07 48 10 75 27
 email=resa@lapapote.com
 website=https://lapapote.com/

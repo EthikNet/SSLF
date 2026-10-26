@@ -10,10 +10,7 @@ exerpt=Psychiatre
 anchorId=Dr_HEID_Christian
 
 phone=05 44 25 44 68
-location=Centre médico-social, 2 Rue du stade 
+location=Centre médico-social, 2 Rue du stade 87160 SAINT SULPICE LES FEUILLES
 order=302
 ~~~~~~
-Psychiatre Dr HEID Christian
-
-> **Adresse**
-> Centre médico-social, 2 Rue du stade 
+	

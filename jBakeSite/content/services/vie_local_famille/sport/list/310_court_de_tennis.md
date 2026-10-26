@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Court en extérieur en accès libre
 anchorId=court_tennis
 
-location=4 route d'Arnac-la-Poste
+location=4 route d'Arnac-la-Poste 87160 SAINT SULPICE LES FEUILLES
 order=310
 ~~~~~~
 Le court de tennis extérieur offre aux habitants la possibilité de pratiquer le tennis en accès libre.

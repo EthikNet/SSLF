@@ -1,4 +1,4 @@
-title=Restez informé·e en temps réel
+title=Restez informés en temps réel
 date=2026-06-17
 type=org_openCiLife_block
 category=panneauPocket

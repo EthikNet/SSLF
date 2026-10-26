@@ -9,7 +9,7 @@ exerpt=céramiste
 stickers={"disposition":"left_absolute", "data":[{"label":"🏺", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan.jpg
 location=1 La Valette 87160 SAINT SULPICE LES FEUILLES
-phone=06.72.84.65.80
+phone=06 72 84 65 80
 website=http://www.patcassone.com
 facebook=https://www.facebook.com/patricia.cassone.50/?locale=fr_FR
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}

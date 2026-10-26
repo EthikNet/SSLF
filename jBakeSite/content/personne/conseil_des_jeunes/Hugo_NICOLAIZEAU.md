@@ -1,10 +1,10 @@
-title=Hugo NICOLAIZAU
+title=Hugo NICOLAIZEAU
 date=2026-07-13
 type=org_openCiLife_post
 category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
-code=Hugo NICOLAIZAU
+code=Hugo NICOLAIZEAU
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=

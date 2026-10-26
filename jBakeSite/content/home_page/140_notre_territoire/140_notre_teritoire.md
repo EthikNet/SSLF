@@ -13,4 +13,4 @@ order=140
 ~~~~~~
 ## Vivre, travailler et s'épanouir au cœur de la France verdoyante
 
-Entre forêts, chemins de randonnée et un bourg animé par ses commerces, associations et services, Saint-Sulpice-les-Feuilles cultive la proximité, la solidarité et un cadre de vie préservé.
+Entre forêts, chemins de randonnée et un bourg animé par ses commerces, artisans, associations et services, Saint-Sulpice-les-Feuilles cultive la proximité, la solidarité et un cadre de vie préservé.

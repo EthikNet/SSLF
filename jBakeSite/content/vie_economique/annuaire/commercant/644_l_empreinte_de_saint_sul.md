@@ -1,11 +1,11 @@
-title=L’empreinte de saint sul
+title=L’empreinte de Saint Sul
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique
 acteurEcoCategorie=commerce
 tags=
 status=published
-exerpt=Vêtements, chaussures
+exerpt=Chaussures
 stickers={"disposition":"left_absolute", "data":[{"label":"👚", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/commerce/l_empreinte_de_saint_sul_deventure.jpg
 responsable=LATHIERE Aurélie

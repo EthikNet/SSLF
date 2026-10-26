@@ -12,9 +12,12 @@ anchorId=periscolaire
 files={"data":[{"location":"/fichiers/scolaire/Fiche_d_inscription_garderie_2026-2027.docx", "label":"Fiche d'inscription périscolaire", "main":true}]}
 phone=05 55 76 73 32
 email=mairie@sslf.fr
+freeDate=Matin de 7h00 à 8h50, Soir de 16h30 à 19h00
 order=308
 ~~~~~~
 Des jeux et activités sont proposés et encadrés par le personnel communal.
+
+![photo de la garderie](${webleger.build.host}/images/services/periscolaire_garderie.jpg)
 
 > **Lieu**
 > La garderie accueille les enfants dans le bâtiment du Cycle 2 pour les élèves du CP au CM2 et à la maternelle pour les plus petits.
@@ -22,14 +25,7 @@ Des jeux et activités sont proposés et encadrés par le personnel communal.
 > **Tarif**
 > 0,50€ la ½ heure / enfant
 
-> **Horaires**
-> - matin de 7h00 à 8h50 
-> - soir de 16h30 à 19h00
-
 - Inscription à la mairie, facturation à chaque période.
-
-![photo de la garderie](${webleger.build.host}/images/services/periscolaire_garderie.jpg)
 
 ### Pause méridienne
 Le personnel communal accompagne également les enfants durant le déjeuner et la récréation. L’équipe assure leur sécurité, veille au respect des règles de vie collective et apporte une aide au repas aux plus jeunes afin de favoriser leur autonomie.
-

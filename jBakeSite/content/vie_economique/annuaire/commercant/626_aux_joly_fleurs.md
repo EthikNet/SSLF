@@ -1,4 +1,4 @@
-title=Aux joly fleur 
+title=Aux joly fleurs
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique

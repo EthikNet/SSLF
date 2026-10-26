@@ -10,10 +10,7 @@ exerpt=Masseurs - Kinésithérapeutes & ostéopathes
 anchorId=couthier_olivier
 
 phone=05 55 76 90 07
-location=2 impasse Voie de la Reine
+location=2 impasse Voie de la Reine 87160 SAINT SULPICE LES FEUILLES
 order=302
 ~~~~~~
-COUTHIER Olivier
-
-> **Adresse**
-> 2 impasse Voie de la Reine
+Présent : toute la semaine

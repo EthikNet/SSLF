@@ -10,10 +10,7 @@ exerpt=Dentiste
 anchorId=dentiste_enom_marc
 
 phone=05 55 76 70 93
-location=2 impasse Voie de la Reine
+location=2 impasse Voie de la Reine 87160 SAINT SULPICE LES FEUILLES
 order=307
 ~~~~~~
-Dentiste Dr ENON Marc
-
-> **Adresse**
-> 2 impasse Voie de la Reine
+	

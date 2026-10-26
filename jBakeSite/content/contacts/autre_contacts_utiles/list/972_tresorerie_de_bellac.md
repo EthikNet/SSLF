@@ -7,8 +7,9 @@ status=published
 specificClass=autre_contact_utile
 phone=05 55 60 93 20
 location=1 Rue Thiers 87300 BELLAC
-website=www.impots.gouv.fr
+website=https://www.impots.gouv.fr
 email=sgc.bellac@dgfip.finances.gouv.fr
+freedate=lundi /merc/jeu/ven 08h30 à 12h30 avec ou sans rdv
 order=972
 ~~~~~~
-	
+Service de gestion Comptable

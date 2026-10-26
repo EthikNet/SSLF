@@ -2,7 +2,7 @@ title=RODIER Pascal
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique
-acteurEcoCategorie=artisan
+acteurEcoCategorie=commerce
 tags=
 status=published
 exerpt=électromenager
@@ -13,6 +13,6 @@ phone=05 55 76 79 37
 email=pascalrodier@orange.fr
 website=https://magasin.blancbrun.fr/magasin/blanc-brun-st-sulpice-les-feuilles
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
-order=628
+order=629
 ~~~~~~
 	

@@ -10,10 +10,7 @@ exerpt=Médecin généraliste
 anchorId=dr_bourrel
 
 phone=05 55 76 97 97
-location=14 Rue du 8 mai 1945
+location=14 Rue du 8 mai 1945 87160 SAINT SULPICE LES FEUILLES
 order=302
 ~~~~~~
-Dr BOURREL Frédéric
-
-> **Adresse**
-> 14 Rue du 8 mai 1945
+	

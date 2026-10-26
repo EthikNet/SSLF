@@ -2,10 +2,10 @@ title=NORISKO AUTO
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique
-acteurEcoCategorie=artisan
+acteurEcoCategorie=commerce
 tags=
 status=published
-exerpt=controle technique
+exerpt=contrôle technique
 stickers={"disposition":"left_absolute", "data":[{"label":"🚪", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/artisan/Norisko_controle_technique.jpg
 responsable=REYNAUD Cédric
@@ -15,6 +15,6 @@ email=reynaudto@orange.fr
 facebook=https://www.facebook.com/p/Contr%C3%B4le-technique-Norisko-Saint-Sulpice-Les-Feuilles-100067910452413/
 freeDate=lundi 14h-18h,mardi au vendredi 8h-12h / 14h-18h,samedi 8h-12h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
-order=608
+order=609
 ~~~~~~
 	

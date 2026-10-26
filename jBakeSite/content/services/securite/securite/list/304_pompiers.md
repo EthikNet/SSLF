@@ -7,10 +7,8 @@ tags=
 status=published
 contentImage=images/services/logo_pompiers.png
 anchorId=pompiers
-
 phone=18
-location=Rue du dc ferdinand renaud, 87160 Saint-Sulpice-les-Feuilles
-
+location=Rue du dc ferdinand renaud 87160 SAINT SULPICE LES FEUILLES
 order=304
 ~~~~~~
 Chef de Centre : Adjudant-chef Mathieu PINARDON

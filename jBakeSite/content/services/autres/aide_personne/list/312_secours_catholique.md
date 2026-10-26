@@ -9,8 +9,8 @@ contentImage=images/services/secours_catholique.png
 exerpt=A définir
 anchorId=secours_catholique
 
-location=Blavot Claire 21 le Virvalais
-phone=06 51 30 94 50
+location=21 le Virvalais 87160 SAINT SULPICE LES FEUILLES
+phone=06 51 30 94 50, jours de distributions|06 08 49 35 82
 email=claire@blavot.net
 web=https://www.secours-catholique.org/
 order=312

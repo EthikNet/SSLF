@@ -20,4 +20,4 @@ Ses principales missions sont :
 - participer à des actions citoyennes, culturelles, solidaires ou environnementales ; 
 - créer du lien entre les jeunes, les élus et les habitants.
 
-Par exemple, le Conseil des Jeunes est à l’origine du Skate Park de Saint-Sulpice-les-Feuilles et prochainement, une boite à livres fabriquée par leurs soins va être installée derrière l’église.
+Par exemple, le Conseil des Jeunes est à l’origine du Skate Park de Saint-Sulpice-les-Feuilles et en juillet dernier, une boîte à livre fabriquée par leurs soins a été installée et inaugurée derrière l'église.

@@ -1,4 +1,4 @@
-title=Marlim energie services
+title=Marlim énergie services
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique

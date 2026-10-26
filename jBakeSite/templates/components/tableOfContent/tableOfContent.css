@@ -10,6 +10,7 @@
 	display:flex;
 	flex-wrap:wrap;
 	align-content:center;
+	width:34px;
 }
 
 .toc_item .toc_image_wraper .toc_image{

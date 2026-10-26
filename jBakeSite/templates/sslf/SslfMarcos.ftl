@@ -59,8 +59,8 @@
 				${item.body!""}
 			</div>
 			
-			<@common.buildFiles item "<hr/>"/>
 		</#if>
+		<@common.buildFiles item "<hr/>"/>
 	</div>
 </#macro>
 
@@ -111,6 +111,14 @@
 </#macro>
 
 <#macro servicesGroupSubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<@servicesGroup theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage false />
+</#macro>
+
+<#macro servicesGroupWithBodySubTemplateItem theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage>
+	<@servicesGroup theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage true />
+</#macro>
+
+<#macro servicesGroup theContent item specificContentClass featauredText displayTitle className subContentBeforeTitleImage displayBody>
 	<div class="${className}_block" data-href="${common.buildRootPathAwareURL(item.uri)}">
 		<#if featauredText?has_content>
 			<span class="featured_label">${featauredText}</span>
@@ -137,6 +145,27 @@
 		</div>
 		<hr>
 		<div class="${className}_body">
+			<#if displayBody>
+				<@block.generateBodyContent item/>
+				<div class="metaDataListInLine greenButtonLikeChildDivs">
+					<@common.buildLocation item/>
+					<@common.buildPhone item/>
+					<@common.buildEmail item/>
+					<@common.buildHours item/>
+					<@common.buildDates item/>
+					<@common.buildDateTimes item/>
+					<@common.buildFreeDate item/>
+					<@common.buildWebsites item/>
+					<@common.buildFaceBook item/>
+					<@common.buildInstagram item/>
+					<@common.buildResponsable item/>
+				</div>
+				<#if (item.files)?? && item.files?has_content && (item.files.data)?? && item.files.data?has_content>
+					<div class="metaDataListInLine">
+						<@common.buildFiles item/>
+					</div>
+				</#if>
+			</#if>
 			<#if (toc)??>
 				<@toc.build item />
 			</#if>

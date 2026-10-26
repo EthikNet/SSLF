@@ -16,7 +16,7 @@ param : closeButtonlabel : *default* : close : label of the botom close button
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Basic Modal</h4>
+					<h3 class="modal-title" id="myModalLabel">Basic Modal</h3>
       			</div>
       			<div class="modal-header">
 					<span class="modal-tags"></span>

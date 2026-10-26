@@ -10,11 +10,8 @@ exerpt=Depistage audition vison
 anchorId=dr_enom_marc
 
 phone=06 81 01 67 21
-location=Place du Champ de foire
+location=Place du Champ de foire 87160 SAINT SULPICE LES FEUILLES
 freeDate=les jeudis tous les 15 jours
 order=306
 ~~~~~~
 Camion Optical Center :  DESFORGES Marie
-
-> **Adresse**
-> Place du Champ de foire

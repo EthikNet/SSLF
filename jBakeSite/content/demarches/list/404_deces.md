@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 demarcheCategory=Décès & cimetière
 status=published
-exerpt=Démarches à suivre lors du décès d'un proche ?
+exerpt=Démarches à suivre lors du décès d'un proche
 order=404
 ~~~~~~
 ## Il faut faire constater le décès par un médecin, qui établit un certificat de décès

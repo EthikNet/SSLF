@@ -1,6 +1,7 @@
 title=Grandmont et son trésor en Limousin
 date=2026-07-23
 type=org_openCiLife_block
+subTemplate=noImageSubTemplate
 category=patrimoine, site_remarquable
 contentImage=/images/tourisme/Grandmont_tresor_en_Limousin.jpg
 siteRemarquableCategorie=patrimoine

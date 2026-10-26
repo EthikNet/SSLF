@@ -10,10 +10,7 @@ exerpt=Podologue
 anchorId=sherif_salah
 
 phone=05 55 11 49 04 
-location=20 Rue Albert Joyeux
+location=20 Rue Albert Joyeux 87160 SAINT SULPICE LES FEUILLES
 order=314
 ~~~~~~
-Podologue SHERIF Salah (sur R-V)
-
-> **Adresse**
-> 20 Rue Albert Joyeux
+Sur Rendez-vous

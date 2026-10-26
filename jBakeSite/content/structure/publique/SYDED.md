@@ -1,4 +1,4 @@
-title=SYndicat Départemental pour l'Elimination des Déchets ménagers et assimilé
+title=SYndicat Départemental pour l'Elimination des Déchets ménagers et assimilés
 date=2026-07-14
 type=org_openCiLife_post
 category=structure

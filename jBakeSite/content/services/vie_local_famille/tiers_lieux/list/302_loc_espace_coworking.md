@@ -9,7 +9,7 @@ contentImage=/images/services/la_papote_travailler_indivi.svg
 exerpt=Louez un espace de woworking
 anchorId=loc_papote_coworking
 
-location=9 rue du Commerce, 87160 Saint-Sulpice-Les-Feuilles
+location=9 rue du Commerce 87160 SAINT SULPICE LES FEUILLES
 phone=07 48 10 75 27
 email=resa@lapapote.com
 website=https://lapapote.com/

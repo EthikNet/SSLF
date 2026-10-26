@@ -11,11 +11,13 @@ order=402
 ~~~~~~
 La commune de Saint-Sulpice-les-Feuilles met à disposition des familles différentes solutions permettant d’accueillir et de conserver les sépultures et les urnes des défunts dans le respect de la réglementation funéraire en vigueur.
 
-> **Perpétuelle**
+## Tarifs
+
+> **Concession perpétuelle**
 > - 5.40 m² : 248.40 €
 > - 9 m² : 414 €
 
-> **Colombarium (durée 30 ans)**
+> **Columbarium ou cave-urne (durée 30 ans)**
 > 600 €
 
 

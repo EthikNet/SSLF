@@ -2,7 +2,7 @@ title=FC MOTOCULTURE
 date=2026-07-26
 type=org_openCiLife_block
 category=acteur_economique
-acteurEcoCategorie=artisan
+acteurEcoCategorie=commerce
 tags=
 status=published
 exerpt=motoculture
@@ -16,6 +16,6 @@ website=https://www.fcmotoculture.com/
 facebook=https://www.facebook.com/fcmotoculture/
 freeDate=Lundi 14h-18h, mardi 8h30-12h/14h-18h, mercredi au vendredi 8h30-12h/14h-18h30, samedi 8h30-12h
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
-order=646
+order=647
 ~~~~~~
 	

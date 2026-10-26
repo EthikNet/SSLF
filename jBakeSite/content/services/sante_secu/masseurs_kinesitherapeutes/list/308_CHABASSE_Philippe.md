@@ -10,10 +10,7 @@ exerpt=Masseurs - Kinésithérapeutes
 anchorId=chabasse_philippe
 
 phone=05 55 76 79 45
-location=20 Rue Albert Joyeux
+location=20 Rue Albert Joyeux 87160 SAINT SULPICE LES FEUILLES
 order=308
 ~~~~~~
-CHABASSE Philippe
-
-> **Adresse**
-> 20 Rue Albert Joyeux
+Effectue des permanences régulières

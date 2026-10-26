@@ -80,6 +80,9 @@ param : **default** : "" : default : the default value to return if not found
 return : the value assoicaited with the key or the default value
 -->
 <#function getValue list serarchKey default="" attributKey="" attributToReturn="">
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("sequenceHelper.getValue : searching for : " + serarchKey + ", in : " + common.toString(list))}
+	</#if>
 	<#local returnValue = default>
 	<#if (list)?? && list?has_content>
 		<#list list as element>

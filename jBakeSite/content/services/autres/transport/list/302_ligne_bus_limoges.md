@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Trajets quotidien entre Limoges et Saint-Sulpice-Les-Feuilles
 anchorId=ligne_bus_602
 
-location=place de la Mairie
+location=place de la Mairie 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 10 31 00
 website=https://www.rrthv.com/
 freeDate=1 fois par jour

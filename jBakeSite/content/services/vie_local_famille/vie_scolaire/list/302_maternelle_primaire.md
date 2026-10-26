@@ -10,8 +10,8 @@ exerpt=École maternelle & élémentaire
 anchorId=primaire
 
 files={"data":[{"location":"/fichiers/scolaire/Fiche_inscription_Ecole.docx", "label":"Fiche d'inscription", "main":true}]}
-location=11 rue du 8 mai, 87160 Saint-Sulpice-les-Feuilles
-phone=05 55 76 93 47
+location=11 rue du 8 mai 87160 SAINT SULPICE LES FEUILLES
+phone=Maternelle|05 55 76 77 91,CP + CE1 + CE2|05 55 76 93 47,CM1 + CM2|05 55 76 72 30
 email=ce.0871004U@ac-limoges.fr
 freeDate=Lun/Mar/Jeu/Ven · 9h00–12h00 / 13h30–16h30
 order=302
@@ -19,13 +19,7 @@ order=302
 Directrice : Marie-Claire TIXIER
 Tél : 05 55 76 93 47
 
-L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans. Le ramassage scolaire est organisé chaque jour par la Région.
-
-> **Adresse**
-> 11 rue du 8 mai 1945 87160 Saint-Sulpice-les-Feuilles
-
-> **Horaires de classe**
-> Lun, Mar, Jeu, Ven · 8h50–12h00 / 13h30–16h30
+L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans de la commune et des communes voisines. Le ramassage scolaire est organisé chaque jour par la Région.
 
 > **Effectif**
 > 5 classes à la rentrée 2026
@@ -41,9 +35,3 @@ L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans. L
 
 ### L’école élémentaire
 ![photo de l'école maternelle](${webleger.build.host}/images/services/ecole_elementaire_batiment.jpg)
-
-> **Du cycle II → CP + CE1 + CE2**
-> tel : 05 55 76 93 47
-
-> **Début du cycle III → CM1 + CM2**
-> tel : 05 55 76 72 30

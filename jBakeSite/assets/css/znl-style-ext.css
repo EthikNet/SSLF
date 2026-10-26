@@ -66,6 +66,10 @@
 	margin-bottom:12px;
 }
 
+.modal-title {
+	font-size: 150%;
+}
+
 #preHeader_blocks {
 	display: flex;
 	flex-direction: column-reverse;
@@ -83,28 +87,52 @@
 	height:auto;
 }
 
-.green {
+.green, .orgchart .node.graphGreen .title{
 	color:hsl(92.14,57.32%,97.13%);
 	background-color:hsl(133.55,100%,23.74%,0.2);
 }
-.light_green {
+.light_green, .orgchart .node.graphLight_green .title{
 	color:hsl(92.14,57.32%,97.13%);
 	background-color:hsl(133.55,100%,23.74%,0.1);
 }
-.darkGreen {
+.darkGreen, .orgchart .node.graphDarkGreen .title{
 	color:hsl(92.14,57.32%,97.13%);
 	background-color:${webleger.site.style.primary.background.color};
 }
-.blue {
+.blue, .orgchart .node.graphBlue .title{
 	color:hsl(194.31 100% 17.38%);
 	background-color:hsl(191.81,100%,36.82%,0.15);
 }
-.orange {
+.lightBlue, .orgchart .node.graphLightBlue .title{
+	color:hsl(194.31 100% 17.38%);
+	background-color:hsl(183,66%,79.2%);
+}
+.orange, .orgchart .node.graphOrange .title{
 	color:hsl(24.57 100% 24.82%);
 	background-color:hsl(30.96,100%,48.44%,0.2);
 }
+.yellow, .orgchart .node.graphYellow .title{
+	color:hsl(24.57 100% 24.82%);
+	background-color:hsl(48,100%,67.5%);
+}
+.rose, .orgchart .node.graphRose .title{
+	color:hsl(194.31 100% 17.38%);
+	background-color:hsl(323,100%,75.3%);
+}
+.purple, .orgchart .node.graphPurple .title{
+	color:hsl(194.31 100% 17.38%);
+	background-color:hsl(288,72%,80.4%);
+}
+.lightRed, .orgchart .node.graphLightRed .title{
+	color:hsl(24.57 100% 24.82%);
+	background-color:hsl(0 100% 67.1%);
+}
 .round {
 	border-radius:9999px;
+}
+
+.orgchart .node .title, .orgchart .node .content {
+	min-width:150px;
 }
 
 .secondary strong{

@@ -10,7 +10,7 @@ anchorId=gendarmerie
 
 phone=05 55 76 66 00
 freeDate=Lundi de 8h00 à 12h00
-location=4, Rue Léon Mercier, 87160 Saint-Sulpice-les-Feuilles
+location=4 Rue Léon Mercier 87160 SAINT SULPICE LES FEUILLES
 
 order=302
 ~~~~~~

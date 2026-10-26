@@ -96,6 +96,72 @@
 			${logHelper.stackDebugMessage("Graph.build : no graph in contentHeader")}
 		</#if>
 	</#if>
+	
+	
+	<#if (theContent.orgChart)?? && theContent.orgChart?has_content && theContent.orgChart.data?has_content>
+		<#list theContent.orgChart.data as anOrgChart>
+			
+			<#global pageUseHierarchy=true />
+			<#local graphId="hierarchyChart">
+			<#local legendData = "">
+			<#local graphParam = []>
+			<#if (anOrgChart.options)??>
+				<#local graphId=sequenceHelper.getValue(anOrgChart.options, "graphId", "hierarchyChart")>
+				<#local specificClass=sequenceHelper.getValue(anOrgChart.options, "specificClass", "hierarchyGraph")>
+				<#local legendData = sequenceHelper.getValue(anOrgChart.options, "legend", "")>
+				<#local legendPosition = sequenceHelper.getValue(anOrgChart.options, "legendPosition", "")>
+				<#if (legendPosition == "" && ((legendData?is_sequence && legendData?size >0) || legendData != ""))>
+					<#local legendPosition = "top">
+				</#if>
+				<#local graphParam = sequenceHelper.getValue(anOrgChart.options, "graphParam", [])>
+			</#if>
+			<#if logHelper??>
+				${logHelper.stackDebugMessage("Graph.build (orgChart): building a, orgChart graht with id : " + graphId)}
+			</#if>
+			<#if legendPosition?lower_case == "top">
+				<@buildOrgChartLegend legendData />
+			</#if>
+			<#local transformedParams = common.toString(graphParam)?replace("\"","'")>
+			<div id="${graphId}" class="hierarchyGraph"<#if (specificClass)?? && specificClass?has_content> class="${specificClass}"</#if> data-graph-data="${anOrgChart.rawData}" data-graph-param="${transformedParams}"></div>
+			<#if legendPosition?lower_case == "bottom">
+				<@buildOrgChartLegend legendData />
+			</#if>
+		</#list>
+		<#else>
+		<#if logHelper??>
+			<@logHelper.debug "No orgChart Data for this content"/>
+		</#if>
+	</#if>
+</#macro>
+
+<#macro buildOrgChartLegend legendData>
+		<#if (legendData)??>
+		<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.buildOrgChartLegend : building Legend with data : " + common.toString(legendData))}
+		</#if>
+		<div class="orgChartlegend">
+		<span class="legendTtitle">Légende</span>
+			<#local jsonData = legendData>
+			<#if jsonData?is_sequence>
+				<#list jsonData as legendElement>
+					<div class="orgchart">
+						<ul class="nodes">
+							<li class="hierarchy">
+								<div class="node ${legendElement.class}">
+									<div class="title">${legendElement.label}</div>
+									<div class="content"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</#list>
+			<#else>
+				<#if logHelper??>
+			${logHelper.stackDebugMessage("Graph.buildOrgChartLegend : ERROR : Legend data is not a sequence !!")}
+		</#if>
+			</#if>
+		</#if>
+	</div>
 </#macro>
 
 <#macro recursiveStruture element parentType="" level=1>
@@ -116,8 +182,11 @@
 		<#case "commission">
 			<@handleElementTypeMembreCommission element level/>
 		<#break>
-		<#case "délégations">
+		<#case "délégation">
 			<@handleElementTypeDelegation element level />
+		<#break>
+		<#case "correspondant">
+			<@handleElementTypeDelegation element level "Correspondant"/>
 		<#break>
 	</#switch>
 	
@@ -139,8 +208,11 @@
 					<#case "commission">
 						<@handleElementTypeMembreCommission theGroup level/>
 					<#break>
-					<#case "délégations">
+					<#case "délégation">
 						<@handleElementTypeDelegation theGroup level />
+					<#break>
+					<#case "correspondant">
+						<@handleElementTypeDelegation theGroup level "Correspondant"/>
 					<#break>
 				</#switch>
 			<#else>
@@ -178,7 +250,7 @@
 	<table>
 		<thead>
 			<th>Commission</th>
-			<th>statut</th>
+			<th>Statut</th>
 		</thead>
 		<#list element.elements as membreCommission>
 			<tr>
@@ -189,20 +261,19 @@
 	</table>
 </#macro>
 
-<#macro handleElementTypeDelegation element level>
+<#macro handleElementTypeDelegation element level, title="Délégation">
 	<#local titleLevel = level+2>
 	
-	<h${titleLevel}>Délégations : </h${titleLevel}>
 	<#if (element.elements)??>
+		<h${titleLevel}>${common.plurialize(title, element.elements?size > 1)} : </h${titleLevel}>
 		<#if logHelper??>
 			${logHelper.stackDebugMessage("Graph.handleElementTypeDelegation (level:"+level+") displaying : " + element.elements?size + " delegations from : " + common.toString(element))}
 		</#if>
 		<ul class="delegation">
 			<#list element.elements as delegateTo>
-				<li><@buildLink delegateTo.type!"délégations" delegateTo.code/></li>
+				<li><@buildLink delegateTo.type!title delegateTo.code/></li>
 			</#list>
 		</ul>
-		
 	<#else>
 		<#if logHelper??>
 			${logHelper.stackDebugMessage("Graph.handleElementTypeDelegation (level:"+level+") displaying : 1 delegation from : " + common.toString(element))}
@@ -227,11 +298,8 @@
 		<#if isGrouped>
 			<#local tableTitle = "Membres de " + groupName + " :">
 		</#if>
-		<#local plurializeTitleChar = "">
-		<#if (anExtendedContent?size > 1)>
-			<#local plurializeTitleChar = "s">
-		</#if>
-		<h${titleLevel} class="relationTitle">${tableTitle}${plurializeTitleChar}</h${titleLevel}>
+		
+		<h${titleLevel} class="relationTitle">${common.plurialize(tableTitle)}</h${titleLevel}>
 		<table>
 			<thead>
 				<th>Nom</th>
@@ -445,7 +513,7 @@
 </#function>
 
 <#function getChildElement structureType="MISSING_TYPE" code="MISSING_CODE">
-	<#local structure = db.getPublishedContent("org_openCiLife_post")?filter(b -> ((b.category)?? && b.category?has_content && b.category==structureType) || structureType=="*")?filter(b -> (b.code)?? && b.code?has_content && b.code==code)>
+	<#local structure = db.getPublishedContent("org_openCiLife_post")?filter(b -> ((b.category)?? && b.category?has_content && sequenceHelper.seq_containsOne(b.category!"__empty_categ__", structureType)) || structureType=="*")?filter(b -> (b.code)?? && b.code?has_content && b.code==code)>
 	<#if (langHelper)??>
 		<#local structure = structure?filter(ct -> langHelper.isCorectLang(ct, langHelper.getLang(content)))>
 	</#if>
@@ -463,7 +531,7 @@
 	
 	<#local defaultCodeDisplay = code>
 	<#if plurial>
-		<#local defaultCodeDisplay = defaultCodeDisplay+"s">
+		<#local defaultCodeDisplay = common.plurialize(defaultCodeDisplay)>
 	</#if>
 	<#if structureType?has_content>
 		<#if code?has_content>
@@ -629,9 +697,16 @@
 		<#list element.group as theGroup>
 			<#local elementsList = theGroup>
 			<#if theGroup?is_hash>
-				<#local elementsList = theGroup.elements>
-				<#if (theGroup.type)??>
-					<#local elementType = theGroup.type>
+				<#if (theGroup.elements)??>
+					<#local elementsList = theGroup.elements>
+					<#if (theGroup.type)??>
+						<#local elementType = theGroup.type>
+					</#if>
+				<#else>
+					<#if logHelper??>
+						${logHelper.stackDebugMessage("Graph.search : ("+structureType+"/"+filterValue+",parentType="+parentType+") ERROR : the group is a HASH and des NOT have LIST 'elements' ==>" + common.toString(theGroup))}
+						<#continue>
+					</#if>	
 				</#if>
 			</#if>
 			
@@ -778,13 +853,12 @@
 			<#local plurial = false>
 			<#if (extendedContents?size >1)>
 				<#local plurial = true>
-				<#local title = title+"s">
 			</#if>
 			<h${titleLevel} class="relationTitle">
 				<#if linkToContent>
 					<@buildLink "*" groupName true plurial/>
 				<#else>
-					${title}
+					${common.plurialize(title, extendedContents?size >1)}
 				</#if>
 			</h${titleLevel}>
 		</#if>

@@ -13,7 +13,7 @@ order=412
 Le mariage sera célébré publiquement lors d'une cérémonie républicaine par l'officier de l'état civil de la commune dans laquelle l'un des époux, ou l'un de leurs parents, aura son domicile ou sa résidence.
 
 ## Constitution du dossier de mariage
-Les futurs époux sont invités à prendre contact avec la mairie afin de retirer leur dossier de mariage, ou le télécharger ci-dessous.
+Les futurs époux sont invités à prendre contact avec la mairie afin de retirer leur dossier de mariage.
 
 ## Pièces à fournir
 

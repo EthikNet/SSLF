@@ -31,7 +31,7 @@ Des ateliers et des formations tout au long de l'année. Consultez [l'agenda](ht
 
 #### Pour se divertir
 
-En collaboration avec les habitants et les acteurs du territoire, l’association La Papote imagine et met en place des activités et événements qui viennent renforcer la vie locale.
+En collaboration avec les habitants et les acteurs du territoire, l’association **les ami.e.s de la Papote** imagine et met en place des activités et événements qui viennent renforcer la vie locale.
 
 #### Pour s'informer
 

@@ -303,7 +303,7 @@ param : theObject : object to transform in String
 						<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle>
 					</svg>
 				</div>
-				<div class="location"><a href="${mapPrefixe}${locationAdress?url}"><#if locationDatas?size == 2>${locationLabel} : </#if>${locationAdress}</a></div>
+				<div class="location"><a href="${mapPrefixe}${locationAdress?url}" target="_blank"><#if locationDatas?size == 2>${locationLabel} : </#if>${locationAdress}</a></div>
 			</div>
 		</#list>
 	</#if>
@@ -326,7 +326,7 @@ param : theObject : object to transform in String
 				<div class="iconWrap">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
 				</div>
-				<div class="phone"><a href="tel:${phoneNumber}"><#if phoneDatas?size == 2>${phoneLabel} (</#if>${phoneNumber}<#if phoneDatas?size == 2>)</#if></a></div>
+				<div class="phone"><a href="tel:${phoneNumber}"><#if phoneDatas?size == 2>${phoneLabel} : </#if>${phoneNumber}</a></div>
 			</div>
 		</#list>
 	</#if>
@@ -366,7 +366,7 @@ param : theObject : object to transform in String
 				<#if webSiteDatas?size == 2>
 					<#local websiteUrl = webSiteDatas[1]?trim>
 				</#if>
-				<div class="website"><a href="${websiteUrl}">site web</a></div>
+				<div class="website"><a href="${websiteUrl}" target="_blank">site web</a></div>
 			</div>
 		</#list>
 	</#if>
@@ -442,9 +442,16 @@ param : theObject : object to transform in String
 	<#if (theContent.email)?? && theContent.email?has_content>
 		<#local emailItems = theContent.email?split(",")>
 		<#list emailItems as emailItem>
+			<#local emailData = emailItem?split("|")>
+			<#local emailLabel = "">
+			<#local emailDest = emailItem>
+			<#if (emailData?size>=2)>
+				<#local emailLabel = emailData[0]>
+			<#local emailDest = emailData[1]>
+			</#if>
 			<div class="elementWithIconSmallWrap">
 				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div>
-				<div class="email"><a href="mailto:${emailItem}">${emailItem}</a></div>
+				<div class="email"><a href="mailto:${emailDest}"><#if emailLabel?has_content>${emailLabel} : </#if>${emailDest}</a></div>
 			</div>
 		</#list>
 	</#if>
@@ -456,7 +463,7 @@ param : theObject : object to transform in String
 		<#list facebookItems as facebookItem>
 			<div class="elementWithIconSmallWrap">
 				<div class="iconWrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></div>
-				<div class="facebook"><a href="${facebookItem}">Facebook</a></div>
+				<div class="facebook"><a href="${facebookItem}" target="_blank">Facebook</a></div>
 			</div>
 		</#list>
 	</#if>
@@ -468,7 +475,7 @@ param : theObject : object to transform in String
 		<#list instagramItems as instagramItem>
 			<div class="elementWithIconSmallWrap">
 				<div class="iconWrap"><img src="${buildRootPathAwareURL("images/common/instagram.png")}"/></div>
-				<div class="facebook"><a href="${instagramItem}">Instagram</a></div>
+				<div class="facebook"><a href="${instagramItem}" target="_blank">Instagram</a></div>
 			</div>
 		</#list>
 	</#if>
@@ -485,3 +492,18 @@ param : theObject : object to transform in String
 		</#list>
 	</#if>
 </#macro>
+
+
+<#function plurialize singularString, condition = true>
+	<#if !condition>
+		<#return singularString>
+	</#if>
+	
+	<#local plurializeChar = "">
+	<#if !(singularString?ends_with("s") || singularString?ends_with("x"))>
+		<#local plurializeChar = "s">
+	</#if>
+	<#local plurialString = singularString + plurializeChar>
+	
+	<#return plurialString>
+</#function>

@@ -10,10 +10,7 @@ exerpt=Masseurs, Kinésithérapeutes & ostéopathes
 anchorId=audousset_pascale
 
 phone=05 55 76 79 45
-location=20 Rue Albert Joyeux
+location=20 Rue Albert Joyeux 87160 SAINT SULPICE LES FEUILLES
 order=306
 ~~~~~~
-AUDOUSSET Pascale
-
-> **Adresse**
-> 20 Rue Albert Joyeux
+Effectue des permanences régulières

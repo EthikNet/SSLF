@@ -10,10 +10,7 @@ exerpt=Masseurs - Kinésithérapeutes
 anchorId=sauvage_pascal
 
 phone=05 55 76 90 07
-location=2 impasse Voie de la Reine
+location=2 impasse Voie de la Reine 87160 SAINT SULPICE LES FEUILLES
 order=304
 ~~~~~~
-SAUVAGE Pascal
-
-> **Adresse**
-> 2 impasse Voie de la Reine
+Présente : toute la semaine

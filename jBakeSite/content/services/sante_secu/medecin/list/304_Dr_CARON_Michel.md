@@ -10,10 +10,7 @@ exerpt=Médecin généraliste
 anchorId=dr_caron
 
 phone=05 55 76 96 96
-location=11 Rue de la reine
+location=11 Rue de la reine 87160 SAINT SULPICE LES FEUILLES
 order=304
 ~~~~~~
-Dr CARON Michel
-
-> **Adresse**
-> 11 Rue de la reine
+	

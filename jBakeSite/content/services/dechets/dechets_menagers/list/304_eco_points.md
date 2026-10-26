@@ -15,6 +15,7 @@ Le tri des déchets constitue un enjeu majeur pour le territoire.
 
 Les éco-points sont répartis sur l'ensemble de la commune :
 
+![photo d'un éco-point](${webleger.build.host}/images/services/ecopoint.jpg)
 
 ### Où trouver les écopoints ?
 
@@ -39,5 +40,3 @@ Les éco-points sont répartis sur l'ensemble de la commune :
 
 > **Textiles**
 > - rue du stade à la croix rouge
-
-![photo d'un éco-point](${webleger.build.host}/images/services/ecopoint.jpg)

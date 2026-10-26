@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Espace dédié à la pétanque
 anchorId=boulodrome
 
-location=4 route d'Arnac-la-Poste
+location=4 route d'Arnac-la-Poste 87160 SAINT SULPICE LES FEUILLES
 order=314
 ~~~~~~
 Espace dédié à la pétanque, il favorise la pratique sportive conviviale et les rencontres intergénérationnelles.

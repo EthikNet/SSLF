@@ -5,12 +5,13 @@ category=acteur_economique
 acteurEcoCategorie=restaurant
 tags=
 status=published
-exerpt=Restaurant, boucherie, charcuterie, traiteur
+exerpt=Restaurant
 stickers={"disposition":"left_absolute", "data":[{"label":"🍴", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/restaurant/toutes_les_saveurs_du_bonheur.jpg
 location=11 Boismandé 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 74 46
 freeDate=Lundi au vendredi 12h00-14h00
+facebook=https://www.facebook.com/p/Restaurant-toutes-Les-Saveurs-Du-Bonheur-100063502419332/
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=604
 ~~~~~~

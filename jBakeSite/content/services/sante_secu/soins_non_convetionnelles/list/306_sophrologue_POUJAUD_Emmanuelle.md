@@ -10,10 +10,7 @@ exerpt=Sophrologue
 anchorId=poujaud_emmanuelle
 
 phone=06 70 84 89 22
-location=11 Route de Puifférat
+location=11 Route de Puifférat 87160 SAINT SULPICE LES FEUILLES
 order=306
 ~~~~~~
-Sophrologue POUJAUD Emmanuelle
-
-> **Adresse**
->  11 Route de Puifférat
+	

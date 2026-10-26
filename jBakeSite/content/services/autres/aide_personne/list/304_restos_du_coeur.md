@@ -6,16 +6,12 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/restos_du_coeur.png
-exerpt=A définir
+exerpt=Aide alimentaire
 anchorId=resto_du_coeur
-
-location=Derrière la mairie Voie de la Reine 87160 ST SULPICE LES FEUILLES
+location=Derrière la mairie Voie de la Reine 87160 SAINT SULPICE LES FEUILLES
 phone=05.55.60.42.71
 email=ad87.saint-sulpice@restosducoeur.org
 freeDate=distribution tous les mardis matins
 order=304
 ~~~~~~
-Distribution de nouriture.
-
-> **Distribution de nouriture**
-> tous les mardis matins : Derrière la mairie
+Distribution de nouriture, tisser du lien social, lutte contre l'isolement.

@@ -9,7 +9,7 @@ contentImage=images/services/logo_medcine_generale.png
 anchorId=Cabinets_infirmiers
 
 phone=05 55 76 92 11
-location=2 Place de l’Eglise
+location=2 Place de l’Eglise 87160 SAINT SULPICE LES FEUILLES
 order=308
 ~~~~~~
 - BOUCEY Amélie
@@ -17,6 +17,3 @@ order=308
 - LESAGE Aurélien
 - LEBEGUE Corinne
 - BONNIN Manuela
-
-> **Adresse**
-> 2 Place de l’Eglise

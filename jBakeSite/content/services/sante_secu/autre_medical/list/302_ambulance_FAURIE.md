@@ -10,11 +10,8 @@ exerpt=Ambulanciers Taxis  VSL
 anchorId=FAURIE
 
 phone=05 55 76 70 06
-location=5  Impasse des Bouguillons
+location=5  Impasse des Bouguillons 87160 SAINT SULPICE LES FEUILLES
 email=faurie.87@orange.fr
 order=302
 ~~~~~~
-Ambulance et VSL FAURIE
-
-> **Adresse**
-> 5  Impasse des Bouguillons
+	

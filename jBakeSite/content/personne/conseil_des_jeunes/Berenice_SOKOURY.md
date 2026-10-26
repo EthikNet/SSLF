@@ -1,10 +1,10 @@
-title=Anguerand THOMAS
-date=2026-07-13
+title=Bérénice SOKOURY
+date=2026-10-21
 type=org_openCiLife_post
 category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
-code=Anguerand THOMAS
+code=Bérénice SOKOURY
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=

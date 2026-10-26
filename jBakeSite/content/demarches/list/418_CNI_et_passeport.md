@@ -20,7 +20,7 @@ Les demandes de carte nationale d’identité et de passeport doivent être dép
 
 > Rue de l'Hermitage
 > 23300 La Souterraine
-W Tél. : 05 55 63 97 80
+> Tél. : 05 55 63 97 80
 
 La démarche peut également se faire à :
 
@@ -29,6 +29,9 @@ La démarche peut également se faire à :
 > 6 Place du Champ de Foire
 > 87360 Lussac-les-Églises
 > Tél. : 05 55 68 12 69
+
+**La Papote**
+ Vous pouvez prendre RDV au Tiers-Lieu la Papote un mardi matin pour vous aider dans cette démarche avec AIDANT CONNECT. Plus d'infos 05 55 60 06 69 ou www.lapapote.com
 
 #### Étape 1 : Préparer votre dossier
 Avant toute prise de rendez-vous, vous devez constituer votre dossier.
@@ -67,7 +70,7 @@ Pour toute demande concernant un mineur :
 Vous pouvez suivre l’avancement de votre demande directement sur votre espace ANTS.
 
 #### Étape 4 : Retirer votre titre d’identité
-Lorsque votre carte nationale d’identité ou votre passeport est disponible, vous recevrez un SMS vous invitant à venir le retirer auprès de la mairie où la demande a été déposée.
+Lorsque votre carte nationale d’identité ou votre passeport est disponible, vous recevrez un SMS vous invitant à venir le retirer auprès de la mairie où la demande a été déposée à condition d'avoir renseigné un numéro de téléphone portable au moment de la demande. Sinon un suivi en ligne est possible, vous pouvez consulter l'état d'avancement directement sur le site officiel de l'Agence nationale des titres sécurisés (ANTS) en vous munissant du numéro de demande inscrit sur votre récépissé.
 Vous disposez de **3 mois** à compter de la réception de cet avis pour récupérer votre titre. Passé ce délai, celui-ci sera détruit conformément à la réglementation.
 
 **Présence obligatoire lors du retrait**

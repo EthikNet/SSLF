@@ -1,4 +1,4 @@
-title=Nos enfants du nord limousin
+title=Nos enfants du nord Limousin
 date=2026-07-28
 type=org_openCiLife_block
 category=association

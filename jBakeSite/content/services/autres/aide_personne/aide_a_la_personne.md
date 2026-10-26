@@ -1,7 +1,7 @@
 title=Aide à la personne
 date=2026-07-17
 type=org_openCiLife_post
-category=sante_secu
+category=autres_services
 includeBlocks={"category":"aide_personne", "wrap":{"enable":"true", "specificClass":"service_items twoPerRow"}}
 toc={"title":"Sommaire", "displayImg":true}
 hooks={"data":[{"position":"beforeContent", "action":"toc.build", "renderOnce":true, "order":80}]}
@@ -12,6 +12,6 @@ status=published
 specificClass=servicesPage
 exerpt=Pour mieux vivre sur la commune
 displayTags=false
-order=322
+order=303
 ~~~~~~
 	

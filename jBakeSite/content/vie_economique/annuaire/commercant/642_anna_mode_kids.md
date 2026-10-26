@@ -5,7 +5,7 @@ category=acteur_economique
 acteurEcoCategorie=commerce
 tags=
 status=published
-exerpt=Vêtements, chaussures
+exerpt=Vêtements, accessoires, jouets
 stickers={"disposition":"left_absolute", "data":[{"label":"🧸", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/commerce/Anna_mode_kids_deventure.jpg
 responsable=RAYMOND Déborah
@@ -13,6 +13,7 @@ location=14 Place de l’Eglise 87160 SAINT SULPICE LES FEUILLES
 phone=06 33 78 10 03, 05 44 25 49 65
 email=a.modekids@yahoo.com
 freeDate=Mardi au samedi 9h30-12h00 / 14h00-18h30
+facebook=https://www.facebook.com/profile.php?id=61588466042514
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=642
 ~~~~~~

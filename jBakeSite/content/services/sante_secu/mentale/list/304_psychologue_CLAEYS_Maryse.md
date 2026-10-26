@@ -10,10 +10,7 @@ exerpt=Psychologue
 anchorId=CLAEYS_Maryse
 
 phone=06 61 50 65 35
-location=2 La Roche
+location=2 La Roche 87160 SAINT SULPICE LES FEUILLES
 order=304
 ~~~~~~
-Psychologue CLAEYS Maryse (sur R-V)
-
-> **Adresse**
->  2 La Roche
+	

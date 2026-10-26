@@ -1,10 +1,10 @@
-title=Ambrella ZONCA
+title=Lola TROUVAT
 date=2026-07-13
 type=org_openCiLife_post
 category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
-code=Ambrella ZONCA
+code=Lola TROUVAT
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=

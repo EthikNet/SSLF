@@ -1,11 +1,11 @@
-title=Pizza Limouzzi
+title=Pizzas Limouzzi
 date=2026-07-27
 type=org_openCiLife_block
 category=acteur_economique
 acteurEcoCategorie=commerce
 tags=
 status=published
-exerpt=distributeur pizza
+exerpt=distributeur pizzas
 stickers={"disposition":"left_absolute", "data":[{"label":"🍕", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/commerce/pizza_limouzzi.jpg
 location=Rue Jean Jaurès 87160 SAINT SULPICE LES FEUILLES

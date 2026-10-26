@@ -11,7 +11,7 @@ anchorId=transport_scolaire
 
 phone=0970 870 870
 website=https://transports.nouvelle-aquitaine.fr/transports-scolaires
-location=14, Rue François de Sourdis 33077 Bordeaux Cedex
+location=14 Rue François de Sourdis 33077 Bordeaux Cedex
 freedate=du lundi au samedi 8h-19h
 order=310
 ~~~~~~

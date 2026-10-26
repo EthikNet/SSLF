@@ -60,6 +60,7 @@
 				<#local allValues = []>
 				<#local allLabel = filter.allLabel!"Tous">
 				<#local allowMultiple = filter.allowMultiple!"true">
+				<#local filterOrder = filter.order!"DESC">
 			  	<#list subContents as subContent>
 			  	<#if (filter.element)?? && (subContent[filter.element])??>
 			  			<#local subContentValues = subContent[filter.element]>
@@ -75,6 +76,13 @@
 				  		</#if>
 			  		</#if>
 			  	</#list>
+			  	
+			  	<#if filterOrder?has_content>
+			  		<#local allValues = allValues?sort>
+			  		<#if filterOrder == "DESC">
+			  			<#local allValues = allValues?reverse>
+			  		</#if>
+			  	</#if>
 			  	
 			  	<#local theTarget = target>
 			  	<#if addSubTargetElement>
@@ -192,6 +200,7 @@ param : content : content to search for include content
 		<#local orderDirection = content.includeContent.orderDirection!"ascending">
 		<#local filter = content.includeContent.filter!"">
 		<#local anchorId = content.anchorId!"">
+		<#local specificClassList = content.includeContent.display.specificClassList!"">
 		
 		<#local subContents = allSubContents>
 		
@@ -273,7 +282,7 @@ param : content : content to search for include content
 				<#return>
 			<#elseif (listDisplayType == "table")>
 				<@generateUserFilters content subContents "#"+anchorIdList+" ."+listDisplayType/>
-				<table class="${listDisplayType}_list content_type_${subContentDisplayContentMode} elementsList">
+				<table class="${listDisplayType}_list content_type_${subContentDisplayContentMode} elementsList<#if (specificClassList?has_content)> ${specificClassList}</#if>">
 					<thead>
 						<tr>
 							<#if (content.includeContent.display.columns)??>
@@ -293,7 +302,7 @@ param : content : content to search for include content
 					<tbody>
 			<#else>
 				<@generateUserFilters content subContents "#"+anchorIdList+" ."+listDisplayType/>
-				<div class="${listDisplayType}_list elementsList">
+				<div class="${listDisplayType}_list elementsList<#if (specificClassList?has_content)> ${specificClassList}</#if>">
 			</#if>
 			
 			<#list subContents as subContent>
@@ -554,7 +563,7 @@ param : content : content to search for include content
 	
 	<@generateUserFilters content subContents "#"+anchorIdList+" ."+listDisplayType/>
 	
-	<div class="${className}_list content_type_${subContentDisplayContentMode}">
+	<div class="${className}_list content_type_${subContentDisplayContentMode}<#if (specificClassList?has_content)> ${specificClassList}</#if>">
 		<div class="middleLine"></div>
 		<div class="${className}_items">
 			<#list items?sort_by("order") as subContent>
