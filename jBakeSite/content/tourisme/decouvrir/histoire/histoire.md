@@ -9,7 +9,7 @@ imageHero={"category":"imageHeroHistoire"}
 specificClass=tourisme
 exerpt=Des origines du nom au bourg d'aujourd'hui.
 displayTags=false
-contentImage=/images/tourisme/photo_bourg_ancien_mairie.png
+contentImage=/images/tourisme/photo_bourg_ancien_mairie.jpg
 order=506
 ~~~~~~
 	

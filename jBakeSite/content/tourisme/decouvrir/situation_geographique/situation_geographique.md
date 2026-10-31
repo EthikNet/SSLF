@@ -8,7 +8,7 @@ imageHero={"category":"imageHeroSituationGeo"}
 specificClass=tourisme
 exerpt=Où sommes-nous, comment venir.
 displayTags=false
-contentImage=/images/tourisme/situation_geographique.png
+contentImage=/images/tourisme/situation_geographique.jpg
 order=504
 ~~~~~~
 	
