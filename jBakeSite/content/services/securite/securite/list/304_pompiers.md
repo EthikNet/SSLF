@@ -8,7 +8,7 @@ status=published
 contentImage=images/services/logo_pompiers.png
 anchorId=pompiers
 phone=18
-location=Rue du dc ferdinand renaud 87160 SAINT SULPICE LES FEUILLES
+location=17 rue du Dr. Ferdinand Renault 87160 SAINT SULPICE LES FEUILLES
 order=304
 ~~~~~~
 Chef de Centre : Adjudant-chef Mathieu PINARDON

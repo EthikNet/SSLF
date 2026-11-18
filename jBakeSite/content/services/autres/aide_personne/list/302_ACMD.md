@@ -18,9 +18,6 @@ order=302
 ~~~~~~
 L’Association Aide Collective pour le Maintien à Domicile a été fondée en 1982. Elle est régie par la loi du 1er juillet 1901 à but non lucratif.
 
-> **Horaires du bureau**
-> Lundi au Vendredi de 8h30 à 12h00 
-
 - assistance aux personnes âgées
 - préparation des repas et courses
 - entretien du logement, du linge. 

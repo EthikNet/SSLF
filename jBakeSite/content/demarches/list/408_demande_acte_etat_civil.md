@@ -27,6 +27,8 @@ order=408
 #### Par internet
 via service public [https://www.service-public.fr/particuliers/vosdroits/N359 ](https://www.service-public.fr/particuliers/vosdroits/N359)
 
+
+#### Sur place
 En se rendant à la mairie, muni d’une pièce d’identité 
 
 #### Par courrier

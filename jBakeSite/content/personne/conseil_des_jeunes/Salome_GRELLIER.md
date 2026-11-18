@@ -1,10 +1,10 @@
-title=Lola FAURIE
+title=Salomé GRELLIER
 date=2026-07-13
 type=org_openCiLife_post
 category=personne
 subTemplate=sslf.personneSubTemplate
 specificClass=personne
-code=Lola FAURIE
+code=Salomé GRELLIER
 imageHero={"category":"imageHeroVieMunicipale"}
 status=published
 exerpt=

@@ -1,30 +1,26 @@
-title=location bureau privatif
+title=aide administrative et numérique
 date=2026-07-20
 type=org_openCiLife_block
 category=laPapote
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
-contentImage=/images/services/la_papote_travailler_indivi.svg
-exerpt=Louez un bureau privatif 10m²
-anchorId=loc_papote_bureau
+contentImage=/images/services/la_papote_s_informer.svg
+exerpt=Soyez accompagné dans ses démarches administratives en ligne
+anchorId=papote_aide_numerique
 
 location=9 rue du Commerce 87160 SAINT SULPICE LES FEUILLES
 phone=07 48 10 75 27
-email=resa@lapapote.com
 website=https://lapapote.com/
 order=304
 ~~~~~~
-Un bureau privatif.
+C’est un lieu où chacun peut trouver de l’aide administrative et numérique. 
 
-![Photo des anciennes écoles](${webleger.build.host}/images/services/la_papote_bureau.jpg)
+### AidantsConnect
+Chacun a la possibilité de se faire accompagner dans ses démarches administratives en ligne de manière sécurisée via le dispositif AidantsConnect. 
 
-> **Tarifs**
-> ½ journée : 8 €
-> Journée : 15 €
-> Semaine lundi à dimanche : 60 €
+### Point Contact France Travail
+Pour des démarches liées à l’emploi, La Papote est devenu Point Contact France Travail, cela signifie que les chercheurs d’emploi peuvent accéder aux principaux services de France Travail (démarches en ligne, accès à l’espace personnel des usagers pour s’inscrire, s’actualiser, rechercher des offres d’emploi, rdv en visio avec un conseiller France Travail…). 
 
-> **Réservations**
-> Auprès de la papote
-> Tél : 07 48 10 75 27
-> email : resa@lapapote.com
+### aide numérique
+Le tiers-lieu propose aussi de l’aide numérique en accompagnant ceux qui le souhaitent dans l’utilisation de leur ordinateur, tablette ou téléphone.

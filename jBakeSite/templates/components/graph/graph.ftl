@@ -183,10 +183,10 @@
 			<@handleElementTypeMembreCommission element level/>
 		<#break>
 		<#case "délégation">
-			<@handleElementTypeDelegation element level />
+			<@handleElementTypeAsUlList element level />
 		<#break>
 		<#case "correspondant">
-			<@handleElementTypeDelegation element level "Correspondant"/>
+			<@handleElementTypeAsUlList element level "Correspondant"/>
 		<#break>
 	</#switch>
 	
@@ -209,10 +209,10 @@
 						<@handleElementTypeMembreCommission theGroup level/>
 					<#break>
 					<#case "délégation">
-						<@handleElementTypeDelegation theGroup level />
+						<@handleElementTypeAsUlList theGroup level />
 					<#break>
 					<#case "correspondant">
-						<@handleElementTypeDelegation theGroup level "Correspondant"/>
+						<@handleElementTypeAsUlList theGroup level "Correspondant"/>
 					<#break>
 				</#switch>
 			<#else>
@@ -246,7 +246,7 @@
 <#macro handleElementTypeMembreCommission element level>
 	<#local titleLevel = level+2>
 	
-	<h${titleLevel}>Membre des comissions : </h${titleLevel}>
+	<h${titleLevel}>Membre des commissions : </h${titleLevel}>
 	<table>
 		<thead>
 			<th>Commission</th>
@@ -261,22 +261,23 @@
 	</table>
 </#macro>
 
-<#macro handleElementTypeDelegation element level, title="Délégation">
+<#macro handleElementTypeAsUlList element level, title="Délégation">
 	<#local titleLevel = level+2>
 	
 	<#if (element.elements)??>
-		<h${titleLevel}>${common.plurialize(title, element.elements?size > 1)} : </h${titleLevel}>
+		<#local plurialize = (element.elements?size > 1 && title!="Correspondant")>
+		<h${titleLevel}>${common.plurialize(title, plurialize)} : </h${titleLevel}>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.handleElementTypeDelegation (level:"+level+") displaying : " + element.elements?size + " delegations from : " + common.toString(element))}
+			${logHelper.stackDebugMessage("Graph.handleElementTypeAsUlList (level:"+level+") displaying : " + element.elements?size + " " + title + " (plurialize : " + plurialize?string("yes","no") + ") from : " + common.toString(element))}
 		</#if>
-		<ul class="delegation">
+		<ul class="${title}">
 			<#list element.elements as delegateTo>
 				<li><@buildLink delegateTo.type!title delegateTo.code/></li>
 			</#list>
 		</ul>
 	<#else>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.handleElementTypeDelegation (level:"+level+") displaying : 1 delegation from : " + common.toString(element))}
+			${logHelper.stackDebugMessage("Graph.handleElementTypeAsUlList (level:"+level+") displaying : 1 " + title + " from : " + common.toString(element))}
 		</#if>
 		<@buildLink element.type element.code/>
 	</#if>
@@ -601,7 +602,7 @@
 	<#return extendedContent>
 </#function>
 
-<#function search element structureType filterData parentType="">
+<#function search element structureType filterData parentType="" parentCode="">
 	<#local related = []>
 	<#local match = false>
 	<#local elementType = parentType>
@@ -682,7 +683,7 @@
 		<#if (element.hierarchy)??>
 			<#local theHierarchy = element.hierarchy>
 		</#if>
-		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "poste":thePoste, "hierarchy":theHierarchy, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
+		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "poste":thePoste, "hierarchy":theHierarchy, "parent":{"type":parentType, "code":parentCode}, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
 		<#if logHelper??>
 			${logHelper.stackDebugMessage("Graph.search : matching (enchanced) element : " + common.toString(enchancedElement))}
 		</#if>
@@ -710,8 +711,9 @@
 				</#if>
 			</#if>
 			
+			<#local parentElement = element>
 			<#list elementsList as element>
-				<#local related = related + search(element structureType filterData elementType)>
+				<#local related = related + search(element structureType filterData elementType parentElement.code!"")>
 			</#list>
 		</#list>
 	</#if>
@@ -790,7 +792,7 @@
 		<#local parentType = elements.type>
 	</#if>
 	<#list elements as element>
-		<#local related = related + search(element, structureType, filterData, parentType)>
+		<#local related = related + search(element, structureType, filterData, parentType, elements.code!"")>
 	</#list>
 	<#return related>
 </#function>
@@ -850,15 +852,12 @@
 			</#if>
 		</#if>
 		<#if (title)?? && title?has_content>
-			<#local plurial = false>
-			<#if (extendedContents?size >1)>
-				<#local plurial = true>
-			</#if>
+			<#local needPlurial = (extendedContents?size >1 && title!="correspondant")>
 			<h${titleLevel} class="relationTitle">
 				<#if linkToContent>
-					<@buildLink "*" groupName true plurial/>
+					<@buildLink "*" groupName true needPlurial/>
 				<#else>
-					${common.plurialize(title, extendedContents?size >1)}
+					${common.plurialize(title, needPlurial)}
 				</#if>
 			</h${titleLevel}>
 		</#if>

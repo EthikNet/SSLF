@@ -1,31 +1,17 @@
-title=Salle de conférence
-date=2026-07-20
+title=se divertir
+date=2026-11-12
 type=org_openCiLife_block
 category=laPapote
 subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=/images/services/la_papote_divertir.svg
-exerpt=Louez la salle de conférence (80-100 personnes)
-anchorId=loc_papote_salle_conf
+exerpt=De nombreux évènements sont organisés chaque mois
+anchorId=papote_se_divertir
 
 location=9 rue du Commerce 87160 SAINT SULPICE LES FEUILLES
 phone=07 48 10 75 27
-email=resa@lapapote.com
-website=https://lapapote.com/
-order=306
+website=https://lapapote.com/?page_id=21317
+order=308
 ~~~~~~
-Salle de conférence.
-
-![Photo des anciennes écoles](${webleger.build.host}/images/services/la_papote_salle_conference.jpg)
-
-> **Tarifs**
-> ½ journée : 50 €
-> Journée : 110 €
-> Soirée : 80 €
-> Semaine lundi à dimanche : 440 € (300€ en cas de réservation annuelle de plus de 5 semaines)
-
-> **Réservations**
-> Auprès de la papote
-> Tél : 07 48 10 75 27
-> email : resa@lapapote.com
+C’est un lieu où chacun peut se divertir : en collaboration avec les habitants et les acteurs du territoire, l’association Les Ami·e·s de La Papote imagine et met en place des activités et évènements qui viennent renforcer la vie locale. De nombreux évènements sont organisés chaque mois, consultez l’agenda pour en savoir plus : [Agenda de la Papote](https://lapapote.com/?page_id=21317).

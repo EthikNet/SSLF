@@ -9,6 +9,7 @@ contentImage=images/services/logo_Maximum.png
 exerpt=Maximum est une ESS qui œuvre à la fois pour la protection de l’environnement et l’insertion professionnelle
 anchorId=ressourcerie_maximum
 
+location=1 Le Masgrimaud 87160 Mailhac-sur-Benaize
 phone=05 55 76 22 78
 website=https://www.associationmaximum.com/
 freeDate=du lundi au samedi 9h-12h / 13h30-17h30
@@ -19,10 +20,3 @@ La ressourcerie Maximum est une association d’économie sociale et solidaire q
 Grâce à son activité, elle contribue à la réduction des déchets, au développement de l’économie circulaire et à la création d’emplois pour des personnes en parcours d’insertion.
 
 Cette structure est aujourd’hui l’une des principales ressourceries du nord de la Haute-Vienne et accueille les particuliers souhaitant donner, acheter ou valoriser des objets du quotidien.
-
-> **Horaires**
-> du lundi au samedi 9h-12h / 13h30-17h30
-
-> **Addresse**
-> 1 Le Masgrimaud 87160 Mailhac-sur-Benaize
-

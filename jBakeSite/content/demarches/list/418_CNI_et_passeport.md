@@ -31,7 +31,9 @@ La démarche peut également se faire à :
 > Tél. : 05 55 68 12 69
 
 **La Papote**
- Vous pouvez prendre RDV au Tiers-Lieu la Papote un mardi matin pour vous aider dans cette démarche avec AIDANT CONNECT. Plus d'infos 05 55 60 06 69 ou www.lapapote.com
+Vous pouvez prendre RDV au Tiers-Lieu la Papote un mardi matin pour vous aider dans cette démarche avec AIDANT CONNECT. Plus d'infos 05 55 60 06 69 ou www.lapapote.com
+
+
 
 #### Étape 1 : Préparer votre dossier
 Avant toute prise de rendez-vous, vous devez constituer votre dossier.

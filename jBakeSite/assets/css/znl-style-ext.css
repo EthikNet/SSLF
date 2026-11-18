@@ -394,6 +394,9 @@ h2 {
 	border: 1px solid ${webleger.site.style.primary.background.color};
 	background-color: ${webleger.site.style.primary.background.color.medium};
 }
+.personneDetail .personneSyntheseFeatured li{
+	color:${webleger.site.style.color};
+}
 
 .personneNoDetails .blockTitle {
 	font-size:125%;

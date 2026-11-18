@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/icones/DAE_sign.svg
-exerpt=Aide Collective pour le Maintien à Domicile depuis 1982
+exerpt=Plusieurs Défibrillateurs Automatisés Externes (DAE) sont installés sur la commune
 anchorId=defibrilateur
 
 order=302
@@ -23,7 +23,7 @@ Ces équipements permettent d’intervenir rapidement en cas d’arrêt cardiaqu
 > *accessible aux horaires d’ouverture de l’établissement*
 
 > **Stade du Mondelet**
-> 4 route d'arnac la poste
+> 4 route d'Arnac-la-Poste
 > *accessible 24h/24 et 7j/7*
 
 > **Cabinet du Docteur Bourrel**

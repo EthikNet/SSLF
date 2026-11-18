@@ -227,9 +227,9 @@
 	</div>
 </#macro>
 
-<#macro comissionsMembresGraphSubTemplate extendedContents level isGrouped options>
+<#macro commissionsMembresGraphSubTemplate extendedContents level isGrouped options>
 	<#if logHelper??>
-		${logHelper.stackDebugMessage("sslf.comissionsParMembresGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
+		${logHelper.stackDebugMessage("sslf.commissionsParMembresGraphSubTemplate : displaying data, isGrouped : " + isGrouped?string("true","false"))}
 	</#if>
 		<@graph.displayGroupOfRelations extendedContents level isGrouped; groupContent>
 			<div class="block_wraping fourPerRow">
@@ -337,7 +337,13 @@
 										<#local theFonction = " (" + theFonction + ")">
 									</#if>
 									
-									<li>${typeLabel}${onSytheseRelation.code!"MISSING_CODE"}${statusLabel}<#if thePoste !=""> : ${thePoste} </#if>${theFonction}</li>
+									<#local parentStructure = onSytheseRelation.parent.code!"">
+									<#local strcutureLabel = "">
+									<#if parentStructure != "commune_SSLF">
+										<#local strcutureLabel = onSytheseRelation.parent.code>
+									</#if>
+									
+									<li><#if strcutureLabel?has_content><b>${strcutureLabel}</b> | </#if>${typeLabel}${onSytheseRelation.code!"MISSING_CODE"}${statusLabel}<#if thePoste !=""> : ${thePoste} </#if>${theFonction}</li>
 								</@graph.filterRelation>
 							</ul>
 						</@graph.displayARelation>

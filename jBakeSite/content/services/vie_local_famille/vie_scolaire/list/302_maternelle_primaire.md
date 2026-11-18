@@ -16,13 +16,13 @@ email=ce.0871004U@ac-limoges.fr
 freeDate=Lun/Mar/Jeu/Ven · 9h00–12h00 / 13h30–16h30
 order=302
 ~~~~~~
-Directrice : Marie-Claire TIXIER
-Tél : 05 55 76 93 47
-
 L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans de la commune et des communes voisines. Le ramassage scolaire est organisé chaque jour par la Région.
 
 > **Effectif**
 > 5 classes à la rentrée 2026
+
+> **Directrice** 
+> Marie-Claire TIXIER
 
 
 - Inscription en mairie (livret de famille, justificatif de domicile, carnet de santé à jour des vaccinations, CNI des parents, jugement de divorce si concerné) 

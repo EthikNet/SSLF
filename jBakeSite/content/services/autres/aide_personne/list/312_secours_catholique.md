@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/secours_catholique.png
-exerpt=A définir
+exerpt=Aide alimentaire
 anchorId=secours_catholique
 
 location=21 le Virvalais 87160 SAINT SULPICE LES FEUILLES

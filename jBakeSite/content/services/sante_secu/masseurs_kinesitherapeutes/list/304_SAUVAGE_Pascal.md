@@ -13,4 +13,4 @@ phone=05 55 76 90 07
 location=2 impasse Voie de la Reine 87160 SAINT SULPICE LES FEUILLES
 order=304
 ~~~~~~
-Présente : toute la semaine
+Présent : toute la semaine

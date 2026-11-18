@@ -13,36 +13,15 @@ contentImage=/images/services/logo-papote.png
 exerpt=Travailler, apprendre, se divertir, s'informer.
 order=308
 ~~~~~~
-### La Papote vous propose
+À La Papote, les activités se construisent avec et pour les habitants du territoire. Un tiers-lieu, c’est un endroit où chacune peut proposer des activités, des ateliers ou des rencontres ouverts à toutes et tous. Une idée, une passion ou un savoir-faire à partager ? N'hésitez pas à pousser les portes du tiers-lieu ! 
 
+Le tiers-lieu est co-géré par deux structures : 
 
-#### Pour travailler : 
+- la mairie, qui développe des activités autour du monde de l’emploi et de la formation ; 
+- l'association Les Ami·e·s de La Papote, qui a pour objet l’animation de la vie sociale et qui a dans ce cadre obtenu l’agrément Espace de Vie Sociale par la Caisse d’Allocations Familiales.
 
-De nombreux équipements pour travailler : Internet par fibre optique, wifi, imprimante-scanner, matériel pour visioconférences, paperboad.
-
-Des espaces de détente : salon, jardin avec terrasse, cuisine équipée.
-
-Un accès 24/24h – 7/7j : accès autonome et sécurisé à votre espace de travail
-
-
-#### Pour apprendre
-
-Des ateliers et des formations tout au long de l'année. Consultez [l'agenda](https://lapapote.com/?page_id=21317) pour plus d'informations.
-
-#### Pour se divertir
-
-En collaboration avec les habitants et les acteurs du territoire, l’association **les ami.e.s de la Papote** imagine et met en place des activités et événements qui viennent renforcer la vie locale.
-
-#### Pour s'informer
-
-La Papote a pour vocation de devenir le lieu où les habitants du territoire iront lorsqu’ils auront une interrogation sur des sujets tels que la vie associative, l’accès aux droits, le tourisme, l’emploi et la formation, le numérique …
-
-#### Pour découvrir
-
-Pour découvrir notre ville et sa région, venez vous renseigner au point infos sur place durant les heures d'ouverture.
-
-**Une équipe à votre écoute !**
+Allez rencontrer l’équipe qui vous accueille ou papoter avec les autres utilisateurs, et venez participer aux nombreux évènements qui y sont organisés et/ou proposez vos savoir-faire.
 
 Pour plus d'infos : [Site web de la Papote](https://lapapote.com/)
 
-![Jardin de la papote](${webleger.build.host}/images/services/papote_jardin.jpg)
+![Jardin de la papote](${webleger.build.host}/images/services/la_papote_jardin.jpg)

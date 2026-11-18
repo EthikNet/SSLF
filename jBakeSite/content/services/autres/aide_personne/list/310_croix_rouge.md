@@ -20,13 +20,13 @@ Deux boutiques pour acheter d'occasion et solidaire.
 
 > **Boutique du bourg**
 > 29 rue du commerce 87160 Saint-Sulpice-les-Feuilles
-> **Horraires**
+> **Horaires**
 > - mardi 9h-12h 
 > - mercredi 14h-18h
 
 > **Vestiaire du Stade**
 > 2 rue du stade 87160 Saint-Sulpice-les-Feuilles
-> **Horraires**
+> **Horaires**
 > - mardi 14h-17h 
 > - vendredi 14h-17h
 

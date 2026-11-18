@@ -13,15 +13,12 @@ phone=06 33 65 17 47
 email=contact@msor.fr
 website=https://msor.fr/
 freeDate=Lundi au vendredi : de 9h à 12h
+location=Association Mobilité Solidaire Rurale (MSoR) C/o Mairie de Bellac 14 place de la République BP 73 87300 Bellac
 order=306
 ~~~~~~
 Service de transport d’utilité sociale destiné aux résidents des communes du Haut-Limousin-en-Marche et de Gartempe Saint-Pardoux.
 
 > **Objectif**
 > Faciliter les déplacements des personnes isolées ou sans moyens de transport, en renforçant le lien social dans la région
-
-> **Adresse**
-> Association Mobilité Solidaire Rurale (MSoR) C/o Mairie de Bellac 14 place de la République BP 73 87300 Bellac 
-
 
 Une **aide** aux **déplacements** pour les habitants, par les habitants, sur le territoire du Pays du Haut Limousin.

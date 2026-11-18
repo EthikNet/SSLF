@@ -10,7 +10,7 @@ exerpt=L’EHPAD Résidence du Cèdre est un établissement public géré par le
 anchorId=residence_Cedre
 
 files={"data":[{"location":"fichiers/sante/residence_du_cedre_mai2026.pdf", "label":"Téléchargez la plaquette !", "icon":"images/icones/dowload.svg", "main":true}]}
-location=2 léon mercier 87160 SAINT SULPICE LES FEUILLES
+location=2 rue Léon Mercier 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 76 66 00
 email=residenceducedre@wanadoo.fr
 freeDate=Du lundi au vendredi 9h00 – 13h00 / 14h00 – 16h00

@@ -13,4 +13,4 @@ phone=05 55 11 49 04
 location=20 Rue Albert Joyeux 87160 SAINT SULPICE LES FEUILLES
 order=314
 ~~~~~~
-Sur Rendez-vous
+	

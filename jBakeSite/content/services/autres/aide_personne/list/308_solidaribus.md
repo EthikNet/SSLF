@@ -9,7 +9,7 @@ contentImage=<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" view
 exerpt=Accueil social et aides
 anchorId=solidaribus
 
-location=parking place du monument aux morts
+location=parking place du monument aux morts 87160 SAINT SULPICE LES FEUILLES
 phone=05 55 04 20 00
 email=solidaribus.spf87@orange.fr
 freeDate=2e jeudi matin de chaque mois 
@@ -17,13 +17,7 @@ order=308
 ~~~~~~
 Toute personne rencontrant des difficultés sociales pourra se présenter à la permanence, munie de ses justificatifs de situation, pour bénéficier de l'aide du Secours Populaire.
 
-![croix rouge deventure](${webleger.build.host}/images/services/solidaribus_infos.jpg)
-
-> **Adresse**
-> parking place du monument aux morts 87160 Saint-Sulpice-les-Feuilles
-
-> **Horaires**
-> parking place du monument aux morts
+![Logo solidaribus](${webleger.build.host}/images/services/solidaribus_infos.jpg)
 
 - accueil social
 - aide alimentaire

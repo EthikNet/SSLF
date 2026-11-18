@@ -94,4 +94,4 @@ Il est similaire au précédent sauf qu'on ne veut afficher que les contenus dé
 
 Un aute exemple, pour une commission : **affaires_scolaires.md**.
 
-``graph={"query":[{"type":"commission", "filter":"code:affaires scolaires", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"} "subTemplate":"sslf.comissionsMembresGraphSubTemplate"}]}``
+``graph={"query":[{"type":"commission", "filter":"code:affaires scolaires", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut"} "subTemplate":"sslf.commissionsMembresGraphSubTemplate"}]}``
