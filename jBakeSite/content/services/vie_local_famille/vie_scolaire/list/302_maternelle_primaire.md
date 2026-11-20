@@ -30,8 +30,5 @@ L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans de
 ### L’école maternelle
 ![photo de l'école maternelle](${webleger.build.host}/images/services/ecole_primaire_batiment.jpg)
 
-> **Téléphone**
-> 05 55 76 77 91
-
 ### L’école élémentaire
 ![photo de l'école maternelle](${webleger.build.host}/images/services/ecole_elementaire_batiment.jpg)

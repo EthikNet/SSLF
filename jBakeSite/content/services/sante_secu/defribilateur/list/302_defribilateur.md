@@ -26,9 +26,6 @@ Ces équipements permettent d’intervenir rapidement en cas d’arrêt cardiaqu
 > 4 route d'Arnac-la-Poste
 > *accessible 24h/24 et 7j/7*
 
-> **Cabinet du Docteur Bourrel**
-> 14 rue du 8 Mai 1945
-
 > **Cabinet infirmier**
 > 2 place de l’Église, à l’extérieur
 > *accessible 24h/24 et 7j/7*
