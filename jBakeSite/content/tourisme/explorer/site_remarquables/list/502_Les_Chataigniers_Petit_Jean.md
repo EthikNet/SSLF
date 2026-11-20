@@ -1,4 +1,4 @@
-title=Les Châtaigniers « Petit Jean » 
+title=Les Châtaigniers «Petit Jean» 
 date=2026-09-04
 type=org_openCiLife_block
 category=site_remarquable

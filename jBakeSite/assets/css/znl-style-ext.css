@@ -143,6 +143,23 @@ p {
 	color:${webleger.site.style.muted.foreground};
 }
 
+.featured {
+	border-width:3px !important;
+	border-color:${webleger.site.style.primary.background.color} !important;
+}
+.featured_label {
+	font-size: 14px;
+	background-color: ${webleger.site.style.primary.color};
+	border: 2px solid ${webleger.site.style.primary.background.color};
+	color: ${webleger.site.style.primary.background.color};
+}
+
+.featured .service_header{
+	background-color: ${webleger.site.style.primary.background.color.light};
+}
+.toc_item.featured{
+	background-color: ${webleger.site.style.primary.background.color.light};
+}
 .minimalCard .blockTitle {
 	font-size:medium;
 	font-weight: 700;
@@ -430,7 +447,7 @@ h2 {
 	flex-wrap: wrap;
 	flex-direction: row;
 	gap: 12px;
-	padding:6px;
+	padding:20px 6px 6px 6px;
 }
 .service_header {
 	border-bottom: 1px solid lightgrey;

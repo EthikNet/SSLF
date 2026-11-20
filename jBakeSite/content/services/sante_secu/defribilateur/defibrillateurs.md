@@ -12,6 +12,7 @@ specificClass=servicesPage
 contentImage=images/icones/DAE_sign.svg
 exerpt=Pour aider aux secours d'urgence
 displayTags=false
+displayTags=false
 order=308
 ~~~~~~
 	

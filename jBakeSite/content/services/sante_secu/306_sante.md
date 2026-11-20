@@ -7,6 +7,7 @@ imageHero={"category":"imageHeroServices"}
 tags=
 status=published
 enableGlossary=false
+displayTags=false
 order=306
 ~~~~~~
 	

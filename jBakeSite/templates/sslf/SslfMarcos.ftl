@@ -180,10 +180,10 @@
 		<#local featauredText = theBlock.featured.text>
 	</#if>
 	<#local displayTitle = true>
-	<#if (serviceGroup.displayTitle)?? && serviceGroup.display.displayTitle == false>
+	<#if (theBlock.displayTitle)?? && theBlock.display.displayTitle == false>
 		<#local displayTitle = false>
 	</#if>
-	<div <@block.generateAnchor theBlock/> class="block ${className}_block">
+	<div <@block.generateAnchor theBlock/> class="block ${className}_block<#if (featauredText?has_content)> featured</#if>">
 		<#if featauredText?has_content>
 			<span class="featured_label">${featauredText}</span>
 		</#if>
@@ -342,8 +342,12 @@
 									<#if parentStructure != "commune_SSLF">
 										<#local strcutureLabel = onSytheseRelation.parent.code>
 									</#if>
+									<#local theCode = onSytheseRelation.code!"MISSING_CODE">
+									<#if theCode=="CCHLEM">
+										<#local theCode = "<b>"+theCode+"</b>">
+									</#if>
 									
-									<li><#if strcutureLabel?has_content><b>${strcutureLabel}</b> | </#if>${typeLabel}${onSytheseRelation.code!"MISSING_CODE"}${statusLabel}<#if thePoste !=""> : ${thePoste} </#if>${theFonction}</li>
+									<li><#if strcutureLabel?has_content><b>${strcutureLabel}</b> | </#if>${typeLabel}${theCode}${statusLabel}<#if thePoste !=""> : ${thePoste} </#if>${theFonction}</li>
 								</@graph.filterRelation>
 							</ul>
 						</@graph.displayARelation>

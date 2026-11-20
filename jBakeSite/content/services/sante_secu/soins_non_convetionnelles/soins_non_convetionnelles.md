@@ -11,6 +11,7 @@ status=published
 specificClass=servicesPage
 contentImage=images/services/logo_psy.jpg
 exerpt=Autres soins
+displayTags=false
 order=320
 ~~~~~~
 	

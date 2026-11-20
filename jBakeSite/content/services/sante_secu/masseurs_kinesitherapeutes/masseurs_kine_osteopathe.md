@@ -11,6 +11,7 @@ status=published
 specificClass=servicesPage
 contentImage=images/services/logo_kine.png
 exerpt=Les Masseurs & Kinésithérapeutes
+displayTags=false
 order=314
 ~~~~~~
 	

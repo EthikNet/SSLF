@@ -47,7 +47,7 @@ param : content : content to search for include content
 		<ul class="toc_list">
 		<#list blocks as blockForToc>
 			<#local uri = buildTocUri(blockForToc mainPageUrl)>
-			<li class="toc_item">
+			<li class="toc_item<#if (blockForToc.featured)??> featured</#if>">
 				<#if uri?has_content>
 					<a href="${uri}">
 					<#local endTag="</a>">

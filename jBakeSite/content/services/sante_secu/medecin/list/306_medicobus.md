@@ -7,7 +7,7 @@ tags=
 status=published
 contentImage=images/services/logo_medicobus.jpg
 exerpt=sage femme
-anchorId=dr_bourrel
+anchorId=medicobus
 
 phone=06 20 87 99 33 
 email=medicobus-occitane@protonmail.com

@@ -11,6 +11,7 @@ status=published
 specificClass=servicesPage
 contentImage=images/services/logo_medcine_generale.png
 exerpt=Les médecins, pharmacien, sage femme et dentiste
+displayTags=false
 order=312
 ~~~~~~
 	

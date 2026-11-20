@@ -13,4 +13,3 @@ contentImage=/images/tourisme/site_remarquables/dolmen_des_bras.jpg
 order=514
 ~~~~~~
 Retrouver tous les sites remarquables à proximité sur le site [https://www.visitlimousin.com/](https://www.visitlimousin.com/).
-![Logo visitLimosin](${webleger.build.host}/images/tourisme/visitLimousin_logo_A1.png).
