@@ -6,7 +6,7 @@ code=alerte téléphonique 'GALA'
 status=published
 contentImage=images/common/logo_left-small.jpg
 specificClass=graphItemsCompactLeft
-graph={"query":[{"type":"commission", "filter":"code:alerte téléphonique 'GALA'", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut", "subTemplate":"sslf.commissionsMembresGraphSubTemplate"}]}
+graph={"query":[{"type":"structure", "filter":"code:alerte téléphonique 'GALA'", "in":{"category":"personne", "order":"order"}, "groupBy":"related.statut", "subTemplate":"sslf.commissionsMembresGraphSubTemplate"}]}
 order=992
 ~~~~~~
 	
