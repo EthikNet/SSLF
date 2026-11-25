@@ -9,7 +9,7 @@
 </#function>
 
 <#function secureStringJsonData theJsonText>
-<#local prop = theJsonText>
+	<#local prop = theJsonText>
 	<#if theJsonText?is_sequence>
 		<#local prop = theJsonText?join(", ")>
 	</#if>

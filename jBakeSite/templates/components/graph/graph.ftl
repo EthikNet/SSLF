@@ -49,7 +49,7 @@
 			
 			<#list theContent.graph.data as firstLevelElement>
 				<#local displayDispatcher = propertiesHelper.retrieveAndDisplayConfigText("component.graph.element.display.dispatcher", true)>
-				<#if displayDispatcher == "component.graph.element.display.dispatcher" || displayDispatcher == "${webleger.component.graph.element.display.dispatcher}">
+				<#if displayDispatcher == "component.graph.element.display.dispatcher" || displayDispatcher?starts_with("$")>
 				<#if logHelper??>
 					${logHelper.stackDebugMessage("Graph.build (WARN) : No custom display dispatcher 'component.graph.element.display.dispatcher' in config, using default")}
 				</#if>
