@@ -8,6 +8,7 @@ status=published
 exerpt=Brasserie 
 stickers={"disposition":"left_absolute", "data":[{"label":"🍻", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/commerce/brasserie_epopee_logo.jpg
+responsable=Frédéric DELPEUCH
 phone=07 43 53 69 35
 email=brasserie.epopee@gmail.com
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}

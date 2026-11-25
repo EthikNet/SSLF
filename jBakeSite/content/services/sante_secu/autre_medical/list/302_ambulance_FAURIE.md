@@ -1,4 +1,4 @@
-title=Ambulance et VSL FAURIE
+title=Ambulances et VSL FAURIE
 date=2026-07-21
 type=org_openCiLife_block
 category=autre_medical,contact_utile

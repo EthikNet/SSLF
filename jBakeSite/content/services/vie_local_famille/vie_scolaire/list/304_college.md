@@ -1,4 +1,4 @@
-title=Collège
+title=Collège Fabre d'Eglantine
 date=2026-07-16
 type=org_openCiLife_block
 category=vieScolaire

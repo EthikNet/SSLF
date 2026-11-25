@@ -21,9 +21,9 @@ Le restaurant scolaire propose chaque midi des repas préparés sur place, avec 
 > **Tarif : Ecole**
 > 2,50 € / repas
 > Inscription et vente des tickets à la mairie, facturation à chaque fin de période
-> PAI pris en compte
+> Projet d'Accueil Individualisé (PAI) pris en compte
 
 > **Tarif : collège**
 > en fonction du quotient familial
 > Inscription et facturation par le secrétariat du collège
-> PAI pris en compte
+> Projet d'Accueil Individualisé (PAI) pris en compte

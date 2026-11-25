@@ -25,7 +25,7 @@ L’école de Saint-Sulpice-les-Feuilles accueille les enfants de 3 à 11 ans de
 > Marie-Claire TIXIER
 
 
-- Inscription en mairie (livret de famille, justificatif de domicile, carnet de santé à jour des vaccinations, CNI des parents, jugement de divorce si concerné) 
+- Inscription en mairie (livret de famille, justificatif de domicile, carnet de santé à jour des vaccinations, carte nationale d'identité des parents, jugement de divorce si concerné) 
 
 ### L’école maternelle
 ![photo de l'école maternelle](${webleger.build.host}/images/services/ecole_primaire_batiment.jpg)

@@ -48,7 +48,14 @@
 			</#if>
 			
 			<#list theContent.graph.data as firstLevelElement>
-				<@recursiveStruture firstLevelElement type 1 />
+				<#local displayDispatcher = propertiesHelper.retrieveAndDisplayConfigText("component.graph.element.display.dispatcher", true)>
+				<#if displayDispatcher == "component.graph.element.display.dispatcher" || displayDispatcher == "${webleger.component.graph.element.display.dispatcher}">
+				<#if logHelper??>
+					${logHelper.stackDebugMessage("Graph.build (WARN) : No custom display dispatcher 'component.graph.element.display.dispatcher' in config, using default")}
+				</#if>
+					<#local displayDispatcher = "defaultDisplayDispatcher">
+				</#if>
+				<@recursiveStruture firstLevelElement type 1 displayDispatcher/>
 			</#list>
 		</#if>
 		
@@ -164,7 +171,14 @@
 	</div>
 </#macro>
 
-<#macro recursiveStruture element parentType="" level=1>
+<#macro defaultDisplayDispatcher elementType element level>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("Graph.defaultDisplayDispatcher : (level:"+level+") PROCESSING type : " + elementType + ", data : " + common.toString(element))}
+	</#if>
+	<@handleElementTypeAsUlList element level/>
+</#macro>
+
+<#macro recursiveStruture element parentType="" level=1 displayDispatcher="defaultDisplayDispatcher">
 	<#local elementType = parentType>
 	<#if (element.type)?? && element.type?has_content>
 		<#local elementType = element.type>
@@ -175,20 +189,8 @@
 		${logHelper.stackDebugMessage("Graph.recursiveStruture : (level:"+level+") PROCESSING type : " + elementType + ", code : " + elementCode + ", data : " + common.toString(element))}
 	</#if>
 	
-	<#switch elementType>
-		<#case "structure">
-			<@handleElementTypeStructure element level/>
-		<#break>
-		<#case "commission">
-			<@handleElementTypeMembreCommission element level/>
-		<#break>
-		<#case "délégation">
-			<@handleElementTypeAsUlList element level />
-		<#break>
-		<#case "correspondant">
-			<@handleElementTypeAsUlList element level "Correspondant"/>
-		<#break>
-	</#switch>
+	<#local graphDisplayDispatcher = "<@${displayDispatcher} elementType element level/>"?interpret>
+	<@graphDisplayDispatcher/>
 	
 	<#if (element.group)?? && element.group?has_content>
 		<#if logHelper??>
@@ -201,20 +203,8 @@
 					<#local elementType = theGroup.type>
 				</#if>
 				
-				<#switch elementType>
-					<#case "structure">
-						<@handleElementTypeStructure theGroup level/>
-					<#break>
-					<#case "commission">
-						<@handleElementTypeMembreCommission theGroup level/>
-					<#break>
-					<#case "délégation">
-						<@handleElementTypeAsUlList theGroup level />
-					<#break>
-					<#case "correspondant">
-						<@handleElementTypeAsUlList theGroup level "Correspondant"/>
-					<#break>
-				</#switch>
+				<#local graphDisplayDispatcher = "<@${displayDispatcher} elementType theGroup level/>"?interpret>
+				<@graphDisplayDispatcher/>
 			<#else>
 				<#list theGroup as element>
 					<@recursiveStruture element elementType level+1 />
@@ -224,60 +214,23 @@
 	</#if>
 </#macro>
 
-<#macro handleElementTypeStructure element level>
-	<#local titleLevel = level+1>
-	
-	<h${titleLevel}><@buildLink element.type element.code /></h${titleLevel}>
-	
-	<#if (element.role)?? && element.role?has_content>
-		<span class="personneInfo personneRole">Rôle : ${element.role}</span>
-	</#if>
-	<#if (element.fonction)?? && element.fonction?has_content>
-		<span class="personneInfo personneFonction">Fonction : ${element.fonction}</span>
-	</#if>
-	<#if (element.poste)?? && element.poste?has_content>
-		<span class="personneInfo personnePoste">Poste : ${element.poste}</span>
-	</#if>
-	<#if (element.statut)?? && element.statut?has_content>
-		<span class="personneInfo personneStatut">Statut : ${element.statut}</span>
-	</#if>
-</#macro>
-
-<#macro handleElementTypeMembreCommission element level>
-	<#local titleLevel = level+2>
-	
-	<h${titleLevel}>Membre des commissions : </h${titleLevel}>
-	<table>
-		<thead>
-			<th>Commission</th>
-			<th>Statut</th>
-		</thead>
-		<#list element.elements as membreCommission>
-			<tr>
-				<td><@buildLink membreCommission.type!"commission" membreCommission.code/></td>
-				<td>${membreCommission.statut}</td>
-			</tr>
-		</#list>
-	</table>
-</#macro>
-
-<#macro handleElementTypeAsUlList element level, title="Délégation">
+<#macro handleElementTypeAsUlList element level>
 	<#local titleLevel = level+2>
 	
 	<#if (element.elements)??>
-		<#local plurialize = (element.elements?size > 1 && title!="Correspondant")>
-		<h${titleLevel}>${common.plurialize(title, plurialize)} : </h${titleLevel}>
+		<#local plurialize = (element.elements?size > 1 && element.type!="correspondant")>
+		<h${titleLevel}>${common.plurialize(element.type, plurialize)} : </h${titleLevel}>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.handleElementTypeAsUlList (level:"+level+") displaying : " + element.elements?size + " " + title + " (plurialize : " + plurialize?string("yes","no") + ") from : " + common.toString(element))}
+			${logHelper.stackDebugMessage("Graph.handleElementTypeAsUlList (level:"+level+") displaying : " + element.elements?size + " " + element.type + " (plurialize : " + plurialize?string("yes","no") + ") from : " + common.toString(element))}
 		</#if>
-		<ul class="${title}">
+		<ul class="${element.type}">
 			<#list element.elements as delegateTo>
 				<li><@buildLink delegateTo.type!title delegateTo.code/></li>
 			</#list>
 		</ul>
 	<#else>
 		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.handleElementTypeAsUlList (level:"+level+") displaying : 1 " + title + " from : " + common.toString(element))}
+			${logHelper.stackDebugMessage("Graph.handleElementTypeAsUlList (level:"+level+") displaying : 1 " + element.type + " from : " + common.toString(element))}
 		</#if>
 		<@buildLink element.type element.code/>
 	</#if>
@@ -458,59 +411,7 @@
 	</#if>
 	
 	<#if match>
-		<#local enchancedElement = element>
-		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.search : preparing enchanced Element, with filter for : " + filterAttribute + ", with value : " + matchedElement)}
-		</#if>
-		<#local theGroup = []>
-		<#if (element.group)??>
-			<#local theGroup = element.group>
-		</#if>
-		<#local theFonction = "">
-		<#if (element.fonction)??>
-			<#local theFonction = element.fonction>
-			<#if filterAttribute == "fonction">
-				<#local theFonction = matchedElement>
-			</#if>
-		</#if>
-		<#local theStatut = "">
-		<#if (element.statut)??>
-			<#local theStatut = element.statut>
-			<#if filterAttribute == "statut">
-				<#local theStatut = matchedElement>
-			</#if>
-		</#if>
-		<#local theRole = "">
-		<#if (element.role)??>
-			<#local theRole = element.role>
-			<#if filterAttribute == "role">
-				<#local theRole = matchedElement>
-			</#if>
-		</#if>
-		<#local theSousRole = "">
-		<#if (element.sousRole)??>
-			<#local theSousRole = element.sousRole>
-			<#if filterAttribute == "sousRole">
-				<#local theSousRole = matchedElement>
-			</#if>
-		</#if>
-		<#local thePoste = "">
-		<#if (element.poste)??>
-			<#local thePoste = element.poste>
-			<#if filterAttribute == "poste">
-				<#local thePoste = matchedElement>
-			</#if>
-		</#if>
-		
-		<#local theHierarchy = "">
-		<#if (element.hierarchy)??>
-			<#local theHierarchy = element.hierarchy>
-		</#if>
-		<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "poste":thePoste, "hierarchy":theHierarchy, "parent":{"type":parentType, "code":parentCode}, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
-		<#if logHelper??>
-			${logHelper.stackDebugMessage("Graph.search : matching (enchanced) element : " + common.toString(enchancedElement))}
-		</#if>
-		<#local related = related + [enchancedElement]>
+		<#local related = related + [buildEnchancedElement(element, elementType, parentType, parentCode, filterAttribute, matchedElement)]>
 	</#if>
 		
 	<#if (element.group)?? && element.group?has_content && (element.group?size>0)>
@@ -541,6 +442,64 @@
 		</#list>
 	</#if>
 	<#return related>
+</#function>
+
+<#function buildEnchancedElement element, elementType, parentType, parentCode, filterAttribute, matchedElement>
+	<#local enchancedElement = element>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("Graph.buildEnchancedElement : preparing enchanced Element, with filter for : " + filterAttribute + ", with value : " + matchedElement)}
+	</#if>
+	<#local theGroup = []>
+	<#if (element.group)??>
+		<#local theGroup = element.group>
+	</#if>
+	<#local theFonction = "">
+	<#if (element.fonction)??>
+		<#local theFonction = element.fonction>
+		<#if filterAttribute == "fonction">
+			<#local theFonction = matchedElement>
+		</#if>
+	</#if>
+	<#local theStatut = "">
+	<#if (element.statut)??>
+		<#local theStatut = element.statut>
+		<#if filterAttribute == "statut">
+			<#local theStatut = matchedElement>
+		</#if>
+	</#if>
+	<#local theRole = "">
+	<#if (element.role)??>
+		<#local theRole = element.role>
+		<#if filterAttribute == "role">
+			<#local theRole = matchedElement>
+		</#if>
+	</#if>
+	<#local theSousRole = "">
+	<#if (element.sousRole)??>
+		<#local theSousRole = element.sousRole>
+		<#if filterAttribute == "sousRole">
+			<#local theSousRole = matchedElement>
+		</#if>
+	</#if>
+	<#local thePoste = "">
+	<#if (element.poste)??>
+		<#local thePoste = element.poste>
+		<#if filterAttribute == "poste">
+			<#local thePoste = matchedElement>
+		</#if>
+	</#if>
+	
+	<#local theHierarchy = "">
+	<#if (element.hierarchy)??>
+		<#local theHierarchy = element.hierarchy>
+	</#if>
+	
+	<#local enchancedElement = {"type":elementType, "code":element.code, "group":theGroup, "fonction":theFonction, "statut":theStatut, "role":theRole, "sousRole":theSousRole, "poste":thePoste, "hierarchy":theHierarchy, "parent":{"type":parentType, "code":parentCode}, "notFilteredAttribute":{"attribute":filterAttribute, "match":matchedElement!""}}>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("Graph.buildEnchancedElement : matching (enchanced) element : " + common.toString(enchancedElement))}
+	</#if>
+	
+	<#return enchancedElement>
 </#function>
 
 <#assign groupedElements = {}>

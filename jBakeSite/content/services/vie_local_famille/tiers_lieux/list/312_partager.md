@@ -1,4 +1,4 @@
-title=partager
+title=Partager
 date=2026-11-12
 type=org_openCiLife_block
 category=laPapote

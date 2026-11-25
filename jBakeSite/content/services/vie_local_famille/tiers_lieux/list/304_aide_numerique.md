@@ -1,4 +1,4 @@
-title=aide administrative et numérique
+title=Aide numérique
 date=2026-07-20
 type=org_openCiLife_block
 category=laPapote
@@ -15,9 +15,6 @@ website=https://lapapote.com/
 order=304
 ~~~~~~
 C’est un lieu où chacun peut trouver de l’aide administrative et numérique. 
-
-### AidantsConnect
-Chacun a la possibilité de se faire accompagner dans ses démarches administratives en ligne de manière sécurisée via le dispositif AidantsConnect. 
 
 ### Point Contact France Travail
 Pour des démarches liées à l’emploi, La Papote est devenu Point Contact France Travail, cela signifie que les chercheurs d’emploi peuvent accéder aux principaux services de France Travail (démarches en ligne, accès à l’espace personnel des usagers pour s’inscrire, s’actualiser, rechercher des offres d’emploi, rdv en visio avec un conseiller France Travail…). 

@@ -15,14 +15,14 @@ website=https://mediatheques.hautlimousinenmarche.fr/st-sulpice-les-feuilles
 freeDate=Mardi 10h-12h,Mercredi 14h00-17h,Samedi 10h-12h
 order=302
 ~~~~~~
-La médiathèque est un service de la CCHLEM. Les bénévoles vous accueillent pour emprunter des livres (Romans, Policiers, SF, BD, revues...), des CD, DVD et jeux de sociétés.
+La médiathèque est un service de la CCHLEM. Les bénévoles vous accueillent pour emprunter des livres (Romans, Policiers, SF, BD, revues...), des CD, DVD et jeux de société.
 
 ![Photo de l'entrée de la médiathèque](${webleger.build.host}/images/services/mediatheque_batiment_exterieur.jpg)
 
-Tout au long de l’année le réseau lecture du haut limousin en marche organise des actions culturelles :
+Tout au long de l’année le réseau lecture du Haut Limousin en Marche organise des actions culturelles :
 
-- Les enfants avec les écoles, les accueils de loisirs, le multi accueil, enfants accompagnés de leurs « nounous » via les relais assistantes maternelles,
-- Résidents de la maison de retraite
+- Accueil des enfants avec les écoles, les accueils de loisirs, le multi accueil, enfants accompagnés de leurs « nounous » via les relais assistantes maternelles,
+- Accueil des résidents de la maison de retraite
 - Je lis j’élis
 - Coqueliconte
 - Salon du polar

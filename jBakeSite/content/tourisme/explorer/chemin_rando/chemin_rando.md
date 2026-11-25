@@ -1,4 +1,4 @@
-title=Chemin de randonnée
+title=Chemins de randonnée
 date=2026-07-24
 type=org_openCiLife_post
 category=explorer

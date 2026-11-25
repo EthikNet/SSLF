@@ -8,7 +8,6 @@ status=published
 exerpt=Eleveurs bovins viande
 stickers={"disposition":"left_absolute", "data":[{"label":"🐄", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/agriculteur.jpg
-responsable=EARL AUBRUN
 location=Les Gouges 87160 SAINT SULPICE LES FEUILLES
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=602

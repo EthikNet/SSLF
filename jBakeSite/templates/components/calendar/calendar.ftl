@@ -31,6 +31,7 @@
 				<#local provider = "Google">
 				<#local variant = "OnlyOneCalendar">
 				<#local timeZone = "Europe%2FParis">
+				<#local mode="">
 				<#if (theContent.calendar.width)??>
 					<#local width = theContent.calendar.width>
 				</#if>
@@ -46,8 +47,11 @@
 				<#if (theContent.calendar.timeZone)??>
 					<#local timeZone = theContent.calendar.timeZone>
 				</#if>
+				<#if (theContent.calendar.mode)??>
+					<#local mode = theContent.calendar.mode>
+				</#if>
 				
-				<@displayCalendar theContent.calendar.calendarId width height provider variant timeZone/>
+				<@displayCalendar theContent.calendar.calendarId width height provider variant timeZone mode/>
 			<#else>
 				<#if logHelper??>
 					<@logHelper.debug "calendar.display : ERROR : Missing required calendar.calendarId"/>
@@ -69,11 +73,12 @@ Display the calendar
 @param provider : provider of the calendar (default "Google")
 @param variant : a display varaite (provider speicific" (default "OnlyOneCalendar")
 @param timeZone : calendar time Zone (default "Europe%2FParis")
+@param mode : calendar Display mode (default "")
   -->
-<#macro displayCalendar calendarId width="800" height="600" provider="Google" variant="OnlyOneCalendar" timeZone="Europe%2FParis">
+<#macro displayCalendar calendarId width="800" height="600" provider="Google" variant="OnlyOneCalendar" timeZone="Europe%2FParis" mode="">
 	<#if provider == "Google">
 		<#if variant = "OnlyOneCalendar">
-			<iframe src="https://calendar.google.com/calendar/embed?src=${calendarId}&ctz=${timeZone}" 
+			<iframe src="https://calendar.google.com/calendar/embed?src=${calendarId}&ctz=${timeZone}<#if mode?has_content>&mode=${mode}</#if>" 
 			class="calendarFrame"
 			style="border: 0" width="${width}" height="${height}" frameborder="0" scrolling="no"></iframe>
 		<#elseif variant = "Custom">

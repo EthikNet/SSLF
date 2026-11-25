@@ -14,7 +14,7 @@ Que vous soyez majeur ou mineur, l’obtention ou le renouvellement d’une cart
 
 ### Où effectuer votre demande ?
 Les demandes de carte nationale d’identité et de passeport doivent être déposées dans une mairie équipée d’un dispositif de recueil.
-**La mairie la plus proche de notre commune est la mairie de La Souterraine**, qui reçoit les demandes sur rendez-vous.
+**La mairie la plus proche de notre commune est la mairie de La Souterraine**, elle reçoit les demandes sur rendez-vous.
 
 **Mairie de La Souterraine**
 
@@ -31,9 +31,9 @@ La démarche peut également se faire à :
 > Tél. : 05 55 68 12 69
 
 **La Papote**
-Vous pouvez prendre RDV au Tiers-Lieu la Papote un mardi matin pour vous aider dans cette démarche avec AIDANT CONNECT. Plus d'infos 05 55 60 06 69 ou www.lapapote.com
+Vous pouvez prendre RDV au Tiers-Lieu la Papote un mardi matin pour vous aider dans cette démarche avec AidantsConnect. Plus d'infos 05 55 60 06 69 ou www.lapapote.com
 
-
+### Comment effectuer votre demande ? 
 
 #### Étape 1 : Préparer votre dossier
 Avant toute prise de rendez-vous, vous devez constituer votre dossier.

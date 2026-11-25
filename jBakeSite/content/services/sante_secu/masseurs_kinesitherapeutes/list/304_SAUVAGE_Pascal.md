@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_kine.png
-exerpt=Masseurs - Kinésithérapeutes
+exerpt=Masseur - Kinésithérapeute
 anchorId=sauvage_pascal
 
 phone=05 55 76 90 07

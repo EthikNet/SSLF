@@ -15,7 +15,7 @@ Le permis de construire est une autorisation d’urbanisme obligatoire pour les 
 Le permis de construire est notamment exigé pour :
 
 - la construction d’une maison individuelle, 
-- les extensions de plus de 20m2 d’un bâtiment existant, 
+- les extensions de plus de 20m<sup>2</sup> d’un bâtiment existant, 
 - la création de surface de plancher ou d’emprise au sol dépassant 20m2, 
 - certains travaux modifiant fortement le volume ou la structure d’un bâtiment, 
 - certains changements de destination avec travaux. 
@@ -38,7 +38,7 @@ Le dossier comprend généralement :
 - toute pièce complémentaire nécessaire selon la nature du projet. 
 
 ## Dépôt du dossier
-Le dossier peut être déposé en mairie (format papier) ou en ligne. (lien)
+Le dossier peut être déposé en mairie (format papier) ou [en ligne](https://portail-usager.sirap.com/087182/connexion).
 Le délai d’instruction est généralement de **2 mois pour une maison individuelle** et peut être plus long pour les autres projets.
 
 ## Décision
@@ -46,6 +46,6 @@ En l’absence de réponse dans le délai d’instruction, le permis peut être 
 
 ### Informations
 Pour vérifier la faisabilité de votre projet ou connaître les pièces nécessaires, il est recommandé de contacter la mairie avant dépôt.
-**Attention**, il est nécessaire de faire appel à un architecte quand l’emprise au sol est de plus de 150m2.
+**Attention**, il est nécessaire de faire appel à un architecte quand l’emprise au sol est de plus de 150m<sup>2</sup>.
 
 **Démarche en ligne** : [https://portail-usager.sirap.com/087182/connexion](https://portail-usager.sirap.com/087182/connexion)

@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_medicobus.jpg
-exerpt=sage femme
+exerpt=Sage-femme
 anchorId=medicobus
 
 phone=06 20 87 99 33 

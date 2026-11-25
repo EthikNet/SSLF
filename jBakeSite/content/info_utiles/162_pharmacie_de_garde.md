@@ -7,9 +7,9 @@ tags=
 status=published
 contentImage=images/icones/pharmacie.svg
 contentImageSpecificClass=green round
-location=Pharmacie du Bourg, 12 rue du Commerce, 87160 Saint-Sulpice-Les-Feuilles
-phone=05 55 76 81 30
+location=Pharmacie BEAUCHET, 84 Bis Rue Grande, 23160 Azerables
+phone=05 55 63 50 63
 order=162
 ~~~~~~
 --------------------------------------
-*De garde du 1er au 7 juin 2026*
+*De garde du Samedi 28 au Dimanche 29 Novembre*

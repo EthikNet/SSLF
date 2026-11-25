@@ -1,4 +1,4 @@
-title=Aires de piques niques
+title=Aires de pique nique
 date=2026-11-20
 type=org_openCiLife_post
 category=explorer

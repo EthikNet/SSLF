@@ -1,4 +1,4 @@
-title=FLEURAT Ethan
+title=Ethan FLEURAT
 date=2026-11-20
 type=org_openCiLife_post
 category=personne

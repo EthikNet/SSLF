@@ -1,4 +1,4 @@
-title=Boulodrome Couvert
+title=Boulodrome couvert
 date=2026-07-19
 type=org_openCiLife_block
 category=infraSportive
@@ -12,6 +12,6 @@ anchorId=boulodrome
 location=4 route d'Arnac-la-Poste 87160 SAINT SULPICE LES FEUILLES
 order=314
 ~~~~~~
-Espace dédié à la pétanque, il favorise la pratique sportive conviviale et les rencontres intergénérationnelles.
+Espace dédié à la pétanque et doté d'un éclairage : il favorise la pratique sportive conviviale et les rencontres intergénérationnelles.
 
 ![photo du bâtiment résidence du cèdre](${webleger.build.host}/images/services/boullodrome_couvert.jpg)

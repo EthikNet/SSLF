@@ -18,7 +18,7 @@
 
 <#--Read and display text from config file. Handle corectly when coma "," in text.
 param : theProperty : the text to display (may be a "sequence")
-param : usePropAsTextIfNotFound : tif true the "theProperty" param will be return, else a warning message
+param : usePropAsTextIfNotFound : if true the "theProperty" param will be return, else a warning message
 return : a text (with original coma ",")
 -->
 <#function retrieveAndDisplayConfigText theProperty usePropAsTextIfNotFound=false comaReplacement=", ">

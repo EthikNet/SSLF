@@ -1,4 +1,4 @@
-title=SIRE  Brigitte 
+title=SIRE Brigitte 
 date=2026-10-23
 type=org_openCiLife_block
 category=acteur_economique
@@ -8,7 +8,7 @@ status=published
 exerpt=Chevaux
 stickers={"disposition":"left_absolute", "data":[{"label":"🐎", "specificClass":"topLeftIcon"}]}
 contentImage=images/vie_economique/agriculteur.jpg
-responsable=SIRE  Brigitte 
+responsable=Brigitte SIRE 
 location=18 Puifférat 87160 SAINT SULPICE LES FEUILLES
 hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "renderOnce":true}]}
 order=602

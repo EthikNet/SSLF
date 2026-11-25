@@ -696,3 +696,63 @@
 		</#if>
 	</div>
 </#macro>
+
+<#macro graphDisplayDispatcher elementType element level>
+	<#if logHelper??>
+		${logHelper.stackDebugMessage("sslf.graphDisplayDispatcher : (level:"+level+") PROCESSING type : " + elementType + ", data : " + common.toString(element))}
+	</#if>
+	
+	<#switch elementType>
+		<#case "structure">
+			<@handleElementTypeStructure element level/>
+		<#break>
+		<#case "commission">
+			<@handleElementTypeCommission element level/>
+		<#break>
+		<#case "délégation">
+			<@graph.handleElementTypeAsUlList element level/>
+		<#break>
+		<#case "correspondant">
+			<@graph.handleElementTypeAsUlList element level/>
+		<#break>
+	</#switch>
+</#macro>
+
+<#macro handleElementTypeStructure element level>
+	<#local titleLevel = level+1>
+	
+	<h${titleLevel}><@graph.buildLink element.type element.code /></h${titleLevel}>
+	
+	<#if (element.role)?? && element.role?has_content>
+		<span class="personneInfo personneRole">Rôle : ${element.role}</span>
+	</#if>
+	<#if (element.fonction)?? && element.fonction?has_content>
+		<span class="personneInfo personneFonction">Fonction : ${element.fonction}</span>
+	</#if>
+	<#if (element.poste)?? && element.poste?has_content>
+		<span class="personneInfo personnePoste">Poste : ${element.poste}</span>
+	</#if>
+	<#if (element.statut)?? && element.statut?has_content>
+		<span class="personneInfo personneStatut">Statut : ${element.statut}</span>
+	</#if>
+</#macro>
+
+<#macro handleElementTypeCommission element level>
+	<#local titleLevel = level+2>
+	
+	<#if (element.elements)??>
+		<h${titleLevel}>Membre des commissions : </h${titleLevel}>
+		<table>
+			<thead>
+				<th>Commission</th>
+				<th>Statut</th>
+			</thead>
+			<#list element.elements as membreCommission>
+				<tr>
+					<td><@graph.buildLink membreCommission.type!"commission" membreCommission.code/></td>
+					<td>${membreCommission.statut}</td>
+				</tr>
+			</#list>
+		</table>
+	</#if>
+</#macro>

@@ -17,6 +17,6 @@ hooks={"data":[{"position":"beginItemSubContent", "action":"sticker.build", "ren
 order=604
 ~~~~~~
 
-- ESPIE Laure      
-- RAYNAUD Lisa
-- BOUCHOT Carole
+- Laure ESPIE      
+- Lisa RAYNAUD
+- Carole BOUCHOT

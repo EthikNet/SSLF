@@ -45,6 +45,7 @@
 
 .label{
 	font-size:110% !important;
+	white-space:normal;
 }
 
 .elementWithIconSmallWrap.main .btn-default {

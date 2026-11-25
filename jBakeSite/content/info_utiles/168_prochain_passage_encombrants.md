@@ -7,7 +7,7 @@ tags=
 status=published
 contentImage=images/icones/poubelle.svg
 contentImageSpecificClass=light_green round
-dates=16-02-27, 13-05-27, 9-09-27,17-11-27
+dates=2027-02-16,2027-05-13,2027-09-9,2027-11-17
 phone=05 55 76 73 32
 order=168
 ~~~~~~

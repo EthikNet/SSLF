@@ -6,6 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_medcine_generale.png
+exerpt=Infirmiers
 anchorId=Cabinets_infirmiers
 
 phone=05 55 76 92 11

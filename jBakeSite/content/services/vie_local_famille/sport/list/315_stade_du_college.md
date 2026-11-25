@@ -10,7 +10,7 @@ exerpt=Principalement pour les collègiens
 anchorId=stade_du_college
 
 location=rue du stade 87160 SAINT SULPICE LES FEUILLES
-order=306
+order=315
 ~~~~~~
 Ce stade en centre bourg est utilisé essentiellement par le collège et l’école.
 

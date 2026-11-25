@@ -6,7 +6,7 @@ subTemplate=sslf.servicesSubTemplate
 tags=
 status=published
 contentImage=images/services/logo_kine.png
-exerpt=Masseurs - Kinésithérapeutes & ostéopathes
+exerpt=Masseur - Kinésithérapeute & ostéopathe
 anchorId=couthier_olivier
 
 phone=05 55 76 90 07
