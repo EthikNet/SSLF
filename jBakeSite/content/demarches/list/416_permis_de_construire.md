@@ -9,7 +9,7 @@ status=published
 exerpt=Dans quels cas effectuer une demande de permis de construire ?
 order=416
 ~~~~~~
-Le permis de construire est une autorisation d’urbanisme obligatoire pour les projets de construction ou d’agrandissement à partir de 20m2. Les demandes sont faites à la mairie mais sont instruites par le service urbanisme de la Communauté de Communes du Haut Limousin en Marche qui demande un avis à la Préfecture.
+Le permis de construire est une autorisation d’urbanisme obligatoire pour les projets de construction ou d’agrandissement à partir de 20m<sup>2</sup>. Les demandes sont faites à la mairie mais sont instruites par le service urbanisme de la Communauté de Communes du Haut Limousin en Marche qui demande un avis à la Préfecture.
 
 ## Quels travaux sont concernés ?
 Le permis de construire est notamment exigé pour :

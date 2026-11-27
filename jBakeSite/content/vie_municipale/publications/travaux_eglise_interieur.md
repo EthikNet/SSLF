@@ -2,6 +2,7 @@ title=⛪ Travaux : phase intérieure de l'église
 date=2026-06-24
 type=org_openCiLife_post
 category=publication
+subTemplate=sslf.publicationSubTemplate
 pubAnnee=2026,2027
 pubCateg=Travaux
 status=draft

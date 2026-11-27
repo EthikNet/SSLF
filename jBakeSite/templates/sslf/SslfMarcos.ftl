@@ -77,8 +77,6 @@
 		</#if>
 		<div class="blockBody">
 			<@common.buildLocation theBlock/>
-			<@common.buildPhone theBlock/>
-			<@common.buildEmail theBlock/>
 			<@common.buildHours theBlock/>
 			<@common.buildDates theBlock/>
 			<@common.buildDateTimes theBlock/>
@@ -87,8 +85,11 @@
 			
 			<@block.generateBodyContent theBlock/>
 			
-			<hr/>
-			<@common.buildFiles theBlock/>
+			<div class="greenButtonLikeChildDivs">
+				<@common.buildPhone theBlock/>
+				<@common.buildEmail theBlock/>
+				<@common.buildFiles theBlock/>
+			</div>
 		</div>
 	</div>
 </#macro>

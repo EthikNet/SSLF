@@ -53,6 +53,7 @@
 }
 
 .btn-primary.dowloadLink .label {
+	white-space:normal;
 	color:${webleger.site.style.primary.color};
 }
 
@@ -572,7 +573,8 @@ h2 {
 	color:${webleger.site.style.color};
 }
 
-.service_block .greenButtonLikeChildDivs > div, .blockWithImageSmall .greenButtonLikeChildDivs > div, .blockWithImageMedium .greenButtonLikeChildDivs > div{
+.service_block .greenButtonLikeChildDivs > div, .blockWithImageSmall .greenButtonLikeChildDivs > div, .blockWithImageMedium .greenButtonLikeChildDivs > div, 
+.cardWithDetailsSubTemplate .greenButtonLikeChildDivs > div{
 	color:black;
 	border-radius:12px;
 	padding:3px 6px;

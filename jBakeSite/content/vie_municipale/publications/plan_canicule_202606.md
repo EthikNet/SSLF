@@ -2,6 +2,7 @@ title=☀️ Plan canicule : inscription au registre
 date=2026-06-25
 type=org_openCiLife_post
 category=publication
+subTemplate=sslf.publicationSubTemplate
 pubAnnee=2024,2025,2026
 pubCateg=Informations
 status=draft
